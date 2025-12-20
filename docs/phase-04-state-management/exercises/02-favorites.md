@@ -333,6 +333,12 @@ export default function FavoritesPage(): JSX.Element {
     .map((id) => mockProducts[id])
     .filter((product): product is NonNullable<typeof product> => Boolean(product));
 
+  const handleClearFavorites = (): void => {
+    if (window.confirm("お気に入りをすべて削除しますか？")) {
+      clearFavorites();
+    }
+  };
+
   if (favoriteProducts.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-20">
@@ -352,7 +358,7 @@ export default function FavoritesPage(): JSX.Element {
       <div className="mb-8 flex items-center justify-between">
         <h1 className="text-2xl font-bold">お気に入り ({favoriteProducts.length})</h1>
         <button
-          onClick={clearFavorites}
+          onClick={handleClearFavorites}
           className="text-red-500 hover:text-red-700"
         >
           すべて削除

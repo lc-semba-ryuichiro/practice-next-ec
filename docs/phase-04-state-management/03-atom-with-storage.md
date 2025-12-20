@@ -411,10 +411,10 @@ const migrateCartData = (stored: unknown): CartItemV2[] => {
 };
 
 const cartAtom = atomWithStorage<CartItemV2[]>("cart", [], {
-  ...createJSONStorage(),
-  getItem: (key) => {
+  ...createJSONStorage<CartItemV2[]>(),
+  getItem: (key, initialValue) => {
     const stored = localStorage.getItem(key);
-    if (!stored) return [];
+    if (!stored) return initialValue;
     return migrateCartData(JSON.parse(stored));
   },
 });

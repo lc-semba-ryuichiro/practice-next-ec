@@ -240,7 +240,7 @@ type CartItemRowProps = {
 };
 
 export function CartItemRow({ item }: CartItemRowProps): JSX.Element {
-  // 数量表示と変更が必要なので useAtom を使う
+  // 書き込みのみなので useSetAtom を使う（値は item props から取得）
   const updateQuantity = useSetAtom(updateQuantityAtom);
   const removeFromCart = useSetAtom(removeFromCartAtom);
 
