@@ -53,6 +53,7 @@
     "dependency-cruiser": "catalog:",
     "eslint": "catalog:",
     "eslint-config-next": "catalog:",
+    "eslint-config-prettier": "catalog:",
     "eslint-plugin-storybook": "catalog:",
     "msw": "catalog:",
     "msw-storybook-addon": "catalog:",

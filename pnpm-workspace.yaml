@@ -37,6 +37,7 @@ catalog:
   dependency-cruiser: ^17.3.4
   eslint: ^9.39.2
   eslint-config-next: ^16.1.0
+  eslint-config-prettier: ^10.1.8
   eslint-plugin-storybook: ^10.1.10
   jotai: ^2.16.0
   msw: ^2.12.4
