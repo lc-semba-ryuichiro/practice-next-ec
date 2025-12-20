@@ -15,8 +15,14 @@ pnpm dev
 # ビルド
 pnpm build
 
-# リント（ESLint）
+# リント（全ツール並列実行）
 pnpm lint
+
+# 型チェックのみ
+pnpm typecheck
+
+# 自動修正（Prettier → ESLint → Stylelint）
+pnpm fix
 
 # Storybook 開発モード（ポート 6006）
 pnpm storybook
@@ -78,3 +84,32 @@ import { SomeType } from "@/types/validator";
 ## pnpm workspace
 
 `pnpm-workspace.yaml` で全依存関係のバージョンを catalog で一元管理。`catalogMode: strict` により、catalog に定義されていないバージョンの使用を禁止。
+
+## Git Hooks (Lefthook)
+
+- **pre-commit**: Prettier でフォーマットチェック
+- **commit-msg**: Conventional Commits 形式を強制（feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert）
+- **pre-push**: ESLint, TypeScript, Stylelint, Secretlint, Textlint, Build を並列実行
+
+## コーディング規約
+
+### TypeScript
+
+- `strict: true` に加え `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes` 等の厳格オプション有効
+- 関数には明示的な戻り値型を指定（`explicit-function-return-type`）
+- 型インポートは `import { type Foo }` 形式（inline-type-imports）
+- Boolean 変数は `is`, `has`, `should`, `can`, `will`, `did` プレフィックス必須
+- インターフェースに `I` プレフィックス禁止
+
+### インポート順序
+
+1. React / Next.js
+2. 外部ライブラリ
+3. 内部モジュール（`@/*`）
+4. 相対パス
+5. 型インポート
+
+### ファイル命名
+
+- kebab-case または PascalCase（コンポーネント）
+- default export は App Router 規約ファイル（page.tsx, layout.tsx 等）と Storybook のみ許可
