@@ -1,0 +1,41 @@
+{
+  "enabledPlugins": {
+    "typescript-lsp@claude-plugins-official": true
+  },
+    "permissions": {
+    "allow": [
+      "Bash(gh issue view:*)",
+      "Bash(gh search:*)",
+      "Bash(gh issue list:*)",
+      "Bash(gh pr comment:*)",
+      "Bash(gh pr diff:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr list:*)"
+    ],
+    "deny": [
+      "Bash(brew install:*)",
+      "Bash(chmod 777:*)",
+      "Bash(gh repo delete:*)",
+      "Bash(git commit --no-verify:*)",
+      "Bash(git config:*)",
+      "Bash(git push --force:*)",
+      "Bash(git push -f:*)",
+      "Bash(git rebase:*)",
+      "Bash(git reset:*)",
+      "Bash(npm publish:*)",
+      "Bash(npm remove:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(pnpm publish:*)",
+      "Bash(pnpm remove:*)",
+      "Bash(pnpm uninstall:*)",
+      "Bash(rm -rf:*)",
+      "Bash(sudo:*)",
+      "Read(.env*)",
+      "Read(**/*token*)",
+      "Read(id_ed25519)",
+      "Read(id_rsa)",
+      "Write(.env*)",
+      "Write(**/secrets/**)"
+    ]
+  }
+}
