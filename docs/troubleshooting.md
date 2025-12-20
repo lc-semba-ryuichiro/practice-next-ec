@@ -519,12 +519,22 @@ function Parent() {
 ```tsx
 // NG: 並べ替え・フィルターがある場合に問題
 {
-  items.map((item, index) => <Item key={index} {...item} />);
+  items.map((item, index) => (
+    <Item
+      key={index}
+      {...item}
+    />
+  ));
 }
 
 // OK: 一意の ID を使用
 {
-  items.map((item) => <Item key={item.id} {...item} />);
+  items.map((item) => (
+    <Item
+      key={item.id}
+      {...item}
+    />
+  ));
 }
 ```
 

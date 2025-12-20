@@ -43,7 +43,10 @@ function Button({ children }: { children: React.ReactNode }) {
 
 ```tsx
 // props の例
-<ProductCard name="商品名" price={1000} />
+<ProductCard
+  name="商品名"
+  price={1000}
+/>
 ```
 
 ### State（ステート）
@@ -333,7 +336,7 @@ const Modal = dynamic(() => import("./Modal"));
 | HTML | HyperText Markup Language         | ハイパーテキストマークアップ言語         |
 | HTTP | HyperText Transfer Protocol       | ハイパーテキスト転送プロトコル           |
 | INP  | Interaction to Next Paint         | 次の描画までのインタラクション           |
-| ISR  | Incremental Static Regeneration   | 増分静的再生成                           |
+| ISR  | Incremental Static Regeneration   | 増分的な静的再生成                       |
 | JSON | JavaScript Object Notation        | JavaScript オブジェクト表記              |
 | JSX  | JavaScript XML                    | JavaScript XML                           |
 | LCP  | Largest Contentful Paint          | 最大コンテンツ描画                       |
