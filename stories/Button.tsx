@@ -13,7 +13,15 @@ export interface ButtonProps {
   onClick?: (() => void) | undefined;
 }
 
-/** Primary UI component for user interaction */
+/**
+ * ユーザーインタラクション用のプライマリ UI コンポーネント
+ * @param props - ボタンのプロパティ
+ * @param props.primary - メインのアクションボタンかどうか
+ * @param props.size - ボタンのサイズ
+ * @param props.backgroundColor - 背景色
+ * @param props.label - ボタンのラベル
+ * @returns ボタン要素
+ */
 export const Button = ({
   primary = false,
   size = "medium",

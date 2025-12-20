@@ -1,15 +1,25 @@
 // @ts-check
-import storybook from "eslint-plugin-storybook";
-import { defineConfig, globalIgnores } from "eslint/config";
+import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
+import vitest from "@vitest/eslint-plugin";
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTs from "eslint-config-next/typescript";
-import tseslint from "typescript-eslint";
+import boundaries from "eslint-plugin-boundaries";
+import functional from "eslint-plugin-functional";
 import importX from "eslint-plugin-import-x";
-import vitest from "@vitest/eslint-plugin";
-import testingLibrary from "eslint-plugin-testing-library";
-import security from "eslint-plugin-security";
-import unicorn from "eslint-plugin-unicorn";
+import jsdoc from "eslint-plugin-jsdoc";
+import nodePlugin from "eslint-plugin-n";
+import pluginPromise from "eslint-plugin-promise";
 import reactCompiler from "eslint-plugin-react-compiler";
+import * as regexpPlugin from "eslint-plugin-regexp";
+import security from "eslint-plugin-security";
+import sonarjs from "eslint-plugin-sonarjs";
+import storybook from "eslint-plugin-storybook";
+import strictDependencies from "eslint-plugin-strict-dependencies";
+import testingLibrary from "eslint-plugin-testing-library";
+import unicorn from "eslint-plugin-unicorn";
+import unusedImports from "eslint-plugin-unused-imports";
+import { defineConfig, globalIgnores } from "eslint/config";
+import tseslint from "typescript-eslint";
 
 const eslintConfig = defineConfig([
   // =====================
@@ -262,6 +272,115 @@ const eslintConfig = defineConfig([
       ],
       "unicorn/no-array-reduce": "off",
       "unicorn/no-useless-undefined": "off", // TypeScript と相性悪い
+    },
+  },
+
+  // =====================
+  // ESLint Comments
+  // =====================
+  comments.recommended,
+
+  // =====================
+  // Promise
+  // =====================
+  pluginPromise.configs["flat/recommended"],
+
+  // =====================
+  // Regexp
+  // =====================
+  regexpPlugin.configs["flat/recommended"],
+
+  // =====================
+  // SonarJS
+  // =====================
+  sonarjs.configs.recommended,
+
+  // =====================
+  // JSDoc (TypeScript)
+  // =====================
+  jsdoc.configs["flat/recommended-typescript"],
+
+  // =====================
+  // Node.js (Next.js 用に調整)
+  // =====================
+  {
+    ...nodePlugin.configs["flat/recommended"],
+    rules: {
+      ...nodePlugin.configs["flat/recommended"].rules,
+      "n/no-missing-import": "off", // TypeScript の解決に任せる
+      "n/no-unsupported-features/node-builtins": "off", // Next.js 環境
+    },
+  },
+
+  // =====================
+  // Functional (選択的ルール)
+  // =====================
+  {
+    plugins: { functional },
+    rules: {
+      "functional/no-let": "warn",
+      "functional/prefer-readonly-type": "off", // TypeScript の readonly を使用
+    },
+  },
+
+  // =====================
+  // Boundaries (アーキテクチャ境界)
+  // =====================
+  {
+    plugins: { boundaries },
+    settings: {
+      "boundaries/elements": [
+        { type: "app", pattern: "app/*" },
+        { type: "components", pattern: "components/*" },
+        { type: "lib", pattern: "lib/*" },
+        { type: "types", pattern: "types/*" },
+      ],
+    },
+    rules: {
+      "boundaries/element-types": [
+        "error",
+        {
+          default: "allow",
+          rules: [
+            // 必要に応じてルール追加
+          ],
+        },
+      ],
+    },
+  },
+
+  // =====================
+  // Strict Dependencies (依存関係制御)
+  // =====================
+  {
+    plugins: { "strict-dependencies": strictDependencies },
+    rules: {
+      "strict-dependencies/strict-dependencies": [
+        "error",
+        [
+          // 必要に応じてルール追加
+        ],
+      ],
+    },
+  },
+
+  // =====================
+  // Unused Imports
+  // =====================
+  {
+    plugins: { "unused-imports": unusedImports },
+    rules: {
+      "@typescript-eslint/no-unused-vars": "off",
+      "unused-imports/no-unused-imports": "error",
+      "unused-imports/no-unused-vars": [
+        "warn",
+        {
+          vars: "all",
+          varsIgnorePattern: "^_",
+          args: "after-used",
+          argsIgnorePattern: "^_",
+        },
+      ],
     },
   },
 
