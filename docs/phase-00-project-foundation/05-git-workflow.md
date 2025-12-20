@@ -13,10 +13,23 @@
 
 シンプルで理解しやすいブランチ戦略です。
 
-```text
-main ─────●─────●─────●─────●─────●─────→
-           \   /       \   /       \
-            feature-1   feature-2   feature-3
+```mermaid
+gitGraph
+    commit id: "Initial"
+    branch feature/product-card
+    commit id: "feat: Add ProductCard"
+    commit id: "fix: Style issues"
+    checkout main
+    merge feature/product-card id: "Merge PR #1"
+    branch feature/cart
+    commit id: "feat: Add Cart"
+    commit id: "feat: Add CartItem"
+    checkout main
+    merge feature/cart id: "Merge PR #2"
+    branch feature/checkout
+    commit id: "feat: Add Checkout"
+    checkout main
+    merge feature/checkout id: "Merge PR #3"
 ```
 
 ### ルール
@@ -74,6 +87,19 @@ git checkout -b refactor/button-component
 
 [optional footer(s)]
 ```
+
+コミットメッセージの構造は以下のようになっています。
+
+```mermaid
+flowchart LR
+    subgraph "コミットメッセージの構造"
+        TYPE["type<br/>(必須)"] --> SCOPE["(scope)<br/>(任意)"]
+        SCOPE --> COLON[": "]
+        COLON --> DESC["description<br/>(必須)"]
+    end
+```
+
+**例:** `feat(ui): Button コンポーネントを追加`
 
 ### type（種類）
 
@@ -216,6 +242,28 @@ pnpm exec secretlint "**/*"
 ---
 
 ## Pull Request のベストプラクティス
+
+PR（Pull Request）は以下のライフサイクルで進行します。
+
+```mermaid
+sequenceDiagram
+    actor Dev as 開発者
+    participant Branch as feature/*
+    participant PR as Pull Request
+    participant CI as CI/CD
+    participant Main as main
+    participant Prod as 本番環境
+
+    Dev->>Branch: git checkout -b feature/xxx
+    Dev->>Branch: コミット作成
+    Dev->>PR: PR 作成
+    PR->>CI: CI 自動実行
+    CI-->>PR: テスト結果
+    Note over PR: レビュー待ち
+    PR->>PR: レビュー・修正
+    PR->>Main: マージ
+    Main->>Prod: 自動デプロイ
+```
 
 ### PR テンプレート
 

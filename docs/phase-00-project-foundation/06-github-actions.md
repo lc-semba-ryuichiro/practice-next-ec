@@ -9,6 +9,21 @@
 
 ## 基本概念
 
+GitHub Actions の構成要素は以下のようになっています。
+
+```mermaid
+flowchart LR
+    subgraph "GitHub Actions の構成"
+        EVENT["イベント<br/>(push, PR)"] --> WORKFLOW["ワークフロー<br/>(.yml)"]
+        WORKFLOW --> JOB1["ジョブ 1"]
+        WORKFLOW --> JOB2["ジョブ 2"]
+        JOB1 --> STEP1["ステップ 1"]
+        JOB1 --> STEP2["ステップ 2"]
+        STEP1 --> ACTION["アクション"]
+        STEP2 --> CMD["コマンド"]
+    end
+```
+
 ### ワークフロー（Workflow）
 
 自動化されたプロセス全体。`.github/workflows/` に YAML ファイルとして定義します。
@@ -356,21 +371,16 @@ jobs:
 
 ### 実行フロー
 
-```text
-┌──────┐     ┌──────┐
-│ lint │     │ test │
-└──┬───┘     └──┬───┘
-   │            │
-   └─────┬──────┘
-         ▼
-     ┌───────┐
-     │ build │
-     └───┬───┘
-         │
-         ▼ (main のみ)
-     ┌────────┐
-     │ deploy │
-     └────────┘
+```mermaid
+flowchart TD
+    subgraph "CI ワークフロー"
+        LINT["lint"] --> BUILD["build"]
+        TEST["test"] --> BUILD
+        TYPECHECK["typecheck"] --> BUILD
+        BUILD --> DEPLOY{"main?"}
+        DEPLOY -->|"Yes"| PROD["deploy"]
+        DEPLOY -->|"No"| END["終了"]
+    end
 ```
 
 ---

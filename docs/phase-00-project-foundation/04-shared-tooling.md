@@ -165,6 +165,21 @@ export default [...nextConfig];
 
 ## TypeScript 設定
 
+TypeScript の設定は、ベース設定から用途別に継承する構造になっています。
+
+```mermaid
+flowchart TD
+    subgraph "TypeScript 設定の継承"
+        BASE["base.json<br/>（共通設定）"]
+        BASE --> NEXT["next.json<br/>（Next.js 用）"]
+        BASE --> REACT["react-library.json<br/>（ライブラリ用）"]
+        NEXT --> WEB["apps/web/tsconfig.json"]
+        NEXT --> ADMIN["apps/admin/tsconfig.json"]
+        REACT --> UI["packages/ui/tsconfig.json"]
+        REACT --> SHARED["packages/shared/tsconfig.json"]
+    end
+```
+
 ### tooling/typescript-config/package.json
 
 ```json

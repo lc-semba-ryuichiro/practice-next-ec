@@ -55,6 +55,20 @@
 7. [Vercel セットアップ](./07-vercel-setup.md)
 8. [モノレポでの Vercel 設定](./08-vercel-monorepo.md)
 
+### 学習フロー
+
+```mermaid
+graph LR
+    A["01 モノレポ概念"] --> B["02 Turborepo"]
+    A --> C["03 pnpm"]
+    B --> D["04 共有設定"]
+    C --> D
+    D --> E["05 Git ワークフロー"]
+    E --> F["06 GitHub Actions"]
+    F --> G["07 Vercel"]
+    G --> H["08 Vercel モノレポ"]
+```
+
 ---
 
 ## 演習問題
@@ -66,28 +80,38 @@
 
 ## セットアップするモノレポ構成
 
-```text
-ec-monorepo/
-├── turbo.json                   # Turborepo 設定
-├── pnpm-workspace.yaml          # pnpm ワークスペース設定
-├── package.json                 # ルート package.json
-│
-├── apps/                        # アプリケーション
-│   ├── web/                     # メイン EC サイト（Next.js）
-│   ├── admin/                   # 管理画面（後半で実装）
-│   └── storybook/               # コンポーネントカタログ
-│
-├── packages/                    # 共有パッケージ
-│   ├── ui/                      # 共有 UI コンポーネント
-│   ├── shared/                  # 共有ロジック・型定義
-│   ├── validators/              # Zod スキーマ
-│   └── store/                   # Jotai Atoms
-│
-└── tooling/                     # 開発ツール設定
-    ├── eslint-config/           # 共有 ESLint 設定
-    ├── typescript-config/       # 共有 TypeScript 設定
-    ├── tailwind-config/         # 共有 Tailwind 設定
-    └── prettier-config/         # 共有 Prettier 設定
+```mermaid
+graph TD
+    subgraph ec-monorepo
+        ROOT["/"]
+        ROOT --> TURBO["turbo.json"]
+        ROOT --> PNPM["pnpm-workspace.yaml"]
+        ROOT --> PKG["package.json"]
+
+        subgraph apps["apps/"]
+            WEB["web/ - メイン EC サイト"]
+            ADMIN["admin/ - 管理画面"]
+            SB["storybook/ - コンポーネントカタログ"]
+        end
+
+        subgraph packages["packages/"]
+            UI["ui/ - 共有 UI"]
+            SHARED["shared/ - 共有ロジック・型定義"]
+            VALIDATORS["validators/ - Zod スキーマ"]
+            STORE["store/ - Jotai Atoms"]
+        end
+
+        subgraph tooling["tooling/"]
+            ESLINT["eslint-config/"]
+            TS["typescript-config/"]
+            TW["tailwind-config/"]
+            PRETTIER["prettier-config/"]
+        end
+
+        ROOT --> apps
+        ROOT --> packages
+        ROOT --> tooling
+    end
 ```
 
 ---

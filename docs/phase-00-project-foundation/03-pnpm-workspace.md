@@ -97,6 +97,18 @@ ec-monorepo/
 
 ## workspace プロトコル
 
+pnpm は `workspace:*` プロトコルを使って、モノレポ内のパッケージ間の依存関係を管理します。
+
+```mermaid
+flowchart TD
+    subgraph "workspace:* 解決プロセス"
+        A["package.json で<br/>workspace:* 指定"] --> B["pnpm-workspace.yaml<br/>を参照"]
+        B --> C["ローカルパッケージを検索"]
+        C --> D["シンボリックリンクを作成"]
+        D --> E["node_modules に配置"]
+    end
+```
+
 ### 内部パッケージの参照
 
 `workspace:*` を使って内部パッケージを参照します。
@@ -332,6 +344,45 @@ import { Card } from "@ec/ui/Card";
 ---
 
 ## 依存関係の管理
+
+モノレポ内のパッケージ間の依存関係を可視化すると以下のようになります。
+
+```mermaid
+graph TD
+    subgraph "Apps"
+        WEB["web"]
+        ADMIN["admin"]
+        SB["storybook"]
+    end
+    subgraph "Packages"
+        UI["@ec/ui"]
+        SHARED["@ec/shared"]
+        VALIDATORS["@ec/validators"]
+        STORE["@ec/store"]
+    end
+    subgraph "Tooling"
+        ESL["@ec/eslint-config"]
+        TS["@ec/typescript-config"]
+    end
+
+    WEB --> UI
+    WEB --> SHARED
+    WEB --> VALIDATORS
+    WEB --> STORE
+    WEB -.-> ESL
+    WEB -.-> TS
+
+    ADMIN --> UI
+    ADMIN --> SHARED
+    ADMIN -.-> ESL
+    ADMIN -.-> TS
+
+    UI --> SHARED
+    UI -.-> ESL
+    UI -.-> TS
+```
+
+> 実線は `dependencies`、破線は `devDependencies` を表します。
 
 ### 依存の確認
 

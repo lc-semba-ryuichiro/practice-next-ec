@@ -5,16 +5,28 @@
 モノレポ構成では、1 つのリポジトリから複数のアプリケーションをデプロイします。
 Vercel は Turborepo モノレポをネイティブサポートしています。
 
-### 構成例
+```mermaid
+flowchart TD
+    subgraph GitHub
+        REPO["ec-monorepo"]
+    end
+    subgraph "Vercel プロジェクト"
+        V1["ec-web<br/>Root: apps/web"]
+        V2["ec-admin<br/>Root: apps/admin"]
+        V3["ec-storybook<br/>Root: apps/storybook"]
+    end
+    subgraph "ドメイン"
+        D1["shop.example.com"]
+        D2["admin.example.com"]
+        D3["storybook.example.com"]
+    end
 
-```text
-ec-monorepo/
-├── apps/
-│   ├── web/           → shop.example.com
-│   ├── admin/         → admin.example.com
-│   └── storybook/     → storybook.example.com
-└── packages/
-    └── ...
+    REPO --> V1
+    REPO --> V2
+    REPO --> V3
+    V1 --> D1
+    V2 --> D2
+    V3 --> D3
 ```
 
 ---
@@ -154,6 +166,15 @@ cd ../.. && turbo build --filter=web
 ### turbo-ignore とは
 
 変更がないアプリのビルドをスキップする機能です。
+
+```mermaid
+flowchart TD
+    A["git push"] --> B{"turbo-ignore 実行"}
+    B --> C{"対象アプリに<br/>変更あり？"}
+    C -->|"Yes"| D["ビルド実行"]
+    C -->|"No"| E["ビルドスキップ"]
+    D --> F["デプロイ"]
+```
 
 ### インストール
 

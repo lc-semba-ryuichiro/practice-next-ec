@@ -134,15 +134,17 @@ pnpm dlx create-turbo@latest
 
 ### 実行順序の例
 
-```text
-packages/ui       →  build  →  (完了)
-packages/shared   →  build  →  (完了)
-                          ↓
-apps/web          →  build  →  (完了)
-apps/admin        →  build  →  (完了)
-```
-
 `^build` により、依存パッケージ（ui, shared）が先にビルドされます。
+
+```mermaid
+flowchart TB
+    subgraph "ビルド順序（^build）"
+        UI["packages/ui<br/>build"] --> WEB["apps/web<br/>build"]
+        SHARED["packages/shared<br/>build"] --> WEB
+        UI --> ADMIN["apps/admin<br/>build"]
+        SHARED --> ADMIN
+    end
+```
 
 ---
 
@@ -193,14 +195,22 @@ turbo build --concurrency=auto
 
 ## キャッシュの仕組み
 
+Turborepo のキャッシュは、入力ファイルのハッシュ値に基づいて動作します。
+
+```mermaid
+flowchart TD
+    A["タスク実行開始"] --> B{"入力ファイルの<br/>ハッシュ計算"}
+    B --> C{"キャッシュに<br/>ハッシュが存在？"}
+    C -->|"ヒット"| D["キャッシュから復元<br/>（即座に完了）"]
+    C -->|"ミス"| E["タスク実行"]
+    E --> F["結果をキャッシュに保存"]
+    D --> G["完了"]
+    F --> G
+```
+
 ### ローカルキャッシュ
 
-```text
-node_modules/.cache/turbo/
-├── 7a8b9c...  # build タスクのキャッシュ
-├── 3d4e5f...  # lint タスクのキャッシュ
-└── ...
-```
+キャッシュは `node_modules/.cache/turbo/` に保存されます。
 
 キャッシュヒット時は実行をスキップします。
 

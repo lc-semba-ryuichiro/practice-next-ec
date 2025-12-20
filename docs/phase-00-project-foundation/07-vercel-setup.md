@@ -5,6 +5,15 @@
 **Vercel** は、フロントエンドのデプロイ・ホスティングプラットフォームです。
 Next.js の開発元であり、Next.js との統合が最も優れています。
 
+```mermaid
+flowchart LR
+    subgraph "開発フロー"
+        DEV["ローカル開発"] -->|"git push"| GH["GitHub"]
+        GH -->|"PR 作成"| PREVIEW["Vercel<br/>プレビュー"]
+        GH -->|"main マージ"| PROD["Vercel<br/>本番"]
+    end
+```
+
 ### 特徴
 
 - ゼロ設定デプロイ - Git リポジトリを接続するだけ
@@ -119,6 +128,18 @@ Environment Variables
 ---
 
 ## 環境変数の管理
+
+Vercel では環境ごとに異なる環境変数を設定できます。
+
+```mermaid
+flowchart TD
+    subgraph "環境別設定"
+        ENV["環境変数"]
+        ENV --> DEV["Development<br/>ローカル開発"]
+        ENV --> PREV["Preview<br/>PR プレビュー"]
+        ENV --> PROD["Production<br/>本番"]
+    end
+```
 
 ### Dashboard での設定
 

@@ -15,13 +15,15 @@
 
 ### マルチレポ（Multirepo / Polyrepo）
 
-```text
-組織/
-├── frontend-repo/        # フロントエンド用リポジトリ
-├── backend-repo/         # バックエンド用リポジトリ
-├── shared-ui-repo/       # 共有 UI ライブラリ
-├── admin-dashboard-repo/ # 管理画面
-└── mobile-app-repo/      # モバイルアプリ
+```mermaid
+graph TD
+    subgraph "マルチレポ構成"
+        A["frontend-repo"]
+        B["backend-repo"]
+        C["shared-ui-repo"]
+        D["admin-dashboard-repo"]
+        E["mobile-app-repo"]
+    end
 ```
 
 特徴は以下のとおりです。
@@ -32,16 +34,22 @@
 
 ### モノレポ（Monorepo）
 
-```text
-組織/
-└── main-repo/
-    ├── apps/
-    │   ├── frontend/
-    │   ├── backend/
-    │   ├── admin-dashboard/
-    │   └── mobile-app/
-    └── packages/
-        └── shared-ui/
+```mermaid
+graph TD
+    subgraph "モノレポ構成"
+        REPO["main-repo"]
+        subgraph apps["apps/"]
+            A1["frontend"]
+            A2["backend"]
+            A3["admin-dashboard"]
+            A4["mobile-app"]
+        end
+        subgraph packages["packages/"]
+            P1["shared-ui"]
+        end
+        REPO --> apps
+        REPO --> packages
+    end
 ```
 
 特徴は以下のとおりです。
@@ -83,6 +91,16 @@ tooling/
 
 **マルチレポの場合:**
 
+```mermaid
+flowchart LR
+    subgraph "マルチレポでの変更フロー"
+        A["shared-ui-repo で変更"] --> B["npm publish"]
+        B --> C["frontend-repo で npm update"]
+        B --> D["backend-repo で npm update"]
+        B --> E["admin-repo で npm update"]
+    end
+```
+
 1. shared-ui-repo で Button を変更
 2. npm に公開
 3. frontend-repo で npm update
@@ -90,6 +108,14 @@ tooling/
 5. admin-dashboard-repo で npm update
 
 **モノレポの場合:**
+
+```mermaid
+flowchart LR
+    subgraph "モノレポでの変更フロー"
+        A["packages/ui で変更"] --> B["1 つの PR"]
+        B --> C["全アプリに即座に反映"]
+    end
+```
 
 1. packages/ui で Button を変更
 2. 1 つの PR ですべてのアプリが更新される
