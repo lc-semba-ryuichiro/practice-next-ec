@@ -165,7 +165,7 @@ export default [...nextConfig];
 
 ## TypeScript 設定
 
-TypeScript の設定は、ベース設定から用途別に継承する構造になっています。
+TypeScript では、ベース設定から用途別に継承する構造を採用しています。
 
 ```mermaid
 flowchart TD

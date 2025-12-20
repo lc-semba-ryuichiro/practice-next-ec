@@ -99,7 +99,7 @@ flowchart LR
     end
 ```
 
-**例:** `feat(ui): Button コンポーネントを追加`
+例: `feat(ui): Button コンポーネントを追加`
 
 ### type（種類）
 
