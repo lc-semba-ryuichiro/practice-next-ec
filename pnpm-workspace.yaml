@@ -34,12 +34,16 @@ catalog:
   "@vitest/browser-playwright": ^4.0.16
   "@vitest/coverage-v8": ^4.0.16
   "@vitest/ui": ^4.0.16
+  class-variance-authority: ^0.7.1
+  clsx: ^2.1.1
   dependency-cruiser: ^17.3.4
   eslint: ^9.39.2
   eslint-config-next: ^16.1.0
   eslint-config-prettier: ^10.1.8
   eslint-plugin-storybook: ^10.1.10
+  fast-check: ^4.5.0
   jotai: ^2.16.0
+  lucide-react: ^0.562.0
   msw: ^2.12.4
   msw-storybook-addon: ^2.0.6
   next: ^16.1.0
@@ -52,6 +56,10 @@ catalog:
   prettier-plugin-tailwindcss: ^0.7.2
   react: ^19.2.3
   react-dom: ^19.2.3
+  reg-keygen-git-hash-plugin: ^0.14.5
+  reg-notify-github-plugin: ^0.14.5
+  reg-publish-s3-plugin: ^0.14.4
+  reg-suit: ^0.14.5
   remark: ^15.0.1
   remark-cli: ^12.0.1
   remark-frontmatter: ^5.0.0
@@ -62,12 +70,15 @@ catalog:
   remark-toc: ^9.0.0
   secretlint: ^11.2.5
   storybook: ^10.1.10
+  storycap-testrun: ^1.0.0
+  tailwind-merge: ^3.4.0
   tailwindcss: ^4.1.18
   textlint: ^15.5.0
   textlint-filter-rule-allowlist: ^4.0.0
   textlint-filter-rule-comments: ^1.2.2
   textlint-plugin-html: ^1.0.1
   textlint-rule-preset-ja-technical-writing: ^12.0.2
+  tw-animate-css: ^1.4.0
   typedoc: ^0.28.15
   typescript: ^5.9.3
   vite: ^7.3.0
