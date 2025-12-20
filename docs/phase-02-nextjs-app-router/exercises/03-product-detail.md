@@ -80,6 +80,8 @@ export function getRelatedProducts(category: string, excludeId: string): Product
 }
 ```
 
+> **Note**: この演習ではモックデータを使用していますが、実際のプロジェクトでは API やデータベースからデータを取得します。Phase 5 でデータ取得について詳しく学びます。
+
 ---
 
 ## ステップ 3: 商品詳細ページ

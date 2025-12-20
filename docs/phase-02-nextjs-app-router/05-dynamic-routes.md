@@ -276,7 +276,7 @@ export default async function ProductPage({ params }: Props): Promise<React.Reac
 
 ## searchParams（クエリパラメータ）
 
-動的ルートとは別に、クエリパラメータも受け取れます。
+動的ルートとは別に、クエリパラメータも受け取れます。Next.js 15 以降では、`searchParams` も `params` と同様に Promise として渡されます。
 
 ```tsx
 // app/products/page.tsx
