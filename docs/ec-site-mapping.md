@@ -8,32 +8,32 @@ EC サイトの各機能がどのフェーズで実装されるかをまとめ�
 
 ### コア機能
 
-| 機能                   | 対応フェーズ | 画面/コンポーネント  | 主な技術               |
-| ---------------------- | ------------ | -------------------- | ---------------------- |
-| 商品カード表示         | Phase 1      | ProductCard          | React, Tailwind        |
-| 商品一覧ページ         | Phase 1, 2   | /products            | Next.js, SSG           |
-| 商品詳細ページ         | Phase 2      | /products/\[id\]     | 動的ルート, ISR        |
-| カテゴリページ         | Phase 2      | /categories/\[slug\] | 動的ルート             |
-| ページレイアウト       | Phase 2      | layout.tsx           | App Router             |
-| デザインシステム       | Phase 3      | packages/ui          | Atomic Design          |
-| フォームコンポーネント | Phase 3      | Input, Select, etc.  | Compound Components    |
-| ショッピングカート     | Phase 4      | /cart, CartDrawer    | Jotai, localStorage    |
-| お気に入り機能         | Phase 4      | /favorites           | Jotai, atomWithStorage |
-| 最近見た商品           | Phase 4      | RecentlyViewed       | Jotai                  |
-| 商品検索               | Phase 5      | /search              | MSW, Server fetch      |
-| 商品フィルター         | Phase 5      | ProductFilter        | URL パラメータ         |
+| 機能                   | 対応フェーズ | 画面/コンポーネント | 主な技術               |
+| ---------------------- | ------------ | ------------------- | ---------------------- |
+| 商品カード表示         | Phase 1      | ProductCard         | React, Tailwind        |
+| 商品一覧ページ         | Phase 1, 2   | /products           | Next.js, SSG           |
+| 商品詳細ページ         | Phase 2      | /products/\[id]     | 動的ルート, ISR        |
+| カテゴリページ         | Phase 2      | /categories/\[slug] | 動的ルート             |
+| ページレイアウト       | Phase 2      | layout.tsx          | App Router             |
+| デザインシステム       | Phase 3      | packages/ui         | Atomic Design          |
+| フォームコンポーネント | Phase 3      | Input, Select, etc. | Compound Components    |
+| ショッピングカート     | Phase 4      | /cart, CartDrawer   | Jotai, localStorage    |
+| お気に入り機能         | Phase 4      | /favorites          | Jotai, atomWithStorage |
+| 最近見た商品           | Phase 4      | RecentlyViewed      | Jotai                  |
+| 商品検索               | Phase 5      | /search             | MSW, Server fetch      |
+| 商品フィルター         | Phase 5      | ProductFilter       | URL パラメータ         |
 
 ### 認証・ユーザー機能
 
-| 機能             | 対応フェーズ | 画面/コンポーネント   | 主な技術            |
-| ---------------- | ------------ | --------------------- | ------------------- |
-| ユーザー登録     | Phase 7, 8   | /register             | Zod, Server Actions |
-| ログイン         | Phase 8      | /login                | Cookie 認証         |
-| ログアウト       | Phase 8      | -                     | Cookie 削除         |
-| マイページ       | Phase 8      | /mypage               | Middleware 保護     |
-| プロフィール編集 | Phase 8      | /mypage/profile       | Server Actions      |
-| 注文履歴         | Phase 9      | /mypage/orders        | API Routes          |
-| 注文詳細         | Phase 9      | /mypage/orders/\[id\] | 動的ルート          |
+| 機能             | 対応フェーズ | 画面/コンポーネント  | 主な技術            |
+| ---------------- | ------------ | -------------------- | ------------------- |
+| ユーザー登録     | Phase 7, 8   | /register            | Zod, Server Actions |
+| ログイン         | Phase 8      | /login               | Cookie 認証         |
+| ログアウト       | Phase 8      | -                    | Cookie 削除         |
+| マイページ       | Phase 8      | /mypage              | Middleware 保護     |
+| プロフィール編集 | Phase 8      | /mypage/profile      | Server Actions      |
+| 注文履歴         | Phase 9      | /mypage/orders       | API Routes          |
+| 注文詳細         | Phase 9      | /mypage/orders/\[id] | 動的ルート          |
 
 ### 購入フロー
 
@@ -81,15 +81,15 @@ EC サイトの各機能がどのフェーズで実装されるかをまとめ�
 
 ## SEO・マーケティング機能
 
-| 機能            | 対応フェーズ | 実装箇所            | 主な技術                  |
-| --------------- | ------------ | ------------------- | ------------------------- |
-| メタデータ      | Phase 11     | generateMetadata    | Metadata API              |
-| OG 画像生成     | Phase 11     | /api/og             | ImageResponse             |
-| 構造化データ    | Phase 11     | JSON-LD             | Product, BreadcrumbList   |
-| サイトマップ    | Phase 11     | sitemap.ts          | 動的生成                  |
-| パンくずリスト  | Phase 11     | Breadcrumb          | 構造化データ連携          |
-| キャンペーン LP | Phase 11     | /campaigns/\[slug\] | SSG, generateStaticParams |
-| カウントダウン  | Phase 11     | Countdown           | Client Component          |
+| 機能            | 対応フェーズ | 実装箇所           | 主な技術                  |
+| --------------- | ------------ | ------------------ | ------------------------- |
+| メタデータ      | Phase 11     | generateMetadata   | Metadata API              |
+| OG 画像生成     | Phase 11     | /api/og            | ImageResponse             |
+| 構造化データ    | Phase 11     | JSON-LD            | Product, BreadcrumbList   |
+| サイトマップ    | Phase 11     | sitemap.ts         | 動的生成                  |
+| パンくずリスト  | Phase 11     | Breadcrumb         | 構造化データ連携          |
+| キャンペーン LP | Phase 11     | /campaigns/\[slug] | SSG, generateStaticParams |
+| カウントダウン  | Phase 11     | Countdown          | Client Component          |
 
 ---
 
@@ -110,7 +110,7 @@ EC サイトの各機能がどのフェーズで実装されるかをまとめ�
 
 | 機能             | 対応フェーズ | 実装箇所         | 主な技術               |
 | ---------------- | ------------ | ---------------- | ---------------------- |
-| 多言語対応       | Phase 16     | /\[locale\]/\*   | i18n ルーティング      |
+| 多言語対応       | Phase 16     | /\[locale]/\*    | i18n ルーティング      |
 | 言語切替         | Phase 16     | LanguageSwitcher | URL ベース             |
 | 通貨ローカライズ | Phase 16     | formatPrice      | Intl.NumberFormat      |
 | 日付フォーマット | Phase 16     | formatDate       | Intl.DateTimeFormat    |
