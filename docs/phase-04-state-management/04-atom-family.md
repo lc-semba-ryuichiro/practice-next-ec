@@ -347,14 +347,14 @@ const cartTotalAtom = atom((get) => {
 import { atom } from "jotai";
 import { atomFamily, atomWithStorage } from "jotai/utils";
 
-// お気に入りの商品 ID セット（永続化）
-export const favoriteIdsAtom = atomWithStorage<Set<string>>("favorites", new Set());
+// お気に入りの商品 ID リスト（永続化）
+export const favoriteIdsAtom = atomWithStorage<string[]>("favorites", []);
 
 // 商品ごとのお気に入り状態（派生 Atom）
 export const isFavoriteFamily = atomFamily((productId: string) =>
   atom((get) => {
     const favorites = get(favoriteIdsAtom);
-    return favorites.has(productId);
+    return favorites.includes(productId);
   })
 );
 
@@ -362,15 +362,15 @@ export const isFavoriteFamily = atomFamily((productId: string) =>
 export const toggleFavoriteFamily = atomFamily((productId: string) =>
   atom(null, (get, set) => {
     const favorites = get(favoriteIdsAtom);
-    const newFavorites = new Set(favorites);
 
-    if (newFavorites.has(productId)) {
-      newFavorites.delete(productId);
+    if (favorites.includes(productId)) {
+      set(
+        favoriteIdsAtom,
+        favorites.filter((id) => id !== productId)
+      );
     } else {
-      newFavorites.add(productId);
+      set(favoriteIdsAtom, [...favorites, productId]);
     }
-
-    set(favoriteIdsAtom, newFavorites);
   })
 );
 ```
