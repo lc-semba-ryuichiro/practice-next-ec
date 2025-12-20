@@ -63,6 +63,8 @@ React / Next.js 開発で使用する専門用語の解説です。
 
 ## React 関連
 
+> 📚 公式ドキュメント: <https://react.dev/>
+
 ### JSX (JavaScript XML)
 
 JavaScript の中に HTML のような構文を書ける拡張構文。React コンポーネントの UI を記述するために使用する。
@@ -132,6 +134,8 @@ state や props の変更によってコンポーネントが再描画される�
 ---
 
 ## Next.js 関連
+
+> 📚 公式ドキュメント: <https://nextjs.org/docs>
 
 ### App Router
 
