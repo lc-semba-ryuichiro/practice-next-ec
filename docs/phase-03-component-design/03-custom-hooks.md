@@ -246,10 +246,10 @@ export function useIsDesktop(): boolean {
 ```tsx
 function ProductGrid({ products }: { products: Product[] }): JSX.Element {
   const isMobile = useIsMobile();
-  const columns = isMobile ? 2 : 4;
+  const gridColsClass = isMobile ? "grid-cols-2" : "grid-cols-4";
 
   return (
-    <div className={`grid grid-cols-${columns} gap-4`}>
+    <div className={`grid ${gridColsClass} gap-4`}>
       {products.map((product) => (
         <ProductCard
           key={product.id}
@@ -353,14 +353,14 @@ export function useCart(): UseCartReturn {
 ```tsx
 function AddToCartButton({ productId }: { productId: string }): JSX.Element {
   const { addItem, isInCart } = useCart();
-  const isAdded = isInCart(productId);
+  const isItemInCart = isInCart(productId);
 
   return (
     <Button
       onClick={() => addItem(productId)}
-      variant={isAdded ? "outline" : "default"}
+      variant={isItemInCart ? "outline" : "default"}
     >
-      {isAdded ? "カートに追加済み" : "カートに追加"}
+      {isItemInCart ? "カートに追加済み" : "カートに追加"}
     </Button>
   );
 }
@@ -429,16 +429,16 @@ export function useFavorites(): UseFavoritesReturn {
 ```tsx
 function FavoriteButton({ productId }: { productId: string }): JSX.Element {
   const { toggleFavorite, isFavorite } = useFavorites();
-  const isLiked = isFavorite(productId);
+  const isFavorited = isFavorite(productId);
 
   return (
     <Button
       variant="ghost"
       size="icon"
       onClick={() => toggleFavorite(productId)}
-      aria-label={isLiked ? "お気に入りから削除" : "お気に入りに追加"}
+      aria-label={isFavorited ? "お気に入りから削除" : "お気に入りに追加"}
     >
-      <Heart className={isLiked ? "fill-red-500 text-red-500" : ""} />
+      <Heart className={isFavorited ? "fill-red-500 text-red-500" : ""} />
     </Button>
   );
 }
