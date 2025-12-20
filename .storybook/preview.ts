@@ -1,11 +1,11 @@
-import type { Preview } from '@storybook/nextjs-vite'
+import type { Preview } from "@storybook/nextjs-vite";
 
 const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
   },

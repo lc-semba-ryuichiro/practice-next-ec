@@ -2,7 +2,7 @@
   "enabledPlugins": {
     "typescript-lsp@claude-plugins-official": true
   },
-    "permissions": {
+  "permissions": {
     "allow": [
       "Bash(gh issue view:*)",
       "Bash(gh search:*)",
