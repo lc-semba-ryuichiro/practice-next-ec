@@ -46,30 +46,15 @@
 
 ## 目次
 
-1. [モノレポの概念とメリット](./01-monorepo-concepts.md)
-2. [Turborepo セットアップ](./02-turborepo-setup.md)
-3. [pnpm ワークスペース設定](./03-pnpm-workspace.md)
-4. [共有設定パッケージ](./04-shared-tooling.md)
-5. [Git ワークフロー概要](./05-git-workflow.md)
-6. [GitHub Actions による CI/CD](./06-github-actions.md)
-7. [Vercel セットアップ](./07-vercel-setup.md)
-8. [モノレポでの Vercel 設定](./08-vercel-monorepo.md)
-
-### 学習フロー
-
-```mermaid
-graph LR
-    A["01 モノレポ概念"] --> B["02 Turborepo"]
-    A --> C["03 pnpm"]
-    B --> D["04 共有設定"]
-    C --> D
-    D --> E["05 Git ワークフロー"]
-    E --> F["06 GitHub Actions"]
-    F --> G["07 Vercel"]
-    G --> H["08 Vercel モノレポ"]
-```
-
----
+- [演習問題](#演習問題)
+- [セットアップするモノレポ構成](#セットアップするモノレポ構成)
+- [使用ツール](#使用ツール)
+- [関連する EC サイト機能](#関連する-ec-サイト機能)
+- [推奨学習リソース](#推奨学習リソース)
+  - [公式ドキュメント](#公式ドキュメント)
+  - [参考記事](#参考記事)
+- [自己チェックリスト](#自己チェックリスト)
+- [次のフェーズ](#次のフェーズ)
 
 ## 演習問題
 
