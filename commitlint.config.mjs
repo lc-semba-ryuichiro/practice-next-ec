@@ -18,7 +18,7 @@ export default {
         "revert", // コミットの取り消し
       ],
     ],
-    "subject-case": [2, "never", ["start-case", "pascal-case", "upper-case"]],
+    "subject-case": [0], // 固有名詞（Phase, Storybook など）を許可
     "subject-max-length": [2, "always", 72],
     "body-max-line-length": [2, "always", 100],
   },
