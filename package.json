@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "jotai": "catalog:",
@@ -30,6 +32,7 @@
     "@storybook/addon-vitest": "catalog:",
     "@storybook/mdx2-csf": "catalog:",
     "@storybook/nextjs": "catalog:",
+    "@storybook/nextjs-vite": "catalog:",
     "@storybook/test-runner": "catalog:",
     "@stryker-mutator/core": "catalog:",
     "@stryker-mutator/typescript-checker": "catalog:",
@@ -44,15 +47,18 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "@vitest/browser-playwright": "catalog:",
     "@vitest/coverage-v8": "catalog:",
     "@vitest/ui": "catalog:",
     "dependency-cruiser": "catalog:",
     "eslint": "catalog:",
     "eslint-config-next": "catalog:",
+    "eslint-plugin-storybook": "catalog:",
     "msw": "catalog:",
     "msw-storybook-addon": "catalog:",
     "oxlint": "catalog:",
     "oxlint-tsgolint": "catalog:",
+    "playwright": "catalog:",
     "playwright-bdd": "catalog:",
     "prettier": "catalog:",
     "prettier-plugin-packagejson": "catalog:",
@@ -75,6 +81,7 @@
     "textlint-rule-preset-ja-technical-writing": "catalog:",
     "typedoc": "catalog:",
     "typescript": "catalog:",
+    "vite": "catalog:",
     "vitest": "catalog:"
   }
 }
