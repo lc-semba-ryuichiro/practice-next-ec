@@ -1,0 +1,15 @@
+# https://browsersl.ist/
+# 対象ブラウザの定義
+
+# Production: モダンブラウザのみ
+[production]
+>= 0.5%
+last 2 versions
+not dead
+not op_mini all
+
+# Development: 最新ブラウザのみ（高速ビルド）
+[development]
+last 1 chrome version
+last 1 firefox version
+last 1 safari version

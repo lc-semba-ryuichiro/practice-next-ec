@@ -1,0 +1,19 @@
+version: 2
+updates:
+  # GitHub Actions の依存関係を自動更新
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Asia/Tokyo"
+    labels:
+      - "依存関係"
+      - "GitHub Actions"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    cooldown:
+      default-days: 7
+    open-pull-requests-limit: 10

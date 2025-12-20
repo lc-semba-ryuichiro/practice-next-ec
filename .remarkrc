@@ -1,0 +1,20 @@
+{
+  "plugins": [
+    "remark-preset-lint-consistent",
+    "remark-preset-lint-recommended",
+    "remark-gfm",
+    [
+      "remark-toc",
+      {
+        "heading": "目次|table of contents",
+        "maxDepth": 3
+      }
+    ],
+    ["remark-frontmatter", ["yaml"]]
+  ],
+  "settings": {
+    "bullet": "-",
+    "emphasis": "*",
+    "strong": "*"
+  }
+}

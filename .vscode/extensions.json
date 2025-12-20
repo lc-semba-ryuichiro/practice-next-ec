@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "anthropic.claude-code",
+    "astro-build.astro-vscode",
+    "openai.chatgpt",
+    "github.copilot",
+    "github.vscode-github-actions",
+    "unifiedjs.vscode-remark",
+    "ms-playwright.playwright",
+    "vitest.explorer"
+  ]
+}

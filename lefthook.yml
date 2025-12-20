@@ -1,37 +1,47 @@
-pre-push:
+# lefthook.yml
+
+# pre-commit: formatter のみ（高速）
+pre-commit:
+  parallel: true
   jobs:
-    - name: packages audit
-      tags:
-        - frontend
-        - security
-      run: pnpm audit
-#
-#     - name: gems audit
-#       tags:
-#         - backend
-#         - security
-#       run: bundle audit
-#
-# pre-commit:
-#   parallel: true
-#   jobs:
-#     - run: yarn eslint {staged_files}
-#       glob: "*.{js,ts,jsx,tsx}"
-#
-#     - name: rubocop
-#       glob: "*.rb"
-#       exclude:
-#         - config/application.rb
-#         - config/routes.rb
-#       run: bundle exec rubocop --force-exclusion {all_files}
-#
-#     - name: govet
-#       files: git ls-files -m
-#       glob: "*.go"
-#       run: go vet {files}
-#
-#     - script: "hello.js"
-#       runner: node
-#
-#     - script: "hello.go"
-#       runner: go run
+    - name: prettier
+      glob: "*.{js,jsx,ts,tsx,mjs,mts,json,md,mdx,css,yaml,yml}"
+      run: pnpm exec prettier --check {staged_files}
+      stage_fixed: true
+
+# commit-msg: コミットメッセージの lint
+commit-msg:
+  jobs:
+    - name: commitlint
+      run: pnpm exec commitlint --edit {1}
+
+# pre-push: 全ての lint チェック
+pre-push:
+  parallel: true
+  jobs:
+    - name: eslint
+      run: pnpm exec eslint . --max-warnings 0
+
+    - name: typecheck
+      run: pnpm exec tsc --noEmit
+
+    - name: stylelint
+      run: pnpm exec stylelint "**/*.css"
+
+    - name: browserslist
+      run: pnpm exec browserslist
+
+    - name: secretlint
+      run: pnpm exec secretlint "**/*"
+
+    - name: textlint
+      run: pnpm exec textlint "**/*.md"
+
+    - name: remark
+      run: pnpm exec remark . --quiet
+
+    - name: audit
+      run: pnpm audit --audit-level=moderate
+
+    - name: build
+      run: pnpm build

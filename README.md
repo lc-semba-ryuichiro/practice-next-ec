@@ -8,17 +8,17 @@ React/Next.js を学習しながら EC サイトを構築するプロジェク�
 
 ## 技術スタック
 
-| カテゴリ | 技術 |
-| :--------| :-----|
-| フレームワーク | Next.js 16 (App Router) |
-| 言語 | TypeScript 5.9+ |
-| スタイリング | Tailwind CSS 4, shadcn/ui |
-| 状態管理 | Jotai |
-| バリデーション | Zod 4 |
-| テスト | Vitest, Playwright, Testing Library |
-| コンポーネント開発 | Storybook 10 |
-| パッケージマネージャー | pnpm 10 |
-| ランタイム | Node.js 24 |
+| カテゴリ               | 技術                                |
+| :--------------------- | :---------------------------------- |
+| フレームワーク         | Next.js 16 (App Router)             |
+| 言語                   | TypeScript 5.9+                     |
+| スタイリング           | Tailwind CSS 4, shadcn/ui           |
+| 状態管理               | Jotai                               |
+| バリデーション         | Zod 4                               |
+| テスト                 | Vitest, Playwright, Testing Library |
+| コンポーネント開発     | Storybook 10                        |
+| パッケージマネージャー | pnpm 10                             |
+| ランタイム             | Node.js 24                          |
 
 ## セットアップ
 
