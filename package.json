@@ -60,6 +60,7 @@
     "eslint-config-prettier": "catalog:",
     "eslint-plugin-storybook": "catalog:",
     "fast-check": "catalog:",
+    "lefthook": "catalog:",
     "msw": "catalog:",
     "msw-storybook-addon": "catalog:",
     "oxlint": "catalog:",

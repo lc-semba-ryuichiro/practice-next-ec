@@ -43,6 +43,7 @@ catalog:
   eslint-plugin-storybook: ^10.1.10
   fast-check: ^4.5.0
   jotai: ^2.16.0
+  lefthook: ^2.0.12
   lucide-react: ^0.562.0
   msw: ^2.12.4
   msw-storybook-addon: ^2.0.6
