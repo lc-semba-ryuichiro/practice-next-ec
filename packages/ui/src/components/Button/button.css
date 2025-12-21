@@ -1,3 +1,9 @@
+:root {
+  --storybook-button-primary-bg: #555ab9;
+  --storybook-button-primary-color: white;
+  --storybook-button-secondary-color: #333;
+}
+
 .storybook-button {
   border: 0;
   border-radius: 3em;
@@ -8,13 +14,13 @@
   line-height: 1;
 }
 .storybook-button--primary {
-  background-color: #555ab9;
-  color: white;
+  background-color: var(--storybook-button-primary-bg);
+  color: var(--storybook-button-primary-color);
 }
 .storybook-button--secondary {
   background-color: transparent;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-  color: #333;
+  color: var(--storybook-button-secondary-color);
 }
 .storybook-button--small {
   font-size: 12px;

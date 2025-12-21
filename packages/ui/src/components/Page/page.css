@@ -1,5 +1,11 @@
+:root {
+  --storybook-page-color: #333;
+  --storybook-page-tip-color: #357a14;
+  --storybook-page-icon-fill: #1ea7fd;
+}
+
 .storybook-page {
-  color: #333;
+  color: var(--storybook-page-color);
   font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 24px;
@@ -37,7 +43,7 @@
 .storybook-page .tip {
   background: #e7fdd8;
   border-radius: 1em;
-  color: #357a14;
+  color: var(--storybook-page-tip-color);
   display: inline-block;
   font-size: 11px;
   font-weight: 700;
@@ -64,5 +70,5 @@
 }
 
 .storybook-page .tip-wrapper svg path {
-  fill: #1ea7fd;
+  fill: var(--storybook-page-icon-fill);
 }

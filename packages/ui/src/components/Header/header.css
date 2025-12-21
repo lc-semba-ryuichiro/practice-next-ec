@@ -1,3 +1,7 @@
+:root {
+  --storybook-header-welcome-color: #333;
+}
+
 .storybook-header {
   align-items: center;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -26,7 +30,7 @@
 }
 
 .storybook-header .welcome {
-  color: #333;
+  color: var(--storybook-header-welcome-color);
   font-size: 14px;
   margin-right: 10px;
 }
