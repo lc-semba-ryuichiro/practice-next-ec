@@ -171,7 +171,7 @@ import { z } from "zod/v4";
 
 // Zod スキーマを定義
 const loginSchema = z.object({
-  email: z.email("有効なメールアドレスを入力してください"),
+  email: z.string().email("有効なメールアドレスを入力してください"),
   password: z.string().min(8, "パスワードは8文字以上です"),
 });
 
