@@ -7,15 +7,63 @@ React / Next.js 開発で使用する専門用語の解説です。
 ## 目次
 
 - [React 関連](#react-関連)
+  - [JSX (JavaScript XML)](#jsx-javascript-xml)
+  - [Component（コンポーネント）](#componentコンポーネント)
+  - [Props（プロパティ）](#propsプロパティ)
+  - [State（ステート）](#stateステート)
+  - [Hooks（フック）](#hooksフック)
+  - [Virtual DOM（仮想 DOM）](#virtual-dom仮想-dom)
+  - [Reconciliation（リコンシリエーション）](#reconciliationリコンシリエーション)
+  - [Re-render（再レンダリング）](#re-render再レンダリング)
 - [Next.js 関連](#nextjs-関連)
+  - [App Router](#app-router)
+  - [Pages Router](#pages-router)
+  - [Server Components（サーバーコンポーネント）](#server-componentsサーバーコンポーネント)
+  - [Client Components（クライアントコンポーネント）](#client-componentsクライアントコンポーネント)
+  - [Layout（レイアウト）](#layoutレイアウト)
+  - [Template（テンプレート）](#templateテンプレート)
+  - [Dynamic Routes（動的ルート）](#dynamic-routes動的ルート)
+  - [Route Groups（ルートグループ）](#route-groupsルートグループ)
+  - [Parallel Routes（パラレルルート）](#parallel-routesパラレルルート)
+  - [Intercepting Routes（インターセプティングルート）](#intercepting-routesインターセプティングルート)
+  - [Middleware](#middleware)
+  - [Edge Runtime](#edge-runtime)
+- [レンダリング戦略](#レンダリング戦略)
+  - [SSR (Server-Side Rendering)](#ssr-server-side-rendering)
+  - [SSG (Static Site Generation)](#ssg-static-site-generation)
+  - [ISR (Incremental Static Regeneration)](#isr-incremental-static-regeneration)
+  - [PPR (Partial Prerendering)](#ppr-partial-prerendering)
+  - [Streaming](#streaming)
+  - [Hydration（ハイドレーション）](#hydrationハイドレーション)
 - [状態管理](#状態管理)
+  - [Atom（アトム）](#atomアトム)
+  - [Derived Atom（派生アトム）](#derived-atom派生アトム)
+  - [Atom Family](#atom-family)
+  - [Provider](#provider)
 - [テスト関連](#テスト関連)
+  - [Unit Test（ユニットテスト）](#unit-testユニットテスト)
+  - [Integration Test（統合テスト）](#integration-test統合テスト)
+  - [E2E Test（End-to-End テスト）](#e2e-testend-to-end-テスト)
+  - [TDD (Test-Driven Development)](#tdd-test-driven-development)
+  - [Component Testing](#component-testing)
+  - [Visual Regression Testing (VRT)](#visual-regression-testing-vrt)
+  - [Mutation Testing（ミューテーションテスト）](#mutation-testingミューテーションテスト)
+  - [Property-based Testing](#property-based-testing)
+  - [Mock（モック）](#mockモック)
+  - [Stub（スタブ）](#stubスタブ)
+  - [Spy（スパイ）](#spyスパイ)
 - [パフォーマンス](#パフォーマンス)
+  - [Core Web Vitals](#core-web-vitals)
+  - [Code Splitting（コード分割）](#code-splittingコード分割)
+  - [Lazy Loading（遅延読み込み）](#lazy-loading遅延読み込み)
+  - [Memoization（メモ化）](#memoizationメモ化)
+  - [Tree Shaking](#tree-shaking)
+  - [Bundle Analyzer](#bundle-analyzer)
 - [略語一覧](#略語一覧)
 
----
-
 ## React 関連
+
+> 📚 公式ドキュメント: <https://react.dev/>
 
 ### JSX (JavaScript XML)
 
@@ -86,6 +134,8 @@ state や props の変更によってコンポーネントが再描画される�
 ---
 
 ## Next.js 関連
+
+> 📚 公式ドキュメント: <https://nextjs.org/docs>
 
 ### App Router
 

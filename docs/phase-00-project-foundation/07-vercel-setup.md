@@ -235,11 +235,11 @@ example.com  A  76.76.21.21
 
 ### 環境ごとのドメイン
 
-| 環境       | ドメイン                 |
-| ---------- | ------------------------ |
-| Production | shop.example.com         |
-| Preview    | preview.shop.example.com |
-| Staging    | staging.shop.example.com |
+| 環境       | ドメイン                  |
+| ---------- | ------------------------- |
+| Production | shop.example.com          |
+| Preview    | preview\.shop.example.com |
+| Staging    | staging.shop.example.com  |
 
 ---
 
