@@ -22,7 +22,9 @@ catalog:
   "@stryker-mutator/core": ^9.4.0
   "@stryker-mutator/typescript-checker": ^9.4.0
   "@stryker-mutator/vitest-runner": ^9.4.0
+  "@t3-oss/env-nextjs": ^0.13.10
   "@tailwindcss/postcss": ^4.1.18
+  "@tanstack/react-query": ^5.90.12
   "@testing-library/dom": ^10.4.1
   "@testing-library/jest-dom": ^6.9.1
   "@testing-library/react": ^16.3.1
@@ -41,6 +43,7 @@ catalog:
   browserslist: ^4.28.1
   class-variance-authority: ^0.7.1
   clsx: ^2.1.1
+  date-fns: ^4.1.0
   dependency-cruiser: ^17.3.4
   eslint: ^9.39.2
   eslint-config-next: ^16.1.0
@@ -67,9 +70,12 @@ catalog:
   msw: ^2.12.4
   msw-storybook-addon: ^2.0.6
   next: ^16.1.0
+  next-intl: ^4.6.1
   npm-run-all2: ^8.0.4
   oxlint: ^1.34.0
   oxlint-tsgolint: ^0.10.0
+  pino: ^10.1.0
+  pino-pretty: ^13.1.3
   playwright: ^1.57.0
   playwright-bdd: ^8.4.2
   prettier: ^3.7.4
@@ -131,6 +137,7 @@ ignoredBuiltDependencies:
 linkWorkspacePackages: true
 
 onlyBuiltDependencies:
+  - "@parcel/watcher"
   - "@swc/core"
   - core-js-pure
   - esbuild
