@@ -60,6 +60,8 @@ EC サイトに必要なユーザー登録、配送先の住所入力、商品�
 - [ ] useOptimistic で楽観的 UI 更新を実装できる
 - [ ] バリデーションエラーをユーザーフレンドリーに表示できる
 - [ ] フロントエンドとバックエンドでバリデーションスキーマを共有できる
+- [ ] react-hook-form でクライアントサイドのフォーム状態を管理できる
+- [ ] react-hook-form と Zod を連携できる
 
 ***
 
@@ -70,6 +72,7 @@ EC サイトに必要なユーザー登録、配送先の住所入力、商品�
 3. [useActionState フック](./03-use-action-state.md)
 4. [楽観的 UI 更新](./04-optimistic-ui.md)
 5. [エラーハンドリング](./05-error-handling.md)
+6. [react-hook-form 基礎](./06-react-hook-form.md)
 
 ### 学習フロー
 
@@ -79,7 +82,9 @@ graph LR
     B --> C["03 useActionState"]
     C --> D["04 楽観的 UI"]
     C --> E["05 エラー処理"]
-    D --> F["演習"]
+    A --> G["06 react-hook-form"]
+    G --> F["演習"]
+    D --> F
     E --> F
 ```
 
@@ -113,12 +118,13 @@ graph TD
 
 ## 使用ツール
 
-| ツール        | バージョン | 用途                            |
-| ---------- | ----- | ----------------------------- |
-| Zod        | 4.x   | スキーマ定義・バリデーション                |
-| React      | 19.x  | useActionState, useOptimistic |
-| Next.js    | 16.x  | Server Actions                |
-| TypeScript | 5.9+  | 型安全なフォーム処理                    |
+| ツール             | バージョン | 用途                            |
+| --------------- | ----- | ----------------------------- |
+| Zod             | 4.x   | スキーマ定義・バリデーション                |
+| React           | 19.x  | useActionState, useOptimistic |
+| Next.js         | 16.x  | Server Actions                |
+| TypeScript      | 5.9+  | 型安全なフォーム処理                    |
+| react-hook-form | 7.x   | クライアントサイドフォーム状態管理             |
 
 ***
 
@@ -188,6 +194,8 @@ Phase 7 を完了する前に、以下を確認してください。
 - [ ] useOptimistic で即座に UI を更新できる
 - [ ] バリデーションエラーを各フィールドに表示できる
 - [ ] packages/validators でスキーマを共有できている
+- [ ] react-hook-form の useForm, register, handleSubmit を使える
+- [ ] zodResolver で Zod と react-hook-form を連携できる
 
 ***
 
