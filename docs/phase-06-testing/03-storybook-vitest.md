@@ -42,7 +42,7 @@ Storybook 10 では `@storybook/addon-vitest` を使って、ストーリーを�
 
 このセクションでは、Storybook と Vitest を連携させ、コンポーネントのインタラクションテストを書く方法を学びます。
 
----
+***
 
 ## addon-vitest とは
 
@@ -67,7 +67,7 @@ graph LR
     end
 ```
 
----
+***
 
 ## セットアップ
 
@@ -118,7 +118,7 @@ export default defineConfig({
 });
 ```
 
----
+***
 
 ## play 関数の基本
 
@@ -166,7 +166,7 @@ play: async ({ canvasElement }) => {
 };
 ```
 
----
+***
 
 ## @storybook/test API
 
@@ -231,7 +231,7 @@ export const WithCallback: Story = {
 };
 ```
 
----
+***
 
 ## EC サイトでの活用例
 
@@ -415,7 +415,7 @@ export const EmptySearchDisabled: Story = {
 };
 ```
 
----
+***
 
 ## 複数ステップのテスト
 
@@ -446,7 +446,7 @@ export const MultiStepInteraction: Story = {
 };
 ```
 
----
+***
 
 ## テストの実行
 
@@ -471,7 +471,7 @@ pnpm test ProductCard.stories.tsx
 pnpm test --watch
 ```
 
----
+***
 
 ## NG / OK パターン
 
@@ -532,21 +532,21 @@ play: async ({ canvasElement }) => {
 };
 ```
 
----
+***
 
 ## VRT（Visual Regression Testing）との関係
 
 Storybook のテストには2つの側面があります。
 
-| テスト種別       | ツール                   | 検証内容                 |
-| ---------------- | ------------------------ | ------------------------ |
-| インタラクション | addon-vitest + play 関数 | 機能が正しく動作するか   |
-| ビジュアル       | Chromatic / reg-suit     | 見た目が変わっていないか |
+| テスト種別    | ツール                    | 検証内容         |
+| -------- | ---------------------- | ------------ |
+| インタラクション | addon-vitest + play 関数 | 機能が正しく動作するか  |
+| ビジュアル    | Chromatic / reg-suit   | 見た目が変わっていないか |
 
 このセクションではインタラクションテストを扱いました。
 VRT については Phase 12 で学習します。
 
----
+***
 
 ## 確認質問
 
@@ -566,7 +566,7 @@ VRT については Phase 12 で学習します。
 
    **回答例**: コールバック関数（onClick, onChange など）をモックしたい場合に使う。`fn()` で作成したモック関数は、呼び出し回数や引数を検証できる。
 
----
+***
 
 ## 次のステップ
 

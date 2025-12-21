@@ -56,7 +56,7 @@ graph LR
     end
 ```
 
----
+***
 
 ## 'use server' ディレクティブ
 
@@ -101,7 +101,7 @@ async function RegisterPage(): Promise<JSX.Element> {
 export default RegisterPage;
 ```
 
----
+***
 
 ## フォームからの呼び出し
 
@@ -153,7 +153,7 @@ export function ContactForm(): JSX.Element {
 }
 ```
 
----
+***
 
 ## データの受け取り
 
@@ -219,7 +219,7 @@ export async function registerUser(formData: FormData): Promise<{
 }
 ```
 
----
+***
 
 ## バリデーションとエラーレスポンス
 
@@ -281,7 +281,7 @@ export async function registerUser(formData: FormData): Promise<ActionState> {
 }
 ```
 
----
+***
 
 ## セキュリティ考慮事項
 
@@ -379,7 +379,7 @@ export async function createComment(formData: FormData): Promise<ActionState> {
 }
 ```
 
----
+***
 
 ## Server Actions vs API Routes
 
@@ -395,13 +395,13 @@ graph TD
     E -->|No| G["Server Actions または API Routes"]
 ```
 
-| 項目               | Server Actions             | API Routes          |
-| ------------------ | -------------------------- | ------------------- |
-| 主な用途           | フォーム送信、データ変更   | 外部 API、Webhook   |
-| 呼び出し元         | フォーム、Client Component | fetch、外部サービス |
-| CSRF 対策          | 自動                       | 手動で実装          |
-| 型安全性           | 高い                       | 手動で型定義        |
-| エンドポイント公開 | なし                       | あり                |
+| 項目        | Server Actions        | API Routes     |
+| --------- | --------------------- | -------------- |
+| 主な用途      | フォーム送信、データ変更          | 外部 API、Webhook |
+| 呼び出し元     | フォーム、Client Component | fetch、外部サービス   |
+| CSRF 対策   | 自動                    | 手動で実装          |
+| 型安全性      | 高い                    | 手動で型定義         |
+| エンドポイント公開 | なし                    | あり             |
 
 ### Server Actions を使うべきケース
 
@@ -417,7 +417,7 @@ graph TD
 - 認証プロバイダーのコールバック
 - CORS が必要なエンドポイント
 
----
+***
 
 ## 実装パターン
 
@@ -471,7 +471,7 @@ export default function ContactPage(): JSX.Element {
 - JavaScript が有効な場合: 非同期でフォームを送信
 - JavaScript が無効な場合: 通常のフォーム送信として動作
 
----
+***
 
 ## EC サイトでの実装例
 
@@ -574,7 +574,7 @@ export async function addToCart(formData: FormData): Promise<ActionState> {
 }
 ```
 
----
+***
 
 ## まとめ
 
@@ -592,7 +592,7 @@ export async function addToCart(formData: FormData): Promise<ActionState> {
 3. 認証が必要なアクションでは認証確認を行う
 4. `revalidatePath` でキャッシュを適切に再検証する
 
----
+***
 
 ## 次のステップ
 

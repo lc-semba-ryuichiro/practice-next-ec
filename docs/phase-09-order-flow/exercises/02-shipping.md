@@ -36,7 +36,7 @@ graph LR
     style B fill:#4caf50,color:#fff
 ```
 
----
+***
 
 ## 完成イメージ
 
@@ -84,14 +84,14 @@ graph LR
 └─────────────────────────────────────────────┘
 ```
 
----
+***
 
 ## 前提条件
 
 - 演習 1（カート確認）が完了していること
 - Phase 7 で学んだ Zod + Server Actions を理解していること
 
----
+***
 
 ## ステップ 1: バリデーションスキーマの作成
 
@@ -182,7 +182,7 @@ export const PREFECTURES = [
 ] as const;
 ```
 
----
+***
 
 ## ステップ 2: ページの作成
 
@@ -224,7 +224,7 @@ export default async function ShippingPage(): Promise<JSX.Element> {
 }
 ```
 
----
+***
 
 ## ステップ 3: フォームコンポーネント
 
@@ -428,7 +428,7 @@ export function FormField({
 }
 ```
 
----
+***
 
 ## ステップ 4: Server Action
 
@@ -483,7 +483,7 @@ export async function saveShippingAddress(
 }
 ```
 
----
+***
 
 ## ステップ 5: 郵便番号から住所を自動入力（オプション）
 
@@ -562,7 +562,7 @@ const handleAutoFill = async (): Promise<void> => {
 };
 ```
 
----
+***
 
 ## 確認ポイント
 
@@ -576,7 +576,7 @@ const handleAutoFill = async (): Promise<void> => {
 - [ ] 「戻る」ボタンでカートページに戻れる
 - [ ] ページを更新しても入力した値が保持される
 
----
+***
 
 ## よくある問題
 
@@ -588,7 +588,7 @@ const handleAutoFill = async (): Promise<void> => {
 
 Server Actions 内で `redirect()` を呼び出していることを確認してください。try-catch の中で `redirect()` を呼ぶと、エラーとして catch される場合があります。
 
----
+***
 
 ## 次の演習
 

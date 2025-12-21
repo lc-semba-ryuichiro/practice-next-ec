@@ -34,7 +34,7 @@
 
 EC サイトで使用するフォームコンポーネント群を実装し、アクセシビリティに配慮した設計を習得します。
 
----
+***
 
 ## 完成イメージ
 
@@ -56,14 +56,14 @@ packages/ui/
 │       └── FormRadioGroup/
 ```
 
----
+***
 
 ## 前提条件
 
 - 演習 1（デザインシステム構築）を完了していること
 - shadcn/ui の基本コンポーネントがインストールされていること
 
----
+***
 
 ## ステップ 1: 基本入力コンポーネント（Atoms）
 
@@ -278,7 +278,7 @@ export const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
 Checkbox.displayName = "Checkbox";
 ```
 
----
+***
 
 ## ステップ 2: フォームフィールドコンポーネント（Molecules）
 
@@ -509,7 +509,7 @@ export const FormRadioGroup = forwardRef<HTMLInputElement, FormRadioGroupProps>(
 FormRadioGroup.displayName = "FormRadioGroup";
 ```
 
----
+***
 
 ## ステップ 3: EC サイト向けフォーム実装例
 
@@ -690,7 +690,7 @@ export function PaymentMethodForm(): JSX.Element {
 }
 ```
 
----
+***
 
 ## ステップ 4: Storybook でドキュメント化
 
@@ -764,7 +764,7 @@ export const Disabled: Story = {
 };
 ```
 
----
+***
 
 ## 確認チェックリスト
 
@@ -788,7 +788,7 @@ export const Disabled: Story = {
 - [ ] 必須、ヒント、エラー状態のストーリーがある
 - [ ] addon-a11y でエラーがない
 
----
+***
 
 ## トラブルシューティング
 
@@ -808,7 +808,7 @@ export const Disabled: Story = {
 <p id="email-error" role="alert">エラーメッセージ</p>
 ```
 
----
+***
 
 ## 発展課題
 
@@ -817,7 +817,7 @@ export const Disabled: Story = {
 3. **リアルタイムバリデーション**: 入力中にバリデーションを実行
 4. **複数ファイルアップロード**: 商品画像アップロード用コンポーネント
 
----
+***
 
 ## 完了条件
 
@@ -825,7 +825,7 @@ export const Disabled: Story = {
 - [ ] Storybook でフォームコンポーネントが確認できる
 - [ ] アクセシビリティチェックに合格している
 
----
+***
 
 ## 次の演習
 

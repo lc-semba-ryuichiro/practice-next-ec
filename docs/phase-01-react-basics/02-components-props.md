@@ -54,7 +54,7 @@ function App(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## コンポーネントの命名規則
 
@@ -86,7 +86,7 @@ product-card.tsx
 cart-button.tsx
 ```
 
----
+***
 
 ## props とは
 
@@ -112,7 +112,7 @@ function Greeting(props: { name: string }): React.ReactElement {
 }
 ```
 
----
+***
 
 ## props の分割代入
 
@@ -157,7 +157,7 @@ function Greeting({ name, age, isVip }: GreetingProps): React.ReactElement {
 />;
 ```
 
----
+***
 
 ## TypeScript での props 型定義
 
@@ -230,7 +230,7 @@ const sampleProduct: Product = {
 <ProductCard product={sampleProduct} />;
 ```
 
----
+***
 
 ## オプショナル props
 
@@ -267,7 +267,7 @@ function Button({
 <Button label="削除" variant="danger" size="small" />
 ```
 
----
+***
 
 ## children プロパティ
 
@@ -321,7 +321,7 @@ function Card({ title, children }: CardProps): React.ReactElement {
 </Card>
 ```
 
----
+***
 
 ## コンポーネントの合成
 
@@ -458,7 +458,7 @@ function ProductCard({ product }: ProductCardProps): React.ReactElement {
 }
 ```
 
----
+***
 
 ## props の読み取り専用性
 
@@ -478,7 +478,7 @@ function GoodComponent({ price }: { price: number }): React.ReactElement {
 }
 ```
 
----
+***
 
 ## コンポーネントの分割粒度
 
@@ -512,7 +512,7 @@ graph TD
     D --> G
 ```
 
----
+***
 
 ## よくある間違い
 
@@ -567,21 +567,21 @@ function Header({ user }: { user: User }): React.ReactElement {
 // → Phase 4 で Jotai を学びます
 ```
 
----
+***
 
 ## まとめ
 
-| 概念               | 説明                                   |
-| ------------------ | -------------------------------------- |
-| コンポーネント     | UI を分割する再利用可能な関数          |
-| props              | 親から子へデータを渡す仕組み           |
-| 分割代入           | props を受け取る推奨パターン           |
-| 型定義             | TypeScript で props の型を定義         |
-| children           | タグ間の要素を受け取る特別な props     |
-| オプショナル props | `?` で省略可能にし、デフォルト値を設定 |
-| 読み取り専用       | props は変更不可                       |
+| 概念           | 説明                       |
+| ------------ | ------------------------ |
+| コンポーネント      | UI を分割する再利用可能な関数         |
+| props        | 親から子へデータを渡す仕組み           |
+| 分割代入         | props を受け取る推奨パターン        |
+| 型定義          | TypeScript で props の型を定義 |
+| children     | タグ間の要素を受け取る特別な props     |
+| オプショナル props | `?` で省略可能にし、デフォルト値を設定    |
+| 読み取り専用       | props は変更不可              |
 
----
+***
 
 ## 次のステップ
 

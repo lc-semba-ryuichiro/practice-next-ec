@@ -49,7 +49,7 @@ graph TD
     A --> B --> C
 ```
 
----
+***
 
 ## Server Component での認証
 
@@ -95,7 +95,7 @@ type Session = {
 };
 ```
 
----
+***
 
 ## Client Component での認証
 
@@ -187,25 +187,25 @@ stateDiagram-v2
     unauthenticated --> authenticated: ログイン
 ```
 
-| status            | session   | 説明             |
-| ----------------- | --------- | ---------------- |
+| status            | session   | 説明       |
+| ----------------- | --------- | -------- |
 | `loading`         | undefined | セッション確認中 |
-| `authenticated`   | Session   | 認証済み         |
-| `unauthenticated` | null      | 未認証           |
+| `authenticated`   | Session   | 認証済み     |
+| `unauthenticated` | null      | 未認証      |
 
----
+***
 
 ## auth() と useSession() の使い分け
 
 ### 比較表
 
-| 項目             | auth()               | useSession()         |
-| ---------------- | -------------------- | -------------------- |
-| 使用場所         | Server Component     | Client Component     |
-| 実行タイミング   | サーバーサイド       | クライアントサイド   |
-| 初期ローディング | なし                 | あり                 |
-| リアルタイム更新 | ページ再読み込み必要 | 自動更新             |
-| SEO              | クローラーに見える   | クローラーに見えない |
+| 項目       | auth()           | useSession()     |
+| -------- | ---------------- | ---------------- |
+| 使用場所     | Server Component | Client Component |
+| 実行タイミング  | サーバーサイド          | クライアントサイド        |
+| 初期ローディング | なし               | あり               |
+| リアルタイム更新 | ページ再読み込み必要       | 自動更新             |
+| SEO      | クローラーに見える        | クローラーに見えない       |
 
 ### 使い分けの指針
 
@@ -265,7 +265,7 @@ export function Header() {
 }
 ```
 
----
+***
 
 ## Route Groups を使った構成
 
@@ -345,7 +345,7 @@ graph TD
     B --> E
 ```
 
----
+***
 
 ## 認証が必要なコンポーネント
 
@@ -428,7 +428,7 @@ export function RequireAuth({ children, fallback }: Props) {
 </RequireAuth>
 ```
 
----
+***
 
 ## ローディング状態の処理
 
@@ -470,7 +470,7 @@ export default function Loading() {
 }
 ```
 
----
+***
 
 ## エラーハンドリング
 
@@ -521,7 +521,7 @@ export default function UnauthorizedPage() {
 }
 ```
 
----
+***
 
 ## セキュリティのベストプラクティス
 
@@ -588,7 +588,7 @@ export default async function UserPage() {
 }
 ```
 
----
+***
 
 ## まとめ
 
@@ -601,7 +601,7 @@ export default async function UserPage() {
 - ローディング状態とエラーハンドリング
 - セキュリティのベストプラクティス
 
----
+***
 
 ## 次のステップ
 

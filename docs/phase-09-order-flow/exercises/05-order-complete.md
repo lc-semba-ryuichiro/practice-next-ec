@@ -33,7 +33,7 @@ graph LR
     style E fill:#4caf50,color:#fff
 ```
 
----
+***
 
 ## 完成イメージ
 
@@ -61,14 +61,14 @@ graph LR
 └─────────────────────────────────────────────┘
 ```
 
----
+***
 
 ## 前提条件
 
 - 演習 4（注文確認）が完了していること
 - 注文が正常に作成されていること
 
----
+***
 
 ## ステップ 1: 注文完了ページ
 
@@ -166,7 +166,7 @@ export default async function CompletePage({ searchParams }: Props): Promise<JSX
 }
 ```
 
----
+***
 
 ## ステップ 2: 状態のクリア
 
@@ -197,7 +197,7 @@ export function ClearCheckoutState(): null {
 }
 ```
 
----
+***
 
 ## ステップ 3: 注文取得関数
 
@@ -241,7 +241,7 @@ export async function getOrders(userId: string): Promise<Order[]> {
 }
 ```
 
----
+***
 
 ## ステップ 4: 注文履歴ページ
 
@@ -466,7 +466,7 @@ export default async function OrderDetailPage({ params }: Props): Promise<JSX.El
 }
 ```
 
----
+***
 
 ## ステップ 5: 注文 API（MSW モック）
 
@@ -538,7 +538,7 @@ export const orderHandlers = [
 ];
 ```
 
----
+***
 
 ## 確認ポイント
 
@@ -552,7 +552,7 @@ export const orderHandlers = [
 - [ ] 注文履歴ページに新しい注文が表示される
 - [ ] 注文詳細ページで注文内容が確認できる
 
----
+***
 
 ## 発展課題
 
@@ -603,7 +603,7 @@ function OrderTimeline({ order }: { order: Order }): JSX.Element {
 }
 ```
 
----
+***
 
 ## まとめ
 
@@ -625,7 +625,7 @@ graph LR
     style F fill:#4caf50,color:#fff
 ```
 
----
+***
 
 ## 次のステップ
 

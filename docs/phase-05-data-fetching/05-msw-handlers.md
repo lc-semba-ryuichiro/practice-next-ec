@@ -38,19 +38,19 @@ export const handlers = [
 ];
 ```
 
----
+***
 
 ## HTTP メソッド対応表
 
-| メソッド | MSW 関数        | ユースケース   |
-| -------- | --------------- | -------------- |
-| GET      | `http.get()`    | データ取得     |
-| POST     | `http.post()`   | データ作成     |
-| PUT      | `http.put()`    | データ全体更新 |
-| PATCH    | `http.patch()`  | データ部分更新 |
-| DELETE   | `http.delete()` | データ削除     |
+| メソッド   | MSW 関数          | ユースケース  |
+| ------ | --------------- | ------- |
+| GET    | `http.get()`    | データ取得   |
+| POST   | `http.post()`   | データ作成   |
+| PUT    | `http.put()`    | データ全体更新 |
+| PATCH  | `http.patch()`  | データ部分更新 |
+| DELETE | `http.delete()` | データ削除   |
 
----
+***
 
 ## パスパラメータの扱い
 
@@ -86,7 +86,7 @@ http.get("/api/categories/:categoryId/products/:productId", ({ params }) => {
 });
 ```
 
----
+***
 
 ## クエリパラメータの扱い
 
@@ -130,7 +130,7 @@ http.get("/api/products", ({ request }) => {
 });
 ```
 
----
+***
 
 ## リクエストボディの処理
 
@@ -181,7 +181,7 @@ export const cartHandlers = [
 ];
 ```
 
----
+***
 
 ## 遅延レスポンス
 
@@ -206,7 +206,7 @@ http.get("/api/products", async () => {
 });
 ```
 
----
+***
 
 ## エラーレスポンス
 
@@ -244,7 +244,7 @@ export const errorHandlers = [
 ];
 ```
 
----
+***
 
 ## レスポンスヘッダーの設定
 
@@ -261,7 +261,7 @@ http.get("/api/products", () => {
 });
 ```
 
----
+***
 
 ## EC サイト向けハンドラー集
 
@@ -414,7 +414,7 @@ export const searchHandlers = [
 ];
 ```
 
----
+***
 
 ## テストでのハンドラー上書き
 
@@ -449,7 +449,7 @@ describe("Products", () => {
 });
 ```
 
----
+***
 
 ## 動的なレスポンス
 
@@ -470,7 +470,7 @@ http.get("/api/products", () => {
 });
 ```
 
----
+***
 
 ## ハンドラーの優先順位
 
@@ -491,20 +491,20 @@ server.use(
 );
 ```
 
----
+***
 
 ## まとめ
 
-| 機能             | 方法                            | 用途                  |
-| ---------------- | ------------------------------- | --------------------- |
-| パスパラメータ   | `{ params }`                    | `/api/products/:id`   |
+| 機能       | 方法                              | 用途                    |
+| -------- | ------------------------------- | --------------------- |
+| パスパラメータ  | `{ params }`                    | `/api/products/:id`   |
 | クエリパラメータ | `new URL(request.url)`          | `/api/products?q=...` |
 | リクエストボディ | `await request.json()`          | POST/PUT/PATCH        |
-| 遅延レスポンス   | `await delay(ms)`               | ローディングテスト    |
-| エラーレスポンス | `HttpResponse(..., { status })` | エラーハンドリング    |
-| ハンドラー上書き | `server.use(...)`               | テストケース          |
+| 遅延レスポンス  | `await delay(ms)`               | ローディングテスト             |
+| エラーレスポンス | `HttpResponse(..., { status })` | エラーハンドリング             |
+| ハンドラー上書き | `server.use(...)`               | テストケース                |
 
----
+***
 
 ## 次のステップ
 

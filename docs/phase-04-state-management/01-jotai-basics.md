@@ -63,7 +63,7 @@ graph TD
 - **TypeScript ファースト** - 型推論が優れている
 - **React に特化** - React の思想に沿った設計
 
----
+***
 
 ## なぜ Jotai を選ぶのか
 
@@ -81,13 +81,13 @@ graph LR
     D --> F["複雑"]
 ```
 
-| 特徴             | useState   | Context API | Jotai      | Redux      |
-| ---------------- | ---------- | ----------- | ---------- | ---------- |
-| 学習コスト       | 低い       | 低い        | 低い       | 高い       |
-| ボイラープレート | なし       | 少ない      | なし       | 多い       |
-| パフォーマンス   | 良好       | 要注意      | 優秀       | 優秀       |
-| 状態の共有       | 親子間のみ | アプリ全体  | アプリ全体 | アプリ全体 |
-| DevTools         | なし       | なし        | あり       | 充実       |
+| 特徴       | useState | Context API | Jotai | Redux |
+| -------- | -------- | ----------- | ----- | ----- |
+| 学習コスト    | 低い       | 低い          | 低い    | 高い    |
+| ボイラープレート | なし       | 少ない         | なし    | 多い    |
+| パフォーマンス  | 良好       | 要注意         | 優秀    | 優秀    |
+| 状態の共有    | 親子間のみ    | アプリ全体       | アプリ全体 | アプリ全体 |
+| DevTools | なし       | なし          | あり    | 充実    |
 
 ### Context API の問題点
 
@@ -117,7 +117,7 @@ const userAtom = atom<User | null>(null);
 // cartAtom が変わっても、favoritesAtom を使うコンポーネントは再レンダリングされない
 ```
 
----
+***
 
 ## Atom の概念
 
@@ -143,7 +143,7 @@ graph TD
 2. **独立している** - 各 Atom は他の Atom に依存しない（派生 Atom を除く）
 3. **購読可能** - コンポーネントが Atom を購読し、変更を検知できる
 
----
+***
 
 ## Atom の作成
 
@@ -192,7 +192,7 @@ type CartItem = {
 const cartAtom = atom<CartItem[]>([]);
 ```
 
----
+***
 
 ## Atom の使用
 
@@ -229,7 +229,7 @@ const [count, setCount] = useAtom(countAtom);
 
 API は `useState` とほぼ同じですが、状態がコンポーネントの外部（Atom）で管理されるため、複数のコンポーネント間で共有できます。
 
----
+***
 
 ## 実践例：カウンター
 
@@ -295,7 +295,7 @@ export default function CounterPage(): JSX.Element {
 }
 ```
 
----
+***
 
 ## EC サイトでの使用例
 
@@ -351,7 +351,7 @@ export function Header(): JSX.Element {
 }
 ```
 
----
+***
 
 ## Provider について
 
@@ -391,7 +391,7 @@ function App(): JSX.Element {
 }
 ```
 
----
+***
 
 ## よくある間違い
 
@@ -436,7 +436,7 @@ setItem({ name, price }); // 毎回新しいオブジェクト
 setItem((prev) => ({ ...prev, name }));
 ```
 
----
+***
 
 ## まとめ
 
@@ -454,7 +454,7 @@ setItem((prev) => ({ ...prev, name }));
 - 不要な再レンダリングを防げる
 - ボイラープレートが少ない
 
----
+***
 
 ## 次のステップ
 

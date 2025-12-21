@@ -32,7 +32,7 @@
 
 動的ルート `/products/[id]` を使って商品詳細ページを実装する。存在しない商品へのアクセス時は 404 ページを表示する。
 
----
+***
 
 ## 前提条件
 
@@ -40,7 +40,7 @@
 - [ ] 動的ルートの概念を理解していること
 - [ ] `notFound()` 関数の使い方を理解していること
 
----
+***
 
 ## 完成イメージ
 
@@ -64,7 +64,7 @@
 └─────────────────────────────────────────────┘
 ```
 
----
+***
 
 ## ステップ 1: ディレクトリ構造
 
@@ -81,7 +81,7 @@ app/
         └── not-found.tsx     # 商品が見つからない
 ```
 
----
+***
 
 ## ステップ 2: データ取得関数
 
@@ -110,7 +110,7 @@ export function getRelatedProducts(category: string, excludeId: string): Product
 
 > **Note**: この演習ではモックデータを使用していますが、実際のプロジェクトでは API やデータベースからデータを取得します。Phase 5 でデータ取得について詳しく学びます。
 
----
+***
 
 ## ステップ 3: 商品詳細ページ
 
@@ -259,7 +259,7 @@ export default async function ProductPage({ params }: Props): Promise<React.Reac
 }
 ```
 
----
+***
 
 ## ステップ 4: ローディング UI
 
@@ -294,7 +294,7 @@ export default function ProductLoading(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## ステップ 5: 404 ページ
 
@@ -335,7 +335,7 @@ export default function ProductNotFound(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## ステップ 6: 静的パラメータの生成（オプション）
 
@@ -353,7 +353,7 @@ export async function generateStaticParams(): Promise<Array<{ id: string }>> {
 }
 ```
 
----
+***
 
 ## ステップ 7: 動作確認
 
@@ -381,7 +381,7 @@ export async function generateStaticParams(): Promise<Array<{ id: string }>> {
 - [ ] 商品詳細から商品一覧に戻れる
 - [ ] 関連商品から別の商品詳細に遷移できる
 
----
+***
 
 ## 確認チェックリスト
 
@@ -393,7 +393,7 @@ export async function generateStaticParams(): Promise<Array<{ id: string }>> {
 - [ ] パンくずリストを実装した
 - [ ] 関連商品を表示した
 
----
+***
 
 ## トラブルシューティング
 
@@ -423,7 +423,7 @@ Cannot read properties of undefined (reading 'id')
 - 外部画像の場合は `next.config.ts` で許可されているか確認
 - `public/` ディレクトリに画像があるか確認
 
----
+***
 
 ## 発展課題
 
@@ -433,7 +433,7 @@ Cannot read properties of undefined (reading 'id')
 4. **レビュー表示**: 商品レビューを表示する
 5. **SNS シェアボタン**: Twitter/Facebook シェアボタンを追加
 
----
+***
 
 ## 完了条件
 
@@ -444,7 +444,7 @@ Cannot read properties of undefined (reading 'id')
 - [ ] TypeScript の型チェックを通過する
 - [ ] パンくずリストが正しく表示される
 
----
+***
 
 ## Phase 2 完了
 
@@ -452,7 +452,7 @@ Cannot read properties of undefined (reading 'id')
 
 最後に [自己チェックリスト](../checklist.md) で学習内容を振り返りましょう。
 
----
+***
 
 ## 次のフェーズ
 

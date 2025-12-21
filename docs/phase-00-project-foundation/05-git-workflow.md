@@ -43,7 +43,7 @@
 チーム開発では、一貫したブランチ戦略が重要です。
 このプロジェクトでは **GitHub Flow** を採用します。
 
----
+***
 
 ## GitHub Flow
 
@@ -108,7 +108,7 @@ git checkout -b docs/api-documentation
 git checkout -b refactor/button-component
 ```
 
----
+***
 
 ## Conventional Commits
 
@@ -141,19 +141,19 @@ flowchart LR
 
 ### type（種類）
 
-| type       | 説明                           | 例                                  |
-| ---------- | ------------------------------ | ----------------------------------- |
-| `feat`     | 新機能                         | feat: 商品カード追加                |
-| `fix`      | バグ修正                       | fix: カート合計の計算エラー         |
-| `docs`     | ドキュメントのみ               | docs: README 更新                   |
-| `style`    | コードの意味に影響しない変更   | style: フォーマット修正             |
-| `refactor` | バグ修正でも機能追加でもない   | refactor: Button コンポーネント整理 |
-| `perf`     | パフォーマンス改善             | perf: 画像の遅延読み込み            |
-| `test`     | テストの追加・修正             | test: カート機能のテスト追加        |
+| type       | 説明              | 例                           |
+| ---------- | --------------- | --------------------------- |
+| `feat`     | 新機能             | feat: 商品カード追加               |
+| `fix`      | バグ修正            | fix: カート合計の計算エラー            |
+| `docs`     | ドキュメントのみ        | docs: README 更新             |
+| `style`    | コードの意味に影響しない変更  | style: フォーマット修正             |
+| `refactor` | バグ修正でも機能追加でもない  | refactor: Button コンポーネント整理  |
+| `perf`     | パフォーマンス改善       | perf: 画像の遅延読み込み             |
+| `test`     | テストの追加・修正       | test: カート機能のテスト追加           |
 | `build`    | ビルドシステム・依存関係の変更 | build: Next.js 16 へアップグレード  |
-| `ci`       | CI 設定の変更                  | ci: GitHub Actions ワークフロー追加 |
-| `chore`    | その他の変更                   | chore: 依存パッケージ更新           |
-| `revert`   | コミットの取り消し             | revert: feat: 商品カード追加        |
+| `ci`       | CI 設定の変更        | ci: GitHub Actions ワークフロー追加 |
+| `chore`    | その他の変更          | chore: 依存パッケージ更新            |
+| `revert`   | コミットの取り消し       | revert: feat: 商品カード追加       |
 
 ### scope（スコープ）
 
@@ -188,7 +188,7 @@ git commit -m "feat(auth): ログイン機能を実装
 Closes #123"
 ```
 
----
+***
 
 ## commitlint の設定
 
@@ -245,7 +245,7 @@ pnpm exec husky init
 echo 'pnpm exec commitlint --edit "$1"' > .husky/commit-msg
 ```
 
----
+***
 
 ## secretlint の設定
 
@@ -277,7 +277,7 @@ pnpm add -D secretlint @secretlint/secretlint-rule-preset-recommend --workspace-
 pnpm exec secretlint "**/*"
 ```
 
----
+***
 
 ## Pull Request のベストプラクティス
 
@@ -351,7 +351,7 @@ Closes #
 4. **セキュリティ**: 脆弱性がないか
 5. **テスト**: 十分にカバーされているか
 
----
+***
 
 ## Git Hooks の設定
 
@@ -381,7 +381,7 @@ pnpm exec secretlint "**/*"
 pnpm exec commitlint --edit "$1"
 ```
 
----
+***
 
 ## Issue と Project の管理
 
@@ -409,16 +409,16 @@ body:
 
 ### ラベル
 
-| ラベル             | 説明         |
-| ------------------ | ------------ |
-| `bug`              | バグ報告     |
-| `enhancement`      | 機能追加     |
+| ラベル                | 説明     |
+| ------------------ | ------ |
+| `bug`              | バグ報告   |
+| `enhancement`      | 機能追加   |
 | `documentation`    | ドキュメント |
-| `good first issue` | 初心者向け   |
-| `help wanted`      | 助けが必要   |
-| `priority: high`   | 優先度高     |
+| `good first issue` | 初心者向け  |
+| `help wanted`      | 助けが必要  |
+| `priority: high`   | 優先度高   |
 
----
+***
 
 ## よく使う Git コマンド
 
@@ -485,7 +485,7 @@ git diff
 git diff --staged
 ```
 
----
+***
 
 ## 次のステップ
 

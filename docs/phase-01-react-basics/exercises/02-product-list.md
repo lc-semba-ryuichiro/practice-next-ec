@@ -50,14 +50,14 @@ graph TD
     GRID --> CARD3
 ```
 
----
+***
 
 ## 前提条件
 
 - 演習 1: ProductCard 実装を完了していること
 - リストレンダリング（map、key）を理解していること
 
----
+***
 
 ## 完成イメージ
 
@@ -79,7 +79,7 @@ graph TD
 └────────────────────────────────────────────┘
 ```
 
----
+***
 
 ## ステップ 1: ProductList コンポーネントの作成
 
@@ -109,7 +109,7 @@ export function ProductList({ products }: ProductListProps): React.ReactElement 
 }
 ```
 
----
+***
 
 ## ステップ 2: 空リストの処理
 
@@ -187,7 +187,7 @@ export function ProductList({
 }
 ```
 
----
+***
 
 ## ステップ 3: グリッドレイアウトの適用
 
@@ -219,14 +219,14 @@ export function ProductList({
 
 ### レスポンシブブレークポイント
 
-| ブレークポイント | 画面幅   | カラム数 |
-| ---------------- | -------- | -------- |
-| デフォルト       | 〜639px  | 1        |
-| sm               | 640px〜  | 2        |
-| md               | 768px〜  | 3        |
-| lg               | 1024px〜 | 4        |
+| ブレークポイント | 画面幅     | カラム数 |
+| -------- | ------- | ---- |
+| デフォルト    | 〜639px  | 1    |
+| sm       | 640px〜  | 2    |
+| md       | 768px〜  | 3    |
+| lg       | 1024px〜 | 4    |
 
----
+***
 
 ## ステップ 4: ローディング状態の追加
 
@@ -297,7 +297,7 @@ export function ProductList({
 }
 ```
 
----
+***
 
 ## ステップ 5: 商品件数の表示
 
@@ -387,7 +387,7 @@ export function ProductList({
 }
 ```
 
----
+***
 
 ## ステップ 6: Storybook ストーリーの作成
 
@@ -531,7 +531,7 @@ export const WithHandlers: Story = {
 };
 ```
 
----
+***
 
 ## ステップ 7: インデックスファイルの作成
 
@@ -551,7 +551,7 @@ export * from "./ProductCard";
 export * from "./ProductList";
 ```
 
----
+***
 
 ## 確認チェックリスト
 
@@ -566,7 +566,7 @@ export * from "./ProductList";
 - [ ] Storybook で各ストーリーが確認できる
 - [ ] onAddToCart が ProductCard に渡されている
 
----
+***
 
 ## 発展課題
 
@@ -596,7 +596,7 @@ type ProductListProps = {
 
 ページネーションの代わりに無限スクロールを実装してください。
 
----
+***
 
 ## 完了条件
 

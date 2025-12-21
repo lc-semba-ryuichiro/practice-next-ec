@@ -72,7 +72,7 @@ flowchart LR
 - Analytics - Web Vitals の自動計測
 - モノレポ対応 - Turborepo との連携
 
----
+***
 
 ## アカウント作成
 
@@ -88,7 +88,7 @@ flowchart LR
 2. GitHub アカウントを連携
 3. リポジトリへのアクセスを許可
 
----
+***
 
 ## プロジェクトのインポート
 
@@ -104,7 +104,7 @@ Import Git Repository
 
 ### 2. プロジェクト設定
 
-| 設定項目         | 値                       |
+| 設定項目             | 値                        |
 | ---------------- | ------------------------ |
 | Project Name     | ec-web                   |
 | Framework Preset | Next.js                  |
@@ -122,7 +122,7 @@ Environment Variables
 └── TURBO_TOKEN: (リモートキャッシュ用)
 ```
 
----
+***
 
 ## vercel.json の設定
 
@@ -175,7 +175,7 @@ Environment Variables
 }
 ```
 
----
+***
 
 ## 環境変数の管理
 
@@ -207,10 +207,10 @@ Project Settings → Environment Variables
 
 ### 環境ごとの設定
 
-| 環境        | 説明                         | 例                                |
-| ----------- | ---------------------------- | --------------------------------- |
-| Production  | 本番環境                     | `https://api.example.com`         |
-| Preview     | PR プレビュー環境            | `https://staging-api.example.com` |
+| 環境          | 説明                   | 例                                 |
+| ----------- | -------------------- | --------------------------------- |
+| Production  | 本番環境                 | `https://api.example.com`         |
+| Preview     | PR プレビュー環境           | `https://staging-api.example.com` |
 | Development | ローカル開発（`vercel dev`） | `http://localhost:3001`           |
 
 ### .env ファイルとの関係
@@ -222,7 +222,7 @@ Project Settings → Environment Variables
 .env.production         # 本番環境用（vercel.json から参照しない）
 ```
 
----
+***
 
 ## プレビューデプロイ
 
@@ -259,7 +259,7 @@ Only production branch   # main のみ
 Custom                   # 指定したパターンのみ
 ```
 
----
+***
 
 ## ドメインの設定
 
@@ -285,13 +285,13 @@ example.com  A  76.76.21.21
 
 ### 環境ごとのドメイン
 
-| 環境       | ドメイン                  |
+| 環境         | ドメイン                      |
 | ---------- | ------------------------- |
 | Production | shop.example.com          |
 | Preview    | preview\.shop.example.com |
 | Staging    | staging.shop.example.com  |
 
----
+***
 
 ## Vercel CLI
 
@@ -332,7 +332,7 @@ vercel inspect <url>
 vercel logs <url>
 ```
 
----
+***
 
 ## ビルド設定
 
@@ -373,7 +373,7 @@ TURBO_TOKEN: <token>
 TURBO_TEAM: <team>
 ```
 
----
+***
 
 ## Analytics と Speed Insights
 
@@ -433,7 +433,7 @@ export default function RootLayout({
 }
 ```
 
----
+***
 
 ## チーム設定
 
@@ -460,7 +460,7 @@ Project Settings → Transfer Project
 → チームを選択
 ```
 
----
+***
 
 ## トラブルシューティング
 
@@ -499,15 +499,15 @@ export const maxDuration = 30; // 最大 30 秒
 }
 ```
 
----
+***
 
 ## 料金プラン
 
-| プラン     | 料金     | 特徴                       |
-| ---------- | -------- | -------------------------- |
-| Hobby      | 無料     | 個人プロジェクト、制限あり |
-| Pro        | $20/月   | チーム向け、Analytics 含む |
-| Enterprise | カスタム | SLA、専用サポート          |
+| プラン        | 料金    | 特徴                 |
+| ---------- | ----- | ------------------ |
+| Hobby      | 無料    | 個人プロジェクト、制限あり      |
+| Pro        | $20/月 | チーム向け、Analytics 含む |
+| Enterprise | カスタム  | SLA、専用サポート         |
 
 ### 無料枠の制限
 
@@ -515,7 +515,7 @@ export const maxDuration = 30; // 最大 30 秒
 - 帯域: 100GB/月
 - Serverless Functions: 100GB-時間/月
 
----
+***
 
 ## 次のステップ
 

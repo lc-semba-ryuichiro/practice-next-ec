@@ -30,7 +30,7 @@
 再利用可能で保守性の高いコンポーネント設計を習得するフェーズです。
 Atomic Design、Compound Components、カスタムフックなどのパターンを学び、EC サイトで使えるデザインシステムを構築します。
 
----
+***
 
 ## 難易度
 
@@ -38,13 +38,13 @@ Atomic Design、Compound Components、カスタムフックなどのパターン
 
 コンポーネント設計の概念理解と実践が中心です。抽象的な考え方が多いため、Phase 1・2 の React/Next.js 基礎をしっかり理解していることが重要です。
 
----
+***
 
 ## 所要時間目安
 
 約 8〜12 時間です。
 
----
+***
 
 ## 前提知識
 
@@ -53,7 +53,7 @@ Atomic Design、Compound Components、カスタムフックなどのパターン
 - React コンポーネントの基本（props, state, hooks）
 - TypeScript の基本的な型定義
 
----
+***
 
 ## 学習目標
 
@@ -69,7 +69,7 @@ Atomic Design、Compound Components、カスタムフックなどのパターン
 - [ ] フォームコンポーネント群を実装できる
 - [ ] Modal/Drawer を Compound Components パターンで実装できる
 
----
+***
 
 ## 目次
 
@@ -91,7 +91,7 @@ graph LR
     F --> G["演習: Modal/Drawer"]
 ```
 
----
+***
 
 ## 演習問題
 
@@ -99,7 +99,7 @@ graph LR
 - [演習 2: フォームコンポーネント群](./exercises/02-form-components.md)
 - [演習 3: Modal/Drawer 実装](./exercises/03-modal-drawer.md)
 
----
+***
 
 ## コンポーネント階層の全体像
 
@@ -127,7 +127,7 @@ graph TD
     COMPOUND --> HOOKS
 ```
 
----
+***
 
 ## 作業場所
 
@@ -147,43 +147,43 @@ apps/
     └── stories/
 ```
 
----
+***
 
 ## 使用する shadcn/ui コンポーネント
 
-| コンポーネント | 分類      | EC サイトでの用途        |
-| -------------- | --------- | ------------------------ |
-| Button         | Atoms     | CTA、フォーム送信        |
-| Input          | Atoms     | 検索、フォーム入力       |
-| Label          | Atoms     | フォームラベル           |
-| Badge          | Atoms     | ステータス表示、タグ     |
-| Card           | Molecules | 商品カード               |
-| Dialog         | Organisms | 確認ダイアログ           |
-| Sheet          | Organisms | モバイルメニュー、Drawer |
-| Tabs           | Organisms | 商品詳細のタブ切り替え   |
-| Accordion      | Organisms | FAQ、フィルター          |
-| Form           | Molecules | フォーム全般             |
-| Select         | Atoms     | ドロップダウン選択       |
-| Checkbox       | Atoms     | フィルター、同意チェック |
-| RadioGroup     | Molecules | 配送方法選択             |
+| コンポーネント    | 分類        | EC サイトでの用途      |
+| ---------- | --------- | --------------- |
+| Button     | Atoms     | CTA、フォーム送信      |
+| Input      | Atoms     | 検索、フォーム入力       |
+| Label      | Atoms     | フォームラベル         |
+| Badge      | Atoms     | ステータス表示、タグ      |
+| Card       | Molecules | 商品カード           |
+| Dialog     | Organisms | 確認ダイアログ         |
+| Sheet      | Organisms | モバイルメニュー、Drawer |
+| Tabs       | Organisms | 商品詳細のタブ切り替え     |
+| Accordion  | Organisms | FAQ、フィルター       |
+| Form       | Molecules | フォーム全般          |
+| Select     | Atoms     | ドロップダウン選択       |
+| Checkbox   | Atoms     | フィルター、同意チェック    |
+| RadioGroup | Molecules | 配送方法選択          |
 
----
+***
 
 ## 関連する EC サイト機能
 
 このフェーズで実装するコンポーネントは、以下の EC 機能で活用されます。
 
-| EC 機能            | 使用コンポーネント                      |
-| ------------------ | --------------------------------------- |
-| 商品一覧           | ProductCard, Pagination, FilterPanel    |
-| 商品詳細           | Tabs, ImageGallery, AddToCartButton     |
+| EC 機能     | 使用コンポーネント                               |
+| --------- | --------------------------------------- |
+| 商品一覧      | ProductCard, Pagination, FilterPanel    |
+| 商品詳細      | Tabs, ImageGallery, AddToCartButton     |
 | ショッピングカート | CartItem, QuantitySelector, CartSummary |
-| 検索               | SearchBox, SearchResults, FilterChips   |
-| フォーム           | Input, Select, Checkbox, FormField      |
-| モーダル           | Dialog, ConfirmDialog, QuickView        |
-| ナビゲーション     | Header, MobileMenu (Sheet), Footer      |
+| 検索        | SearchBox, SearchResults, FilterChips   |
+| フォーム      | Input, Select, Checkbox, FormField      |
+| モーダル      | Dialog, ConfirmDialog, QuickView        |
+| ナビゲーション   | Header, MobileMenu (Sheet), Footer      |
 
----
+***
 
 ## 推奨学習リソース
 
@@ -205,7 +205,7 @@ apps/
 - [addon-a11y](https://storybook.js.org/addons/@storybook/addon-a11y) - アクセシビリティチェック
 - [addon-designs](https://storybook.js.org/addons/@storybook/addon-designs) - Figma 連携
 
----
+***
 
 ## 自己チェックリスト
 
@@ -235,7 +235,7 @@ Phase 3 を完了する前に、以下を確認してください。
 - [ ] キーボードナビゲーションに対応できる
 - [ ] Storybook addon-a11y でチェックを実行できる
 
----
+***
 
 ## 次のフェーズ
 

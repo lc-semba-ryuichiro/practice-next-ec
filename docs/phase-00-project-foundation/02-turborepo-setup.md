@@ -45,7 +45,7 @@ Vercel が開発しており、Next.js との相性が非常に良いです。
 - 並列実行 - 依存関係を考慮した最適な並列ビルド
 - シンプルな設定 - `turbo.json` 1 ファイルで設定完了
 
----
+***
 
 ## インストール方法
 
@@ -70,7 +70,7 @@ pnpm dlx create-turbo@latest
 # - パッケージマネージャーで pnpm を選択
 ```
 
----
+***
 
 ## turbo.json の設定
 
@@ -115,12 +115,12 @@ pnpm dlx create-turbo@latest
 
 ### 設定の解説
 
-| プロパティ           | 説明                                           |
-| -------------------- | ---------------------------------------------- |
-| `$schema`            | JSON スキーマ（エディタ補完用）                |
-| `ui`                 | `tui` でターミナル UI を有効化                 |
+| プロパティ                | 説明                      |
+| -------------------- | ----------------------- |
+| `$schema`            | JSON スキーマ（エディタ補完用）      |
+| `ui`                 | `tui` でターミナル UI を有効化    |
 | `globalDependencies` | 変更時にすべてのキャッシュを無効化するファイル |
-| `tasks`              | 実行可能なタスクの定義                         |
+| `tasks`              | 実行可能なタスクの定義             |
 
 ### タスク設定の詳細
 
@@ -134,16 +134,16 @@ pnpm dlx create-turbo@latest
 }
 ```
 
-| プロパティ   | 説明                                          |
-| ------------ | --------------------------------------------- |
+| プロパティ        | 説明                           |
+| ------------ | ---------------------------- |
 | `dependsOn`  | このタスク実行前に完了すべきタスク            |
-| `^build`     | 依存パッケージの build を先に実行             |
-| `outputs`    | キャッシュ対象の出力ファイル                  |
-| `inputs`     | 変更検知対象のファイル（省略時は全ファイル）  |
-| `cache`      | `false` でキャッシュを無効化                  |
+| `^build`     | 依存パッケージの build を先に実行         |
+| `outputs`    | キャッシュ対象の出力ファイル               |
+| `inputs`     | 変更検知対象のファイル（省略時は全ファイル）       |
+| `cache`      | `false` でキャッシュを無効化           |
 | `persistent` | `true` で長時間実行タスク（dev サーバーなど） |
 
----
+***
 
 ## 依存関係の理解
 
@@ -179,7 +179,7 @@ flowchart TB
     end
 ```
 
----
+***
 
 ## コマンドの実行
 
@@ -224,7 +224,7 @@ turbo build --concurrency=10
 turbo build --concurrency=auto
 ```
 
----
+***
 
 ## キャッシュの仕組み
 
@@ -273,7 +273,7 @@ TURBO_TOKEN=xxx
 TURBO_TEAM=your-team
 ```
 
----
+***
 
 ## ルート package.json の設定
 
@@ -302,23 +302,23 @@ TURBO_TEAM=your-team
 }
 ```
 
----
+***
 
 ## よく使うコマンド集
 
-| コマンド                      | 説明                           |
-| ----------------------------- | ------------------------------ |
-| `turbo build`                 | 全パッケージをビルド           |
-| `turbo dev`                   | 全パッケージで開発サーバー起動 |
-| `turbo dev --filter=web`      | web のみ開発サーバー           |
-| `turbo build --filter=web...` | web と依存パッケージをビルド   |
-| `turbo lint`                  | 全パッケージでリント           |
-| `turbo test`                  | 全パッケージでテスト           |
-| `turbo run build test lint`   | 複数タスクを実行               |
+| コマンド                          | 説明               |
+| ----------------------------- | ---------------- |
+| `turbo build`                 | 全パッケージをビルド       |
+| `turbo dev`                   | 全パッケージで開発サーバー起動  |
+| `turbo dev --filter=web`      | web のみ開発サーバー     |
+| `turbo build --filter=web...` | web と依存パッケージをビルド |
+| `turbo lint`                  | 全パッケージでリント       |
+| `turbo test`                  | 全パッケージでテスト       |
+| `turbo run build test lint`   | 複数タスクを実行         |
 | `turbo build --dry-run`       | 実行計画を表示（実行しない）   |
-| `turbo build --graph`         | 依存グラフを表示               |
+| `turbo build --graph`         | 依存グラフを表示         |
 
----
+***
 
 ## トラブルシューティング
 
@@ -349,7 +349,7 @@ turbo build --verbose
 # 例: "build": "next build"
 ```
 
----
+***
 
 ## ベストプラクティス
 
@@ -387,7 +387,7 @@ turbo build --verbose
 }
 ```
 
----
+***
 
 ## 次のステップ
 

@@ -52,17 +52,17 @@ graph TD
     E["useSetAtom"] --> F["書き込みのみ"]
 ```
 
----
+***
 
 ## 3 つのフックの比較
 
-| フック       | 読み取り | 書き込み | 再レンダリング   |
-| ------------ | -------- | -------- | ---------------- |
-| useAtom      | ✅       | ✅       | 値が変わると発生 |
-| useAtomValue | ✅       | ❌       | 値が変わると発生 |
-| useSetAtom   | ❌       | ✅       | 発生しない       |
+| フック          | 読み取り | 書き込み | 再レンダリング  |
+| ------------ | ---- | ---- | -------- |
+| useAtom      | ✅    | ✅    | 値が変わると発生 |
+| useAtomValue | ✅    | ❌    | 値が変わると発生 |
+| useSetAtom   | ❌    | ✅    | 発生しない    |
 
----
+***
 
 ## useAtom
 
@@ -99,7 +99,7 @@ const [value, setValue] = useAtom(someAtom);
 - フォームの入力フィールド
 - トグルボタン（状態を表示しつつ切り替える）
 
----
+***
 
 ## useAtomValue
 
@@ -140,7 +140,7 @@ const [value, _setValue] = useAtom(someAtom);
 const value = useAtomValue(someAtom);
 ```
 
----
+***
 
 ## useSetAtom
 
@@ -189,7 +189,7 @@ graph TD
     end
 ```
 
----
+***
 
 ## 実践例：EC サイトでの使い分け
 
@@ -329,7 +329,7 @@ export function CartItemRow({ item }: CartItemRowProps): JSX.Element {
 }
 ```
 
----
+***
 
 ## パフォーマンス最適化
 
@@ -365,7 +365,7 @@ function AddButton(): JSX.Element {
 }
 ```
 
----
+***
 
 ## 使い分けのフローチャート
 
@@ -380,13 +380,13 @@ flowchart TD
 
 ### 判断基準
 
-| 質問                     | はい                 | いいえ               |
-| ------------------------ | -------------------- | -------------------- |
-| 値を表示する必要がある？ | useAtom/useAtomValue | useSetAtom           |
-| 値を更新する必要がある？ | useAtom/useSetAtom   | useAtomValue         |
-| 両方必要？               | useAtom              | 読み取り or 書き込み |
+| 質問           | はい                   | いいえ          |
+| ------------ | -------------------- | ------------ |
+| 値を表示する必要がある？ | useAtom/useAtomValue | useSetAtom   |
+| 値を更新する必要がある？ | useAtom/useSetAtom   | useAtomValue |
+| 両方必要？        | useAtom              | 読み取り or 書き込み |
 
----
+***
 
 ## よくあるパターン
 
@@ -442,7 +442,7 @@ function SearchInput(): JSX.Element {
 }
 ```
 
----
+***
 
 ## アンチパターン
 
@@ -501,19 +501,19 @@ function CartActions(): JSX.Element {
 }
 ```
 
----
+***
 
 ## まとめ
 
 ### フックの選択基準
 
-| 状況                     | 使用するフック |
-| ------------------------ | -------------- |
-| 値の表示と更新が必要     | useAtom        |
-| 値の表示のみ             | useAtomValue   |
-| 値の更新のみ             | useSetAtom     |
-| 派生 Atom の読み取り     | useAtomValue   |
-| イベントハンドラーで更新 | useSetAtom     |
+| 状況            | 使用するフック      |
+| ------------- | ------------ |
+| 値の表示と更新が必要    | useAtom      |
+| 値の表示のみ        | useAtomValue |
+| 値の更新のみ        | useSetAtom   |
+| 派生 Atom の読み取り | useAtomValue |
+| イベントハンドラーで更新  | useSetAtom   |
 
 ### パフォーマンスのポイント
 
@@ -521,7 +521,7 @@ function CartActions(): JSX.Element {
 - 必要なフックを選ぶことで不要な再レンダリングを防げる
 - コンポーネントの責務を明確にすることで最適なフックを選びやすくなる
 
----
+***
 
 ## 次のステップ
 

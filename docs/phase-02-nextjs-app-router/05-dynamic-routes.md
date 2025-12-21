@@ -32,7 +32,7 @@
 
 動的ルート（Dynamic Routes）を使うと、URL パラメータに基づいてページを動的に生成できます。EC サイトでは、商品詳細ページ（`/products/123`）やカテゴリページ（`/categories/shoes`）などで必須の機能です。
 
----
+***
 
 ## 動的ルートの基本
 
@@ -64,7 +64,7 @@ export default async function ProductPage({ params }: Props): Promise<React.Reac
 }
 ```
 
----
+***
 
 ## 動的セグメントの種類
 
@@ -77,13 +77,13 @@ graph TD
     end
 ```
 
-| パターン      | 例                 | マッチする URL                        |
+| パターン          | 例                  | マッチする URL                             |
 | ------------- | ------------------ | ------------------------------------- |
 | `[id]`        | `products/[id]`    | `/products/1`, `/products/abc`        |
 | `[...slug]`   | `docs/[...slug]`   | `/docs/a`, `/docs/a/b`, `/docs/a/b/c` |
 | `[[...slug]]` | `shop/[[...slug]]` | `/shop`, `/shop/a`, `/shop/a/b`       |
 
----
+***
 
 ## 単一パラメータ \[param]
 
@@ -159,7 +159,7 @@ export default async function CategoryPage({ params }: Props): Promise<React.Rea
 }
 ```
 
----
+***
 
 ## キャッチオールセグメント \[...param]
 
@@ -227,7 +227,7 @@ export default async function CategoryPage({ params }: Props): Promise<React.Rea
 }
 ```
 
----
+***
 
 ## オプショナルキャッチオール \[\[...param]]
 
@@ -263,7 +263,7 @@ export default async function ShopPage({ params }: Props): Promise<React.ReactEl
 }
 ```
 
----
+***
 
 ## 複数の動的パラメータ
 
@@ -300,7 +300,7 @@ export default async function ProductPage({ params }: Props): Promise<React.Reac
 }
 ```
 
----
+***
 
 ## searchParams（クエリパラメータ）
 
@@ -330,7 +330,7 @@ export default async function ProductsPage({ searchParams }: Props): Promise<Rea
 }
 ```
 
----
+***
 
 ## generateStaticParams
 
@@ -373,7 +373,7 @@ sequenceDiagram
     end
 ```
 
----
+***
 
 ## 動的メタデータ
 
@@ -408,7 +408,7 @@ export default async function ProductPage({ params }: Props): Promise<React.Reac
 }
 ```
 
----
+***
 
 ## EC サイトでの動的ルート構成
 
@@ -436,7 +436,7 @@ app/
         └── page.tsx                # /orders/ORD-123（注文詳細）
 ```
 
----
+***
 
 ## ベストプラクティス
 
@@ -489,18 +489,18 @@ export default async function ProductPage({ params }: Props): Promise<React.Reac
 }
 ```
 
----
+***
 
 ## まとめ
 
-| パターン       | 構文           | 用途                                 |
-| -------------- | -------------- | ------------------------------------ |
-| 単一パラメータ | `[id]`         | 商品詳細、ユーザープロフィール       |
-| キャッチオール | `[...slug]`    | 階層カテゴリ、ドキュメント           |
-| オプショナル   | `[[...slug]]`  | ルートを含めたマッチ                 |
-| クエリ         | `searchParams` | フィルター、ソート、ページネーション |
+| パターン    | 構文             | 用途                 |
+| ------- | -------------- | ------------------ |
+| 単一パラメータ | `[id]`         | 商品詳細、ユーザープロフィール    |
+| キャッチオール | `[...slug]`    | 階層カテゴリ、ドキュメント      |
+| オプショナル  | `[[...slug]]`  | ルートを含めたマッチ         |
+| クエリ     | `searchParams` | フィルター、ソート、ページネーション |
 
----
+***
 
 ## 次のステップ
 

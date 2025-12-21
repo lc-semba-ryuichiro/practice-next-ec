@@ -41,14 +41,14 @@ graph TD
     end
 ```
 
----
+***
 
 ## 前提条件
 
 - Phase 1 の学習コンテンツ（01〜05）を読了していること
 - 開発環境がセットアップ済みであること
 
----
+***
 
 ## 完成イメージ
 
@@ -70,7 +70,7 @@ graph TD
 └─────────────────────────┘
 ```
 
----
+***
 
 ## ステップ 1: 型定義の確認
 
@@ -94,7 +94,7 @@ export type Product = {
 };
 ```
 
----
+***
 
 ## ステップ 2: 基本構造の作成
 
@@ -138,7 +138,7 @@ export function ProductCard({ product }: ProductCardProps): React.ReactElement {
 }
 ```
 
----
+***
 
 ## ステップ 3: バッジの追加
 
@@ -190,7 +190,7 @@ export function ProductCard({ product }: ProductCardProps): React.ReactElement {
 }
 ```
 
----
+***
 
 ## ステップ 4: Tailwind CSS でスタイリング
 
@@ -261,7 +261,7 @@ export function ProductCard({ product }: ProductCardProps): React.ReactElement {
 }
 ```
 
----
+***
 
 ## ステップ 5: Storybook ストーリーの作成
 
@@ -378,7 +378,7 @@ export const LongName: Story = {
 };
 ```
 
----
+***
 
 ## ステップ 6: イベントハンドラの追加
 
@@ -417,7 +417,7 @@ export function ProductCard({ product, onAddToCart }: ProductCardProps): React.R
 }
 ```
 
----
+***
 
 ## 確認チェックリスト
 
@@ -433,7 +433,7 @@ export function ProductCard({ product, onAddToCart }: ProductCardProps): React.R
 - [ ] 各ストーリー（Default, NewProduct, OnSale, SoldOut）が正しく表示される
 - [ ] カートに追加ボタンがクリックできる
 
----
+***
 
 ## 発展課題
 
@@ -462,7 +462,7 @@ type ProductCardProps = {
 
 マウスホバー時にクイックビューボタンを表示してください。
 
----
+***
 
 ## 完了条件
 

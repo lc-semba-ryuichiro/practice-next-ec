@@ -36,7 +36,7 @@
 
 Compound Components パターンを使って、アクセシブルな Modal と Drawer コンポーネントを実装します。
 
----
+***
 
 ## 完成イメージ
 
@@ -61,14 +61,14 @@ packages/ui/
 │           └── index.ts
 ```
 
----
+***
 
 ## 前提条件
 
 - 演習 1, 2 を完了していること
 - Compound Components パターンを理解していること
 
----
+***
 
 ## ステップ 1: Dialog（Modal）の実装
 
@@ -424,7 +424,7 @@ export type { DialogTriggerProps } from "./DialogTrigger";
 export type { DialogContentProps } from "./DialogContent";
 ```
 
----
+***
 
 ## ステップ 2: Drawer の実装
 
@@ -620,7 +620,7 @@ export type { DrawerProps } from "./Drawer";
 export type { DrawerContentProps } from "./DrawerContent";
 ```
 
----
+***
 
 ## ステップ 3: EC サイト向け実装例
 
@@ -852,7 +852,7 @@ export function ProductQuickView({ product, isOpen, onClose }: ProductQuickViewP
 }
 ```
 
----
+***
 
 ## 確認チェックリスト
 
@@ -880,7 +880,7 @@ export function ProductQuickView({ product, isOpen, onClose }: ProductQuickViewP
 - [ ] 確認ダイアログのストーリーがある
 - [ ] addon-a11y でエラーがない
 
----
+***
 
 ## トラブルシューティング
 
@@ -903,7 +903,7 @@ const focusableElements = content.querySelectorAll<HTMLElement>(
 );
 ```
 
----
+***
 
 ## 発展課題
 
@@ -912,7 +912,7 @@ const focusableElements = content.querySelectorAll<HTMLElement>(
 3. **サイズバリエーション**: sm, md, lg, fullscreen などのサイズ対応
 4. **ドラッグで閉じる**: モバイルでのスワイプで Drawer を閉じる
 
----
+***
 
 ## 完了条件
 
@@ -921,7 +921,7 @@ const focusableElements = content.querySelectorAll<HTMLElement>(
 - [ ] EC サイト向けの確認ダイアログ、カート Drawer が動作する
 - [ ] アクセシビリティチェックに合格している
 
----
+***
 
 ## 次のステップ
 

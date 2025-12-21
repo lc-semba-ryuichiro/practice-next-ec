@@ -32,7 +32,7 @@
 
 App Router では、`loading.tsx`、`error.tsx`、`not-found.tsx` という特殊なファイルを使って、ローディング状態、エラー状態、404 状態を宣言的に処理できます。これにより、ユーザー体験を向上できます。
 
----
+***
 
 ## 特殊ファイルの一覧
 
@@ -45,14 +45,14 @@ graph TD
     end
 ```
 
-| ファイル           | 役割                | 表示タイミング             |
-| ------------------ | ------------------- | -------------------------- |
-| `loading.tsx`      | ローディング UI     | データ取得中               |
-| `error.tsx`        | エラー UI           | ランタイムエラー発生時     |
-| `not-found.tsx`    | 404 UI              | ページが見つからない時     |
+| ファイル               | 役割          | 表示タイミング       |
+| ------------------ | ----------- | ------------- |
+| `loading.tsx`      | ローディング UI   | データ取得中        |
+| `error.tsx`        | エラー UI      | ランタイムエラー発生時   |
+| `not-found.tsx`    | 404 UI      | ページが見つからない時   |
 | `global-error.tsx` | グローバルエラー UI | ルートレイアウトでのエラー |
 
----
+***
 
 ## loading.tsx
 
@@ -124,7 +124,7 @@ app/
 │       └── loading.tsx      # /products/[id] のローディング
 ```
 
----
+***
 
 ## error.tsx
 
@@ -166,12 +166,12 @@ export default function Error({ error, reset }: Props): React.ReactElement {
 
 ### error.tsx の特徴
 
-| 特徴                  | 説明                                   |
-| --------------------- | -------------------------------------- |
-| Client Component 必須 | `"use client"` が必要                  |
-| `error` prop          | エラーオブジェクトを受け取る           |
-| `reset` prop          | コンポーネントを再レンダリングする関数 |
-| 境界                  | そのセグメント以下のエラーをキャッチ   |
+| 特徴                  | 説明                  |
+| ------------------- | ------------------- |
+| Client Component 必須 | `"use client"` が必要  |
+| `error` prop        | エラーオブジェクトを受け取る      |
+| `reset` prop        | コンポーネントを再レンダリングする関数 |
+| 境界                  | そのセグメント以下のエラーをキャッチ  |
 
 ### エラー境界の仕組み
 
@@ -213,7 +213,7 @@ export default function GlobalError({ error, reset }: Props): React.ReactElement
 }
 ```
 
----
+***
 
 ## not-found.tsx
 
@@ -277,7 +277,7 @@ app/
 │       └── page.tsx           # notFound() を呼び出す
 ```
 
----
+***
 
 ## EC サイトでの活用例
 
@@ -358,7 +358,7 @@ export default function ProductNotFound(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## ファイル構成のベストプラクティス
 
@@ -385,7 +385,7 @@ app/
         └── error.tsx        # 商品詳細のエラー
 ```
 
----
+***
 
 ## ファイルの適用順序
 
@@ -401,18 +401,18 @@ graph TD
     H --> C
 ```
 
----
+***
 
 ## まとめ
 
-| ファイル           | 用途            | 必須の設定                |
-| ------------------ | --------------- | ------------------------- |
-| `loading.tsx`      | ローディング UI | なし                      |
-| `error.tsx`        | エラー UI       | `"use client"`            |
-| `not-found.tsx`    | 404 UI          | なし                      |
+| ファイル               | 用途        | 必須の設定                     |
+| ------------------ | --------- | ------------------------- |
+| `loading.tsx`      | ローディング UI | なし                        |
+| `error.tsx`        | エラー UI    | `"use client"`            |
+| `not-found.tsx`    | 404 UI    | なし                        |
 | `global-error.tsx` | 致命的エラー UI | `"use client"` + `<html>` |
 
----
+***
 
 ## 次のステップ
 

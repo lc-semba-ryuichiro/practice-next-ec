@@ -2,7 +2,7 @@
 
 React / Next.js 開発で使用する専門用語の解説です。
 
----
+***
 
 ## 目次
 
@@ -109,15 +109,15 @@ const [count, setCount] = useState(0);
 
 関数コンポーネントで state やライフサイクルなどの React 機能を使うための関数。`use` で始まる命名規則がある。
 
-| Hook          | 用途                                         |
-| ------------- | -------------------------------------------- |
-| `useState`    | state の管理                                 |
-| `useEffect`   | 副作用の処理（API 呼び出し、DOM 操作など）   |
-| `useContext`  | Context からの値の取得                       |
-| `useRef`      | DOM 参照や再レンダリングに影響しない値の保持 |
-| `useMemo`     | 計算結果のメモ化                             |
-| `useCallback` | 関数のメモ化                                 |
-| `useReducer`  | 複雑な state ロジックの管理                  |
+| Hook          | 用途                        |
+| ------------- | ------------------------- |
+| `useState`    | state の管理                 |
+| `useEffect`   | 副作用の処理（API 呼び出し、DOM 操作など） |
+| `useContext`  | Context からの値の取得           |
+| `useRef`      | DOM 参照や再レンダリングに影響しない値の保持  |
+| `useMemo`     | 計算結果のメモ化                  |
+| `useCallback` | 関数のメモ化                    |
+| `useReducer`  | 複雑な state ロジックの管理         |
 
 ### Virtual DOM（仮想 DOM）
 
@@ -131,7 +131,7 @@ React が Virtual DOM の差分を計算し、最小限の DOM 操作で UI を�
 
 state や props の変更によってコンポーネントが再描画されること。
 
----
+***
 
 ## Next.js 関連
 
@@ -215,7 +215,7 @@ app/
 
 サーバーサイドコードを CDN のエッジで実行する軽量ランタイム。
 
----
+***
 
 ## レンダリング戦略
 
@@ -248,7 +248,7 @@ Next.js 14 以降の機能。静的部分と動的部分を組み合わせてレ
 
 サーバーで生成された HTML に、クライアント側で JavaScript を紐付けてインタラクティブにするプロセス。
 
----
+***
 
 ## 状態管理
 
@@ -278,7 +278,7 @@ const doubleCountAtom = atom((get) => get(countAtom) * 2);
 
 状態のスコープを提供するコンポーネント。Jotai ではオプション。
 
----
+***
 
 ## テスト関連
 
@@ -326,7 +326,7 @@ UI のスクリーンショットを比較して、意図しない視覚的変�
 
 関数の呼び出しを記録しつつ、元の実装も実行するモック。
 
----
+***
 
 ## パフォーマンス
 
@@ -334,12 +334,12 @@ UI のスクリーンショットを比較して、意図しない視覚的変�
 
 Google が定義するウェブパフォーマンス指標。
 
-| 指標                            | 意味                     | 良好な値  |
-| ------------------------------- | ------------------------ | --------- |
-| LCP (Largest Contentful Paint)  | 最大コンテンツの表示時間 | 2.5秒以下 |
-| FID (First Input Delay)         | 初回入力遅延             | 100ms以下 |
-| CLS (Cumulative Layout Shift)   | レイアウトのずれ         | 0.1以下   |
-| INP (Interaction to Next Paint) | インタラクション応答性   | 200ms以下 |
+| 指標                              | 意味           | 良好な値    |
+| ------------------------------- | ------------ | ------- |
+| LCP (Largest Contentful Paint)  | 最大コンテンツの表示時間 | 2.5秒以下  |
+| FID (First Input Delay)         | 初回入力遅延       | 100ms以下 |
+| CLS (Cumulative Layout Shift)   | レイアウトのずれ     | 0.1以下   |
+| INP (Interaction to Next Paint) | インタラクション応答性  | 200ms以下 |
 
 ### Code Splitting（コード分割）
 
@@ -365,47 +365,47 @@ const Modal = dynamic(() => import("./Modal"));
 
 バンドルサイズを可視化するツール。
 
----
+***
 
 ## 略語一覧
 
-| 略語 | 正式名称                          | 意味                                     |
-| ---- | --------------------------------- | ---------------------------------------- |
+| 略語   | 正式名称                              | 意味                   |
+| ---- | --------------------------------- | -------------------- |
 | API  | Application Programming Interface | アプリケーション間の通信インターフェース |
-| CDN  | Content Delivery Network          | コンテンツ配信ネットワーク               |
-| CI   | Continuous Integration            | 継続的インテグレーション                 |
-| CD   | Continuous Deployment/Delivery    | 継続的デプロイ/デリバリー                |
-| CLI  | Command Line Interface            | コマンドラインインターフェース           |
-| CLS  | Cumulative Layout Shift           | 累積レイアウトシフト                     |
-| CORS | Cross-Origin Resource Sharing     | クロスオリジンリソース共有               |
-| CSS  | Cascading Style Sheets            | スタイルシート言語                       |
-| DOM  | Document Object Model             | ドキュメントオブジェクトモデル           |
-| E2E  | End-to-End                        | エンドツーエンド                         |
-| FCP  | First Contentful Paint            | 最初のコンテンツ表示                     |
-| FID  | First Input Delay                 | 最初の入力遅延                           |
-| HTML | HyperText Markup Language         | ハイパーテキストマークアップ言語         |
-| HTTP | HyperText Transfer Protocol       | ハイパーテキスト転送プロトコル           |
-| INP  | Interaction to Next Paint         | 次の描画までのインタラクション           |
-| ISR  | Incremental Static Regeneration   | 増分的な静的再生成                       |
-| JSON | JavaScript Object Notation        | JavaScript オブジェクト表記              |
-| JSX  | JavaScript XML                    | JavaScript XML                           |
-| LCP  | Largest Contentful Paint          | 最大コンテンツ描画                       |
-| MSW  | Mock Service Worker               | モックサービスワーカー                   |
-| OG   | Open Graph                        | Open Graph プロトコル                    |
-| PPR  | Partial Prerendering              | 部分的プリレンダリング                   |
-| PWA  | Progressive Web App               | プログレッシブウェブアプリ               |
-| REST | Representational State Transfer   | REST アーキテクチャ                      |
-| RSC  | React Server Components           | React サーバーコンポーネント             |
-| SEO  | Search Engine Optimization        | 検索エンジン最適化                       |
-| SPA  | Single Page Application           | シングルページアプリケーション           |
-| SSG  | Static Site Generation            | 静的サイト生成                           |
-| SSR  | Server-Side Rendering             | サーバーサイドレンダリング               |
-| TDD  | Test-Driven Development           | テスト駆動開発                           |
-| TSX  | TypeScript XML                    | TypeScript XML                           |
-| UI   | User Interface                    | ユーザーインターフェース                 |
-| URL  | Uniform Resource Locator          | URL                                      |
-| UX   | User Experience                   | ユーザー体験                             |
-| VRT  | Visual Regression Testing         | ビジュアル回帰テスト                     |
-| a11y | Accessibility                     | アクセシビリティ                         |
-| i18n | Internationalization              | 国際化                                   |
-| l10n | Localization                      | ローカライゼーション                     |
+| CDN  | Content Delivery Network          | コンテンツ配信ネットワーク        |
+| CI   | Continuous Integration            | 継続的インテグレーション         |
+| CD   | Continuous Deployment/Delivery    | 継続的デプロイ/デリバリー        |
+| CLI  | Command Line Interface            | コマンドラインインターフェース      |
+| CLS  | Cumulative Layout Shift           | 累積レイアウトシフト           |
+| CORS | Cross-Origin Resource Sharing     | クロスオリジンリソース共有        |
+| CSS  | Cascading Style Sheets            | スタイルシート言語            |
+| DOM  | Document Object Model             | ドキュメントオブジェクトモデル      |
+| E2E  | End-to-End                        | エンドツーエンド             |
+| FCP  | First Contentful Paint            | 最初のコンテンツ表示           |
+| FID  | First Input Delay                 | 最初の入力遅延              |
+| HTML | HyperText Markup Language         | ハイパーテキストマークアップ言語     |
+| HTTP | HyperText Transfer Protocol       | ハイパーテキスト転送プロトコル      |
+| INP  | Interaction to Next Paint         | 次の描画までのインタラクション      |
+| ISR  | Incremental Static Regeneration   | 増分的な静的再生成            |
+| JSON | JavaScript Object Notation        | JavaScript オブジェクト表記  |
+| JSX  | JavaScript XML                    | JavaScript XML       |
+| LCP  | Largest Contentful Paint          | 最大コンテンツ描画            |
+| MSW  | Mock Service Worker               | モックサービスワーカー          |
+| OG   | Open Graph                        | Open Graph プロトコル     |
+| PPR  | Partial Prerendering              | 部分的プリレンダリング          |
+| PWA  | Progressive Web App               | プログレッシブウェブアプリ        |
+| REST | Representational State Transfer   | REST アーキテクチャ         |
+| RSC  | React Server Components           | React サーバーコンポーネント    |
+| SEO  | Search Engine Optimization        | 検索エンジン最適化            |
+| SPA  | Single Page Application           | シングルページアプリケーション      |
+| SSG  | Static Site Generation            | 静的サイト生成              |
+| SSR  | Server-Side Rendering             | サーバーサイドレンダリング        |
+| TDD  | Test-Driven Development           | テスト駆動開発              |
+| TSX  | TypeScript XML                    | TypeScript XML       |
+| UI   | User Interface                    | ユーザーインターフェース         |
+| URL  | Uniform Resource Locator          | URL                  |
+| UX   | User Experience                   | ユーザー体験               |
+| VRT  | Visual Regression Testing         | ビジュアル回帰テスト           |
+| a11y | Accessibility                     | アクセシビリティ             |
+| i18n | Internationalization              | 国際化                  |
+| l10n | Localization                      | ローカライゼーション           |

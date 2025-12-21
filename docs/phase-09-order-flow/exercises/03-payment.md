@@ -31,7 +31,7 @@ graph LR
     style C fill:#4caf50,color:#fff
 ```
 
----
+***
 
 ## 完成イメージ
 
@@ -60,13 +60,13 @@ graph LR
 └─────────────────────────────────────────────┘
 ```
 
----
+***
 
 ## 前提条件
 
 - 演習 2（配送先入力）が完了していること
 
----
+***
 
 ## ステップ 1: 支払い方法スキーマ
 
@@ -131,7 +131,7 @@ export const PAYMENT_OPTIONS = [
 ] as const;
 ```
 
----
+***
 
 ## ステップ 2: ページの作成
 
@@ -171,7 +171,7 @@ export default async function PaymentPage(): Promise<JSX.Element> {
 }
 ```
 
----
+***
 
 ## ステップ 3: フォームコンポーネント
 
@@ -392,7 +392,7 @@ export function CreditCardForm({ defaultValues, errors }: Props): JSX.Element {
 }
 ```
 
----
+***
 
 ## ステップ 4: Server Action
 
@@ -472,7 +472,7 @@ export async function savePaymentMethod(
 }
 ```
 
----
+***
 
 ## ステップ 5: カード番号のフォーマット（オプション）
 
@@ -510,7 +510,7 @@ export function useCardNumberFormat(initialValue = ""): {
 }
 ```
 
----
+***
 
 ## 確認ポイント
 
@@ -523,7 +523,7 @@ export function useCardNumberFormat(initialValue = ""): {
 - [ ] 「次へ進む」ボタンで注文確認ページに遷移できる
 - [ ] 「戻る」ボタンで配送先入力ページに戻れる
 
----
+***
 
 ## セキュリティに関する注意
 
@@ -552,7 +552,7 @@ function PaymentWithStripe(): JSX.Element {
 }
 ```
 
----
+***
 
 ## 次の演習
 

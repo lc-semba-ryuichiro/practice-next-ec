@@ -2,7 +2,7 @@
 
 React / Next.js 開発でよくあるエラーと解決策をまとめています。
 
----
+***
 
 ## 目次
 
@@ -68,7 +68,7 @@ function Component({ condition }) {
 }
 ```
 
----
+***
 
 ### 無限ループ（useEffect）
 
@@ -90,7 +90,7 @@ useEffect(() => {
 }, []); // 初回のみ実行
 ```
 
----
+***
 
 ### Key の警告
 
@@ -121,7 +121,7 @@ Warning: Each child in a list should have a unique "key" prop.
 }
 ```
 
----
+***
 
 ## Next.js 関連のエラー
 
@@ -189,7 +189,7 @@ function Component() {
 </div>
 ```
 
----
+***
 
 ### "use client" ディレクティブ忘れ
 
@@ -214,7 +214,7 @@ export function Counter() {
 }
 ```
 
----
+***
 
 ### Server Component でのイベントハンドラ
 
@@ -245,7 +245,7 @@ export function Button() {
 }
 ```
 
----
+***
 
 ### Dynamic import のエラー
 
@@ -270,7 +270,7 @@ const Modal = dynamic(() => import("./Modal"));
 const Modal = dynamic(() => import("./Modal").then((mod) => mod.Modal));
 ```
 
----
+***
 
 ## TypeScript 関連のエラー
 
@@ -297,7 +297,7 @@ Cannot find module '@/types/product' or its corresponding type declarations.
 }
 ```
 
----
+***
 
 ### 暗黙の any 型
 
@@ -323,7 +323,7 @@ const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 };
 ```
 
----
+***
 
 ### children の型エラー
 
@@ -352,7 +352,7 @@ type Props = {
 };
 ```
 
----
+***
 
 ## テスト関連のエラー
 
@@ -383,7 +383,7 @@ await waitFor(() => {
 });
 ```
 
----
+***
 
 ### 要素が見つからない
 
@@ -408,7 +408,7 @@ const button = await screen.findByText("Submit");
 expect(screen.queryByText("Submit")).not.toBeInTheDocument();
 ```
 
----
+***
 
 ## デバッグのヒント
 
@@ -452,7 +452,7 @@ DEBUG=* pnpm dev
 DEBUG=next:* pnpm dev
 ```
 
----
+***
 
 ## アンチパターン
 

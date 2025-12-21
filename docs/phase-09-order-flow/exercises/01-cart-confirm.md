@@ -36,7 +36,7 @@ graph LR
     style A fill:#4caf50,color:#fff
 ```
 
----
+***
 
 ## 完成イメージ
 
@@ -60,14 +60,14 @@ graph LR
 └─────────────────────────────────────────────┘
 ```
 
----
+***
 
 ## 前提条件
 
 - Phase 4 で実装したカート機能（Jotai Atom）が動作していること
 - カートに商品が追加できること
 
----
+***
 
 ## ステップ 1: カート確認ページの作成
 
@@ -176,7 +176,7 @@ export function CartContent(): JSX.Element {
 }
 ```
 
----
+***
 
 ## ステップ 2: 数量変更機能
 
@@ -282,7 +282,7 @@ export const cartTotalAtom = atom((get) => {
 });
 ```
 
----
+***
 
 ## ステップ 3: 削除機能
 
@@ -319,7 +319,7 @@ export function RemoveButton({ productId }: Props): JSX.Element {
 }
 ```
 
----
+***
 
 ## ステップ 4: サマリーとアクション
 
@@ -416,7 +416,7 @@ export function CartActions(): JSX.Element {
 }
 ```
 
----
+***
 
 ## ステップ 5: 在庫確認（オプション）
 
@@ -487,7 +487,7 @@ export function StockWarning(): JSX.Element | null {
 }
 ```
 
----
+***
 
 ## 確認ポイント
 
@@ -501,7 +501,7 @@ export function StockWarning(): JSX.Element | null {
 - [ ] カートが空の場合、「カートに商品がありません」などのメッセージが表示される
 - [ ] 「レジに進む」ボタンで次のステップに遷移できる
 
----
+***
 
 ## よくある問題
 
@@ -513,7 +513,7 @@ Jotai の状態が正しく反映されているか確認してください。`u
 
 派生 Atom（`cartTotalAtom`）が正しく設定されているか確認してください。元の Atom（`cartItemsAtom`）が更新されると、派生 Atom も自動的に再計算されます。
 
----
+***
 
 ## 次の演習
 

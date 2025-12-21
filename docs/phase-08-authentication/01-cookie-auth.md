@@ -69,7 +69,7 @@ flowchart LR
     end
 ```
 
----
+***
 
 ## Cookie ベース認証の仕組み
 
@@ -94,13 +94,13 @@ sequenceDiagram
 
 ### Cookie の重要な属性
 
-| 属性       | 説明                                            | 推奨設定       |
-| ---------- | ----------------------------------------------- | -------------- |
-| `HttpOnly` | JavaScript からアクセス不可（XSS 対策）         | `true`         |
-| `Secure`   | HTTPS 通信でのみ送信                            | `true`（本番） |
-| `SameSite` | クロスサイトリクエストでの送信制御（CSRF 対策） | `lax`          |
-| `Path`     | Cookie が有効なパス                             | `/`            |
-| `Max-Age`  | 有効期限（秒）                                  | 用途による     |
+| 属性         | 説明                          | 推奨設定       |
+| ---------- | --------------------------- | ---------- |
+| `HttpOnly` | JavaScript からアクセス不可（XSS 対策） | `true`     |
+| `Secure`   | HTTPS 通信でのみ送信               | `true`（本番） |
+| `SameSite` | クロスサイトリクエストでの送信制御（CSRF 対策）  | `lax`      |
+| `Path`     | Cookie が有効なパス               | `/`        |
+| `Max-Age`  | 有効期限（秒）                     | 用途による      |
 
 ```typescript
 // Cookie 設定の例
@@ -113,7 +113,7 @@ cookies().set("session", token, {
 });
 ```
 
----
+***
 
 ## NextAuth.js（Auth.js v5）とは
 
@@ -143,7 +143,7 @@ graph TD
     end
 ```
 
----
+***
 
 ## NextAuth.js のセットアップ
 
@@ -271,7 +271,7 @@ GITHUB_CLIENT_SECRET=your-github-client-secret
 openssl rand -base64 32
 ```
 
----
+***
 
 ## セッション戦略
 
@@ -334,15 +334,15 @@ export const { handlers, auth } = NextAuth({
 
 ### 比較表
 
-| 項目             | JWT セッション   | Database セッション  |
-| ---------------- | ---------------- | -------------------- |
-| データベース     | 不要             | 必要                 |
-| スケーラビリティ | 高い             | 中程度               |
-| 即時無効化       | 困難             | 容易                 |
-| データサイズ     | 制限あり         | 制限なし             |
-| 推奨用途         | ステートレス API | 管理機能が必要な場合 |
+| 項目       | JWT セッション  | Database セッション |
+| -------- | ---------- | -------------- |
+| データベース   | 不要         | 必要             |
+| スケーラビリティ | 高い         | 中程度            |
+| 即時無効化    | 困難         | 容易             |
+| データサイズ   | 制限あり       | 制限なし           |
+| 推奨用途     | ステートレス API | 管理機能が必要な場合     |
 
----
+***
 
 ## Credentials Provider の詳細設定
 
@@ -411,7 +411,7 @@ export async function registerAction(formData: FormData) {
 }
 ```
 
----
+***
 
 ## OAuth Provider の設定
 
@@ -443,7 +443,7 @@ Google({
 });
 ```
 
----
+***
 
 ## セキュリティのベストプラクティス
 
@@ -503,7 +503,7 @@ function checkRateLimit(ip: string): boolean {
 }
 ```
 
----
+***
 
 ## まとめ
 
@@ -516,7 +516,7 @@ function checkRateLimit(ip: string): boolean {
 - Credentials Provider と OAuth Provider の設定
 - セキュリティのベストプラクティス
 
----
+***
 
 ## 次のステップ
 

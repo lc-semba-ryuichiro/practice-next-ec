@@ -33,14 +33,14 @@
 
 `/products` ルートに商品一覧ページを実装し、商品カードを表示する。ローディング状態と 404 ページも実装する。
 
----
+***
 
 ## 前提条件
 
 - [ ] 演習 1（レイアウト実装）を完了していること
 - [ ] `layout.tsx` でヘッダー/フッターが表示されていること
 
----
+***
 
 ## 完成イメージ
 
@@ -62,7 +62,7 @@
 └─────────────────────────────────────────────┘
 ```
 
----
+***
 
 ## ステップ 1: モックデータの作成
 
@@ -142,7 +142,7 @@ export const products: Product[] = [
 ];
 ```
 
----
+***
 
 ## ステップ 2: 商品カードコンポーネント
 
@@ -218,7 +218,7 @@ export default nextConfig;
 imageUrl: "https://via.placeholder.com/400x400?text=Product",
 ```
 
----
+***
 
 ## ステップ 3: 商品一覧ページ
 
@@ -268,7 +268,7 @@ export default function ProductsPage(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## ステップ 4: ローディング UI
 
@@ -332,7 +332,7 @@ export default async function ProductsPage(): Promise<React.ReactElement> {
 }
 ```
 
----
+***
 
 ## ステップ 5: not-found ページ
 
@@ -360,7 +360,7 @@ export default function ProductsNotFound(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## ステップ 6: 動作確認
 
@@ -374,7 +374,7 @@ export default function ProductsNotFound(): React.ReactElement {
 - [ ] 商品カードをクリックすると `/products/[id]` に遷移する（まだ 404）
 - [ ] ローディング中にスケルトン UI が表示される
 
----
+***
 
 ## 確認チェックリスト
 
@@ -386,7 +386,7 @@ export default function ProductsNotFound(): React.ReactElement {
 - [ ] `app/products/not-found.tsx` を作成した
 - [ ] 商品一覧が正しく表示される
 
----
+***
 
 ## トラブルシューティング
 
@@ -409,7 +409,7 @@ Type '{ product: Product; }' is not assignable to type...
 - 型定義ファイルが正しくインポートされているか確認
 - `@/types/product` のパスが正しいか確認
 
----
+***
 
 ## 発展課題
 
@@ -418,7 +418,7 @@ Type '{ product: Product; }' is not assignable to type...
 3. **ページネーション**: 商品数が多い場合にページ分割する
 4. **グリッド切り替え**: 2列/3列/4列表示を切り替えられるようにする
 
----
+***
 
 ## 完了条件
 
@@ -428,7 +428,7 @@ Type '{ product: Product; }' is not assignable to type...
 - [ ] TypeScript の型チェックを通過する
 - [ ] レスポンシブデザインになっている
 
----
+***
 
 ## 次の演習
 

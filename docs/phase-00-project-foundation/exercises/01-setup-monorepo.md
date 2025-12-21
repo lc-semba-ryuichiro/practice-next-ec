@@ -39,7 +39,7 @@
 
 Turborepo + pnpm ワークスペースを使ったモノレポ構成をゼロから構築します。
 
----
+***
 
 ## 前提条件
 
@@ -56,7 +56,7 @@ pnpm --version
 git --version
 ```
 
----
+***
 
 ## ステップ 1: プロジェクトの作成
 
@@ -108,7 +108,7 @@ pnpm init
 }
 ```
 
----
+***
 
 ## ステップ 2: pnpm ワークスペース設定
 
@@ -137,7 +137,7 @@ mkdir -p tooling/tailwind-config
 mkdir -p tooling/prettier-config
 ```
 
----
+***
 
 ## ステップ 3: Turborepo 設定
 
@@ -174,7 +174,7 @@ mkdir -p tooling/prettier-config
 }
 ```
 
----
+***
 
 ## ステップ 4: 共有設定パッケージの作成
 
@@ -280,7 +280,7 @@ const config = {
 module.exports = config;
 ```
 
----
+***
 
 ## ステップ 5: 共有パッケージの作成
 
@@ -348,7 +348,7 @@ export type Category = {
 };
 ```
 
----
+***
 
 ## ステップ 6: web アプリの作成
 
@@ -402,7 +402,7 @@ pnpm create next-app@latest . --typescript --tailwind --eslint --app --src-dir=f
 }
 ```
 
----
+***
 
 ## ステップ 7: 依存関係のインストール
 
@@ -414,7 +414,7 @@ cd ../..
 pnpm install
 ```
 
----
+***
 
 ## ステップ 8: 動作確認
 
@@ -436,7 +436,7 @@ pnpm build
 pnpm typecheck
 ```
 
----
+***
 
 ## 確認チェックリスト
 
@@ -448,7 +448,7 @@ pnpm typecheck
 - [ ] `pnpm typecheck` がエラーなく完了する
 - [ ] `@ec/shared` からの型インポートが動作する
 
----
+***
 
 ## トラブルシューティング
 
@@ -476,7 +476,7 @@ pnpm install
 pnpm add -D turbo --workspace-root
 ```
 
----
+***
 
 ## 発展課題
 
@@ -484,7 +484,7 @@ pnpm add -D turbo --workspace-root
 2. `packages/validators` に Zod スキーマを作成する
 3. `apps/storybook` を追加し、コンポーネントを表示する
 
----
+***
 
 ## 完了条件
 

@@ -48,7 +48,7 @@ HTML の `<select>` と `<option>` の関係に似ています。
 </Tabs>;
 ```
 
----
+***
 
 ## なぜ Compound Components を使うのか
 
@@ -110,7 +110,7 @@ HTML の `<select>` と `<option>` の関係に似ています。
 </ProductTabs>;
 ```
 
----
+***
 
 ## 実装パターン
 
@@ -338,7 +338,7 @@ export type { AccordionTriggerProps } from "./AccordionTrigger";
 export type { AccordionContentProps } from "./AccordionContent";
 ```
 
----
+***
 
 ## EC サイトでの活用例
 
@@ -495,20 +495,20 @@ export function FilterPanel({
 }
 ```
 
----
+***
 
 ## shadcn/ui での Compound Components
 
 shadcn/ui は Radix UI をベースにしており、多くの Compound Components パターンを採用しています。
 
-| コンポーネント | 構成                                           |
-| -------------- | ---------------------------------------------- |
-| Accordion      | Root, Item, Trigger, Content                   |
-| Tabs           | Root, List, Trigger, Content                   |
-| Dialog         | Root, Trigger, Portal, Overlay, Content, Close |
-| DropdownMenu   | Root, Trigger, Content, Item, Separator        |
-| Sheet          | Root, Trigger, Portal, Overlay, Content        |
-| AlertDialog    | Root, Trigger, Portal, Content, Action, Cancel |
+| コンポーネント      | 構成                                             |
+| ------------ | ---------------------------------------------- |
+| Accordion    | Root, Item, Trigger, Content                   |
+| Tabs         | Root, List, Trigger, Content                   |
+| Dialog       | Root, Trigger, Portal, Overlay, Content, Close |
+| DropdownMenu | Root, Trigger, Content, Item, Separator        |
+| Sheet        | Root, Trigger, Portal, Overlay, Content        |
+| AlertDialog  | Root, Trigger, Portal, Content, Action, Cancel |
 
 ### インストール例
 
@@ -517,19 +517,19 @@ shadcn/ui は Radix UI をベースにしており、多くの Compound Componen
 pnpm dlx shadcn@latest add accordion tabs dialog sheet
 ```
 
----
+***
 
 ## Compound Components の利点
 
-| 利点               | 説明                                              |
-| ------------------ | ------------------------------------------------- |
-| **柔軟性**         | 子コンポーネントの順序や構成を自由に変更できる    |
-| **可読性**         | JSX の構造が HTML のように直感的                  |
-| **拡張性**         | 新しい子コンポーネントを追加しやすい              |
-| **カスタマイズ性** | 各子コンポーネントに個別のスタイルを適用できる    |
-| **状態の隠蔽**     | 内部状態が Context で管理され、利用者は意識しない |
+| 利点          | 説明                            |
+| ----------- | ----------------------------- |
+| **柔軟性**     | 子コンポーネントの順序や構成を自由に変更できる       |
+| **可読性**     | JSX の構造が HTML のように直感的         |
+| **拡張性**     | 新しい子コンポーネントを追加しやすい            |
+| **カスタマイズ性** | 各子コンポーネントに個別のスタイルを適用できる       |
+| **状態の隠蔽**   | 内部状態が Context で管理され、利用者は意識しない |
 
----
+***
 
 ## まとめ
 
@@ -539,7 +539,7 @@ pnpm dlx shadcn@latest add accordion tabs dialog sheet
 - shadcn/ui の Accordion, Tabs, Dialog などで活用されている
 - EC サイトでは商品詳細タブ、FAQ、フィルターパネルなどで使える
 
----
+***
 
 ## 次のステップ
 

@@ -28,7 +28,7 @@
 Jotai を使ってお気に入り機能を実装します。
 atomFamily を活用して、商品ごとのお気に入り状態を効率的に管理します。
 
----
+***
 
 ## 実装する機能
 
@@ -48,14 +48,14 @@ graph TD
 - お気に入り一覧ページの作成
 - お気に入りデータを localStorage に永続化
 
----
+***
 
 ## 前提条件
 
 - 演習 1（ショッピングカート）を完了していること
 - `packages/store` に Jotai がインストールされていること
 
----
+***
 
 ## ステップ 1: お気に入り Atom を作成
 
@@ -152,7 +152,7 @@ export const toggleFavoriteFamily = atomFamily((productId: string) =>
 );
 ```
 
----
+***
 
 ## ステップ 2: エクスポート設定
 
@@ -162,7 +162,7 @@ export * from "./cart";
 export * from "./favorites";
 ```
 
----
+***
 
 ## ステップ 3: コンポーネントを作成
 
@@ -311,7 +311,7 @@ export function FavoriteProductCard({ product }: FavoriteProductCardProps): JSX.
 }
 ```
 
----
+***
 
 ## ステップ 4: お気に入り一覧ページを作成
 
@@ -400,7 +400,7 @@ export default function FavoritesPage(): JSX.Element {
 }
 ```
 
----
+***
 
 ## ステップ 5: 商品カードに統合
 
@@ -452,7 +452,7 @@ export function ProductCard({ product }: ProductCardProps): JSX.Element {
 }
 ```
 
----
+***
 
 ## 確認チェックリスト
 
@@ -466,7 +466,7 @@ export function ProductCard({ product }: ProductCardProps): JSX.Element {
 - [ ] ページをリロードしてもお気に入りが保持される
 - [ ] お気に入りをすべて削除できる
 
----
+***
 
 ## トラブルシューティング
 
@@ -487,7 +487,7 @@ const isFavoriteFamily = atomFamily((params: { id: string }) => atom(...));
 
 `useSetAtom` を使って、値を読み取らないコンポーネントでは再レンダリングを防ぎましょう。
 
----
+***
 
 ## 発展課題
 
@@ -503,7 +503,7 @@ const isFavoriteFamily = atomFamily((params: { id: string }) => atom(...));
 4. **お気に入り上限**
    - 最大件数を設定し、超えたら警告
 
----
+***
 
 ## 完了条件
 

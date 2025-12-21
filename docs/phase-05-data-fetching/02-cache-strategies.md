@@ -56,13 +56,13 @@ graph TD
 
 ### キャッシュレイヤーの説明
 
-| レイヤー            | スコープ       | 用途                             |
-| ------------------- | -------------- | -------------------------------- |
-| Request Memoization | 1 リクエスト内 | 同じ fetch の重複を排除          |
-| Data Cache          | サーバー永続   | fetch 結果をサーバーに保存       |
+| レイヤー                | スコープ       | 用途                    |
+| ------------------- | ---------- | --------------------- |
+| Request Memoization | 1 リクエスト内   | 同じ fetch の重複を排除       |
+| Data Cache          | サーバー永続     | fetch 結果をサーバーに保存      |
 | Full Route Cache    | ビルド時 / ISR | ページ全体の HTML/RSC ペイロード |
 
----
+***
 
 ## fetch オプション
 
@@ -70,14 +70,14 @@ Next.js の fetch は拡張されており、キャッシュ動作を細かく�
 
 ### オプション一覧
 
-| オプション                | 動作                   | ユースケース            |
-| ------------------------- | ---------------------- | ----------------------- |
-| `cache: 'force-cache'`    | 永続キャッシュ（既定） | 静的コンテンツ          |
-| `cache: 'no-store'`       | キャッシュなし         | リアルタイムデータ      |
-| `next: { revalidate: N }` | N 秒後に再検証         | ISR（増分・静的再生成） |
-| `next: { tags: [...] }`   | タグベース再検証       | オンデマンド再検証      |
+| オプション                     | 動作          | ユースケース        |
+| ------------------------- | ----------- | ------------- |
+| `cache: 'force-cache'`    | 永続キャッシュ（既定） | 静的コンテンツ       |
+| `cache: 'no-store'`       | キャッシュなし     | リアルタイムデータ     |
+| `next: { revalidate: N }` | N 秒後に再検証    | ISR（増分・静的再生成） |
+| `next: { tags: [...] }`   | タグベース再検証    | オンデマンド再検証     |
 
----
+***
 
 ## cache: 'force-cache'（デフォルト）
 
@@ -96,7 +96,7 @@ const response = await fetch("https://api.example.com/categories", {
 - カテゴリマスター
 - 利用規約など静的コンテンツ
 
----
+***
 
 ## cache: 'no-store'
 
@@ -115,7 +115,7 @@ const response = await fetch("https://api.example.com/stock", {
 - ユーザー固有データ
 - 検索結果
 
----
+***
 
 ## next: { revalidate: N }（ISR）
 
@@ -157,7 +157,7 @@ sequenceDiagram
 - ランキング（5 分ごと更新）
 - ニュース（10 分ごと更新）
 
----
+***
 
 ## next: { tags: \[...] }（タグベース再検証）
 
@@ -190,7 +190,7 @@ export async function updateProduct(id: string): Promise<void> {
 }
 ```
 
----
+***
 
 ## revalidatePath と revalidateTag
 
@@ -224,12 +224,12 @@ revalidateTag("products");
 
 ### 使い分け
 
-| 方法           | 適用範囲             | ユースケース     |
-| -------------- | -------------------- | ---------------- |
-| revalidatePath | 特定のパス           | ページ単位の更新 |
+| 方法             | 適用範囲          | ユースケース   |
+| -------------- | ------------- | -------- |
+| revalidatePath | 特定のパス         | ページ単位の更新 |
 | revalidateTag  | タグが付いた全 fetch | データ単位の更新 |
 
----
+***
 
 ## EC サイトでのキャッシュ戦略
 
@@ -245,18 +245,18 @@ flowchart TD
 
 ### データ別の推奨設定
 
-| データ         | キャッシュ設定          | 理由                   |
-| -------------- | ----------------------- | ---------------------- |
-| カテゴリ一覧   | `revalidate: 3600`      | 変更頻度が低い         |
-| 商品一覧       | `revalidate: 60`        | 在庫切れを早く反映     |
-| 商品詳細       | `revalidate: 60` + tags | 更新時に即座に反映可能 |
-| 在庫状況       | `cache: 'no-store'`     | リアルタイム必須       |
-| ユーザーカート | `cache: 'no-store'`     | ユーザー固有データ     |
-| 検索結果       | `cache: 'no-store'`     | 毎回異なるクエリ       |
-| ランキング     | `revalidate: 300`       | 5 分ごとで十分         |
-| お知らせ       | `revalidate: 3600`      | 時間単位で更新         |
+| データ     | キャッシュ設定                 | 理由          |
+| ------- | ----------------------- | ----------- |
+| カテゴリ一覧  | `revalidate: 3600`      | 変更頻度が低い     |
+| 商品一覧    | `revalidate: 60`        | 在庫切れを早く反映   |
+| 商品詳細    | `revalidate: 60` + tags | 更新時に即座に反映可能 |
+| 在庫状況    | `cache: 'no-store'`     | リアルタイム必須    |
+| ユーザーカート | `cache: 'no-store'`     | ユーザー固有データ   |
+| 検索結果    | `cache: 'no-store'`     | 毎回異なるクエリ    |
+| ランキング   | `revalidate: 300`       | 5 分ごとで十分    |
+| お知らせ    | `revalidate: 3600`      | 時間単位で更新     |
 
----
+***
 
 ## 実装例: 商品一覧と詳細
 
@@ -320,7 +320,7 @@ export async function updateProduct(id: string, data: ProductUpdateData): Promis
 }
 ```
 
----
+***
 
 ## 実装例: カテゴリ（長期キャッシュ）
 
@@ -342,7 +342,7 @@ export async function getCategories(): Promise<Category[]> {
 }
 ```
 
----
+***
 
 ## 実装例: 在庫状況（リアルタイム）
 
@@ -361,7 +361,7 @@ export async function getStock(productId: string): Promise<StockInfo> {
 }
 ```
 
----
+***
 
 ## キャッシュのデバッグ
 
@@ -382,18 +382,18 @@ console.log("Cache-Control:", response.headers.get("cache-control"));
 console.log("X-Vercel-Cache:", response.headers.get("x-vercel-cache"));
 ```
 
----
+***
 
 ## まとめ
 
-| 戦略               | オプション                | 適用シーン             |
-| ------------------ | ------------------------- | ---------------------- |
-| 永続キャッシュ     | デフォルト                | 静的コンテンツ         |
-| キャッシュなし     | `cache: 'no-store'`       | リアルタイムデータ     |
-| 時間ベース ISR     | `next: { revalidate: N }` | 定期的に更新するデータ |
-| オンデマンド再検証 | `next: { tags: [...] }`   | 更新時に即座に反映     |
+| 戦略        | オプション                     | 適用シーン       |
+| --------- | ------------------------- | ----------- |
+| 永続キャッシュ   | デフォルト                     | 静的コンテンツ     |
+| キャッシュなし   | `cache: 'no-store'`       | リアルタイムデータ   |
+| 時間ベース ISR | `next: { revalidate: N }` | 定期的に更新するデータ |
+| オンデマンド再検証 | `next: { tags: [...] }`   | 更新時に即座に反映   |
 
----
+***
 
 ## 次のステップ
 

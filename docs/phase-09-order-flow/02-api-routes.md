@@ -51,15 +51,15 @@ graph LR
     end
 ```
 
-| 特徴           | Server Actions       | Route Handlers         |
-| -------------- | -------------------- | ---------------------- |
-| 用途           | フォーム処理         | API エンドポイント     |
-| 呼び出し元     | React コンポーネント | 任意のクライアント     |
-| レスポンス     | React の状態更新     | JSON / その他          |
-| HTTP メソッド  | POST のみ            | GET, POST, PUT, DELETE |
-| 外部からの利用 | 不可                 | 可能                   |
+| 特徴        | Server Actions | Route Handlers         |
+| --------- | -------------- | ---------------------- |
+| 用途        | フォーム処理         | API エンドポイント            |
+| 呼び出し元     | React コンポーネント  | 任意のクライアント              |
+| レスポンス     | React の状態更新    | JSON / その他             |
+| HTTP メソッド | POST のみ        | GET, POST, PUT, DELETE |
+| 外部からの利用   | 不可             | 可能                     |
 
----
+***
 
 ## 基本的な Route Handler
 
@@ -166,7 +166,7 @@ export async function PATCH(request: NextRequest, { params }: Params): Promise<N
 }
 ```
 
----
+***
 
 ## RESTful API 設計
 
@@ -185,13 +185,13 @@ graph TD
     end
 ```
 
-| メソッド | エンドポイント  | 説明           | ステータスコード       |
-| -------- | --------------- | -------------- | ---------------------- |
-| GET      | /api/orders     | 注文一覧取得   | 200 OK                 |
-| POST     | /api/orders     | 注文作成       | 201 Created            |
-| GET      | /api/orders/:id | 注文詳細取得   | 200 OK / 404 Not Found |
-| PATCH    | /api/orders/:id | 注文更新       | 200 OK / 404 Not Found |
-| DELETE   | /api/orders/:id | 注文キャンセル | 204 No Content         |
+| メソッド   | エンドポイント         | 説明      | ステータスコード               |
+| ------ | --------------- | ------- | ---------------------- |
+| GET    | /api/orders     | 注文一覧取得  | 200 OK                 |
+| POST   | /api/orders     | 注文作成    | 201 Created            |
+| GET    | /api/orders/:id | 注文詳細取得  | 200 OK / 404 Not Found |
+| PATCH  | /api/orders/:id | 注文更新    | 200 OK / 404 Not Found |
+| DELETE | /api/orders/:id | 注文キャンセル | 204 No Content         |
 
 ### クエリパラメータ
 
@@ -233,7 +233,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 }
 ```
 
----
+***
 
 ## 型定義
 
@@ -302,7 +302,7 @@ export type OrderStatus = z.infer<typeof orderStatusSchema>;
 export type Order = z.infer<typeof orderSchema>;
 ```
 
----
+***
 
 ## エラーハンドリング
 
@@ -359,19 +359,19 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
 ### HTTP ステータスコードの使い分け
 
-| ステータス | 意味                  | 使用場面                         |
-| ---------- | --------------------- | -------------------------------- |
-| 200        | OK                    | 取得・更新成功                   |
-| 201        | Created               | 新規リソース作成成功             |
-| 204        | No Content            | 削除成功（レスポンスボディなし） |
-| 400        | Bad Request           | バリデーションエラー             |
-| 401        | Unauthorized          | 認証が必要                       |
-| 403        | Forbidden             | 権限がない                       |
-| 404        | Not Found             | リソースが存在しない             |
-| 409        | Conflict              | 競合（重複など）                 |
-| 500        | Internal Server Error | サーバー側のエラー               |
+| ステータス | 意味                    | 使用場面             |
+| ----- | --------------------- | ---------------- |
+| 200   | OK                    | 取得・更新成功          |
+| 201   | Created               | 新規リソース作成成功       |
+| 204   | No Content            | 削除成功（レスポンスボディなし） |
+| 400   | Bad Request           | バリデーションエラー       |
+| 401   | Unauthorized          | 認証が必要            |
+| 403   | Forbidden             | 権限がない            |
+| 404   | Not Found             | リソースが存在しない       |
+| 409   | Conflict              | 競合（重複など）         |
+| 500   | Internal Server Error | サーバー側のエラー        |
 
----
+***
 
 ## 認証・認可
 
@@ -426,7 +426,7 @@ export const config = {
 };
 ```
 
----
+***
 
 ## EC サイトでの実践例
 
@@ -506,7 +506,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 }
 ```
 
----
+***
 
 ## よくある間違い
 
@@ -578,7 +578,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 }
 ```
 
----
+***
 
 ## まとめ
 
@@ -597,7 +597,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 - 操作結果に応じた HTTP ステータスコードの使用
 - 認証・認可の実装
 
----
+***
 
 ## 次のステップ
 

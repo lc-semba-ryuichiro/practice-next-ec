@@ -30,7 +30,7 @@
 Jotai を使って「最近見た商品」機能を実装します。
 閲覧履歴の管理、重複排除、最大件数の制限を学びます。
 
----
+***
 
 ## 実装する機能
 
@@ -51,14 +51,14 @@ graph TD
 - 最近見た商品をサイドバーやトップページに表示
 - 閲覧履歴を localStorage に永続化
 
----
+***
 
 ## 前提条件
 
 - 演習 1, 2 を完了していること
 - `packages/store` に Jotai がインストールされていること
 
----
+***
 
 ## ステップ 1: 閲覧履歴 Atom を作成
 
@@ -154,7 +154,7 @@ export const recentlyViewedExceptAtom = atom((get) => {
 });
 ```
 
----
+***
 
 ## ステップ 2: エクスポート設定
 
@@ -165,7 +165,7 @@ export * from "./favorites";
 export * from "./recently-viewed";
 ```
 
----
+***
 
 ## ステップ 3: 閲覧記録用のフックを作成
 
@@ -202,7 +202,7 @@ export function useTrackProductView(product: Product | null): void {
 }
 ```
 
----
+***
 
 ## ステップ 4: コンポーネントを作成
 
@@ -315,7 +315,7 @@ export function ClearHistoryButton(): JSX.Element {
 }
 ```
 
----
+***
 
 ## ステップ 5: 商品詳細ページに統合
 
@@ -409,7 +409,7 @@ export default function ProductDetailPage(): JSX.Element {
 }
 ```
 
----
+***
 
 ## ステップ 6: トップページに表示
 
@@ -435,7 +435,7 @@ export default function HomePage(): JSX.Element {
 }
 ```
 
----
+***
 
 ## 確認チェックリスト
 
@@ -449,7 +449,7 @@ export default function HomePage(): JSX.Element {
 - [ ] ページをリロードしても履歴が保持される
 - [ ] 履歴をクリアできる
 
----
+***
 
 ## トラブルシューティング
 
@@ -465,7 +465,7 @@ React 18 の Strict Mode では、開発環境で useEffect が 2 回実行さ�
 サーバーとクライアントで `Date.now()` の値は異なります。
 SSR を使用する場合は、クライアントサイドでのみタイムスタンプを設定してください。
 
----
+***
 
 ## 発展課題
 
@@ -495,7 +495,7 @@ export const recentlyViewedValidItemsAtom = atom((get) => {
 });
 ```
 
----
+***
 
 ## 完了条件
 

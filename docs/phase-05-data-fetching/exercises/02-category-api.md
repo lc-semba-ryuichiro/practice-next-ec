@@ -35,13 +35,13 @@
 
 カテゴリ一覧 API のモックを作成し、長期キャッシュ戦略を適用してカテゴリナビゲーションとカテゴリ別商品ページを実装します。
 
----
+***
 
 ## 前提条件
 
 [演習 1: 商品データ API](./01-product-api.md) が完了していることを確認してください。
 
----
+***
 
 ## 実装する機能
 
@@ -54,7 +54,7 @@ graph TD
     E --> F["6. カテゴリページ"]
 ```
 
----
+***
 
 ## ステップ 1: 型定義
 
@@ -71,7 +71,7 @@ export type Category = {
 };
 ```
 
----
+***
 
 ## ステップ 2: モックデータ
 
@@ -120,7 +120,7 @@ export const categories: Category[] = [
 ];
 ```
 
----
+***
 
 ## ステップ 3: MSW ハンドラー
 
@@ -174,7 +174,7 @@ import { categoryHandlers } from "./categories";
 export const handlers = [...productHandlers, ...categoryHandlers];
 ```
 
----
+***
 
 ## ステップ 4: データ取得関数
 
@@ -238,7 +238,7 @@ export async function getCategoryProducts(slug: string): Promise<Product[]> {
 }
 ```
 
----
+***
 
 ## ステップ 5: カテゴリナビゲーション
 
@@ -327,7 +327,7 @@ export default function ShopLayout({ children }: Props): React.ReactElement {
 }
 ```
 
----
+***
 
 ## ステップ 6: カテゴリページ
 
@@ -471,19 +471,19 @@ export default function CategoryNotFound(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## キャッシュ戦略の確認
 
 この演習で設定したキャッシュ戦略は以下の通りです。
 
-| データ             | revalidate | 理由                       |
-| ------------------ | ---------- | -------------------------- |
-| カテゴリ一覧       | 3600 秒    | 変更頻度が低い             |
-| カテゴリ詳細       | 3600 秒    | 変更頻度が低い             |
-| カテゴリ別商品一覧 | 60 秒      | 商品在庫が変わる可能性あり |
+| データ       | revalidate | 理由            |
+| --------- | ---------- | ------------- |
+| カテゴリ一覧    | 3600 秒     | 変更頻度が低い       |
+| カテゴリ詳細    | 3600 秒     | 変更頻度が低い       |
+| カテゴリ別商品一覧 | 60 秒       | 商品在庫が変わる可能性あり |
 
----
+***
 
 ## 確認チェックリスト
 
@@ -495,7 +495,7 @@ export default function CategoryNotFound(): React.ReactElement {
 - [ ] 存在しないカテゴリで 404 ページが表示される
 - [ ] ローディング中に Skeleton が表示される
 
----
+***
 
 ## トラブルシューティング
 
@@ -518,7 +518,7 @@ export async function getCategories(): Promise<Category[]> {
 
 本番ビルド（`pnpm build && pnpm start`）でキャッシュの効果を確認できます。
 
----
+***
 
 ## 発展課題
 
@@ -526,7 +526,7 @@ export async function getCategories(): Promise<Category[]> {
 2. **サブカテゴリ**: カテゴリに親子関係を追加
 3. **カテゴリ別商品数**: カテゴリ一覧に商品数を表示
 
----
+***
 
 ## 完了条件
 

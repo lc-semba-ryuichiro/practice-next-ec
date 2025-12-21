@@ -65,7 +65,7 @@ function ProductCard() {
 }
 ```
 
----
+***
 
 ## JSX の基本ルール
 
@@ -125,7 +125,7 @@ React コンポーネントは **PascalCase（大文字始まり）** で命名�
 <PriceDisplay>
 ```
 
----
+***
 
 ## 式の埋め込み
 
@@ -178,7 +178,7 @@ function PriceDisplay(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## HTML との違い
 
@@ -186,14 +186,14 @@ JSX は HTML に似ていますが、いくつかの重要な違いがありま�
 
 ### 属性名の違い
 
-| HTML        | JSX         | 理由                           |
-| ----------- | ----------- | ------------------------------ |
+| HTML        | JSX         | 理由                        |
+| ----------- | ----------- | ------------------------- |
 | `class`     | `className` | `class` は JavaScript の予約語 |
 | `for`       | `htmlFor`   | `for` は JavaScript の予約語   |
-| `tabindex`  | `tabIndex`  | JSX は camelCase               |
-| `onclick`   | `onClick`   | JSX は camelCase               |
-| `readonly`  | `readOnly`  | JSX は camelCase               |
-| `maxlength` | `maxLength` | JSX は camelCase               |
+| `tabindex`  | `tabIndex`  | JSX は camelCase           |
+| `onclick`   | `onClick`   | JSX は camelCase           |
+| `readonly`  | `readOnly`  | JSX は camelCase           |
+| `maxlength` | `maxLength` | JSX は camelCase           |
 
 ```tsx
 // HTML
@@ -219,14 +219,14 @@ HTML では文字列ですが、JSX では **オブジェクト** で指定し�
 
 プロパティ名は camelCase に変換されます。
 
-| CSS                | JSX style オブジェクト |
-| ------------------ | ---------------------- |
-| `font-size`        | `fontSize`             |
-| `background-color` | `backgroundColor`      |
-| `border-radius`    | `borderRadius`         |
-| `z-index`          | `zIndex`               |
+| CSS                | JSX style オブジェクト  |
+| ------------------ | ----------------- |
+| `font-size`        | `fontSize`        |
+| `background-color` | `backgroundColor` |
+| `border-radius`    | `borderRadius`    |
+| `z-index`          | `zIndex`          |
 
----
+***
 
 ## JSX でのコメント
 
@@ -253,7 +253,7 @@ function ProductCard(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## React Fragment
 
@@ -317,7 +317,7 @@ function Table(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## 三項演算子による条件分岐
 
@@ -363,7 +363,7 @@ function Badge({ status }: { status: string }): React.ReactElement {
 }
 ```
 
----
+***
 
 ## EC サイトでの実践例
 
@@ -444,7 +444,7 @@ function ProductCard({ product }: { product: Product }): React.ReactElement {
 }
 ```
 
----
+***
 
 ## よくある間違い
 
@@ -487,20 +487,20 @@ function Good(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## まとめ
 
-| 概念               | 説明                                      |
-| ------------------ | ----------------------------------------- |
-| JSX                | JavaScript 内に HTML ライクな構文を書ける |
-| 式の埋め込み       | `{}` で JavaScript の式を埋め込む         |
-| className          | HTML の class の代わりに使用              |
-| style オブジェクト | スタイルは camelCase のオブジェクトで指定 |
-| Fragment           | 余分な DOM 要素なしで複数要素をグループ化 |
-| 自己閉じタグ       | すべてのタグを閉じる必要がある            |
+| 概念           | 説明                            |
+| ------------ | ----------------------------- |
+| JSX          | JavaScript 内に HTML ライクな構文を書ける |
+| 式の埋め込み       | `{}` で JavaScript の式を埋め込む     |
+| className    | HTML の class の代わりに使用          |
+| style オブジェクト | スタイルは camelCase のオブジェクトで指定    |
+| Fragment     | 余分な DOM 要素なしで複数要素をグループ化       |
+| 自己閉じタグ       | すべてのタグを閉じる必要がある               |
 
----
+***
 
 ## 次のステップ
 

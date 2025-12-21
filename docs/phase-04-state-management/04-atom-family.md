@@ -56,7 +56,7 @@ graph TD
 - 動的なフォームフィールド
 - リストの各アイテムの状態
 
----
+***
 
 ## 基本的な使い方
 
@@ -78,7 +78,7 @@ const itemQuantityFamily = atomFamily((productId: string) => atom(1));
 const quantity = useAtom(itemQuantityFamily("product-123"));
 ```
 
----
+***
 
 ## EC サイトでの実装例
 
@@ -214,7 +214,7 @@ export function ProductCard({ product }: ProductCardProps): JSX.Element {
 }
 ```
 
----
+***
 
 ## パラメータの等価性
 
@@ -284,7 +284,7 @@ function ProductList(): JSX.Element {
 }
 ```
 
----
+***
 
 ## メモ化とキャッシュ
 
@@ -324,7 +324,7 @@ myFamily.remove("product-1");
 myFamily.setShouldRemove(() => true);
 ```
 
----
+***
 
 ## 派生 Atom との組み合わせ
 
@@ -372,7 +372,7 @@ const cartTotalAtom = atom((get) => {
 });
 ```
 
----
+***
 
 ## 実践例：お気に入りボタン
 
@@ -440,7 +440,7 @@ export function FavoriteButton({ productId }: FavoriteButtonProps): JSX.Element 
 }
 ```
 
----
+***
 
 ## ベストプラクティス
 
@@ -474,7 +474,7 @@ useEffect(() => {
 }, [productId]);
 ```
 
----
+***
 
 ## よくある間違い
 
@@ -515,7 +515,7 @@ const family = atomFamily(
 );
 ```
 
----
+***
 
 ## まとめ
 
@@ -533,7 +533,7 @@ const family = atomFamily(
 - 動的なフォームフィールド
 - パラメータ付きのデータ取得
 
----
+***
 
 ## 次のステップ
 

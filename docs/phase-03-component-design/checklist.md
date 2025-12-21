@@ -30,7 +30,7 @@ pie title Phase 3 学習内容の割合
     "アクセシビリティ" : 25
 ```
 
----
+***
 
 ## Atomic Design 理解度チェック
 
@@ -55,7 +55,7 @@ pie title Phase 3 学習内容の割合
 
    Templates はページのワイヤーフレーム（構造）を定義し、実際のデータは持たない。Pages は Templates に実データを流し込んだ最終的なページで、Next.js では app/ ディレクトリ内の page.tsx がこれに該当する。
 
----
+***
 
 ## Compound Components 理解度チェック
 
@@ -71,6 +71,7 @@ pie title Phase 3 学習内容の割合
 1. **Compound Components パターンを使う利点は何か**
 
    **回答例**:
+
    - (1) 柔軟性: 子コンポーネントの順序や構成を自由に変更できる
    - (2) 可読性: JSX の構造が HTML のように直感的
    - (3) カスタマイズ性: 各子コンポーネントに個別のスタイルを適用できる
@@ -79,6 +80,7 @@ pie title Phase 3 学習内容の割合
 2. **Context を使った状態共有の実装手順は？**
 
    **回答例**:
+
    - (1) createContext で Context を作成する
    - (2) Provider コンポーネントで値を提供する
    - (3) 子コンポーネントで useContext を使って値を取得する
@@ -87,12 +89,13 @@ pie title Phase 3 学習内容の割合
 3. **shadcn/ui で Compound Components パターンを採用しているコンポーネントは？**
 
    **回答例**:
+
    - Accordion (Root・Item・Trigger・Content)
    - Tabs (Root・List・Trigger・Content)
    - Dialog (Root・Trigger・Portal・Content・Close)
    - DropdownMenu など
 
----
+***
 
 ## カスタムフック 理解度チェック
 
@@ -113,6 +116,7 @@ pie title Phase 3 学習内容の割合
 2. **useLocalStorage の実装で注意すべき点は？**
 
    **回答例**:
+
    - (1) SSR 対応: サーバーサイドでは window が存在しないため初期値を返す
    - (2) useEffect 内でのみ localStorage にアクセスする
    - (3) JSON.parse/stringify でシリアライズする
@@ -122,7 +126,7 @@ pie title Phase 3 学習内容の割合
 
    **回答例**: `@testing-library/react` の `renderHook` を使用。`act` でステート更新をラップし、`result.current` で現在の値を取得。例: `const { result } = renderHook(() => useToggle())`
 
----
+***
 
 ## アクセシビリティ 理解度チェック
 
@@ -139,6 +143,7 @@ pie title Phase 3 学習内容の割合
 1. **POUR 原則とは何か**
 
    **回答例**: WCAG 2.1 の 4 つの原則である。
+
    - Perceivable (知覚可能): 情報を認識できる
    - Operable (操作可能): キーボードで操作できる
    - Understandable (理解可能): 内容を理解できる
@@ -152,7 +157,7 @@ pie title Phase 3 学習内容の割合
 
    **回答例**: モーダルが開いている間、Tab キーでのフォーカス移動をモーダル内に閉じ込めること。最後の要素で Tab を押すと最初の要素に戻り、最初の要素で Shift+Tab を押すと最後の要素に移動する。
 
----
+***
 
 ## 実践確認
 
@@ -177,18 +182,18 @@ pnpm storybook
 - [ ] Storybook で各コンポーネントのストーリーが表示される
 - [ ] addon-a11y でエラーが出ていない
 
----
+***
 
 ## 総合評価
 
-| 達成率   | 評価           | 次のアクション                        |
-| -------- | -------------- | ------------------------------------- |
-| 90-100%  | Phase 4 へ進む | 次のフェーズに進みましょう            |
-| 70-89%   | ほぼ完了       | 未達成項目を復習してから次へ          |
-| 50-69%   | 追加学習が必要 | 該当セクションのドキュメントを再読    |
-| 50% 未満 | 基礎から復習   | Phase 1, 2 の理解が不足している可能性 |
+| 達成率     | 評価          | 次のアクション                  |
+| ------- | ----------- | ------------------------ |
+| 90-100% | Phase 4 へ進む | 次のフェーズに進みましょう            |
+| 70-89%  | ほぼ完了        | 未達成項目を復習してから次へ           |
+| 50-69%  | 追加学習が必要     | 該当セクションのドキュメントを再読        |
+| 50% 未満  | 基礎から復習      | Phase 1, 2 の理解が不足している可能性 |
 
----
+***
 
 ## 次のステップ
 

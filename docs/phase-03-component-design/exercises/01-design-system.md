@@ -30,7 +30,7 @@
 
 EC サイト向けのデザインシステムを構築し、一貫性のある UI を実現します。
 
----
+***
 
 ## 完成イメージ
 
@@ -58,7 +58,7 @@ apps/storybook/
         └── Button.stories.tsx
 ```
 
----
+***
 
 ## 前提条件
 
@@ -66,7 +66,7 @@ apps/storybook/
 - pnpm がインストールされていること
 - Phase 1, 2 を完了していること
 
----
+***
 
 ## ステップ 1: デザイントークンの定義
 
@@ -284,7 +284,7 @@ export { typography, textStyles } from "./typography";
 export { spacing, componentSpacing } from "./spacing";
 ```
 
----
+***
 
 ## ステップ 2: 基本コンポーネントの作成
 
@@ -431,7 +431,7 @@ export * from "./atoms";
 export { cn } from "./lib/utils";
 ```
 
----
+***
 
 ## ステップ 3: Storybook でドキュメント化
 
@@ -613,7 +613,7 @@ export const FullWidth: Story = {
 };
 ```
 
----
+***
 
 ## 確認チェックリスト
 
@@ -625,7 +625,7 @@ export const FullWidth: Story = {
 - [ ] `pnpm build` が成功する
 - [ ] `pnpm storybook` でエラーなく表示される
 
----
+***
 
 ## トラブルシューティング
 
@@ -659,7 +659,7 @@ pnpm turbo clean
 }
 ```
 
----
+***
 
 ## 発展課題
 
@@ -668,7 +668,7 @@ pnpm turbo clean
 3. **ブレークポイント**: レスポンシブデザイン用のトークンを定義する
 4. **Tailwind 統合**: デザイントークンを Tailwind のテーマに統合する
 
----
+***
 
 ## 完了条件
 
@@ -676,7 +676,7 @@ pnpm turbo clean
 - [ ] `pnpm storybook` でデザインシステムが確認できる
 - [ ] EC サイト向けのバリアントが追加されている
 
----
+***
 
 ## 次の演習
 

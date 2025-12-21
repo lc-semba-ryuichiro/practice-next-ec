@@ -57,15 +57,15 @@ graph TD
 
 ### MSW のメリット
 
-| メリット            | 説明                                        |
-| ------------------- | ------------------------------------------- |
-| バックエンド不要    | API が完成していなくても開発できる          |
-| 実際の fetch を使用 | コードを変更せずにモック/本番を切り替え     |
-| テストで再利用      | 同じハンドラーをテストでも使える            |
-| 型安全              | TypeScript で型付きレスポンスを定義         |
+| メリット           | 説明                         |
+| -------------- | -------------------------- |
+| バックエンド不要       | API が完成していなくても開発できる        |
+| 実際の fetch を使用  | コードを変更せずにモック/本番を切り替え       |
+| テストで再利用        | 同じハンドラーをテストでも使える           |
+| 型安全            | TypeScript で型付きレスポンスを定義    |
 | DevTools で確認可能 | ブラウザの Network タブでリクエストが見える |
 
----
+***
 
 ## インストール
 
@@ -74,7 +74,7 @@ graph TD
 pnpm add -D msw
 ```
 
----
+***
 
 ## 初期設定
 
@@ -96,7 +96,7 @@ public/
 └── mockServiceWorker.js  # MSW の Service Worker
 ```
 
----
+***
 
 ## ハンドラーファイル構成
 
@@ -116,7 +116,7 @@ mocks/
     └── categories.ts   # カテゴリモックデータ
 ```
 
----
+***
 
 ## ハンドラーの作成
 
@@ -157,7 +157,7 @@ export const productHandlers = [
 ];
 ```
 
----
+***
 
 ## ブラウザ用設定
 
@@ -171,7 +171,7 @@ import { handlers } from "./handlers";
 export const worker = setupWorker(...handlers);
 ```
 
----
+***
 
 ## Node.js 用設定
 
@@ -185,7 +185,7 @@ import { handlers } from "./handlers";
 export const server = setupServer(...handlers);
 ```
 
----
+***
 
 ## Next.js App Router での初期化
 
@@ -286,7 +286,7 @@ export default function RootLayout({
 }
 ```
 
----
+***
 
 ## モックデータの作成
 
@@ -346,7 +346,7 @@ export const categories: Category[] = [
 ];
 ```
 
----
+***
 
 ## 環境変数による切り替え
 
@@ -380,7 +380,7 @@ export async function register(): Promise<void> {
 }
 ```
 
----
+***
 
 ## Storybook との統合
 
@@ -461,7 +461,7 @@ export const Error: Story = {
 };
 ```
 
----
+***
 
 ## トラブルシューティング
 
@@ -494,20 +494,20 @@ experimental: {
 }
 ```
 
----
+***
 
 ## まとめ
 
-| 設定                | ファイル                    | 用途              |
-| ------------------- | --------------------------- | ----------------- |
-| Service Worker 生成 | public/mockServiceWorker.js | ブラウザ用        |
-| ブラウザ設定        | mocks/browser.ts            | Client Components |
+| 設定                | ファイル                        | 用途                |
+| ----------------- | --------------------------- | ----------------- |
+| Service Worker 生成 | public/mockServiceWorker.js | ブラウザ用             |
+| ブラウザ設定            | mocks/browser.ts            | Client Components |
 | Node.js 設定        | mocks/server.ts             | Server Components |
-| ハンドラー          | mocks/handlers/             | API モック定義    |
-| モックデータ        | mocks/data/                 | テストデータ      |
-| 初期化              | instrumentation.ts          | サーバー起動時    |
+| ハンドラー             | mocks/handlers/             | API モック定義         |
+| モックデータ            | mocks/data/                 | テストデータ            |
+| 初期化               | instrumentation.ts          | サーバー起動時           |
 
----
+***
 
 ## 次のステップ
 

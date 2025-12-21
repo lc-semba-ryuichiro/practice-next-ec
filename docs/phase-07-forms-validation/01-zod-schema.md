@@ -59,7 +59,7 @@ type User = z.infer<typeof userSchema>;
 // { name: string; email: string; age: number }
 ```
 
----
+***
 
 ## なぜ Zod を使うのか
 
@@ -114,7 +114,7 @@ if (!result.success) {
 }
 ```
 
----
+***
 
 ## 基本的なスキーマ定義
 
@@ -177,7 +177,7 @@ const ratingSchema = z
   .max(5, "評価は5以下で入力してください");
 ```
 
----
+***
 
 ## オブジェクトスキーマ
 
@@ -228,7 +228,7 @@ const orderSchema = z.object({
 });
 ```
 
----
+***
 
 ## オプショナルとデフォルト値
 
@@ -270,7 +270,7 @@ const settings = settingsSchema.parse({});
 // { theme: "light", notificationsEnabled: true, itemsPerPage: 20 }
 ```
 
----
+***
 
 ## カスタムエラーメッセージ
 
@@ -324,7 +324,7 @@ const customErrorMap: z.ZodErrorMap = (issue, ctx) => {
 z.setErrorMap(customErrorMap);
 ```
 
----
+***
 
 ## refine / superRefine による高度なバリデーション
 
@@ -372,7 +372,7 @@ const complexFormSchema = z
   });
 ```
 
----
+***
 
 ## EC サイトでの実例
 
@@ -466,7 +466,7 @@ export const reviewSchema = z.object({
 export type ReviewInput = z.infer<typeof reviewSchema>;
 ```
 
----
+***
 
 ## パッケージ構成
 
@@ -524,7 +524,7 @@ function RegisterForm(): JSX.Element {
 }
 ```
 
----
+***
 
 ## バリデーションの実行
 
@@ -577,7 +577,7 @@ async function validateFormData(
 }
 ```
 
----
+***
 
 ## まとめ
 
@@ -596,7 +596,7 @@ async function validateFormData(
 3. `safeParse` を使って安全にバリデーションする
 4. 複雑なバリデーションは `refine` / `superRefine` を使う
 
----
+***
 
 ## 次のステップ
 

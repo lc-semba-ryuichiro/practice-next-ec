@@ -42,7 +42,7 @@ graph LR
     C --> D["finalPriceAtom<br/>最終金額"]
 ```
 
----
+***
 
 ## 読み取り専用の派生 Atom
 
@@ -72,7 +72,7 @@ const derivedAtom = atom((get) => {
 });
 ```
 
----
+***
 
 ## EC サイトでの実践例
 
@@ -183,7 +183,7 @@ export default function CartPage(): JSX.Element {
 }
 ```
 
----
+***
 
 ## 派生 Atom の依存関係
 
@@ -213,7 +213,7 @@ graph TD
 // → cartTaxAtom と cartTotalAtom は再計算される
 ```
 
----
+***
 
 ## 書き込み可能な派生 Atom
 
@@ -352,7 +352,7 @@ export function CartItemRow({ item }: CartItemRowProps): JSX.Element {
 }
 ```
 
----
+***
 
 ## 非同期派生 Atom
 
@@ -404,7 +404,7 @@ function ProductPage(): JSX.Element {
 }
 ```
 
----
+***
 
 ## フィルタリングの例
 
@@ -466,7 +466,7 @@ export const filteredCountAtom = atom((get) => {
 });
 ```
 
----
+***
 
 ## ベストプラクティス
 
@@ -510,7 +510,7 @@ const badAtom = atom((get) => {
 });
 ```
 
----
+***
 
 ## まとめ
 
@@ -528,7 +528,7 @@ const badAtom = atom((get) => {
 - データの変換
 - 複数の Atom を組み合わせた状態
 
----
+***
 
 ## 次のステップ
 

@@ -57,13 +57,13 @@ function Button(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## イベント属性の命名規則
 
 HTML のイベント属性は小文字（onclick）ですが、React では **camelCase** を使います。
 
-| HTML 属性      | React 属性     |
+| HTML 属性        | React 属性       |
 | -------------- | -------------- |
 | `onclick`      | `onClick`      |
 | `onchange`     | `onChange`     |
@@ -73,7 +73,7 @@ HTML のイベント属性は小文字（onclick）ですが、React では **ca
 | `onkeydown`    | `onKeyDown`    |
 | `onmouseenter` | `onMouseEnter` |
 
----
+***
 
 ## よく使うイベント
 
@@ -160,7 +160,7 @@ function FocusableInput(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## イベントオブジェクト
 
@@ -186,16 +186,16 @@ function InputLogger(): React.ReactElement {
 
 ### よく使うプロパティ
 
-| プロパティ                | 説明                         |
-| ------------------------- | ---------------------------- |
-| `event.target`            | イベントが発生した要素       |
-| `event.target.value`      | 入力要素の値                 |
-| `event.target.name`       | 要素の name 属性             |
+| プロパティ                     | 説明             |
+| ------------------------- | -------------- |
+| `event.target`            | イベントが発生した要素    |
+| `event.target.value`      | 入力要素の値         |
+| `event.target.name`       | 要素の name 属性    |
 | `event.currentTarget`     | ハンドラがアタッチされた要素 |
-| `event.preventDefault()`  | デフォルト動作を防ぐ         |
-| `event.stopPropagation()` | イベントの伝播を停止         |
+| `event.preventDefault()`  | デフォルト動作を防ぐ     |
+| `event.stopPropagation()` | イベントの伝播を停止     |
 
----
+***
 
 ## TypeScript でのイベント型
 
@@ -237,7 +237,7 @@ React.MouseEvent<HTMLButtonElement>;
 React.MouseEvent<HTMLDivElement>;
 ```
 
----
+***
 
 ## イベントハンドラの定義方法
 
@@ -296,14 +296,14 @@ function ProductCard({ productId }: { productId: string }): React.ReactElement {
 
 ### 名前付き関数 vs インライン関数
 
-| 方法           | メリット                   | デメリット           |
-| -------------- | -------------------------- | -------------------- |
-| 名前付き関数   | 読みやすい、再利用しやすい | コード量が増える     |
-| インライン関数 | 簡潔、引数を渡しやすい     | 読みにくくなる可能性 |
+| 方法      | メリット          | デメリット      |
+| ------- | ------------- | ---------- |
+| 名前付き関数  | 読みやすい、再利用しやすい | コード量が増える   |
+| インライン関数 | 簡潔、引数を渡しやすい   | 読みにくくなる可能性 |
 
 一般的に、ロジックが複雑な場合は名前付き関数、シンプルな場合はインライン関数を使うとよい。
 
----
+***
 
 ## イベントの伝播
 
@@ -362,7 +362,7 @@ function NestedButtons(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## preventDefault
 
@@ -391,7 +391,7 @@ function SearchForm(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## EC サイトでの実践例
 
@@ -585,7 +585,7 @@ function FavoriteButton({
 }
 ```
 
----
+***
 
 ## よくある間違い
 
@@ -633,20 +633,20 @@ const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
 };
 ```
 
----
+***
 
 ## まとめ
 
-| 概念                 | 説明                                    |
-| -------------------- | --------------------------------------- |
-| イベントハンドラ     | ユーザー操作に応答する関数              |
-| camelCase            | React のイベント属性は camelCase で記述 |
-| イベントオブジェクト | イベントの詳細情報を持つオブジェクト    |
-| preventDefault       | デフォルト動作を防ぐ                    |
-| stopPropagation      | イベントの伝播を停止                    |
-| TypeScript 型        | React.〇〇Event<HTMLElement> 形式       |
+| 概念              | 説明                            |
+| --------------- | ----------------------------- |
+| イベントハンドラ        | ユーザー操作に応答する関数                 |
+| camelCase       | React のイベント属性は camelCase で記述  |
+| イベントオブジェクト      | イベントの詳細情報を持つオブジェクト            |
+| preventDefault  | デフォルト動作を防ぐ                    |
+| stopPropagation | イベントの伝播を停止                    |
+| TypeScript 型    | React.〇〇Event<HTMLElement> 形式 |
 
----
+***
 
 ## 次のステップ
 

@@ -49,7 +49,7 @@ graph LR
     HOOK --> C
 ```
 
----
+***
 
 ## 命名規則
 
@@ -66,7 +66,7 @@ function getCart() { ... }      // use プレフィックスがない
 function CartHook() { ... }     // 大文字始まり（コンポーネントと混同）
 ```
 
----
+***
 
 ## 基本的なカスタムフック
 
@@ -116,7 +116,7 @@ function MobileMenu(): JSX.Element {
 }
 ```
 
----
+***
 
 ### 2. useLocalStorage
 
@@ -174,7 +174,7 @@ function ThemeToggle(): JSX.Element {
 }
 ```
 
----
+***
 
 ### 3. useDebounce
 
@@ -223,7 +223,7 @@ function SearchBox(): JSX.Element {
 }
 ```
 
----
+***
 
 ### 4. useMediaQuery
 
@@ -279,7 +279,7 @@ function ProductGrid({ products }: { products: Product[] }): JSX.Element {
 }
 ```
 
----
+***
 
 ## EC サイト向けカスタムフック
 
@@ -384,7 +384,7 @@ function AddToCartButton({ productId }: { productId: string }): JSX.Element {
 }
 ```
 
----
+***
 
 ### 2. useFavorites
 
@@ -462,7 +462,7 @@ function FavoriteButton({ productId }: { productId: string }): JSX.Element {
 }
 ```
 
----
+***
 
 ### 3. useRecentlyViewed
 
@@ -547,7 +547,7 @@ function RecentlyViewedSection(): JSX.Element {
 }
 ```
 
----
+***
 
 ## カスタムフックのテスト
 
@@ -604,20 +604,20 @@ describe("useToggle", () => {
 });
 ```
 
----
+***
 
 ## カスタムフックのベストプラクティス
 
-| ルール               | 説明                           |
-| -------------------- | ------------------------------ |
-| `use` プレフィックス | 必ず use で始める              |
-| 単一責任             | 1 つのフックは 1 つの責務のみ  |
-| 純粋な関数           | 副作用は useEffect 内で処理    |
-| useCallback/useMemo  | 返す関数やオブジェクトをメモ化 |
-| 型定義               | 戻り値の型を明示的に定義       |
-| テスト可能           | renderHook でテストできる設計  |
+| ルール                 | 説明                   |
+| ------------------- | -------------------- |
+| `use` プレフィックス       | 必ず use で始める          |
+| 単一責任                | 1 つのフックは 1 つの責務のみ    |
+| 純粋な関数               | 副作用は useEffect 内で処理  |
+| useCallback/useMemo | 返す関数やオブジェクトをメモ化      |
+| 型定義                 | 戻り値の型を明示的に定義         |
+| テスト可能               | renderHook でテストできる設計 |
 
----
+***
 
 ## まとめ
 
@@ -627,7 +627,7 @@ describe("useToggle", () => {
 - **renderHook** を使ってテストを書く
 - **単一責任**を意識し、複雑化を避ける
 
----
+***
 
 ## 次のステップ
 

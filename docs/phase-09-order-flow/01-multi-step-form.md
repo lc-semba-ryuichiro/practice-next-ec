@@ -51,7 +51,7 @@ graph LR
 - **離脱率の低減** - 少しずつ進めるため心理的ハードルが下がる
 - **エラー処理の容易さ** - ステップごとにバリデーションできる
 
----
+***
 
 ## EC サイトの購入フロー
 
@@ -71,15 +71,15 @@ graph TD
     style E fill:#e8f5e9
 ```
 
-| ステップ       | 内容                     | 特徴                   |
-| -------------- | ------------------------ | ---------------------- |
-| カート確認     | 商品一覧、数量変更       | 編集可能、離脱も多い   |
-| 配送先入力     | 住所、連絡先             | バリデーションが重要   |
-| 支払い方法選択 | クレジット、代引きなど   | セキュリティに配慮     |
-| 注文確認       | 最終確認、規約同意       | 変更不可、二重送信防止 |
-| 注文完了       | 完了メッセージ、注文番号 | ブックマーク不可       |
+| ステップ    | 内容           | 特徴          |
+| ------- | ------------ | ----------- |
+| カート確認   | 商品一覧、数量変更    | 編集可能、離脱も多い  |
+| 配送先入力   | 住所、連絡先       | バリデーションが重要  |
+| 支払い方法選択 | クレジット、代引きなど  | セキュリティに配慮   |
+| 注文確認    | 最終確認、規約同意    | 変更不可、二重送信防止 |
+| 注文完了    | 完了メッセージ、注文番号 | ブックマーク不可    |
 
----
+***
 
 ## 状態管理のアプローチ
 
@@ -179,7 +179,7 @@ export const shippingAddressAtom = atomWithStorage<ShippingAddress | null>(
 export const paymentMethodAtom = atomWithStorage<PaymentMethod | null>("checkout:payment", null);
 ```
 
----
+***
 
 ## ステップナビゲーション
 
@@ -266,7 +266,7 @@ export default async function ShippingPage(): Promise<JSX.Element> {
 }
 ```
 
----
+***
 
 ## バリデーション戦略
 
@@ -353,7 +353,7 @@ export async function saveShippingAddress(
 }
 ```
 
----
+***
 
 ## 離脱防止と復帰
 
@@ -415,7 +415,7 @@ function ShippingForm(): JSX.Element {
 }
 ```
 
----
+***
 
 ## よくある間違い
 
@@ -466,7 +466,7 @@ export default function CompletePage(): JSX.Element {
 }
 ```
 
----
+***
 
 ## まとめ
 
@@ -484,7 +484,7 @@ export default function CompletePage(): JSX.Element {
 - 確認画面での二重送信防止が重要
 - 完了後は状態をクリアして再注文を防止
 
----
+***
 
 ## 次のステップ
 

@@ -26,7 +26,7 @@
 Vitest、Testing Library、Playwright、fast-check を使った各種テスト手法を学びます。
 EC サイトの品質を担保するテスト戦略を身につけます。
 
----
+***
 
 ## 難易度
 
@@ -34,13 +34,13 @@ EC サイトの品質を担保するテスト戦略を身につけます。
 
 テストの概念理解と、テスタブルなコード設計の考え方が重要です。
 
----
+***
 
 ## 所要時間目安
 
 約 8〜12 時間です。
 
----
+***
 
 ## 前提知識
 
@@ -49,7 +49,7 @@ EC サイトの品質を担保するテスト戦略を身につけます。
 - Jotai による状態管理の理解
 - async/await の基本
 
----
+***
 
 ## 学習目標
 
@@ -63,7 +63,7 @@ EC サイトの品質を担保するテスト戦略を身につけます。
 - [ ] fast-check で Property-based テストを書ける
 - [ ] テストピラミッドに基づくテスト戦略を説明できる
 
----
+***
 
 ## 目次
 
@@ -89,18 +89,18 @@ graph LR
     F --> G
 ```
 
----
+***
 
 ## 演習問題
 
-| 演習                                                             | 内容                            | 難易度 |
-| ---------------------------------------------------------------- | ------------------------------- | ------ |
-| [演習 1: カート機能テスト](./exercises/01-cart-unit-test.md)     | Vitest でカートロジックをテスト | 2/5    |
-| [演習 2: コンポーネントテスト](./exercises/02-component-test.md) | ProductCard をテスト            | 3/5    |
-| [演習 3: E2E 購入フロー](./exercises/03-e2e-purchase.md)         | Playwright で購入フロー         | 3/5    |
-| [演習 4: Property-based テスト](./exercises/04-property-test.md) | fast-check で価格計算           | 4/5    |
+| 演習                                                          | 内容                  | 難易度 |
+| ----------------------------------------------------------- | ------------------- | --- |
+| [演習 1: カート機能テスト](./exercises/01-cart-unit-test.md)          | Vitest でカートロジックをテスト | 2/5 |
+| [演習 2: コンポーネントテスト](./exercises/02-component-test.md)        | ProductCard をテスト    | 3/5 |
+| [演習 3: E2E 購入フロー](./exercises/03-e2e-purchase.md)           | Playwright で購入フロー   | 3/5 |
+| [演習 4: Property-based テスト](./exercises/04-property-test.md) | fast-check で価格計算    | 4/5 |
 
----
+***
 
 ## テストピラミッド
 
@@ -121,27 +121,27 @@ graph TD
 
 ### EC サイトでのテスト配分
 
-| テスト種別     | 対象                             | 割合 | ツール          |
-| -------------- | -------------------------------- | ---- | --------------- |
-| ユニット       | ビジネスロジック、ユーティリティ | 60%  | Vitest          |
-| コンポーネント | 個別コンポーネント               | 25%  | Testing Library |
-| E2E            | クリティカルパス                 | 15%  | Playwright      |
+| テスト種別   | 対象               | 割合  | ツール             |
+| ------- | ---------------- | --- | --------------- |
+| ユニット    | ビジネスロジック、ユーティリティ | 60% | Vitest          |
+| コンポーネント | 個別コンポーネント        | 25% | Testing Library |
+| E2E     | クリティカルパス         | 15% | Playwright      |
 
----
+***
 
 ## 使用ツール
 
-| ツール                      | バージョン | 用途                          |
-| --------------------------- | ---------- | ----------------------------- |
-| Vitest                      | 4.x        | ユニット/コンポーネントテスト |
-| @testing-library/react      | 16.x       | コンポーネントテスト          |
-| @testing-library/user-event | 14.x       | ユーザー操作シミュレーション  |
-| Playwright                  | 1.x        | E2E テスト                    |
-| playwright-bdd              | 8.x        | Gherkin シナリオ              |
-| fast-check                  | 4.x        | Property-based テスト         |
-| @storybook/addon-vitest     | 10.x       | Storybook 連携                |
+| ツール                         | バージョン | 用途                 |
+| --------------------------- | ----- | ------------------ |
+| Vitest                      | 4.x   | ユニット/コンポーネントテスト    |
+| @testing-library/react      | 16.x  | コンポーネントテスト         |
+| @testing-library/user-event | 14.x  | ユーザー操作シミュレーション     |
+| Playwright                  | 1.x   | E2E テスト            |
+| playwright-bdd              | 8.x   | Gherkin シナリオ       |
+| fast-check                  | 4.x   | Property-based テスト |
+| @storybook/addon-vitest     | 10.x  | Storybook 連携       |
 
----
+***
 
 ## 関連する EC サイト機能
 
@@ -168,14 +168,14 @@ graph TD
     end
 ```
 
-| 機能        | テスト種別     | 演習   |
-| ----------- | -------------- | ------ |
-| カート計算  | ユニット       | 演習 1 |
-| ProductCard | コンポーネント | 演習 2 |
-| 購入フロー  | E2E            | 演習 3 |
-| 価格計算    | Property-based | 演習 4 |
+| 機能          | テスト種別          | 演習   |
+| ----------- | -------------- | ---- |
+| カート計算       | ユニット           | 演習 1 |
+| ProductCard | コンポーネント        | 演習 2 |
+| 購入フロー       | E2E            | 演習 3 |
+| 価格計算        | Property-based | 演習 4 |
 
----
+***
 
 ## 推奨学習リソース
 
@@ -192,7 +192,7 @@ graph TD
 - [Testing Library のクエリ優先順位](https://testing-library.com/docs/queries/about/#priority)
 - [Playwright Best Practices](https://playwright.dev/docs/best-practices)
 
----
+***
 
 ## 自己チェックリスト
 
@@ -211,7 +211,7 @@ Phase 6 を完了する前に、以下を確認してください。
 
 詳細なチェックリストは [checklist.md](./checklist.md) を参照してください。
 
----
+***
 
 ## 次のフェーズ
 

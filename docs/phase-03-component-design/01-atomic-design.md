@@ -31,7 +31,7 @@ graph LR
     D --> E["Pages<br/>ページ"]
 ```
 
----
+***
 
 ## 5 つの階層
 
@@ -39,15 +39,15 @@ graph LR
 
 **最小単位の UI 要素**です。これ以上分解できない基本パーツ。
 
-| コンポーネント | 説明                     |
-| -------------- | ------------------------ |
-| Button         | ボタン                   |
-| Input          | テキスト入力             |
-| Label          | ラベル                   |
-| Icon           | アイコン                 |
-| Badge          | バッジ（ステータス表示） |
-| Checkbox       | チェックボックス         |
-| Avatar         | ユーザーアバター         |
+| コンポーネント  | 説明           |
+| -------- | ------------ |
+| Button   | ボタン          |
+| Input    | テキスト入力       |
+| Label    | ラベル          |
+| Icon     | アイコン         |
+| Badge    | バッジ（ステータス表示） |
+| Checkbox | チェックボックス     |
+| Avatar   | ユーザーアバター     |
 
 ```typescript
 // packages/ui/src/atoms/Button.tsx
@@ -84,19 +84,19 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = "Button";
 ```
 
----
+***
 
 ### 2. Molecules（分子）
 
 **複数の Atoms を組み合わせた機能単位**です。単一の責務を持ちます。
 
-| コンポーネント | 構成要素                | 用途           |
-| -------------- | ----------------------- | -------------- |
-| FormField      | Label + Input + Error   | フォーム入力欄 |
-| SearchBox      | Input + Button (Icon)   | 検索入力       |
-| PriceDisplay   | Text + Badge            | 価格表示       |
-| StarRating     | Icon × 5                | 評価表示       |
-| QuantityInput  | Button + Input + Button | 数量選択       |
+| コンポーネント       | 構成要素                    | 用途      |
+| ------------- | ----------------------- | ------- |
+| FormField     | Label + Input + Error   | フォーム入力欄 |
+| SearchBox     | Input + Button (Icon)   | 検索入力    |
+| PriceDisplay  | Text + Badge            | 価格表示    |
+| StarRating    | Icon × 5                | 評価表示    |
+| QuantityInput | Button + Input + Button | 数量選択    |
 
 ```typescript
 // packages/ui/src/molecules/FormField.tsx
@@ -136,19 +136,19 @@ export function FormField({
 }
 ```
 
----
+***
 
 ### 3. Organisms（有機体）
 
 **Molecules や Atoms を組み合わせた、独立して機能する UI ブロック**です。
 
-| コンポーネント | 構成要素                          | 用途           |
-| -------------- | --------------------------------- | -------------- |
-| Header         | Logo + Nav + SearchBox + CartIcon | サイトヘッダー |
-| ProductCard    | Image + Title + Price + Button    | 商品カード     |
-| CartItem       | Image + Title + Quantity + Remove | カート内商品   |
-| FilterPanel    | Title + Checkbox Group + Button   | 検索フィルター |
-| ReviewCard     | Avatar + StarRating + Text + Date | レビュー表示   |
+| コンポーネント     | 構成要素                              | 用途      |
+| ----------- | --------------------------------- | ------- |
+| Header      | Logo + Nav + SearchBox + CartIcon | サイトヘッダー |
+| ProductCard | Image + Title + Price + Button    | 商品カード   |
+| CartItem    | Image + Title + Quantity + Remove | カート内商品  |
+| FilterPanel | Title + Checkbox Group + Button   | 検索フィルター |
+| ReviewCard  | Avatar + StarRating + Text + Date | レビュー表示  |
 
 ```typescript
 // packages/ui/src/organisms/ProductCard.tsx
@@ -225,7 +225,7 @@ export function ProductCard({
 }
 ```
 
----
+***
 
 ### 4. Templates（テンプレート）
 
@@ -265,7 +265,7 @@ export function ProductListTemplate({
 }
 ```
 
----
+***
 
 ### 5. Pages（ページ）
 
@@ -300,7 +300,7 @@ export default async function ProductsPage(): Promise<JSX.Element> {
 }
 ```
 
----
+***
 
 ## EC サイトでのコンポーネント分類例
 
@@ -360,7 +360,7 @@ graph TD
     M4 --> A5
 ```
 
----
+***
 
 ## packages/ui でのディレクトリ構成
 
@@ -405,45 +405,45 @@ packages/ui/
 └── tsconfig.json
 ```
 
----
+***
 
 ## shadcn/ui との関係
 
 shadcn/ui のコンポーネントは、主に Atoms と Molecules に分類されます。
 
-| shadcn/ui | 分類      | カスタマイズ例                      |
-| --------- | --------- | ----------------------------------- |
-| Button    | Atoms     | EC 用バリアント追加（add-to-cart）  |
-| Input     | Atoms     | 数量入力用の number 専用版          |
-| Badge     | Atoms     | NEW, SALE, 在庫なし用バリアント     |
-| Card      | Molecules | ProductCard の基礎として使用        |
+| shadcn/ui | 分類        | カスタマイズ例                        |
+| --------- | --------- | ------------------------------ |
+| Button    | Atoms     | EC 用バリアント追加（add-to-cart）       |
+| Input     | Atoms     | 数量入力用の number 専用版              |
+| Badge     | Atoms     | NEW, SALE, 在庫なし用バリアント          |
+| Card      | Molecules | ProductCard の基礎として使用           |
 | Dialog    | Organisms | ConfirmDialog, QuickView として拡張 |
 | Sheet     | Organisms | MobileMenu, CartDrawer として使用   |
-| Tabs      | Organisms | 商品詳細の説明/レビュー切り替え     |
-| Form      | Molecules | React Hook Form 統合済み            |
+| Tabs      | Organisms | 商品詳細の説明/レビュー切り替え               |
+| Form      | Molecules | React Hook Form 統合済み           |
 
----
+***
 
 ## Atomic Design の利点と注意点
 
 ### 利点
 
-| 利点               | 説明                                                   |
-| ------------------ | ------------------------------------------------------ |
-| 一貫性             | 共通のコンポーネントを使うことで UI の一貫性が保たれる |
-| 再利用性           | 小さな単位で作るため、様々な場面で再利用できる         |
-| 保守性             | 変更箇所が明確で、影響範囲を把握しやすい               |
-| Storybook との相性 | 階層ごとにストーリーを整理できる                       |
+| 利点             | 説明                            |
+| -------------- | ----------------------------- |
+| 一貫性            | 共通のコンポーネントを使うことで UI の一貫性が保たれる |
+| 再利用性           | 小さな単位で作るため、様々な場面で再利用できる       |
+| 保守性            | 変更箇所が明確で、影響範囲を把握しやすい          |
+| Storybook との相性 | 階層ごとにストーリーを整理できる              |
 
 ### 注意点
 
-| 注意点                 | 説明                                                   |
-| ---------------------- | ------------------------------------------------------ |
-| 厳密すぎる分類は避ける | どの階層か迷ったら、チームで合意した分類に従う         |
-| 早期の抽象化を避ける   | 最初は最小限の構成で始め、必要に応じてリファクタリング |
-| コンテキストを考慮     | EC サイトの文脈で意味のある分類を優先                  |
+| 注意点         | 説明                          |
+| ----------- | --------------------------- |
+| 厳密すぎる分類は避ける | どの階層か迷ったら、チームで合意した分類に従う     |
+| 早期の抽象化を避ける  | 最初は最小限の構成で始め、必要に応じてリファクタリング |
+| コンテキストを考慮   | EC サイトの文脈で意味のある分類を優先        |
 
----
+***
 
 ## まとめ
 
@@ -455,7 +455,7 @@ shadcn/ui のコンポーネントは、主に Atoms と Molecules に分類さ�
 - **Pages** は Templates に実データを流し込んだ最終形
 - shadcn/ui は Atoms/Molecules として活用し、EC 用に拡張する
 
----
+***
 
 ## 次のステップ
 

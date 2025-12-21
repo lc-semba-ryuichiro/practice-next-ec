@@ -67,7 +67,7 @@ sequenceDiagram
     Server-->>Browser: Cookie 削除
 ```
 
----
+***
 
 ## NextAuth.js のセッション設定
 
@@ -92,13 +92,13 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
 
 ### 設定オプションの詳細
 
-| オプション  | 説明                             | デフォルト |
-| ----------- | -------------------------------- | ---------- |
-| `strategy`  | セッション戦略（jwt / database） | `jwt`      |
-| `maxAge`    | セッションの有効期限（秒）       | 30日       |
-| `updateAge` | セッション更新までの間隔（秒）   | 24時間     |
+| オプション       | 説明                      | デフォルト |
+| ----------- | ----------------------- | ----- |
+| `strategy`  | セッション戦略（jwt / database） | `jwt` |
+| `maxAge`    | セッションの有効期限（秒）           | 30日   |
+| `updateAge` | セッション更新までの間隔（秒）         | 24時間  |
 
----
+***
 
 ## JWT セッションの詳細
 
@@ -175,7 +175,7 @@ sequenceDiagram
     end
 ```
 
----
+***
 
 ## Database セッションの詳細
 
@@ -260,7 +260,7 @@ graph TD
 - 毎リクエストで DB アクセスが発生
 - スケーリングが難しい
 
----
+***
 
 ## セッションの更新
 
@@ -318,7 +318,7 @@ timeline
     Day 30+: アクセスなし → セッション期限切れ
 ```
 
----
+***
 
 ## ログアウト処理
 
@@ -387,7 +387,7 @@ async function logoutAllDevices(userId: string) {
 }
 ```
 
----
+***
 
 ## CSRF 対策
 
@@ -429,7 +429,7 @@ export async function loginAction(formData: FormData) {
 }
 ```
 
----
+***
 
 ## セッション情報のカスタマイズ
 
@@ -485,7 +485,7 @@ callbacks: {
 },
 ```
 
----
+***
 
 ## セッションの監視とデバッグ
 
@@ -525,7 +525,7 @@ export const { handlers, auth } = NextAuth({
 
 開発環境でデバッグモードを有効にすると、認証フローの詳細がコンソールに出力されます。
 
----
+***
 
 ## よくあるパターン
 
@@ -574,7 +574,7 @@ async function revokeSession(sessionToken: string) {
 }
 ```
 
----
+***
 
 ## まとめ
 
@@ -601,7 +601,7 @@ flowchart TD
     F -->|No| E
 ```
 
----
+***
 
 ## 次のステップ
 

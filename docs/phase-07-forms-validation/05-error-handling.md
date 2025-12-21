@@ -43,7 +43,7 @@ graph TD
     E -->|失敗| G["サーバーエラー表示"]
 ```
 
----
+***
 
 ## バリデーションエラーの表示
 
@@ -166,7 +166,7 @@ export function RegisterForm(): JSX.Element {
 }
 ```
 
----
+***
 
 ## サーバーエラーのハンドリング
 
@@ -282,7 +282,7 @@ export function RegisterForm(): JSX.Element {
 }
 ```
 
----
+***
 
 ## トースト通知
 
@@ -448,17 +448,17 @@ export function ContactForm(): JSX.Element {
 }
 ```
 
----
+***
 
 ## ユーザーフレンドリーなエラー UX
 
 ### エラーメッセージのガイドライン
 
-| 良い例                                   | 悪い例             |
-| ---------------------------------------- | ------------------ |
-| メールアドレスの形式が正しくありません   | Invalid email      |
-| パスワードは8文字以上で入力してください  | Password too short |
-| 数量は1以上99以下で入力してください      | Invalid quantity   |
+| 良い例                  | 悪い例                |
+| -------------------- | ------------------ |
+| メールアドレスの形式が正しくありません  | Invalid email      |
+| パスワードは8文字以上で入力してください | Password too short |
+| 数量は1以上99以下で入力してください  | Invalid quantity   |
 | このメールアドレスは既に登録されています | Duplicate email    |
 
 ### アクセシビリティ対応
@@ -545,7 +545,7 @@ export function RegisterForm(): JSX.Element {
 }
 ```
 
----
+***
 
 ## エラー状態のリセット
 
@@ -613,7 +613,7 @@ export function ContactForm(): JSX.Element {
 }
 ```
 
----
+***
 
 ## エラーハンドリングのパターン
 
@@ -712,7 +712,7 @@ export async function registerUser(
 }
 ```
 
----
+***
 
 ## まとめ
 
@@ -731,7 +731,7 @@ export async function registerUser(
 - 成功時はフィードバックを提供（トースト、メッセージ、リダイレクト）
 - エラーメッセージは具体的で actionable に
 
----
+***
 
 ## 次のステップ
 

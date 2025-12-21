@@ -37,7 +37,7 @@
 **GitHub Actions** は、GitHub に組み込まれた CI/CD プラットフォームです。
 リポジトリ内のイベント（push, PR など）をトリガーにワークフローを実行できます。
 
----
+***
 
 ## 基本概念
 
@@ -72,7 +72,7 @@ flowchart LR
 
 再利用可能なタスク。マーケットプレイスで公開されているものを使用できます。
 
----
+***
 
 ## 基本的なワークフロー構造
 
@@ -96,7 +96,7 @@ jobs: # ジョブ定義
         run: npm test # コマンド実行
 ```
 
----
+***
 
 ## EC サイト向け CI ワークフロー
 
@@ -194,7 +194,7 @@ jobs:
       - run: pnpm build
 ```
 
----
+***
 
 ## E2E テストワークフロー
 
@@ -243,7 +243,7 @@ jobs:
           retention-days: 30
 ```
 
----
+***
 
 ## Storybook / Chromatic ワークフロー
 
@@ -286,7 +286,7 @@ jobs:
           buildScriptName: build-storybook
 ```
 
----
+***
 
 ## 設定の詳細解説
 
@@ -351,10 +351,10 @@ jobs:
 
 ### シークレットと変数
 
-| 種類      | 用途           | 例                 |
-| --------- | -------------- | ------------------ |
-| `secrets` | 機密情報       | API キー、トークン |
-| `vars`    | 設定値（公開） | 環境名、URL        |
+| 種類        | 用途      | 例           |
+| --------- | ------- | ----------- |
+| `secrets` | 機密情報    | API キー、トークン |
+| `vars`    | 設定値（公開） | 環境名、URL     |
 
 設定場所はリポジトリの Settings → Secrets and variables → Actions です。
 
@@ -377,7 +377,7 @@ jobs:
       ${{ runner.os }}-turbo-
 ```
 
----
+***
 
 ## ジョブの依存関係
 
@@ -415,7 +415,7 @@ flowchart TD
     end
 ```
 
----
+***
 
 ## マトリックスビルド
 
@@ -439,7 +439,7 @@ jobs:
       - run: pnpm test
 ```
 
----
+***
 
 ## 再利用可能なワークフロー
 
@@ -491,20 +491,20 @@ jobs:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
 ```
 
----
+***
 
 ## よくあるアクション
 
-| アクション                     | 用途                       |
-| ------------------------------ | -------------------------- |
-| `actions/checkout@v4`          | リポジトリのチェックアウト |
-| `actions/setup-node@v4`        | Node.js のセットアップ     |
-| `pnpm/action-setup@v4`         | pnpm のセットアップ        |
-| `actions/cache@v4`             | キャッシュ                 |
-| `actions/upload-artifact@v4`   | 成果物のアップロード       |
-| `actions/download-artifact@v4` | 成果物のダウンロード       |
+| アクション                          | 用途              |
+| ------------------------------ | --------------- |
+| `actions/checkout@v4`          | リポジトリのチェックアウト   |
+| `actions/setup-node@v4`        | Node.js のセットアップ |
+| `pnpm/action-setup@v4`         | pnpm のセットアップ    |
+| `actions/cache@v4`             | キャッシュ           |
+| `actions/upload-artifact@v4`   | 成果物のアップロード      |
+| `actions/download-artifact@v4` | 成果物のダウンロード      |
 
----
+***
 
 ## トラブルシューティング
 
@@ -527,14 +527,14 @@ jobs:
 
 ### よくあるエラー
 
-| エラー                      | 原因               | 解決策                |
-| --------------------------- | ------------------ | --------------------- |
-| `Node.js version not found` | バージョン未対応   | 対応バージョンを指定  |
+| エラー                         | 原因        | 解決策                |
+| --------------------------- | --------- | ------------------ |
+| `Node.js version not found` | バージョン未対応  | 対応バージョンを指定         |
 | `pnpm-lock.yaml not found`  | ロックファイルなし | `pnpm install` を実行 |
 | `Secret not found`          | シークレット未設定 | Settings で設定       |
-| `Permission denied`         | 権限不足           | `permissions` を追加  |
+| `Permission denied`         | 権限不足      | `permissions` を追加  |
 
----
+***
 
 ## 次のステップ
 

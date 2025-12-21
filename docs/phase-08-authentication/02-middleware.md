@@ -52,7 +52,7 @@ flowchart LR
 - リクエストを変更・リダイレクト可能
 - レスポンスヘッダーを変更可能
 
----
+***
 
 ## Middleware の基本構造
 
@@ -100,7 +100,7 @@ export const config = {
 };
 ```
 
----
+***
 
 ## NextAuth.js と Middleware の連携
 
@@ -165,7 +165,7 @@ sequenceDiagram
     end
 ```
 
----
+***
 
 ## matcher 設定
 
@@ -222,7 +222,7 @@ graph TD
     D --> E
 ```
 
----
+***
 
 ## 複雑な認証ロジック
 
@@ -295,7 +295,7 @@ declare module "@auth/core/jwt" {
 }
 ```
 
----
+***
 
 ## Edge Runtime の制約
 
@@ -303,12 +303,12 @@ Middleware は Edge Runtime で実行されるため、いくつかの制約が�
 
 ### 使用できないもの
 
-| 機能                  | 代替手段                  |
-| --------------------- | ------------------------- |
-| Node.js API           | Web Standard API を使用   |
-| ファイルシステム      | API Route で処理          |
-| 一部の npm パッケージ | Edge 対応パッケージを使用 |
-| データベース直接接続  | API Route 経由でアクセス  |
+| 機能            | 代替手段                 |
+| ------------- | -------------------- |
+| Node.js API   | Web Standard API を使用 |
+| ファイルシステム      | API Route で処理        |
+| 一部の npm パッケージ | Edge 対応パッケージを使用      |
+| データベース直接接続    | API Route 経由でアクセス    |
 
 ### Edge 対応の例
 
@@ -347,7 +347,7 @@ async function verifyToken(token: string) {
 }
 ```
 
----
+***
 
 ## リダイレクトパターン
 
@@ -397,7 +397,7 @@ export default async function LoginPage({ searchParams }: Props) {
 }
 ```
 
----
+***
 
 ## デバッグとトラブルシューティング
 
@@ -418,14 +418,14 @@ export default auth((req) => {
 
 ### よくある問題と解決策
 
-| 問題                      | 原因                             | 解決策                        |
-| ------------------------- | -------------------------------- | ----------------------------- |
-| Middleware が実行されない | matcher が正しく設定されていない | パターンを確認                |
-| 無限リダイレクト          | ログインページも保護している     | ログインページを除外          |
-| セッションが取得できない  | Cookie が送信されていない        | credentials: 'include' を確認 |
-| Edge Runtime エラー       | 非対応の API を使用              | 代替手段を使用                |
+| 問題                 | 原因                   | 解決策                        |
+| ------------------ | -------------------- | -------------------------- |
+| Middleware が実行されない | matcher が正しく設定されていない | パターンを確認                    |
+| 無限リダイレクト           | ログインページも保護している       | ログインページを除外                 |
+| セッションが取得できない       | Cookie が送信されていない     | credentials: 'include' を確認 |
+| Edge Runtime エラー   | 非対応の API を使用         | 代替手段を使用                    |
 
----
+***
 
 ## パフォーマンス考慮
 
@@ -461,7 +461,7 @@ export const config = {
 };
 ```
 
----
+***
 
 ## まとめ
 
@@ -474,7 +474,7 @@ export const config = {
 - Edge Runtime の制約と対策
 - デバッグとパフォーマンスの考慮点
 
----
+***
 
 ## 次のステップ
 

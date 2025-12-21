@@ -68,7 +68,7 @@ tooling/
     └── package.json
 ```
 
----
+***
 
 ## ESLint 設定
 
@@ -199,7 +199,7 @@ import nextConfig from "@ec/eslint-config/next";
 export default [...nextConfig];
 ```
 
----
+***
 
 ## TypeScript 設定
 
@@ -325,7 +325,7 @@ flowchart TD
 }
 ```
 
----
+***
 
 ## Tailwind CSS 設定
 
@@ -422,7 +422,7 @@ const config: Config = {
 export default config;
 ```
 
----
+***
 
 ## Prettier 設定
 
@@ -478,7 +478,7 @@ module.exports = {
 };
 ```
 
----
+***
 
 ## ルート package.json での設定
 
@@ -503,7 +503,7 @@ module.exports = {
 }
 ```
 
----
+***
 
 ## パッケージ間の依存関係
 
@@ -534,7 +534,7 @@ graph TD
     SB --> TS
 ```
 
----
+***
 
 ## よくあるパターン
 
@@ -580,7 +580,7 @@ export default [
 content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "../../packages/ui/src/**/*.{js,ts,jsx,tsx,mdx}"];
 ```
 
----
+***
 
 ## トラブルシューティング
 
@@ -608,7 +608,7 @@ rm -rf .eslintcache
 
 `content` にすべてのファイルパスが含まれているか確認。
 
----
+***
 
 ## 次のステップ
 

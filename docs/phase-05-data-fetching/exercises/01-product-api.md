@@ -39,7 +39,7 @@
 
 商品一覧・詳細 API のモックを作成し、Server Components でデータを取得して表示します。
 
----
+***
 
 ## 前提条件
 
@@ -53,7 +53,7 @@ pnpm list msw
 ls public/mockServiceWorker.js
 ```
 
----
+***
 
 ## 実装する機能
 
@@ -67,7 +67,7 @@ graph TD
     F --> G["7. Skeleton コンポーネント"]
 ```
 
----
+***
 
 ## ステップ 1: 型定義
 
@@ -87,7 +87,7 @@ export type Product = {
 };
 ```
 
----
+***
 
 ## ステップ 2: モックデータ
 
@@ -189,7 +189,7 @@ export const products: Product[] = [
 ];
 ```
 
----
+***
 
 ## ステップ 3: MSW ハンドラー
 
@@ -279,7 +279,7 @@ const nextConfig: NextConfig = {
 export default nextConfig;
 ```
 
----
+***
 
 ## ステップ 4: データ取得関数
 
@@ -325,7 +325,7 @@ export async function getProduct(id: string): Promise<Product> {
 }
 ```
 
----
+***
 
 ## ステップ 5: 商品一覧ページ
 
@@ -394,7 +394,7 @@ export default async function ProductsPage(): Promise<React.ReactElement> {
 }
 ```
 
----
+***
 
 ## ステップ 6: 商品詳細ページ
 
@@ -486,7 +486,7 @@ export default function ProductNotFound(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## ステップ 7: Skeleton コンポーネント
 
@@ -555,7 +555,7 @@ export default function ProductDetailLoading(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## 確認チェックリスト
 
@@ -568,7 +568,7 @@ export default function ProductDetailLoading(): React.ReactElement {
 - [ ] ローディング中に Skeleton が表示される
 - [ ] コンソールに「🔶 MSW server started」が表示される
 
----
+***
 
 ## トラブルシューティング
 
@@ -601,7 +601,7 @@ const nextConfig: NextConfig = {
 imageUrl: "https://via.placeholder.com/400",
 ```
 
----
+***
 
 ## 発展課題
 
@@ -609,7 +609,7 @@ imageUrl: "https://via.placeholder.com/400",
 2. **ソート機能**: 価格順、新着順のソート
 3. **関連商品**: 商品詳細ページに同じカテゴリの関連商品を表示
 
----
+***
 
 ## 完了条件
 

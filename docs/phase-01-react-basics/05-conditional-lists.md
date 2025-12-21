@@ -48,7 +48,7 @@ flowchart TD
     B -->|No| D["コンポーネント B を表示"]
 ```
 
----
+***
 
 ## 条件レンダリングの方法
 
@@ -94,7 +94,7 @@ function ProductCard({ product }: { product: Product }): React.ReactElement {
 }
 ```
 
----
+***
 
 ## 早期リターンパターン
 
@@ -144,7 +144,7 @@ function ProductPage({ productId }: { productId: string }): React.ReactElement {
 }
 ```
 
----
+***
 
 ## 複数条件のパターン
 
@@ -195,7 +195,7 @@ function PriceDisplay({ type, price }: { type: string; price: number }): React.R
 }
 ```
 
----
+***
 
 ## リストレンダリング
 
@@ -238,7 +238,7 @@ function ProductGrid({ products }: { products: Product[] }): React.ReactElement 
 }
 ```
 
----
+***
 
 ## key の重要性
 
@@ -329,7 +329,7 @@ function MonthList(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## 空リストの処理
 
@@ -389,7 +389,7 @@ function ProductList({ products, isLoading }: ProductListProps): React.ReactElem
 }
 ```
 
----
+***
 
 ## EC サイトでの実践例
 
@@ -597,7 +597,7 @@ function CheckoutProgress({ currentStep }: { currentStep: number }): React.React
 }
 ```
 
----
+***
 
 ## よくある間違い
 
@@ -675,20 +675,20 @@ function CheckoutProgress({ currentStep }: { currentStep: number }): React.React
 }
 ```
 
----
+***
 
 ## まとめ
 
-| 概念         | 説明                                     |
-| ------------ | ---------------------------------------- |
-| 三項演算子   | `条件 ? A : B` で表示を切り替え          |
-| && 演算子    | `条件 && 要素` で条件付き表示            |
-| 早期リターン | 複雑な条件をシンプルに処理               |
-| map          | 配列をコンポーネントのリストに変換       |
-| key          | リスト要素の識別子（ユニークな値を使用） |
-| 空リスト処理 | フォールバック UI を表示                 |
+| 概念     | 説明                    |
+| ------ | --------------------- |
+| 三項演算子  | `条件 ? A : B` で表示を切り替え |
+| && 演算子 | `条件 && 要素` で条件付き表示    |
+| 早期リターン | 複雑な条件をシンプルに処理         |
+| map    | 配列をコンポーネントのリストに変換     |
+| key    | リスト要素の識別子（ユニークな値を使用）  |
+| 空リスト処理 | フォールバック UI を表示        |
 
----
+***
 
 ## 次のステップ
 

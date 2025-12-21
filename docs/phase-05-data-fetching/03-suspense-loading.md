@@ -57,7 +57,7 @@ sequenceDiagram
 - UX 向上 - ローディング状態を明示できる
 - 段階的表示 - 準備できた部分から順次表示
 
----
+***
 
 ## loading.tsx の使い方
 
@@ -98,7 +98,7 @@ app/
 │       └── loading.tsx   # 詳細のローディング
 ```
 
----
+***
 
 ## Suspense 境界のパターン
 
@@ -180,7 +180,7 @@ export async function Recommendations(): Promise<React.ReactElement> {
 }
 ```
 
----
+***
 
 ## Skeleton コンポーネントの設計
 
@@ -265,7 +265,7 @@ export function ProductDetailSkeleton(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## Streaming SSR
 
@@ -296,7 +296,7 @@ graph LR
 - FCP（First Contentful Paint）の改善 - ローディング UI がすぐに表示される
 - 並列処理 - 複数の Suspense 境界が並列でデータを取得
 
----
+***
 
 ## ErrorBoundary との組み合わせ
 
@@ -362,7 +362,7 @@ export default function ProductsPage(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## EC サイトでの活用例
 
@@ -432,7 +432,7 @@ export default async function ProductDetailPage({ params }: Props): Promise<Reac
 }
 ```
 
----
+***
 
 ## ベストプラクティス
 
@@ -458,18 +458,18 @@ app/products/loading.tsx → /products 全体のローディング
 
 複数の Suspense 境界を配置し、準備できたものから表示。
 
----
+***
 
 ## まとめ
 
-| 機能        | 用途                     | 配置場所            |
-| ----------- | ------------------------ | ------------------- |
-| loading.tsx | ルート全体のローディング | app/xxx/loading.tsx |
-| Suspense    | 細かい Suspense 境界     | コンポーネント内    |
-| Skeleton    | プレースホルダー UI      | components/         |
-| error.tsx   | エラー時のフォールバック | app/xxx/error.tsx   |
+| 機能          | 用途              | 配置場所                |
+| ----------- | --------------- | ------------------- |
+| loading.tsx | ルート全体のローディング    | app/xxx/loading.tsx |
+| Suspense    | 細かい Suspense 境界 | コンポーネント内            |
+| Skeleton    | プレースホルダー UI     | components/         |
+| error.tsx   | エラー時のフォールバック    | app/xxx/error.tsx   |
 
----
+***
 
 ## 次のステップ
 

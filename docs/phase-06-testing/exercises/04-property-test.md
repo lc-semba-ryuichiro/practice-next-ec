@@ -36,14 +36,14 @@ graph LR
     D -->|No| F["失敗ケース<br/>を縮小表示"]
 ```
 
----
+***
 
 ## 前提条件
 
 - [06-fast-check.md](../06-fast-check.md) を読んでいること
 - fast-check のインストール済み
 
----
+***
 
 ## 完成イメージ
 
@@ -65,7 +65,7 @@ graph LR
      ✓ 任意の文字列でクラッシュしない
 ```
 
----
+***
 
 ## ステップ 1: テスト対象の関数
 
@@ -94,7 +94,7 @@ export function calculateTax(subtotal: number, taxRate: number = 0.1): number {
 }
 ```
 
----
+***
 
 ## ステップ 2: テストファイルの作成
 
@@ -105,7 +105,7 @@ import { describe, it, expect } from "vitest";
 import { calculateTotal, applyDiscount, calculateTax } from "../pricing";
 ```
 
----
+***
 
 ## ステップ 3: calculateTotal のプロパティテスト
 
@@ -154,7 +154,7 @@ describe("価格計算 Property-based テスト", () => {
 });
 ```
 
----
+***
 
 ## ステップ 4: applyDiscount のプロパティテスト
 
@@ -224,7 +224,7 @@ describe("applyDiscount", () => {
 });
 ```
 
----
+***
 
 ## ステップ 5: calculateTax のプロパティテスト
 
@@ -268,7 +268,7 @@ describe("calculateTax", () => {
 });
 ```
 
----
+***
 
 ## ステップ 6: バリデーションのプロパティテスト
 
@@ -335,7 +335,7 @@ describe("バリデーション Property-based テスト", () => {
 });
 ```
 
----
+***
 
 ## ステップ 7: カスタム Arbitrary
 
@@ -365,7 +365,7 @@ describe("商品データ", () => {
 });
 ```
 
----
+***
 
 ## ステップ 8: 完成したテストコード
 
@@ -471,7 +471,7 @@ describe("価格計算 Property-based テスト", () => {
 });
 ```
 
----
+***
 
 ## 確認チェックリスト
 
@@ -483,7 +483,7 @@ describe("価格計算 Property-based テスト", () => {
 - [ ] カスタム Arbitrary を作成できた
 - [ ] すべてのテストがパスする
 
----
+***
 
 ## トラブルシューティング
 
@@ -512,7 +512,7 @@ fc.assert(fc.property(/* ... */), { seed: 123456789 });
 fc.sample(cartItemArbitrary, 5).forEach(console.log);
 ```
 
----
+***
 
 ## 発展課題
 
@@ -520,7 +520,7 @@ fc.sample(cartItemArbitrary, 5).forEach(console.log);
 2. **クーポン適用**: 複数クーポンの適用順序に関するテスト
 3. **在庫管理**: 在庫数が負にならないことのテスト
 
----
+***
 
 ## 完了条件
 
@@ -530,7 +530,7 @@ fc.sample(cartItemArbitrary, 5).forEach(console.log);
 - [ ] カスタム Arbitrary を使用している
 - [ ] `pnpm test` でテストが成功する
 
----
+***
 
 ## Phase 6 完了
 

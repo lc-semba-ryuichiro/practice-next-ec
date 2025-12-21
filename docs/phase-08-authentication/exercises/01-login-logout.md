@@ -31,7 +31,7 @@
 
 NextAuth.js を使って、メール/パスワードでのログイン・ログアウト機能を実装します。
 
----
+***
 
 ## 完成イメージ
 
@@ -42,7 +42,7 @@ flowchart LR
     A -->|認証失敗| C["エラー表示"]
 ```
 
----
+***
 
 ## 要件
 
@@ -61,7 +61,7 @@ flowchart LR
 - Zod でフォームバリデーション
 - 環境変数で機密情報を管理
 
----
+***
 
 ## 実装手順
 
@@ -134,7 +134,7 @@ export const { GET, POST } = handlers;
 // TODO: ログアウト機能を実装
 ```
 
----
+***
 
 ## ヒント
 
@@ -232,7 +232,7 @@ export function findUserByEmail(email: string) {
 
 </details>
 
----
+***
 
 ## 解答例
 
@@ -397,7 +397,7 @@ export function LogoutButton() {
 
 </details>
 
----
+***
 
 ## 発展課題
 
@@ -405,7 +405,7 @@ export function LogoutButton() {
 2. **ユーザー登録機能**: 新規ユーザー登録ページを作成してみましょう
 3. **Remember Me**: 「ログイン状態を維持する」チェックボックスを追加してみましょう
 
----
+***
 
 ## 確認ポイント
 
@@ -416,7 +416,7 @@ export function LogoutButton() {
 - [ ] ログアウトできる
 - [ ] ログアウト後、トップページにリダイレクトされる
 
----
+***
 
 ## 次の演習
 

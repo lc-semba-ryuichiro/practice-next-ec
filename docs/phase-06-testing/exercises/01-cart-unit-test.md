@@ -37,14 +37,14 @@ graph LR
     E --> A
 ```
 
----
+***
 
 ## 前提条件
 
 - [01-vitest-basics.md](../01-vitest-basics.md) を読んでいること
 - Vitest のセットアップ済み
 
----
+***
 
 ## 完成イメージ
 
@@ -66,7 +66,7 @@ graph LR
      ✓ 空のカートは 0 を返す
 ```
 
----
+***
 
 ## ステップ 1: テストファイルの作成
 
@@ -102,7 +102,7 @@ const mockProduct2: Product = {
 };
 ```
 
----
+***
 
 ## ステップ 2: addItem のテスト（Red）
 
@@ -146,7 +146,7 @@ describe("Cart", () => {
 pnpm test cart.test.ts
 ```
 
----
+***
 
 ## ステップ 3: 最小限の実装（Green）
 
@@ -197,7 +197,7 @@ pnpm test cart.test.ts
 # ✓ addItem のテストが通る
 ```
 
----
+***
 
 ## ステップ 4: removeItem のテスト
 
@@ -229,7 +229,7 @@ removeItem(productId: string): void {
 }
 ```
 
----
+***
 
 ## ステップ 5: updateQuantity のテスト
 
@@ -278,7 +278,7 @@ updateQuantity(productId: string, quantity: number): void {
 }
 ```
 
----
+***
 
 ## ステップ 6: getTotal のテスト
 
@@ -316,7 +316,7 @@ getTotal(): number {
 }
 ```
 
----
+***
 
 ## ステップ 7: 完成したコード
 
@@ -481,7 +481,7 @@ describe("Cart", () => {
 });
 ```
 
----
+***
 
 ## 確認チェックリスト
 
@@ -493,7 +493,7 @@ describe("Cart", () => {
 - [ ] `getTotal` のテストがパスする
 - [ ] `pnpm test` でテストが成功する
 
----
+***
 
 ## トラブルシューティング
 
@@ -515,7 +515,7 @@ pnpm test lib/__tests__/cart.test.ts
 
 `beforeEach` で毎回新しい Cart インスタンスを作成しているか確認してください。
 
----
+***
 
 ## 発展課題
 
@@ -523,14 +523,14 @@ pnpm test lib/__tests__/cart.test.ts
 2. **在庫チェック**: 在庫数を超える数量を設定できないようにする
 3. **割引適用**: クーポンコードによる割引機能を追加
 
----
+***
 
 ## 完了条件
 
 - [ ] すべてのテストがパスする
 - [ ] `pnpm test:coverage` でカバレッジ 80% 以上
 
----
+***
 
 ## 次の演習
 

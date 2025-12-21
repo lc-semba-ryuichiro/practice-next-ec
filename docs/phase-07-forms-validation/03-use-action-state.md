@@ -36,7 +36,7 @@ graph LR
     D --> E["pending = false"]
 ```
 
----
+***
 
 ## 基本的な使い方
 
@@ -46,14 +46,14 @@ graph LR
 const [state, formAction, isPending] = useActionState(action, initialState);
 ```
 
-| 戻り値       | 説明                                   |
-| ------------ | -------------------------------------- |
-| `state`      | Server Action の戻り値（現在の状態）   |
-| `formAction` | フォームの `action` 属性に渡す関数     |
-| `isPending`  | アクション実行中かどうかを示すブール値 |
+| 戻り値          | 説明                        |
+| ------------ | ------------------------- |
+| `state`      | Server Action の戻り値（現在の状態） |
+| `formAction` | フォームの `action` 属性に渡す関数    |
+| `isPending`  | アクション実行中かどうかを示すブール値       |
 
-| 引数           | 説明                   |
-| -------------- | ---------------------- |
+| 引数             | 説明                 |
+| -------------- | ------------------ |
 | `action`       | 呼び出す Server Action |
 | `initialState` | 初期状態               |
 
@@ -127,7 +127,7 @@ export default function ContactPage(): JSX.Element {
 }
 ```
 
----
+***
 
 ## 状態管理のパターン
 
@@ -180,7 +180,7 @@ export function RegisterForm(): JSX.Element {
 }
 ```
 
----
+***
 
 ## フォームとの連携
 
@@ -266,7 +266,7 @@ export function RegisterForm(): JSX.Element {
 }
 ```
 
----
+***
 
 ## useFormStatus との組み合わせ
 
@@ -381,7 +381,7 @@ export function RegisterForm(): JSX.Element {
 }
 ```
 
----
+***
 
 ## 実装例
 
@@ -661,7 +661,7 @@ export default function ContactPage(): JSX.Element {
 }
 ```
 
----
+***
 
 ## まとめ
 
@@ -679,7 +679,7 @@ export default function ContactPage(): JSX.Element {
 3. フィールドごとにエラーを表示する
 4. 成功時はユーザーにフィードバックを表示する
 
----
+***
 
 ## 次のステップ
 

@@ -59,7 +59,7 @@ graph TD
 - ブラウザを閉じても後でカートを確認できる
 - お気に入りが消えない
 
----
+***
 
 ## atomWithStorage の基本
 
@@ -89,13 +89,13 @@ const [cart, setCart] = useAtom(cartAtom);
 atomWithStorage<T>(key: string, initialValue: T, storage?: Storage)
 ```
 
-| 引数         | 説明                                 |
-| ------------ | ------------------------------------ |
-| key          | localStorage に保存するキー名        |
-| initialValue | 初期値（保存されたデータがない場合） |
+| 引数           | 説明                    |
+| ------------ | --------------------- |
+| key          | localStorage に保存するキー名 |
+| initialValue | 初期値（保存されたデータがない場合）    |
 | storage      | 使用するストレージ（省略可能）       |
 
----
+***
 
 ## EC サイトでの実装例
 
@@ -173,18 +173,18 @@ export const isFavoriteAtom = atom((get) => {
 });
 ```
 
----
+***
 
 ## localStorage vs sessionStorage
 
 ### 違い
 
-| 特徴     | localStorage         | sessionStorage       |
-| -------- | -------------------- | -------------------- |
-| 有効期限 | なし（永続）         | タブを閉じると消える |
-| 共有範囲 | 同一オリジンの全タブ | 開いたタブのみ       |
-| 容量     | 約 5MB               | 約 5MB               |
-| 用途     | カート、お気に入り   | フォーム一時保存     |
+| 特徴   | localStorage | sessionStorage |
+| ---- | ------------ | -------------- |
+| 有効期限 | なし（永続）       | タブを閉じると消える     |
+| 共有範囲 | 同一オリジンの全タブ   | 開いたタブのみ        |
+| 容量   | 約 5MB        | 約 5MB          |
+| 用途   | カート、お気に入り    | フォーム一時保存       |
 
 ### sessionStorage を使う場合
 
@@ -214,7 +214,7 @@ const checkoutFormAtom = atomWithStorage(
 ); // チェックアウトフォームは一時的
 ```
 
----
+***
 
 ## SSR での注意点
 
@@ -308,7 +308,7 @@ export function CartCount(): JSX.Element {
 }
 ```
 
----
+***
 
 ## カスタムストレージ
 
@@ -374,7 +374,7 @@ const createEncryptedStorage = <T>(secret: string) =>
   }));
 ```
 
----
+***
 
 ## デバッグ
 
@@ -407,7 +407,7 @@ const favoritesAtom = atomWithStorage("ec-site-favorites", []);
 const cartAtom = atomWithStorage("cart", []); // 他サイトと衝突の可能性
 ```
 
----
+***
 
 ## よくある問題と解決策
 
@@ -472,7 +472,7 @@ const safeSetItem = (key: string, value: string): boolean => {
 };
 ```
 
----
+***
 
 ## まとめ
 
@@ -485,15 +485,15 @@ const safeSetItem = (key: string, value: string): boolean => {
 
 ### 使いどころ
 
-| 用途             | ストレージ     |
-| ---------------- | -------------- |
-| カート           | localStorage   |
-| お気に入り       | localStorage   |
-| 閲覧履歴         | localStorage   |
+| 用途       | ストレージ          |
+| -------- | -------------- |
+| カート      | localStorage   |
+| お気に入り    | localStorage   |
+| 閲覧履歴     | localStorage   |
 | フォーム一時保存 | sessionStorage |
-| ユーザー設定     | localStorage   |
+| ユーザー設定   | localStorage   |
 
----
+***
 
 ## 次のステップ
 

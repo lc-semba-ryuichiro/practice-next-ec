@@ -66,7 +66,7 @@ function BadCounter(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## useState
 
@@ -107,7 +107,7 @@ flowchart TD
     C --> D["新しい count の値で UI を更新"]
 ```
 
----
+***
 
 ## useState の型指定
 
@@ -155,7 +155,7 @@ const [items, setItems] = useState<CartItem[]>([]);
 const [product, setProduct] = useState<Product | null>(null);
 ```
 
----
+***
 
 ## 状態の更新
 
@@ -221,7 +221,7 @@ const goodIncrement = (): void => {
 };
 ```
 
----
+***
 
 ## オブジェクト・配列の状態更新
 
@@ -310,7 +310,7 @@ function Cart(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## useEffect
 
@@ -336,7 +336,7 @@ flowchart TD
     E --> C
 ```
 
----
+***
 
 ## 依存配列のパターン
 
@@ -365,7 +365,7 @@ useEffect(() => {
 }, [productId]);
 ```
 
----
+***
 
 ## useEffect の実践例
 
@@ -483,7 +483,7 @@ function Countdown({ seconds }: { seconds: number }): React.ReactElement {
 }
 ```
 
----
+***
 
 ## EC サイトでの実践例
 
@@ -597,7 +597,7 @@ function CartIcon(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## よくある間違い
 
@@ -649,20 +649,20 @@ useEffect(() => {
 }, [productId]);
 ```
 
----
+***
 
 ## まとめ
 
-| 概念           | 説明                                         |
-| -------------- | -------------------------------------------- |
-| useState       | コンポーネントに状態を追加するフック         |
-| 関数型更新     | 前の状態を使って安全に更新                   |
-| イミュータブル | 状態は直接変更せず、新しいオブジェクトを作成 |
-| useEffect      | 副作用（API 呼び出し、購読など）を処理       |
-| 依存配列       | useEffect の実行タイミングを制御             |
-| クリーンアップ | useEffect の return で後処理を行う           |
+| 概念        | 説明                         |
+| --------- | -------------------------- |
+| useState  | コンポーネントに状態を追加するフック         |
+| 関数型更新     | 前の状態を使って安全に更新              |
+| イミュータブル   | 状態は直接変更せず、新しいオブジェクトを作成     |
+| useEffect | 副作用（API 呼び出し、購読など）を処理      |
+| 依存配列      | useEffect の実行タイミングを制御      |
+| クリーンアップ   | useEffect の return で後処理を行う |
 
----
+***
 
 ## 次のステップ
 

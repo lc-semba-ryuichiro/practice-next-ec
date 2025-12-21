@@ -34,13 +34,13 @@
 
 商品検索 API のモックを作成し、検索フォーム（Client Component）と検索結果ページ（Server Component）を実装します。検索はリアルタイム性が必要なため、キャッシュなし（`cache: 'no-store'`）で実装します。
 
----
+***
 
 ## 前提条件
 
 [演習 2: カテゴリ API](./02-category-api.md) が完了していることを確認してください。
 
----
+***
 
 ## 実装する機能
 
@@ -53,7 +53,7 @@ graph TD
     E --> F["6. デバウンス処理"]
 ```
 
----
+***
 
 ## ステップ 1: 型定義
 
@@ -84,7 +84,7 @@ export type SearchResult = {
 };
 ```
 
----
+***
 
 ## ステップ 2: MSW ハンドラー
 
@@ -173,7 +173,7 @@ import { searchHandlers } from "./search";
 export const handlers = [...productHandlers, ...categoryHandlers, ...searchHandlers];
 ```
 
----
+***
 
 ## ステップ 3: データ取得関数
 
@@ -212,7 +212,7 @@ export async function searchProducts(params: SearchParams): Promise<SearchResult
 }
 ```
 
----
+***
 
 ## ステップ 4: 検索フォーム（Client Component）
 
@@ -311,7 +311,7 @@ export function Header(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## ステップ 5: 検索結果ページ（Server Component）
 
@@ -613,7 +613,7 @@ export default function SearchLoading(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## ステップ 6: デバウンス処理（発展）
 
@@ -677,7 +677,7 @@ export function SearchFormWithDebounce(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## 確認チェックリスト
 
@@ -690,7 +690,7 @@ export function SearchFormWithDebounce(): React.ReactElement {
 - [ ] ページネーションが動作する
 - [ ] 該当なしの場合にメッセージが表示される
 
----
+***
 
 ## トラブルシューティング
 
@@ -709,7 +709,7 @@ export function SearchFormWithDebounce(): React.ReactElement {
 </Suspense>
 ```
 
----
+***
 
 ## 発展課題
 
@@ -717,7 +717,7 @@ export function SearchFormWithDebounce(): React.ReactElement {
 2. **検索履歴**: 過去の検索キーワードを保存（Jotai + localStorage）
 3. **無限スクロール**: ページネーションの代わりに無限スクロール
 
----
+***
 
 ## 完了条件
 

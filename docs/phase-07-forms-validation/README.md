@@ -25,7 +25,7 @@
 Zod によるバリデーションと Server Actions を使ったフォーム処理を習得するフェーズです。
 EC サイトに必要なユーザー登録、配送先の住所入力、商品レビューなどのフォーム機能を実装します。
 
----
+***
 
 ## 難易度
 
@@ -33,13 +33,13 @@ EC サイトに必要なユーザー登録、配送先の住所入力、商品�
 
 フォームのバリデーションとサーバーサイドの処理を組み合わせるため、フロントエンドとバックエンドの両方の理解が必要です。
 
----
+***
 
 ## 所要時間目安
 
 約 6〜8 時間です。
 
----
+***
 
 ## 前提知識
 
@@ -48,7 +48,7 @@ EC サイトに必要なユーザー登録、配送先の住所入力、商品�
 - React コンポーネントの作成経験
 - Next.js App Router の基礎知識
 
----
+***
 
 ## 学習目標
 
@@ -61,7 +61,7 @@ EC サイトに必要なユーザー登録、配送先の住所入力、商品�
 - [ ] バリデーションエラーをユーザーフレンドリーに表示できる
 - [ ] フロントエンドとバックエンドでバリデーションスキーマを共有できる
 
----
+***
 
 ## 目次
 
@@ -83,7 +83,7 @@ graph LR
     E --> F
 ```
 
----
+***
 
 ## 演習問題
 
@@ -91,7 +91,7 @@ graph LR
 - [演習 2: 配送先住所フォーム](./exercises/02-address-form.md)
 - [演習 3: 商品レビュー投稿フォーム](./exercises/03-review-form.md)
 
----
+***
 
 ## 作業場所
 
@@ -109,30 +109,30 @@ graph TD
 - `packages/validators/` - Zod スキーマを一元管理
 - `apps/web/` - フォームコンポーネントと Server Actions
 
----
+***
 
 ## 使用ツール
 
-| ツール     | バージョン | 用途                          |
-| ---------- | ---------- | ----------------------------- |
-| Zod        | 4.x        | スキーマ定義・バリデーション  |
-| React      | 19.x       | useActionState, useOptimistic |
-| Next.js    | 16.x       | Server Actions                |
-| TypeScript | 5.9+       | 型安全なフォーム処理          |
+| ツール        | バージョン | 用途                            |
+| ---------- | ----- | ----------------------------- |
+| Zod        | 4.x   | スキーマ定義・バリデーション                |
+| React      | 19.x  | useActionState, useOptimistic |
+| Next.js    | 16.x  | Server Actions                |
+| TypeScript | 5.9+  | 型安全なフォーム処理                    |
 
----
+***
 
 ## 関連する EC サイト機能
 
 このフェーズで実装する EC サイト機能は以下の通りです。
 
-| EC 機能          | 実装画面        | 使用技術            |
-| ---------------- | --------------- | ------------------- |
-| ユーザー登録     | /register       | Zod, Server Actions |
-| ログイン         | /login          | Zod, Server Actions |
+| EC 機能    | 実装画面            | 使用技術                |
+| -------- | --------------- | ------------------- |
+| ユーザー登録   | /register       | Zod, Server Actions |
+| ログイン     | /login          | Zod, Server Actions |
 | 配送先の住所登録 | /checkout       | Zod, useActionState |
 | 商品レビュー投稿 | /products/\[id] | Zod, useOptimistic  |
-| お問い合わせ     | /contact        | Zod, Server Actions |
+| お問い合わせ   | /contact        | Zod, Server Actions |
 
 ### バリデーションスキーマの共有
 
@@ -160,7 +160,7 @@ graph TD
     REVIEW --> REVIEW_FORM
 ```
 
----
+***
 
 ## 推奨学習リソース
 
@@ -176,7 +176,7 @@ graph TD
 - [Zod を使ったフォームバリデーション](https://zenn.dev/topics/zod)
 - [Server Actions 入門](https://zenn.dev/topics/serveractions)
 
----
+***
 
 ## 自己チェックリスト
 
@@ -189,7 +189,7 @@ Phase 7 を完了する前に、以下を確認してください。
 - [ ] バリデーションエラーを各フィールドに表示できる
 - [ ] packages/validators でスキーマを共有できている
 
----
+***
 
 ## 次のフェーズ
 

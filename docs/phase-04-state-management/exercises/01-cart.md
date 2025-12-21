@@ -35,7 +35,7 @@
 Jotai を使ってショッピングカート機能を実装します。
 このエクササイズでは、Atom の基本、派生 Atom、永続化の知識を総合的に活用します。
 
----
+***
 
 ## 実装する機能
 
@@ -56,7 +56,7 @@ graph TD
 - カート内の合計金額計算
 - カート内容を localStorage に永続化
 
----
+***
 
 ## 前提条件
 
@@ -73,7 +73,7 @@ pnpm --version
 pnpm dev
 ```
 
----
+***
 
 ## ステップ 1: 型定義を作成
 
@@ -104,7 +104,7 @@ export type CartItem = {
 };
 ```
 
----
+***
 
 ## ステップ 2: Jotai をインストール
 
@@ -138,7 +138,7 @@ pnpm add jotai
 }
 ```
 
----
+***
 
 ## ステップ 3: カート Atom を作成
 
@@ -256,7 +256,7 @@ export const clearCartAtom = atom(null, (_get, set) => {
 });
 ```
 
----
+***
 
 ## ステップ 4: エクスポート設定
 
@@ -267,7 +267,7 @@ export const clearCartAtom = atom(null, (_get, set) => {
 export * from "./cart";
 ```
 
----
+***
 
 ## ステップ 5: コンポーネントを作成
 
@@ -460,7 +460,7 @@ export function CartSummary(): JSX.Element {
 }
 ```
 
----
+***
 
 ## ステップ 6: カートページを作成
 
@@ -512,7 +512,7 @@ export default function CartPage(): JSX.Element {
 }
 ```
 
----
+***
 
 ## 確認チェックリスト
 
@@ -527,7 +527,7 @@ export default function CartPage(): JSX.Element {
 - [ ] カートを空にできる
 - [ ] カートが空のときに「カートは空です」のメッセージが表示される
 
----
+***
 
 ## トラブルシューティング
 
@@ -559,7 +559,7 @@ export function ClientOnly({ children }: { children: React.ReactNode }): JSX.Ele
 }
 ```
 
----
+***
 
 ## 発展課題
 
@@ -575,7 +575,7 @@ export function ClientOnly({ children }: { children: React.ReactNode }): JSX.Ele
 4. **クーポン適用機能**
    - クーポンコードを入力して割引を適用
 
----
+***
 
 ## 完了条件
 

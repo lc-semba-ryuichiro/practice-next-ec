@@ -33,7 +33,7 @@ graph LR
     style D fill:#4caf50,color:#fff
 ```
 
----
+***
 
 ## 完成イメージ
 
@@ -67,14 +67,14 @@ graph LR
 └─────────────────────────────────────────────┘
 ```
 
----
+***
 
 ## 前提条件
 
 - 演習 3（支払い方法選択）が完了していること
 - すべてのチェックアウトデータ（カート、配送先、支払い方法）が保存されていること
 
----
+***
 
 ## ステップ 1: ページの作成
 
@@ -153,7 +153,7 @@ export default async function ConfirmPage(): Promise<JSX.Element> {
 }
 ```
 
----
+***
 
 ## ステップ 2: 注文サマリー
 
@@ -286,7 +286,7 @@ function formatPaymentMethod(method: PaymentMethod): string {
 }
 ```
 
----
+***
 
 ## ステップ 3: 確認フォーム（二重送信防止）
 
@@ -375,7 +375,7 @@ export function ConfirmationForm(): JSX.Element {
 }
 ```
 
----
+***
 
 ## ステップ 4: 注文処理 Server Action
 
@@ -470,7 +470,7 @@ async function createOrder(data: {
 }
 ```
 
----
+***
 
 ## ステップ 5: 二重送信防止の強化
 
@@ -552,7 +552,7 @@ export async function placeOrder(
 }
 ```
 
----
+***
 
 ## 確認ポイント
 
@@ -566,7 +566,7 @@ export async function placeOrder(
 - [ ] 処理中はボタンが無効化される
 - [ ] 二重クリックで重複注文されない
 
----
+***
 
 ## よくある問題
 
@@ -593,7 +593,7 @@ return { error: "エラーメッセージ" };
 
 Cookie の有効期限が切れている可能性があります。「セッションが期限切れです。カートからやり直してください。」のようなエラーメッセージを表示し、カート画面へのリンクを提示してください。
 
----
+***
 
 ## 次の演習
 

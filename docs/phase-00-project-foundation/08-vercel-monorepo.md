@@ -76,7 +76,7 @@ flowchart TD
     V3 --> D3
 ```
 
----
+***
 
 ## 複数アプリのデプロイ
 
@@ -84,11 +84,11 @@ flowchart TD
 
 1 つのリポジトリから複数の Vercel プロジェクトを作成します。
 
-| Vercel プロジェクト | Root Directory | ドメイン              |
-| ------------------- | -------------- | --------------------- |
-| ec-web              | apps/web       | shop.example.com      |
-| ec-admin            | apps/admin     | admin.example.com     |
-| ec-storybook        | apps/storybook | storybook.example.com |
+| Vercel プロジェクト | Root Directory | ドメイン                  |
+| ------------- | -------------- | --------------------- |
+| ec-web        | apps/web       | shop.example.com      |
+| ec-admin      | apps/admin     | admin.example.com     |
+| ec-storybook  | apps/storybook | storybook.example.com |
 
 ### 手順
 
@@ -123,7 +123,7 @@ Vercel Dashboard → Add New Project
 └── Output Directory: storybook-static
 ```
 
----
+***
 
 ## ビルドコマンドの設定
 
@@ -171,7 +171,7 @@ cd ../.. && turbo build --filter=web
 }
 ```
 
----
+***
 
 ## vercel.json の配置
 
@@ -206,7 +206,7 @@ cd ../.. && turbo build --filter=web
 }
 ```
 
----
+***
 
 ## turbo-ignore による最適化
 
@@ -256,7 +256,7 @@ apps/admin    → 変更あり → ビルド実行 ✓
 apps/storybook → 変更なし → スキップ ⏭
 ```
 
----
+***
 
 ## リモートキャッシュの設定
 
@@ -296,7 +296,7 @@ Cached:    2 cached, 2 total
   Time:    1.234s
 ```
 
----
+***
 
 ## 環境変数の共有
 
@@ -327,7 +327,7 @@ Preview:
   NEXT_PUBLIC_API_URL=https://staging-api.example.com
 ```
 
----
+***
 
 ## プレビューデプロイの設定
 
@@ -352,7 +352,7 @@ Project Settings → Git → Preview Branches
 Pattern: feature/*, fix/*, develop
 ```
 
----
+***
 
 ## ドメインの設定
 
@@ -373,7 +373,7 @@ admin.example.com  CNAME  cname.vercel-dns.com
 docs.example.com   CNAME  cname.vercel-dns.com
 ```
 
----
+***
 
 ## 依存関係の可視化
 
@@ -411,7 +411,7 @@ digraph G {
 5. web, admin    (並列実行可能)
 ```
 
----
+***
 
 ## ベストプラクティス
 
@@ -454,7 +454,7 @@ API_SECRET_KEY
 - ec-admin-staging
 ```
 
----
+***
 
 ## トラブルシューティング
 
@@ -492,7 +492,7 @@ Error: Environment variable not found: DATABASE_URL
 2. 正しい環境（Production/Preview/Development）に設定されているか確認
 3. `vercel env pull` で同期
 
----
+***
 
 ## 完成形の構成
 
@@ -517,7 +517,7 @@ Turborepo Remote Cache: 有効
 turbo-ignore: 有効（変更のないアプリはスキップ）
 ```
 
----
+***
 
 ## 次のステップ
 

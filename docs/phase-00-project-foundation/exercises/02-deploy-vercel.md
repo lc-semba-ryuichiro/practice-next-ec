@@ -46,7 +46,7 @@
 
 モノレポ構成のプロジェクトを Vercel にデプロイし、プレビューデプロイとリモートキャッシュを設定します。
 
----
+***
 
 ## 前提条件
 
@@ -54,7 +54,7 @@
 - GitHub アカウントを持っていること
 - Vercel アカウントを持っていること（なければ作成）
 
----
+***
 
 ## ステップ 1: GitHub にプッシュ
 
@@ -104,7 +104,7 @@ git commit -m "chore: 初期セットアップ"
 git push -u origin main
 ```
 
----
+***
 
 ## ステップ 2: Vercel アカウントの準備
 
@@ -121,7 +121,7 @@ git push -u origin main
 2. アクセスするリポジトリを選択（または「All repositories」）
 3. 「Install」をクリック
 
----
+***
 
 ## ステップ 3: web アプリのデプロイ
 
@@ -133,11 +133,11 @@ git push -u origin main
 
 ### 3.2 プロジェクト設定
 
-| 設定項目         | 値                                     |
+| 設定項目             | 値                                      |
 | ---------------- | -------------------------------------- |
 | Project Name     | ec-web                                 |
 | Framework Preset | Next.js                                |
-| Root Directory   | `apps/web`（Configure で設定）         |
+| Root Directory   | `apps/web`（Configure で設定）              |
 | Build Command    | `cd ../.. && turbo build --filter=web` |
 | Install Command  | `pnpm install`                         |
 
@@ -147,7 +147,7 @@ git push -u origin main
 2. ビルドログを確認
 3. デプロイ完了後、URL にアクセスして確認
 
----
+***
 
 ## ステップ 4: Turborepo リモートキャッシュの設定
 
@@ -183,7 +183,7 @@ TURBO_TOKEN: <取得したトークン>
 TURBO_TEAM: <チーム名またはユーザー名>
 ```
 
----
+***
 
 ## ステップ 5: プレビューデプロイの確認
 
@@ -225,7 +225,7 @@ GitHub で Pull Request を作成します。
 2. URL にアクセスして変更を確認
 3. レビュー後、マージ
 
----
+***
 
 ## ステップ 6: GitHub Actions の設定
 
@@ -330,7 +330,7 @@ git push
 
 GitHub → Actions タブでワークフローの実行を確認。
 
----
+***
 
 ## ステップ 7: turbo-ignore の設定（オプション）
 
@@ -356,7 +356,7 @@ git commit -m "chore: turbo-ignore を設定"
 git push
 ```
 
----
+***
 
 ## 確認チェックリスト
 
@@ -368,7 +368,7 @@ git push
 - [ ] GitHub Actions が正常に実行される
 - [ ] Turborepo のリモートキャッシュが有効（ビルドログで確認）
 
----
+***
 
 ## トラブルシューティング
 
@@ -397,7 +397,7 @@ Error: Cannot find module '@ec/shared'
 - Vercel の GitHub App が正しく設定されているか確認する
 - Project Settings → Git → Preview Branches の設定を確認する
 
----
+***
 
 ## 発展課題
 
@@ -405,7 +405,7 @@ Error: Cannot find module '@ec/shared'
 2. カスタムドメインを設定
 3. 環境ごとの環境変数を設定（Production/Preview/Development）
 
----
+***
 
 ## 完了条件
 
@@ -416,7 +416,7 @@ Error: Cannot find module '@ec/shared'
 - [ ] GitHub Actions の CI が正常に動作する
 - [ ] Turborepo のリモートキャッシュが有効になっている
 
----
+***
 
 ## 次のステップ
 

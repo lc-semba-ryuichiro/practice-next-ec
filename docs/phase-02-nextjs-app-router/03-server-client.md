@@ -30,7 +30,7 @@
 
 React 18 と Next.js App Router では、コンポーネントが **Server Components** と **Client Components** の2種類に分かれます。適切に使い分けることで、パフォーマンスと UX を最適化できます。
 
----
+***
 
 ## Server Components と Client Components の違い
 
@@ -50,16 +50,16 @@ graph TD
     end
 ```
 
-| 特徴                                    | Server Components          | Client Components |
-| --------------------------------------- | -------------------------- | ----------------- |
-| 実行場所                                | サーバー                   | ブラウザ          |
-| `useState` / `useEffect`                | 使用不可                   | 使用可能          |
-| イベントハンドラ (`onClick` など)       | 使用不可                   | 使用可能          |
-| ブラウザ API (`window`, `localStorage`) | 使用不可                   | 使用可能          |
-| データ取得                              | 直接 `fetch` / DB アクセス | API 経由          |
-| バンドルサイズ                          | 影響なし                   | 含まれる          |
+| 特徴                                  | Server Components    | Client Components |
+| ----------------------------------- | -------------------- | ----------------- |
+| 実行場所                                | サーバー                 | ブラウザ              |
+| `useState` / `useEffect`            | 使用不可                 | 使用可能              |
+| イベントハンドラ (`onClick` など)             | 使用不可                 | 使用可能              |
+| ブラウザ API (`window`, `localStorage`) | 使用不可                 | 使用可能              |
+| データ取得                               | 直接 `fetch` / DB アクセス | API 経由            |
+| バンドルサイズ                             | 影響なし                 | 含まれる              |
 
----
+***
 
 ## デフォルトは Server Components
 
@@ -94,7 +94,7 @@ export default async function ProductsPage(): Promise<React.ReactElement> {
 3. **機密情報の保護**: API キーなどをサーバーに隠せる
 4. **直接データアクセス**: DB や外部 API に直接アクセス可能
 
----
+***
 
 ## Client Components の宣言
 
@@ -140,7 +140,7 @@ export function AddToCartButton({ productId }: Props): React.ReactElement {
 - `window`, `document`, `localStorage` などのブラウザ API を使う
 - クラスコンポーネントを使う
 
----
+***
 
 ## コンポーネントの組み合わせ
 
@@ -187,7 +187,7 @@ export default async function ProductPage({ params }: Props): Promise<React.Reac
 }
 ```
 
----
+***
 
 ## "use client" の境界
 
@@ -224,7 +224,7 @@ export function InteractiveComponent(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## データの受け渡し
 
@@ -263,7 +263,7 @@ function ClientComponent({ date }: Props) {
 }
 ```
 
----
+***
 
 ## パターン: Composition
 
@@ -306,28 +306,28 @@ export default function Page(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## EC サイトでの使い分け
 
 ### Server Components を使う場面
 
-| コンポーネント | 理由             |
-| -------------- | ---------------- |
-| 商品一覧       | データ取得が中心 |
-| 商品詳細       | SEO が重要       |
-| カテゴリナビ   | 静的なリスト表示 |
-| フッター       | 静的なコンテンツ |
+| コンポーネント | 理由       |
+| ------- | -------- |
+| 商品一覧    | データ取得が中心 |
+| 商品詳細    | SEO が重要  |
+| カテゴリナビ  | 静的なリスト表示 |
+| フッター    | 静的なコンテンツ |
 
 ### Client Components を使う場面
 
-| コンポーネント     | 理由             |
-| ------------------ | ---------------- |
+| コンポーネント   | 理由       |
+| --------- | -------- |
 | カートに追加ボタン | クリックイベント |
-| 数量選択           | フォーム入力     |
-| お気に入りボタン   | 状態管理         |
-| 検索フォーム       | ユーザー入力     |
-| モーダル/ドロワー  | インタラクション |
+| 数量選択      | フォーム入力   |
+| お気に入りボタン  | 状態管理     |
+| 検索フォーム    | ユーザー入力   |
+| モーダル/ドロワー | インタラクション |
 
 ### 実践例：商品カード
 
@@ -377,7 +377,7 @@ export function AddToFavoriteButton({ productId }: Props): React.ReactElement {
 }
 ```
 
----
+***
 
 ## よくある間違い
 
@@ -424,19 +424,19 @@ export default function Page() {
 }
 ```
 
----
+***
 
 ## まとめ
 
-| ポイント            | 説明                                                 |
-| ------------------- | ---------------------------------------------------- |
-| デフォルトは Server | 全てのコンポーネントがデフォルトで Server Components |
-| `"use client"`      | Client Components にするためのディレクティブ         |
-| 最小限の Client     | インタラクションが必要な部分だけ Client に           |
-| Composition         | Server の中に Client を組み込むパターン              |
-| シリアライズ        | props はシリアライズ可能な値のみ                     |
+| ポイント           | 説明                                  |
+| -------------- | ----------------------------------- |
+| デフォルトは Server  | 全てのコンポーネントがデフォルトで Server Components |
+| `"use client"` | Client Components にするためのディレクティブ     |
+| 最小限の Client    | インタラクションが必要な部分だけ Client に           |
+| Composition    | Server の中に Client を組み込むパターン         |
+| シリアライズ         | props はシリアライズ可能な値のみ                 |
 
----
+***
 
 ## 次のステップ
 

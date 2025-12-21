@@ -47,7 +47,7 @@ sequenceDiagram
 - SEO に有利 - データ込みの HTML が返されるため、クローラーがコンテンツを認識しやすい
 - 初期表示が速い - ブラウザでの追加リクエストが不要
 
----
+***
 
 ## 基本的な fetch の書き方
 
@@ -83,19 +83,19 @@ export default async function ProductsPage(): Promise<React.ReactElement> {
 3. `await` でレスポンスを待つ
 4. `response.json()` も Promise なので `await` が必要
 
----
+***
 
 ## Client fetch との比較
 
-| 項目               | Server fetch        | Client fetch（useEffect）    |
-| ------------------ | ------------------- | ---------------------------- |
-| 実行場所           | Node.js（サーバー） | ブラウザ                     |
-| 初期表示           | データ込み HTML     | ローディング → データ表示    |
-| SEO                | 有利                | 不利（クローラーが待たない） |
-| API キーの露出     | なし（安全）        | あり（公開 API のみ可）      |
-| ユーザー固有データ | Cookie で対応       | トークンで対応               |
-| リアルタイム更新   | 再リクエストが必要  | WebSocket 等で可能           |
-| バンドルサイズ     | 小さい              | 大きくなりがち               |
+| 項目        | Server fetch  | Client fetch（useEffect） |
+| --------- | ------------- | ----------------------- |
+| 実行場所      | Node.js（サーバー） | ブラウザ                    |
+| 初期表示      | データ込み HTML    | ローディング → データ表示          |
+| SEO       | 有利            | 不利（クローラーが待たない）          |
+| API キーの露出 | なし（安全）        | あり（公開 API のみ可）          |
+| ユーザー固有データ | Cookie で対応    | トークンで対応                 |
+| リアルタイム更新  | 再リクエストが必要     | WebSocket 等で可能          |
+| バンドルサイズ   | 小さい           | 大きくなりがち                 |
 
 ### いつ Client fetch を使うか
 
@@ -103,7 +103,7 @@ export default async function ProductsPage(): Promise<React.ReactElement> {
 - WebSocket によるリアルタイム更新
 - ブラウザ API が必要な処理
 
----
+***
 
 ## データ取得関数の分離
 
@@ -159,7 +159,7 @@ export default async function ProductsPage(): Promise<React.ReactElement> {
 - 型定義を一元管理できる
 - エラーハンドリングを統一できる
 
----
+***
 
 ## Zod による型安全なデータ取得
 
@@ -206,7 +206,7 @@ export async function getProducts(): Promise<Product[]> {
 - 不正なデータによるランタイムエラーを防げる
 - スキーマから型を自動生成できる
 
----
+***
 
 ## エラーハンドリング
 
@@ -314,7 +314,7 @@ export default function ProductNotFound(): React.ReactElement {
 }
 ```
 
----
+***
 
 ## EC サイトでの活用例
 
@@ -389,21 +389,21 @@ export default async function ProductDetailPage({
 }
 ```
 
----
+***
 
 ## まとめ
 
-| ポイント           | 内容                             |
-| ------------------ | -------------------------------- |
-| Server Components  | async/await でデータ取得可能     |
-| 実行環境           | Node.js（サーバーサイド）        |
-| SEO                | データ込み HTML で有利           |
-| セキュリティ       | API キーを隠せる                 |
-| 型安全性           | Zod でレスポンスをバリデーション |
-| エラーハンドリング | error.tsx、not-found.tsx と連携  |
-| コード分離         | lib/api/ にデータ取得関数を分離  |
+| ポイント              | 内容                          |
+| ----------------- | --------------------------- |
+| Server Components | async/await でデータ取得可能        |
+| 実行環境              | Node.js（サーバーサイド）            |
+| SEO               | データ込み HTML で有利              |
+| セキュリティ            | API キーを隠せる                  |
+| 型安全性              | Zod でレスポンスをバリデーション          |
+| エラーハンドリング         | error.tsx、not-found.tsx と連携 |
+| コード分離             | lib/api/ にデータ取得関数を分離        |
 
----
+***
 
 ## 次のステップ
 
