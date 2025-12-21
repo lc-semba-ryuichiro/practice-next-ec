@@ -181,8 +181,8 @@ catalogs:
       specifier: ^4.3.0
       version: 4.3.0
     fast-check:
-      specifier: ^4.5.0
-      version: 4.5.0
+      specifier: ^4.5.1
+      version: 4.5.1
     jotai:
       specifier: ^2.16.0
       version: 2.16.0
@@ -231,6 +231,9 @@ catalogs:
     react-dom:
       specifier: ^19.2.3
       version: 19.2.3
+    react-hook-form:
+      specifier: ^7.69.0
+      version: 7.69.0
     reg-keygen-git-hash-plugin:
       specifier: ^0.14.5
       version: 0.14.5
@@ -368,6 +371,9 @@ importers:
       react-dom:
         specifier: 'catalog:'
         version: 19.2.3(react@19.2.3)
+      react-hook-form:
+        specifier: 'catalog:'
+        version: 7.69.0(react@19.2.3)
       tailwind-merge:
         specifier: 'catalog:'
         version: 3.4.0
@@ -548,7 +554,7 @@ importers:
         version: 4.3.0(@typescript-eslint/eslint-plugin@8.50.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))
       fast-check:
         specifier: 'catalog:'
-        version: 4.5.0
+        version: 4.5.1
       lefthook:
         specifier: 'catalog:'
         version: 2.0.12
@@ -5803,8 +5809,8 @@ packages:
     resolution: {integrity: sha512-hMQ4CX1p1izmuLYyZqLMO/qGNw10wSv9QDCPfzXfyFrOaCSSoRfqE1Kf1s5an66J5JZC62NewG+mK49jOCtQew==}
     engines: {node: '>=4'}
 
-  fast-check@4.5.0:
-    resolution: {integrity: sha512-xFXcerDrzB+c+s4xT6LT2hhYzSbuYgIvXTV5k0w9y4RoiREFw73XuHAeYncI7mo5Ik+hvInRXrlkJUm+bLl18Q==}
+  fast-check@4.5.1:
+    resolution: {integrity: sha512-G70DBBb8ThD/0dYFfPRHJKxk45JvjiWRZWFWIE41bYwncnZftIsCTV8iKc3+9gUvB6SQ5i4byCK6P/G5RQbH3Q==}
     engines: {node: '>=12.17.0'}
 
   fast-deep-equal@3.1.3:
@@ -8601,6 +8607,12 @@ packages:
     resolution: {integrity: sha512-yELu4WmLPw5Mr/lmeEpox5rw3RETacE++JgHqQzd2dg+YbJuat3jH4ingc+WPZhxaoFzdv9y33G+F7Nl5O0GBg==}
     peerDependencies:
       react: ^19.2.3
+
+  react-hook-form@7.69.0:
+    resolution: {integrity: sha512-yt6ZGME9f4F6WHwevrvpAjh42HMvocuSnSIHUGycBqXIJdhqGSPQzTpGF+1NLREk/58IdPxEMfPcFCjlMhclGw==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      react: ^16.8.0 || ^17 || ^18 || ^19
 
   react-is@16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
@@ -16905,7 +16917,7 @@ snapshots:
       iconv-lite: 0.4.24
       tmp: 0.0.33
 
-  fast-check@4.5.0:
+  fast-check@4.5.1:
     dependencies:
       pure-rand: 7.0.1
 
@@ -18699,7 +18711,7 @@ snapshots:
 
   md5.js@1.3.5:
     dependencies:
-      hash-base: 3.0.5
+      hash-base: 3.1.2
       inherits: 2.0.4
       safe-buffer: 5.2.1
 
@@ -20180,6 +20192,10 @@ snapshots:
     dependencies:
       react: 19.2.3
       scheduler: 0.27.0
+
+  react-hook-form@7.69.0(react@19.2.3):
+    dependencies:
+      react: 19.2.3
 
   react-is@16.13.1: {}
 
