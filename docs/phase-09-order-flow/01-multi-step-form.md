@@ -214,7 +214,7 @@ export function StepProgress({ currentStep }: Props): JSX.Element {
 
 ### ステップ間の遷移制御
 
-前のステップが完了していない場合、先に進めないようにします。
+前のステップが未完了であれば、先へ進めないよう制御します。
 
 ```tsx
 // apps/web/app/checkout/shipping/page.tsx

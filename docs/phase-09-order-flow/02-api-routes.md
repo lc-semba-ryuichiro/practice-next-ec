@@ -563,7 +563,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 - RESTful な URL 設計
 - Zod でリクエストをバリデーション
 - 統一されたエラーレスポンス形式
-- 適切な HTTP ステータスコードの使用
+- 操作結果に応じた HTTP ステータスコードの使用
 - 認証・認可の実装
 
 ---
