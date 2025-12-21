@@ -18,7 +18,7 @@
 
 ## 完成イメージ
 
-```
+```text
 ┌─────────────────────────────────────────────┐
 │  商品名: ワイヤレスイヤホン Pro              │
 │                                             │
@@ -483,6 +483,13 @@ export function ReviewForm({
         setReviews((prev) => [result.data!, ...prev]);
         setRating(0);
         formRef.current?.reset();
+      } else {
+        // 失敗時はエラーをコンソールに出力
+        // 注: useOptimistic は transition 終了時に自動的にリバートするため、
+        // 手動でのロールバックは不要
+        console.error("レビューの投稿に失敗しました:", result.message);
+        // 実際のアプリケーションでは toast 通知などでユーザーに知らせる
+        // 例: toast.error(result.message ?? "レビューの投稿に失敗しました");
       }
     });
   };
