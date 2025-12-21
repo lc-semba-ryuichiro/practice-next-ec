@@ -1,10 +1,7 @@
 ---
-name: Custom issue template
-about: Describe this issue template's purpose here.
+name: その他の Issue
+about: 上記テンプレートに該当しない Issue はこちらを使用してください
 title: ''
 labels: ''
 assignees: ''
-
 ---
-
-
