@@ -85,7 +85,7 @@ git push -u origin main
 
 ### 3.1 プロジェクトをインポート
 
-1. Vercel Dashboard で「Add New...」→「Project」
+1. Vercel Dashboard で「Add New\...」→「Project」
 2. 「Import Git Repository」で `ec-monorepo` を選択
 3. 「Import」をクリック
 
