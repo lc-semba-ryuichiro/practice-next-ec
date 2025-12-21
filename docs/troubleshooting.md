@@ -7,13 +7,34 @@ React / Next.js 開発でよくあるエラーと解決策をまとめていま�
 ## 目次
 
 - [React 関連のエラー](#react-関連のエラー)
+  - [Hooks の呼び出し規則違反](#hooks-の呼び出し規則違反)
+  - [無限ループ（useEffect）](#無限ループuseeffect)
+  - [Key の警告](#key-の警告)
 - [Next.js 関連のエラー](#nextjs-関連のエラー)
+  - [Hydration エラー](#hydration-エラー)
+  - ["use client" ディレクティブ忘れ](#use-client-ディレクティブ忘れ)
+  - [Server Component でのイベントハンドラ](#server-component-でのイベントハンドラ)
+  - [Dynamic import のエラー](#dynamic-import-のエラー)
 - [TypeScript 関連のエラー](#typescript-関連のエラー)
+  - [型が見つからない](#型が見つからない)
+  - [暗黙の any 型](#暗黙の-any-型)
+  - [children の型エラー](#children-の型エラー)
 - [テスト関連のエラー](#テスト関連のエラー)
+  - [act() 警告](#act-警告)
+  - [要素が見つからない](#要素が見つからない)
 - [デバッグのヒント](#デバッグのヒント)
+  - [React DevTools](#react-devtools)
+  - [console.log の効果的な使い方](#consolelog-の効果的な使い方)
+  - [Network タブの確認](#network-タブの確認)
+  - [Next.js のデバッグ](#nextjs-のデバッグ)
 - [アンチパターン](#アンチパターン)
-
----
+  - [1. コンポーネント内での直接 DOM 操作](#1-コンポーネント内での直接-dom-操作)
+  - [2. Props のミューテーション](#2-props-のミューテーション)
+  - [3. useEffect 内での state 設定ループ](#3-useeffect-内での-state-設定ループ)
+  - [4. 過度な re-render](#4-過度な-re-render)
+  - [5. 条件付きレンダリングでの && の誤用](#5-条件付きレンダリングでの--の誤用)
+  - [6. key にインデックスを使用（順序が変わる場合）](#6-key-にインデックスを使用順序が変わる場合)
+  - [7. Server Component で Client 専用機能を使用](#7-server-component-で-client-専用機能を使用)
 
 ## React 関連のエラー
 
