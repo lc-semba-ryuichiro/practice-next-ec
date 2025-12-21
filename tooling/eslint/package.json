@@ -1,0 +1,34 @@
+{
+  "name": "@practice-next-ec/eslint-config",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    "./base": "./base.mts",
+    "./react": "./react.mts",
+    "./next": "./next.mts",
+    "./storybook": "./storybook.mts",
+    "./test": "./test.mts"
+  },
+  "dependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "catalog:",
+    "@vitest/eslint-plugin": "catalog:",
+    "eslint": "catalog:",
+    "eslint-config-next": "catalog:",
+    "eslint-plugin-boundaries": "catalog:",
+    "eslint-plugin-functional": "catalog:",
+    "eslint-plugin-import-x": "catalog:",
+    "eslint-plugin-jsdoc": "catalog:",
+    "eslint-plugin-n": "catalog:",
+    "eslint-plugin-promise": "catalog:",
+    "eslint-plugin-react-compiler": "catalog:",
+    "eslint-plugin-regexp": "catalog:",
+    "eslint-plugin-security": "catalog:",
+    "eslint-plugin-sonarjs": "catalog:",
+    "eslint-plugin-storybook": "catalog:",
+    "eslint-plugin-strict-dependencies": "catalog:",
+    "eslint-plugin-testing-library": "catalog:",
+    "eslint-plugin-unicorn": "catalog:",
+    "eslint-plugin-unused-imports": "catalog:",
+    "typescript-eslint": "catalog:"
+  }
+}

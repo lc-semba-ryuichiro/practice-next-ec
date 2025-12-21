@@ -37,19 +37,7 @@
     // Interop
     "allowJs": true,
     "skipLibCheck": true,
-    "jsx": "react-jsx",
-
-    // Next.js
-    "plugins": [{ "name": "next" }],
-    "paths": { "@/*": ["./*"] }
+    "jsx": "react-jsx"
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.mts",
-    ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts"
-  ],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "apps", "packages"]
 }

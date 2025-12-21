@@ -19,11 +19,11 @@ commit-msg:
 pre-push:
   parallel: true
   jobs:
-    - name: eslint
-      run: pnpm exec eslint . --max-warnings 0
+    - name: lint
+      run: pnpm turbo run lint
 
     - name: typecheck
-      run: pnpm exec tsc --noEmit
+      run: pnpm turbo run typecheck
 
     - name: stylelint
       run: pnpm exec stylelint "**/*.css"
@@ -44,4 +44,4 @@ pre-push:
       run: pnpm audit --audit-level=moderate
 
     - name: build
-      run: pnpm build
+      run: pnpm turbo run build

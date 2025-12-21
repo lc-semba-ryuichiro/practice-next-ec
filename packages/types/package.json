@@ -1,0 +1,17 @@
+{
+  "name": "@practice-next-ec/types",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@practice-next-ec/eslint-config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}

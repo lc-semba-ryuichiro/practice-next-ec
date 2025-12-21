@@ -28,20 +28,16 @@ export const Button = ({
   backgroundColor,
   label,
   ...props
-}: ButtonProps) => {
+}: ButtonProps): React.JSX.Element => {
   const mode = primary ? "storybook-button--primary" : "storybook-button--secondary";
   return (
     <button
       type="button"
       className={["storybook-button", `storybook-button--${size}`, mode].join(" ")}
+      style={{ backgroundColor }}
       {...props}
     >
       {label}
-      <style jsx>{`
-        button {
-          background-color: ${backgroundColor};
-        }
-      `}</style>
     </button>
   );
 };

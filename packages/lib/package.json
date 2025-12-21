@@ -1,0 +1,22 @@
+{
+  "name": "@practice-next-ec/lib",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./utils": "./src/utils.ts"
+  },
+  "scripts": {
+    "clean": "rm -rf .turbo",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "clsx": "catalog:",
+    "tailwind-merge": "catalog:"
+  },
+  "devDependencies": {
+    "@practice-next-ec/eslint-config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}
