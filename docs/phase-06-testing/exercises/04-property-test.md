@@ -261,7 +261,7 @@ export function validateEmail(input: string): { success: boolean; error?: string
   if (result.success) {
     return { success: true };
   }
-  return { success: false, error: result.error.message };
+  return { success: false, error: result.error.issues[0]?.message ?? "Invalid input" };
 }
 ```
 

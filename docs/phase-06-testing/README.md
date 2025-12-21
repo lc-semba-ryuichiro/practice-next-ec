@@ -113,12 +113,12 @@ graph TD
 
 | ツール                      | バージョン | 用途                          |
 | --------------------------- | ---------- | ----------------------------- |
-| Vitest                      | 3.x        | ユニット/コンポーネントテスト |
+| Vitest                      | 4.x        | ユニット/コンポーネントテスト |
 | @testing-library/react      | 16.x       | コンポーネントテスト          |
 | @testing-library/user-event | 14.x       | ユーザー操作シミュレーション  |
 | Playwright                  | 1.x        | E2E テスト                    |
 | playwright-bdd              | 8.x        | Gherkin シナリオ              |
-| fast-check                  | 3.x        | Property-based テスト         |
+| fast-check                  | 4.x        | Property-based テスト         |
 | @storybook/addon-vitest     | 10.x       | Storybook 連携                |
 
 ---

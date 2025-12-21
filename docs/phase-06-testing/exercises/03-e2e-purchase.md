@@ -284,7 +284,7 @@ test.describe("購入フロー", () => {
   test.describe("商品閲覧", () => {
     test("商品一覧から商品を選択できる", async ({ page }) => {
       await page.goto("/products");
-      await expect(page.getByRole("article")).toHaveCount.greaterThan(0);
+      expect(await page.getByRole("article").count()).toBeGreaterThan(0);
       await page.getByRole("article").first().click();
       await expect(page).toHaveURL(/\/products\/\d+/);
     });
