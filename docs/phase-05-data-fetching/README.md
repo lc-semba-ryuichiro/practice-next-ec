@@ -59,6 +59,8 @@ Server Components での非同期処理とキャッシュの概念理解が必�
 - [ ] MSW をプロジェクトにセットアップできる
 - [ ] MSW ハンドラーで API モックを作成できる
 - [ ] 商品一覧・詳細・検索の API モックを実装できる
+- [ ] @tanstack/react-query でクライアントサイドキャッシュを実装できる
+- [ ] Server Components と React Query の使い分けを判断できる
 
 ***
 
@@ -69,6 +71,8 @@ Server Components での非同期処理とキャッシュの概念理解が必�
 3. [Suspense と loading](./03-suspense-loading.md)
 4. [MSW セットアップ](./04-msw-setup.md)
 5. [MSW ハンドラー作成](./05-msw-handlers.md)
+6. [@tanstack/react-query 基礎](./06-react-query.md)
+7. [Server Components vs React Query の使い分け](./07-query-vs-server.md)
 
 ### 学習フロー
 
@@ -78,7 +82,9 @@ graph LR
     B --> C["03 Suspense/loading"]
     C --> D["04 MSW セットアップ"]
     D --> E["05 MSW ハンドラー"]
-    E --> F["演習問題"]
+    E --> F["06 React Query"]
+    F --> G["07 使い分け"]
+    G --> H["演習問題"]
 ```
 
 ***
@@ -115,12 +121,13 @@ graph TD
 
 ## 使用ツール
 
-| ツール        | バージョン | 用途                           |
-| ---------- | ----- | ---------------------------- |
-| Next.js    | 16+   | App Router、Server Components |
-| MSW        | 2.x   | API モック                      |
-| Zod        | 4.x   | レスポンスバリデーション                 |
-| TypeScript | 5.9+  | 型安全なデータ取得                    |
+| ツール                   | バージョン | 用途                           |
+| --------------------- | ----- | ---------------------------- |
+| Next.js               | 16+   | App Router、Server Components |
+| MSW                   | 2.x   | API モック                      |
+| Zod                   | 4.x   | レスポンスバリデーション                 |
+| TypeScript            | 5.9+  | 型安全なデータ取得                    |
+| @tanstack/react-query | 5.x   | クライアントキャッシュ                  |
 
 ***
 
@@ -163,6 +170,8 @@ Phase 5 を完了する前に、以下を確認してください。
 - [ ] MSW のブラウザ用と Node.js 用の設定を理解している
 - [ ] パスパラメータとクエリパラメータを含むハンドラーを書ける
 - [ ] 商品一覧・詳細・検索の API モックが動作している
+- [ ] useQuery と useMutation の使い方を理解している
+- [ ] Server Components と React Query の使い分け基準を説明できる
 
 ***
 
