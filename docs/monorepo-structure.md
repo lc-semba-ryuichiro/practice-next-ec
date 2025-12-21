@@ -4,6 +4,32 @@ Turborepo + pnpm workspace を使用した EC サイト向けモノレポ構成�
 
 ---
 
+## 目次
+
+- [ディレクトリ構造](#ディレクトリ構造)
+- [設定ファイル例](#設定ファイル例)
+  - [turbo.json](#turbojson)
+  - [pnpm-workspace.yaml](#pnpm-workspaceyaml)
+  - [ルート package.json](#ルート-packagejson)
+  - [apps/web/package.json](#appswebpackagejson)
+  - [packages/ui/package.json](#packagesuipackagejson)
+- [パッケージ間の依存関係](#パッケージ間の依存関係)
+- [Turborepo のメリット](#turborepo-のメリット)
+  - [1. ビルドキャッシュ](#1-ビルドキャッシュ)
+  - [2. タスクの並列実行](#2-タスクの並列実行)
+  - [3. リモートキャッシュ（Vercel）](#3-リモートキャッシュvercel)
+- [モノレポのメリット（EC サイト観点）](#モノレポのメリットec-サイト観点)
+- [開発フロー](#開発フロー)
+  - [新しいコンポーネントの追加](#新しいコンポーネントの追加)
+  - [共有型の追加](#共有型の追加)
+  - [開発サーバーの起動](#開発サーバーの起動)
+- [Vercel でのデプロイ設定](#vercel-でのデプロイ設定)
+  - [web アプリ](#web-アプリ)
+  - [admin アプリ](#admin-アプリ)
+  - [環境変数](#環境変数)
+- [CI/CD 設定例](#cicd-設定例)
+  - [.github/workflows/ci.yml](#githubworkflowsciyml)
+
 ## ディレクトリ構造
 
 ```text

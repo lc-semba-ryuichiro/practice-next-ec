@@ -1,5 +1,37 @@
 # 演習 3: ルートガード
 
+## 目次
+
+- [目標](#目標)
+- [完成イメージ](#完成イメージ)
+- [要件](#要件)
+  - [機能要件](#機能要件)
+  - [技術要件](#技術要件)
+- [実装手順](#実装手順)
+  - [Step 1: 基本的な Middleware の作成](#step-1-基本的な-middleware-の作成)
+  - [Step 2: matcher の設定](#step-2-matcher-の設定)
+  - [Step 3: callbackUrl の実装](#step-3-callbackurl-の実装)
+  - [Step 4: ロールベースアクセス制御](#step-4-ロールベースアクセス制御)
+- [ヒント](#ヒント)
+  - [基本的な Middleware](#基本的な-middleware)
+  - [保護されたルートの定義](#保護されたルートの定義)
+  - [callbackUrl の処理](#callbackurl-の処理)
+  - [ロールチェック](#ロールチェック)
+- [解答例](#解答例)
+  - [middleware.ts](#middlewarets)
+  - [types/next-auth.d.ts（型拡張）](#typesnext-authdts型拡張)
+  - [auth.ts（コールバック追加）](#authtsコールバック追加)
+  - [app/unauthorized/page.tsx](#appunauthorizedpagetsx)
+  - [app/login/page.tsx（callbackUrl 対応）](#apploginpagetsxcallbackurl-対応)
+  - [app/login/LoginForm.tsx（callbackUrl 対応）](#apploginloginformtsxcallbackurl-対応)
+  - [app/login/actions.ts（callbackUrl 対応）](#apploginactionstscallbackurl-対応)
+- [発展課題](#発展課題)
+- [確認ポイント](#確認ポイント)
+- [トラブルシューティング](#トラブルシューティング)
+  - [よくある問題](#よくある問題)
+- [まとめ](#まとめ)
+- [Phase 8 完了](#phase-8-完了)
+
 ## 目標
 
 Middleware を使って認証が必要なルートを保護し、高度なアクセス制御を実装します。

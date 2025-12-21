@@ -1,5 +1,43 @@
 # 共有設定パッケージ
 
+## 目次
+
+- [概要](#概要)
+  - [tooling ディレクトリ構成](#tooling-ディレクトリ構成)
+- [ESLint 設定](#eslint-設定)
+  - [tooling/eslint-config/package.json](#toolingeslint-configpackagejson)
+  - [tooling/eslint-config/base.js](#toolingeslint-configbasejs)
+  - [tooling/eslint-config/next.js](#toolingeslint-confignextjs)
+  - [tooling/eslint-config/react.js](#toolingeslint-configreactjs)
+  - [使用例（apps/web/eslint.config.mjs）](#使用例appswebeslintconfigmjs)
+- [TypeScript 設定](#typescript-設定)
+  - [tooling/typescript-config/package.json](#toolingtypescript-configpackagejson)
+  - [tooling/typescript-config/base.json](#toolingtypescript-configbasejson)
+  - [tooling/typescript-config/next.json](#toolingtypescript-confignextjson)
+  - [tooling/typescript-config/react-library.json](#toolingtypescript-configreact-libraryjson)
+  - [使用例（apps/web/tsconfig.json）](#使用例appswebtsconfigjson)
+  - [使用例（packages/ui/tsconfig.json）](#使用例packagesuitsconfigjson)
+- [Tailwind CSS 設定](#tailwind-css-設定)
+  - [tooling/tailwind-config/package.json](#toolingtailwind-configpackagejson)
+  - [tooling/tailwind-config/tailwind.config.ts](#toolingtailwind-configtailwindconfigts)
+  - [使用例（apps/web/tailwind.config.ts）](#使用例appswebtailwindconfigts)
+- [Prettier 設定](#prettier-設定)
+  - [tooling/prettier-config/package.json](#toolingprettier-configpackagejson)
+  - [tooling/prettier-config/index.js](#toolingprettier-configindexjs)
+  - [使用例（apps/web/prettier.config.js）](#使用例appswebprettierconfigjs)
+- [ルート package.json での設定](#ルート-packagejson-での設定)
+  - [package.json（ルート）](#packagejsonルート)
+- [パッケージ間の依存関係](#パッケージ間の依存関係)
+- [よくあるパターン](#よくあるパターン)
+  - [1. 設定の拡張](#1-設定の拡張)
+  - [2. TypeScript パスエイリアスの共有](#2-typescript-パスエイリアスの共有)
+  - [3. Tailwind のコンテンツパス](#3-tailwind-のコンテンツパス)
+- [トラブルシューティング](#トラブルシューティング)
+  - [ESLint が設定を見つけられない](#eslint-が設定を見つけられない)
+  - [TypeScript のパスが解決されない](#typescript-のパスが解決されない)
+  - [Tailwind のスタイルが適用されない](#tailwind-のスタイルが適用されない)
+- [次のステップ](#次のステップ)
+
 ## 概要
 
 モノレポでは、ESLint、TypeScript、Tailwind、Prettier などの設定を共有パッケージとして管理します。

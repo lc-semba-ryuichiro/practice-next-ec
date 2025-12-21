@@ -1,5 +1,40 @@
 # Storybook + Vitest 連携
 
+## 目次
+
+- [概要](#概要)
+- [addon-vitest とは](#addon-vitest-とは)
+  - [特徴](#特徴)
+  - [従来のテストとの違い](#従来のテストとの違い)
+- [セットアップ](#セットアップ)
+  - [インストール](#インストール)
+  - [Storybook 設定](#storybook-設定)
+  - [Vitest 設定](#vitest-設定)
+- [play 関数の基本](#play-関数の基本)
+  - [基本構造](#基本構造)
+  - [canvasElement と within](#canvaselement-と-within)
+- [@storybook/test API](#storybooktest-api)
+  - [アサーション](#アサーション)
+  - [userEvent](#userevent)
+  - [fn() - モック関数](#fn---モック関数)
+- [EC サイトでの活用例](#ec-サイトでの活用例)
+  - [ProductCard のインタラクションテスト](#productcard-のインタラクションテスト)
+  - [Modal のインタラクションテスト](#modal-のインタラクションテスト)
+  - [フォームのインタラクションテスト](#フォームのインタラクションテスト)
+- [複数ステップのテスト](#複数ステップのテスト)
+  - [step 関数](#step-関数)
+- [テストの実行](#テストの実行)
+  - [Storybook UI で確認](#storybook-ui-で確認)
+  - [Vitest で実行](#vitest-で実行)
+- [NG / OK パターン](#ng--ok-パターン)
+  - [NG: テストが長すぎる](#ng-テストが長すぎる)
+  - [OK: 1つの play 関数に1つの目的](#ok-1つの-play-関数に1つの目的)
+  - [NG: await を忘れる](#ng-await-を忘れる)
+  - [OK: すべての非同期操作に await](#ok-すべての非同期操作に-await)
+- [VRT（Visual Regression Testing）との関係](#vrtvisual-regression-testingとの関係)
+- [確認質問](#確認質問)
+- [次のステップ](#次のステップ)
+
 ## 概要
 
 Storybook 10 では `@storybook/addon-vitest` を使って、ストーリーをそのままテストとして実行できます。

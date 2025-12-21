@@ -1,5 +1,28 @@
 # Server Components での fetch
 
+## 目次
+
+- [Server Components での fetch とは](#server-components-での-fetch-とは)
+  - [特徴](#特徴)
+- [基本的な fetch の書き方](#基本的な-fetch-の書き方)
+  - [シンプルな例](#シンプルな例)
+  - [ポイント](#ポイント)
+- [Client fetch との比較](#client-fetch-との比較)
+  - [いつ Client fetch を使うか](#いつ-client-fetch-を使うか)
+- [データ取得関数の分離](#データ取得関数の分離)
+  - [分離のメリット](#分離のメリット)
+- [Zod による型安全なデータ取得](#zod-による型安全なデータ取得)
+  - [バリデーションのメリット](#バリデーションのメリット)
+- [エラーハンドリング](#エラーハンドリング)
+  - [try/catch パターン](#trycatch-パターン)
+  - [error.tsx との連携](#errortsx-との連携)
+  - [not-found.tsx との連携](#not-foundtsx-との連携)
+- [EC サイトでの活用例](#ec-サイトでの活用例)
+  - [商品一覧ページ](#商品一覧ページ)
+  - [商品詳細ページ](#商品詳細ページ)
+- [まとめ](#まとめ)
+- [次のステップ](#次のステップ)
+
 ## Server Components での fetch とは
 
 Next.js の App Router では、Server Components がデフォルトです。Server Components は Node.js 環境で実行されるため、コンポーネント内で直接 `async/await` を使ってデータを取得できます。

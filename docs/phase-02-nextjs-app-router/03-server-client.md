@@ -1,5 +1,31 @@
 # Server Components vs Client Components
 
+## 目次
+
+- [概要](#概要)
+- [Server Components と Client Components の違い](#server-components-と-client-components-の違い)
+- [デフォルトは Server Components](#デフォルトは-server-components)
+  - [Server Components のメリット](#server-components-のメリット)
+- [Client Components の宣言](#client-components-の宣言)
+  - [Client Components が必要な場面](#client-components-が必要な場面)
+- [コンポーネントの組み合わせ](#コンポーネントの組み合わせ)
+  - [実装例](#実装例)
+- ["use client" の境界](#use-client-の境界)
+  - [境界の例](#境界の例)
+- [データの受け渡し](#データの受け渡し)
+  - [Date の受け渡し](#date-の受け渡し)
+- [パターン: Composition](#パターン-composition)
+  - [children を使ったパターン](#children-を使ったパターン)
+- [EC サイトでの使い分け](#ec-サイトでの使い分け)
+  - [Server Components を使う場面](#server-components-を使う場面)
+  - [Client Components を使う場面](#client-components-を使う場面)
+  - [実践例：商品カード](#実践例商品カード)
+- [よくある間違い](#よくある間違い)
+  - [1. 不要な "use client"](#1-不要な-use-client)
+  - [2. Server Component でフックを使う](#2-server-component-でフックを使う)
+- [まとめ](#まとめ)
+- [次のステップ](#次のステップ)
+
 ## 概要
 
 React 18 と Next.js App Router では、コンポーネントが **Server Components** と **Client Components** の2種類に分かれます。適切に使い分けることで、パフォーマンスと UX を最適化できます。

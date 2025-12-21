@@ -1,5 +1,46 @@
 # Testing Library
 
+## 目次
+
+- [概要](#概要)
+- [Testing Library とは](#testing-library-とは)
+  - [設計思想](#設計思想)
+  - [特徴](#特徴)
+- [基本構文](#基本構文)
+  - [render と screen](#render-と-screen)
+  - [cleanup](#cleanup)
+- [クエリの種類](#クエリの種類)
+  - [クエリのプレフィックス](#クエリのプレフィックス)
+  - [複数要素のクエリ](#複数要素のクエリ)
+- [クエリの優先順位](#クエリの優先順位)
+  - [1. 誰でもアクセスできるクエリ（最優先）](#1-誰でもアクセスできるクエリ最優先)
+  - [2. セマンティッククエリ](#2-セマンティッククエリ)
+  - [3. テスト ID（最終手段）](#3-テスト-id最終手段)
+  - [クエリ選択のフローチャート](#クエリ選択のフローチャート)
+- [userEvent](#userevent)
+  - [setup](#setup)
+  - [よく使う操作](#よく使う操作)
+  - [fireEvent との違い](#fireevent-との違い)
+- [非同期処理の待機](#非同期処理の待機)
+  - [waitFor](#waitfor)
+  - [findBy](#findby)
+  - [waitForElementToBeRemoved](#waitforelementtoberemoved)
+- [EC サイトでの活用例](#ec-サイトでの活用例)
+  - [ProductCard コンポーネントのテスト](#productcard-コンポーネントのテスト)
+- [NG / OK パターン](#ng--ok-パターン)
+  - [NG: 実装詳細に依存](#ng-実装詳細に依存)
+  - [OK: ユーザー視点でクエリ](#ok-ユーザー視点でクエリ)
+  - [NG: getByTestId を多用](#ng-getbytestid-を多用)
+  - [OK: 適切なクエリを選択](#ok-適切なクエリを選択)
+  - [NG: 不要な wrapper](#ng-不要な-wrapper)
+  - [OK: フラットで読みやすい構造](#ok-フラットで読みやすい構造)
+- [デバッグ](#デバッグ)
+  - [screen.debug()](#screendebug)
+  - [logRoles](#logroles)
+  - [Testing Playground](#testing-playground)
+- [確認質問](#確認質問)
+- [次のステップ](#次のステップ)
+
 ## 概要
 
 Testing Library は「ユーザーがアプリケーションを使用する方法」に基づいてテストを書くためのライブラリです。

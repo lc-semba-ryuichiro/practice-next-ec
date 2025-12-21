@@ -1,5 +1,39 @@
 # Cookie ベース認証と NextAuth.js
 
+## 目次
+
+- [認証（Authentication）と認可（Authorization）](#認証authenticationと認可authorization)
+  - [認証（Authentication）](#認証authentication)
+  - [認可（Authorization）](#認可authorization)
+- [Cookie ベース認証の仕組み](#cookie-ベース認証の仕組み)
+  - [Cookie とは](#cookie-とは)
+  - [Cookie の重要な属性](#cookie-の重要な属性)
+- [NextAuth.js（Auth.js v5）とは](#nextauthjsauthjs-v5とは)
+  - [特徴](#特徴)
+  - [主要コンポーネント](#主要コンポーネント)
+- [NextAuth.js のセットアップ](#nextauthjs-のセットアップ)
+  - [1. パッケージのインストール](#1-パッケージのインストール)
+  - [2. 設定ファイルの作成（auth.ts）](#2-設定ファイルの作成authts)
+  - [3. API ルートの作成](#3-api-ルートの作成)
+  - [4. 環境変数の設定](#4-環境変数の設定)
+- [セッション戦略](#セッション戦略)
+  - [JWT セッション（デフォルト）](#jwt-セッションデフォルト)
+  - [Database セッション](#database-セッション)
+  - [比較表](#比較表)
+- [Credentials Provider の詳細設定](#credentials-provider-の詳細設定)
+  - [パスワードハッシュ化](#パスワードハッシュ化)
+  - [ユーザー登録フロー](#ユーザー登録フロー)
+- [OAuth Provider の設定](#oauth-provider-の設定)
+  - [GitHub Provider](#github-provider)
+  - [Google Provider](#google-provider)
+- [セキュリティのベストプラクティス](#セキュリティのベストプラクティス)
+  - [1. 環境変数の管理](#1-環境変数の管理)
+  - [2. パスワードポリシー](#2-パスワードポリシー)
+  - [3. レート制限](#3-レート制限)
+- [まとめ](#まとめ)
+  - [学んだこと](#学んだこと)
+- [次のステップ](#次のステップ)
+
 ## 認証（Authentication）と認可（Authorization）
 
 Web アプリケーションのセキュリティを考える際、認証と認可は異なる概念です。

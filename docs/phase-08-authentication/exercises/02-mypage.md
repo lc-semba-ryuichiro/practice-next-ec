@@ -1,5 +1,31 @@
 # 演習 2: マイページ
 
+## 目次
+
+- [目標](#目標)
+- [完成イメージ](#完成イメージ)
+- [要件](#要件)
+  - [機能要件](#機能要件)
+  - [技術要件](#技術要件)
+- [実装手順](#実装手順)
+  - [Step 1: Route Groups の構成](#step-1-route-groups-の構成)
+  - [Step 2: 保護されたレイアウトの作成](#step-2-保護されたレイアウトの作成)
+  - [Step 3: マイページの作成](#step-3-マイページの作成)
+  - [Step 4: ユーザーメニューの作成](#step-4-ユーザーメニューの作成)
+- [ヒント](#ヒント)
+  - [保護されたレイアウト](#保護されたレイアウト)
+  - [SessionProvider の設定](#sessionprovider-の設定)
+  - [useSession の使用](#usesession-の使用)
+- [解答例](#解答例)
+  - [app/(protected)/layout.tsx](#appprotectedlayouttsx)
+  - [app/(protected)/mypage/page.tsx](#appprotectedmypagepagetsx)
+  - [app/(protected)/orders/page.tsx](#appprotectedorderspagetsx)
+  - [app/(protected)/favorites/page.tsx](#appprotectedfavoritespagetsx)
+  - [components/UserMenu.tsx（Client Component 版）](#componentsusermenutsxclient-component-版)
+- [発展課題](#発展課題)
+- [確認ポイント](#確認ポイント)
+- [次の演習](#次の演習)
+
 ## 目標
 
 認証ユーザー専用のマイページを実装し、Server Component と Client Component でのセッション取得を実践します。

@@ -1,5 +1,26 @@
 # Compound Components パターン
 
+## 目次
+
+- [Compound Components とは](#compound-components-とは)
+- [なぜ Compound Components を使うのか](#なぜ-compound-components-を使うのか)
+  - [従来の Props 地獄](#従来の-props-地獄)
+  - [Compound Components で解決](#compound-components-で解決)
+- [実装パターン](#実装パターン)
+  - [1. Context を使った状態共有](#1-context-を使った状態共有)
+  - [2. ルートコンポーネント](#2-ルートコンポーネント)
+  - [3. 子コンポーネント](#3-子コンポーネント)
+  - [4. エクスポートの統合](#4-エクスポートの統合)
+- [EC サイトでの活用例](#ec-サイトでの活用例)
+  - [1. 商品詳細タブ](#1-商品詳細タブ)
+  - [2. FAQ アコーディオン](#2-faq-アコーディオン)
+  - [3. 商品フィルター](#3-商品フィルター)
+- [shadcn/ui での Compound Components](#shadcnui-での-compound-components)
+  - [インストール例](#インストール例)
+- [Compound Components の利点](#compound-components-の利点)
+- [まとめ](#まとめ)
+- [次のステップ](#次のステップ)
+
 ## Compound Components とは
 
 Compound Components は、**複数のコンポーネントが暗黙的に状態を共有し、協調して動作するパターン**です。

@@ -1,5 +1,37 @@
 # Suspense と loading
 
+## 目次
+
+- [Suspense とは](#suspense-とは)
+  - [メリット](#メリット)
+- [loading.tsx の使い方](#loadingtsx-の使い方)
+  - [基本的な使い方](#基本的な使い方)
+  - [ディレクトリ構造](#ディレクトリ構造)
+- [Suspense 境界のパターン](#suspense-境界のパターン)
+  - [複数の Suspense 境界](#複数の-suspense-境界)
+  - [並列データ取得](#並列データ取得)
+- [Skeleton コンポーネントの設計](#skeleton-コンポーネントの設計)
+  - [商品カード Skeleton](#商品カード-skeleton)
+  - [商品リスト Skeleton](#商品リスト-skeleton)
+  - [商品詳細 Skeleton](#商品詳細-skeleton)
+- [Streaming SSR](#streaming-ssr)
+  - [動作の仕組み](#動作の仕組み)
+  - [利点](#利点)
+- [ErrorBoundary との組み合わせ](#errorboundary-との組み合わせ)
+  - [error.tsx の配置](#errortsx-の配置)
+  - [error.tsx の実装](#errortsx-の実装)
+  - [Suspense 内でのエラー処理](#suspense-内でのエラー処理)
+- [EC サイトでの活用例](#ec-サイトでの活用例)
+  - [商品一覧ページ](#商品一覧ページ)
+  - [商品詳細ページ](#商品詳細ページ)
+- [ベストプラクティス](#ベストプラクティス)
+  - [1. loading.tsx はルート全体に使う](#1-loadingtsx-はルート全体に使う)
+  - [2. 細かい制御は Suspense で](#2-細かい制御は-suspense-で)
+  - [3. Skeleton はコンテンツのレイアウトを模倣](#3-skeleton-はコンテンツのレイアウトを模倣)
+  - [4. 並列データ取得を活用](#4-並列データ取得を活用)
+- [まとめ](#まとめ)
+- [次のステップ](#次のステップ)
+
 ## Suspense とは
 
 React の Suspense は、コンポーネントがデータを待っている間にフォールバック UI を表示する仕組みです。Next.js App Router では、この仕組みを活用してストリーミング SSR を実現しています。
