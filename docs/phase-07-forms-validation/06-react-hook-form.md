@@ -274,7 +274,7 @@ import { registerUser } from "@/app/actions/auth";
 
 const registerSchema = z.object({
   name: z.string().min(1, "名前は必須です"),
-  email: z.email("有効なメールアドレスを入力してください"),
+  email: z.string().email("有効なメールアドレスを入力してください"),
   password: z.string().min(8, "パスワードは8文字以上です"),
 });
 
