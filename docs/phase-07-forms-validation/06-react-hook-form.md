@@ -438,7 +438,7 @@ import { z } from "zod/v4";
 export const userRegistrationSchema = z
   .object({
     name: z.string().min(1, "お名前を入力してください"),
-    email: z.email("有効なメールアドレスを入力してください"),
+    email: z.string().email("有効なメールアドレスを入力してください"),
     password: z
       .string()
       .min(8, "パスワードは8文字以上です")
