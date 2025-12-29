@@ -1,7 +1,6 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@practice-next-ec/typescript-config/nextjs",
   "compilerOptions": {
-    "plugins": [{ "name": "next" }],
     "paths": {
       "@/*": ["./*"],
       "@practice-next-ec/ui": ["../../packages/ui/src"],

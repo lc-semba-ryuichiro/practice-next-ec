@@ -53,6 +53,7 @@
   "devDependencies": {
     "@netlify/vite-plugin-tanstack-start": "catalog:",
     "@practice-next-ec/eslint-config": "workspace:^0.1.0",
+    "@practice-next-ec/typescript-config": "workspace:*",
     "@tanstack/devtools-vite": "catalog:",
     "@tanstack/eslint-config": "catalog:",
     "@testing-library/dom": "catalog:",

@@ -1,0 +1,14 @@
+{
+  "name": "@practice-next-ec/prettier-config",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "prettier": "catalog:",
+    "prettier-plugin-packagejson": "catalog:",
+    "prettier-plugin-tailwindcss": "catalog:"
+  }
+}

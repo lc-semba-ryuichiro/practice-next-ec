@@ -1,5 +1,5 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@practice-next-ec/typescript-config/library",
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }

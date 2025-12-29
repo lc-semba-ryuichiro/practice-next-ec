@@ -44,7 +44,7 @@ const tanstackConfigFiltered = tanstackConfig.map((config) => {
 export default defineConfig([
   // Ignore auto-generated files
   {
-    ignores: ["src/routeTree.gen.ts"],
+    ignores: ["src/routeTree.gen.ts", ".netlify/**"],
   },
   // TanStack base config (will be overridden by monorepo config where needed)
   ...tanstackConfigFiltered,

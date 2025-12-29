@@ -1,6 +1,7 @@
 .next/
 out/
 build/
+dist/
 storybook-static/
 coverage/
 node_modules/

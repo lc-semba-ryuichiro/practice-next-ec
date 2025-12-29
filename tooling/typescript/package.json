@@ -1,0 +1,14 @@
+{
+  "name": "@practice-next-ec/typescript-config",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    "./base": "./base.json",
+    "./nextjs": "./nextjs.json",
+    "./vite": "./vite.json",
+    "./library": "./library.json"
+  },
+  "dependencies": {
+    "typescript": "catalog:"
+  }
+}

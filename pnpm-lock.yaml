@@ -482,12 +482,18 @@ importers:
       '@commitlint/config-conventional':
         specifier: 'catalog:'
         version: 20.2.0
-      '@eslint-community/eslint-plugin-eslint-comments':
-        specifier: 'catalog:'
-        version: 4.5.0(eslint@9.39.2(jiti@2.6.1))
       '@playwright/test':
         specifier: 'catalog:'
         version: 1.57.0
+      '@practice-next-ec/prettier-config':
+        specifier: workspace:*
+        version: link:tooling/prettier
+      '@practice-next-ec/stylelint-config':
+        specifier: workspace:*
+        version: link:tooling/stylelint
+      '@practice-next-ec/typescript-config':
+        specifier: workspace:*
+        version: link:tooling/typescript
       '@practice-next-ec/ui':
         specifier: workspace:*
         version: link:packages/ui
@@ -569,9 +575,6 @@ importers:
       '@vitest/coverage-v8':
         specifier: 'catalog:'
         version: 4.0.16(@vitest/browser@4.0.16(msw@2.12.7(@types/node@25.0.3)(typescript@5.9.3))(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(tsx@4.21.0)(yaml@2.8.2))(vitest@4.0.16))(vitest@4.0.16)
-      '@vitest/eslint-plugin':
-        specifier: 'catalog:'
-        version: 1.6.4(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)(vitest@4.0.16)
       '@vitest/ui':
         specifier: 'catalog:'
         version: 4.0.16(vitest@4.0.16)
@@ -584,57 +587,6 @@ importers:
       eslint:
         specifier: 'catalog:'
         version: 9.39.2(jiti@2.6.1)
-      eslint-config-next:
-        specifier: 'catalog:'
-        version: 16.1.1(@typescript-eslint/parser@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
-      eslint-config-prettier:
-        specifier: 'catalog:'
-        version: 10.1.8(eslint@9.39.2(jiti@2.6.1))
-      eslint-plugin-boundaries:
-        specifier: 'catalog:'
-        version: 5.3.1(@typescript-eslint/parser@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))
-      eslint-plugin-functional:
-        specifier: 'catalog:'
-        version: 9.0.2(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
-      eslint-plugin-import-x:
-        specifier: 'catalog:'
-        version: 4.16.1(@typescript-eslint/utils@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint@9.39.2(jiti@2.6.1))
-      eslint-plugin-jsdoc:
-        specifier: 'catalog:'
-        version: 61.5.0(eslint@9.39.2(jiti@2.6.1))
-      eslint-plugin-n:
-        specifier: 'catalog:'
-        version: 17.23.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
-      eslint-plugin-promise:
-        specifier: 'catalog:'
-        version: 7.2.1(eslint@9.39.2(jiti@2.6.1))
-      eslint-plugin-react-compiler:
-        specifier: 'catalog:'
-        version: 19.1.0-rc.2(eslint@9.39.2(jiti@2.6.1))
-      eslint-plugin-regexp:
-        specifier: 'catalog:'
-        version: 2.10.0(eslint@9.39.2(jiti@2.6.1))
-      eslint-plugin-security:
-        specifier: 'catalog:'
-        version: 3.0.1
-      eslint-plugin-sonarjs:
-        specifier: 'catalog:'
-        version: 3.0.5(eslint@9.39.2(jiti@2.6.1))
-      eslint-plugin-storybook:
-        specifier: 'catalog:'
-        version: 10.1.10(eslint@9.39.2(jiti@2.6.1))(storybook@10.1.10(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(typescript@5.9.3)
-      eslint-plugin-strict-dependencies:
-        specifier: 'catalog:'
-        version: 1.3.29
-      eslint-plugin-testing-library:
-        specifier: 'catalog:'
-        version: 7.15.3(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
-      eslint-plugin-unicorn:
-        specifier: 'catalog:'
-        version: 62.0.0(eslint@9.39.2(jiti@2.6.1))
-      eslint-plugin-unused-imports:
-        specifier: 'catalog:'
-        version: 4.3.0(@typescript-eslint/eslint-plugin@8.50.1(@typescript-eslint/parser@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))
       fast-check:
         specifier: 'catalog:'
         version: 4.5.2
@@ -731,21 +683,6 @@ importers:
       stylelint:
         specifier: 'catalog:'
         version: 16.26.1(typescript@5.9.3)
-      stylelint-config-standard:
-        specifier: 'catalog:'
-        version: 39.0.1(stylelint@16.26.1(typescript@5.9.3))
-      stylelint-config-tailwindcss:
-        specifier: 'catalog:'
-        version: 1.0.0(stylelint@16.26.1(typescript@5.9.3))(tailwindcss@4.1.18)
-      stylelint-declaration-strict-value:
-        specifier: 'catalog:'
-        version: 1.10.11(stylelint@16.26.1(typescript@5.9.3))
-      stylelint-high-performance-animation:
-        specifier: 'catalog:'
-        version: 1.11.0(stylelint@16.26.1(typescript@5.9.3))
-      stylelint-order:
-        specifier: 'catalog:'
-        version: 7.0.1(stylelint@16.26.1(typescript@5.9.3))
       textlint:
         specifier: 'catalog:'
         version: 15.5.0(hono@4.11.1)
@@ -785,9 +722,6 @@ importers:
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
-      typescript-eslint:
-        specifier: 'catalog:'
-        version: 8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       vite:
         specifier: 'catalog:'
         version: 7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(tsx@4.21.0)(yaml@2.8.2)
@@ -909,6 +843,9 @@ importers:
       '@practice-next-ec/eslint-config':
         specifier: workspace:^0.1.0
         version: link:../../tooling/eslint
+      '@practice-next-ec/typescript-config':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
       '@tanstack/devtools-vite':
         specifier: 'catalog:'
         version: 0.4.0(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(tsx@4.21.0)(yaml@2.8.2))
@@ -1012,6 +949,9 @@ importers:
       '@practice-next-ec/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
+      '@practice-next-ec/typescript-config':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
       '@tailwindcss/postcss':
         specifier: 'catalog:'
         version: 4.1.18
@@ -1046,6 +986,9 @@ importers:
       '@practice-next-ec/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
+      '@practice-next-ec/typescript-config':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
@@ -1055,6 +998,9 @@ importers:
       '@practice-next-ec/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
+      '@practice-next-ec/typescript-config':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
       typescript:
         specifier: 'catalog:'
         version: 5.9.3
@@ -1086,6 +1032,9 @@ importers:
       '@practice-next-ec/eslint-config':
         specifier: workspace:*
         version: link:../../tooling/eslint
+      '@practice-next-ec/typescript-config':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
       '@types/react':
         specifier: 'catalog:'
         version: 19.2.7
@@ -1110,6 +1059,9 @@ importers:
       eslint-config-next:
         specifier: 'catalog:'
         version: 16.1.1(@typescript-eslint/parser@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
+      eslint-config-prettier:
+        specifier: 'catalog:'
+        version: 10.1.8(eslint@9.39.2(jiti@2.6.1))
       eslint-plugin-boundaries:
         specifier: 'catalog:'
         version: 5.3.1(@typescript-eslint/parser@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))
@@ -1158,6 +1110,76 @@ importers:
       typescript-eslint:
         specifier: 'catalog:'
         version: 8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
+
+  tooling/prettier:
+    dependencies:
+      prettier:
+        specifier: 'catalog:'
+        version: 3.7.4
+      prettier-plugin-packagejson:
+        specifier: 'catalog:'
+        version: 2.5.20(prettier@3.7.4)
+      prettier-plugin-tailwindcss:
+        specifier: 'catalog:'
+        version: 0.7.2(prettier@3.7.4)
+
+  tooling/stylelint:
+    dependencies:
+      stylelint:
+        specifier: 'catalog:'
+        version: 16.26.1(typescript@5.9.3)
+      stylelint-config-standard:
+        specifier: 'catalog:'
+        version: 39.0.1(stylelint@16.26.1(typescript@5.9.3))
+      stylelint-config-tailwindcss:
+        specifier: 'catalog:'
+        version: 1.0.0(stylelint@16.26.1(typescript@5.9.3))(tailwindcss@4.1.18)
+      stylelint-declaration-strict-value:
+        specifier: 'catalog:'
+        version: 1.10.11(stylelint@16.26.1(typescript@5.9.3))
+      stylelint-high-performance-animation:
+        specifier: 'catalog:'
+        version: 1.11.0(stylelint@16.26.1(typescript@5.9.3))
+      stylelint-order:
+        specifier: 'catalog:'
+        version: 7.0.1(stylelint@16.26.1(typescript@5.9.3))
+
+  tooling/typescript:
+    dependencies:
+      typescript:
+        specifier: 'catalog:'
+        version: 5.9.3
+
+  tooling/vitest:
+    dependencies:
+      '@testing-library/dom':
+        specifier: 'catalog:'
+        version: 10.4.1
+      '@testing-library/jest-dom':
+        specifier: 'catalog:'
+        version: 6.9.1
+      '@testing-library/react':
+        specifier: 'catalog:'
+        version: 16.3.1(@testing-library/dom@10.4.1)(@types/react-dom@19.2.3(@types/react@19.2.7))(@types/react@19.2.7)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@testing-library/user-event':
+        specifier: 'catalog:'
+        version: 14.6.1(@testing-library/dom@10.4.1)
+      '@vitest/coverage-v8':
+        specifier: 'catalog:'
+        version: 4.0.16(@vitest/browser@4.0.16(msw@2.12.7(@types/node@25.0.3)(typescript@5.9.3))(vite@7.3.0(@types/node@25.0.3)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.44.1)(tsx@4.21.0)(yaml@2.8.2))(vitest@4.0.16))(vitest@4.0.16)
+      '@vitest/ui':
+        specifier: 'catalog:'
+        version: 4.0.16(vitest@4.0.16)
+      jsdom:
+        specifier: 'catalog:'
+        version: 27.4.0
+      vitest:
+        specifier: 'catalog:'
+        version: 4.0.16(@opentelemetry/api@1.9.0)(@types/node@25.0.3)(@vitest/browser-playwright@4.0.16)(@vitest/ui@4.0.16)(jiti@2.6.1)(jsdom@27.4.0)(lightningcss@1.30.2)(msw@2.12.7(@types/node@25.0.3)(typescript@5.9.3))(terser@5.44.1)(tsx@4.21.0)(yaml@2.8.2)
+    devDependencies:
+      '@practice-next-ec/typescript-config':
+        specifier: workspace:*
+        version: link:../typescript
 
 packages:
 
@@ -21025,7 +21047,7 @@ snapshots:
       '@next/eslint-plugin-next': 16.1.1
       eslint: 9.39.2(jiti@2.6.1)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint@9.39.2(jiti@2.6.1)))(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint@9.39.2(jiti@2.6.1)))(eslint-plugin-import@2.32.0)(eslint@9.39.2(jiti@2.6.1))
       eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-typescript@3.10.1)(eslint@9.39.2(jiti@2.6.1))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@9.39.2(jiti@2.6.1))
       eslint-plugin-react: 7.37.5(eslint@9.39.2(jiti@2.6.1))
@@ -21059,7 +21081,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint@9.39.2(jiti@2.6.1)))(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1)):
+  eslint-import-resolver-typescript@3.10.1(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint@9.39.2(jiti@2.6.1)))(eslint-plugin-import@2.32.0)(eslint@9.39.2(jiti@2.6.1)):
     dependencies:
       '@nolyfill/is-core-module': 1.0.39
       debug: 4.4.3
@@ -21082,7 +21104,7 @@ snapshots:
       '@typescript-eslint/parser': 8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       eslint: 9.39.2(jiti@2.6.1)
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint@9.39.2(jiti@2.6.1)))(eslint-plugin-import@2.32.0(@typescript-eslint/parser@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1)))(eslint@9.39.2(jiti@2.6.1))
+      eslint-import-resolver-typescript: 3.10.1(eslint-plugin-import-x@4.16.1(@typescript-eslint/utils@8.50.1(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint@9.39.2(jiti@2.6.1)))(eslint-plugin-import@2.32.0)(eslint@9.39.2(jiti@2.6.1))
     transitivePeerDependencies:
       - supports-color
 

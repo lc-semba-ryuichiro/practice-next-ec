@@ -1,43 +1,4 @@
 {
-  "compilerOptions": {
-    // Target & Module
-    "target": "es2024",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
-    "moduleResolution": "bundler",
-
-    // Strict Mode (基本)
-    "strict": true,
-
-    // Strict Mode (追加)
-    "noUncheckedIndexedAccess": true,
-    "exactOptionalPropertyTypes": true,
-    "noImplicitOverride": true,
-
-    // Code Quality
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noPropertyAccessFromIndexSignature": true,
-    "forceConsistentCasingInFileNames": true,
-
-    // Module
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-
-    // TypeScript 5.8+
-    "erasableSyntaxOnly": true,
-
-    // Emit
-    "noEmit": true,
-    "incremental": true,
-
-    // Interop
-    "allowJs": true,
-    "skipLibCheck": true,
-    "jsx": "react-jsx"
-  },
-  "exclude": ["node_modules", "apps", "packages"]
+  "extends": "@practice-next-ec/typescript-config/base",
+  "exclude": ["node_modules", "apps", "packages", "tooling"]
 }

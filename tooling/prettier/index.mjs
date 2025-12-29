@@ -1,0 +1,16 @@
+/** @type {import("prettier").Config} */
+export default {
+  semi: true,
+  singleQuote: false,
+  tabWidth: 2,
+  useTabs: false,
+  trailingComma: "es5",
+  printWidth: 100,
+  bracketSpacing: true,
+  bracketSameLine: false,
+  arrowParens: "always",
+  endOfLine: "lf",
+  singleAttributePerLine: true,
+  plugins: ["prettier-plugin-packagejson", "prettier-plugin-tailwindcss"],
+  tailwindFunctions: ["cn", "clsx", "cva"],
+};

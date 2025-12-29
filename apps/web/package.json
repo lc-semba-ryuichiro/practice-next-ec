@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@practice-next-ec/eslint-config": "workspace:*",
+    "@practice-next-ec/typescript-config": "workspace:*",
     "@tailwindcss/postcss": "catalog:",
     "@tanstack/eslint-config": "catalog:",
     "@types/node": "catalog:",

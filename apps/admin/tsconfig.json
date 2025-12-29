@@ -1,8 +1,6 @@
 {
-  "extends": "../../tsconfig.json",
+  "extends": "@practice-next-ec/typescript-config/vite",
   "compilerOptions": {
-    "verbatimModuleSyntax": false,
-    "types": ["vite/client"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],

@@ -1,0 +1,23 @@
+{
+  "name": "@practice-next-ec/vitest-config",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./base": "./base.ts",
+    "./react": "./react.ts"
+  },
+  "dependencies": {
+    "@testing-library/dom": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@testing-library/user-event": "catalog:",
+    "@vitest/coverage-v8": "catalog:",
+    "@vitest/ui": "catalog:",
+    "jsdom": "catalog:",
+    "vitest": "catalog:"
+  },
+  "devDependencies": {
+    "@practice-next-ec/typescript-config": "workspace:*"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "@practice-next-ec/stylelint-config",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "stylelint": "catalog:",
+    "stylelint-config-standard": "catalog:",
+    "stylelint-config-tailwindcss": "catalog:",
+    "stylelint-declaration-strict-value": "catalog:",
+    "stylelint-high-performance-animation": "catalog:",
+    "stylelint-order": "catalog:"
+  }
+}

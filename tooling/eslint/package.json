@@ -14,6 +14,7 @@
     "@vitest/eslint-plugin": "catalog:",
     "eslint": "catalog:",
     "eslint-config-next": "catalog:",
+    "eslint-config-prettier": "catalog:",
     "eslint-plugin-boundaries": "catalog:",
     "eslint-plugin-functional": "catalog:",
     "eslint-plugin-import-x": "catalog:",
