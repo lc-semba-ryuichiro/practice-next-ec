@@ -1,5 +1,5 @@
 import { defineConfig, mergeConfig } from "vitest/config";
-import { createBaseConfig } from "./base";
+import { createBaseConfig } from "./base.ts";
 
 export function createReactConfig(): ReturnType<typeof defineConfig> {
   return mergeConfig(

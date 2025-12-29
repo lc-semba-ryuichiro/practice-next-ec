@@ -14,6 +14,7 @@
   "dependencies": {
     "@faker-js/faker": "catalog:",
     "@radix-ui/react-label": "catalog:",
+    "@radix-ui/react-radio-group": "catalog:",
     "@radix-ui/react-select": "catalog:",
     "@radix-ui/react-slider": "catalog:",
     "@radix-ui/react-slot": "catalog:",
@@ -50,6 +51,7 @@
     "@netlify/vite-plugin-tanstack-start": "catalog:",
     "@practice-next-ec/eslint-config": "workspace:^0.1.0",
     "@practice-next-ec/typescript-config": "workspace:*",
+    "@practice-next-ec/vitest-config": "workspace:*",
     "@tanstack/devtools-vite": "catalog:",
     "@tanstack/eslint-config": "catalog:",
     "@testing-library/dom": "catalog:",
