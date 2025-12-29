@@ -33,7 +33,7 @@
 
 ### react-hook-form とは
 
-react-hook-form は、React でフォームを効率的に管理するためのライブラリです。
+react-hook-formは、Reactでフォームを効率的に管理するためのライブラリです。
 非制御コンポーネント（uncontrolled components）を活用し、パフォーマンスを最適化しながらフォーム状態を管理します。
 
 ```mermaid
@@ -64,7 +64,7 @@ graph TD
 pnpm add react-hook-form
 ```
 
-Zod と連携する場合は以下のパッケージも追加します。
+Zodと連携する場合は以下のパッケージも追加します。
 
 ```bash
 pnpm add @hookform/resolvers
@@ -105,7 +105,7 @@ export function LoginForm(): React.ReactElement {
 
 ### register でフィールドを登録
 
-`register` は input 要素に必要な props を返します。
+`register` はinput要素に必要なpropsを返します。
 
 ```typescript
 const { register } = useForm<FormData>();
@@ -565,26 +565,26 @@ export type AddressData = z.infer<typeof addressSchema>;
 | UX                      | 即時フィードバック       | 送信後にエラー表示         |
 | バンドルサイズ                 | ライブラリ分増加        | 追加なし              |
 | Progressive Enhancement | JavaScript 必須   | JavaScript なしでも動作 |
-| 複雑なフォーム                 | 得意（動的フィールド等）    | シンプルなフォーム向き       |
+| 複雑なフォーム                 | 得意（動的フィールドなど）   | シンプルなフォーム向き       |
 | TypeScript              | 型推論が効く          | 型定義が必要            |
 
 **使い分けの指針**
 
-- react-hook-form は複雑なフォーム、即時バリデーション、多数のフィールドに向いている
-- useActionState はシンプルなフォーム、Progressive Enhancement 重視の場合に向いている
+- react-hook-formは複雑なフォーム、即時バリデーション、多数のフィールドに向いている
+- useActionStateはシンプルなフォーム、Progressive Enhancement重視の場合に向いている
 
 ***
 
 ## まとめ
 
-- react-hook-form は非制御コンポーネントでパフォーマンスを最適化
-- `register`, `handleSubmit`, `formState` の 3 つが基本
-- `@hookform/resolvers` で Zod と連携し、型安全なバリデーションを実現
-- Server Actions と組み合わせてクライアント + サーバーの二重バリデーション
+- react-hook-formは非制御コンポーネントでパフォーマンスを最適化
+- `register`, `handleSubmit`, `formState` の3つが基本
+- `@hookform/resolvers` でZodと連携し、型安全なバリデーションを実現
+- Server Actionsと組み合わせてクライアント + サーバーの二重バリデーション
 - `setError` でサーバーエラーをフォームに反映
 
 ***
 
 ## 次のステップ
 
-react-hook-form の基礎を理解したら、[演習 1: ユーザー登録フォーム](./exercises/01-register-form.md) で実際にフォームを実装してみましょう。
+react-hook-formの基礎を理解したら、[演習 1: ユーザー登録フォーム](./exercises/01-register-form.md) で実際にフォームを実装してみましょう。

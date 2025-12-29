@@ -120,7 +120,7 @@ graph LR
 
 ### JWT コールバック
 
-JWT トークンにカスタム情報を追加できます。
+JWTトークンにカスタム情報を追加できます。
 
 ```typescript
 // auth.ts
@@ -257,7 +257,7 @@ graph TD
 
 **デメリット:**
 
-- 毎リクエストで DB アクセスが発生
+- 毎リクエストでDBアクセスが発生
 - スケーリングが難しい
 
 ***
@@ -393,11 +393,11 @@ async function logoutAllDevices(userId: string) {
 
 ### NextAuth.js の自動対策
 
-NextAuth.js は以下の CSRF 対策を自動で行います。
+NextAuth.jsは以下のCSRF対策を自動で行います。
 
-- CSRF トークンの生成と検証
-- SameSite Cookie 属性の設定
-- Origin ヘッダーの検証
+- CSRFトークンの生成と検証
+- SameSite Cookie属性の設定
+- Originヘッダーの検証
 
 ```mermaid
 sequenceDiagram
@@ -415,7 +415,7 @@ sequenceDiagram
 
 ### Server Actions との連携
 
-Server Actions では、Next.js が自動的に CSRF 対策を実施します。
+Server Actionsでは、Next.jsが自動的にCSRF対策を実施します。
 
 ```typescript
 // app/actions/auth.ts
@@ -580,11 +580,11 @@ async function revokeSession(sessionToken: string) {
 
 ### 学んだこと
 
-- セッションの基本概念と NextAuth.js での設定
-- JWT セッションと Database セッションの違い
+- セッションの基本概念とNextAuth.jsでの設定
+- JWTセッションとDatabaseセッションの違い
 - セッションの更新とローリングセッション
 - ログアウト処理の実装
-- CSRF 対策の仕組み
+- CSRF対策の仕組み
 - セッション情報のカスタマイズ
 - セッションの監視とデバッグ
 

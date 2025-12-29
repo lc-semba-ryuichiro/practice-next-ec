@@ -40,7 +40,7 @@
 
 ## 概要
 
-モノレポでは、ESLint、TypeScript、Tailwind、Prettier などの設定を共有パッケージとして管理します。
+モノレポでは、ESLint、TypeScript、Tailwind、Prettierなどの設定を共有パッケージとして管理します。
 これにより、全プロジェクトで一貫した設定を維持できます。
 
 ### tooling ディレクトリ構成
@@ -203,7 +203,7 @@ export default [...nextConfig];
 
 ## TypeScript 設定
 
-TypeScript では、ベース設定から用途別に継承する構造を採用しています。
+TypeScriptでは、ベース設定から用途別に継承する構造を採用しています。
 
 ```mermaid
 flowchart TD

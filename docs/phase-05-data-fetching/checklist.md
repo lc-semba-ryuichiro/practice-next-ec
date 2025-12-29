@@ -1,6 +1,6 @@
 # Phase 5: 自己チェックリスト
 
-Phase 5 の理解度を確認するためのチェックリストです。
+Phase 5の理解度を確認するためのチェックリストです。
 各項目を確認し、自信を持って「はい」と答えられるか確認してください。
 
 ## 目次
@@ -49,21 +49,21 @@ pie title Phase 5 学習領域の構成
 
 ### 理解度チェック
 
-- [ ] Server Components で async/await を使ってデータ取得できる
-- [ ] Server fetch と Client fetch の違いを説明できる
-- [ ] fetch ロジックを別ファイルに分離するメリットを理解している
-- [ ] Zod でレスポンスをバリデーションできる
-- [ ] notFound() を使って 404 ページを表示できる
+- [ ] Server Componentsでasync/awaitを使ってデータ取得できる
+- [ ] Server fetchとClient fetchの違いを説明できる
+- [ ] fetchロジックを別ファイルに分離するメリットを理解している
+- [ ] Zodでレスポンスをバリデーションできる
+- [ ] notFound() を使って404ページを表示できる
 
 ### 確認質問
 
-1. Server Components で fetch するメリットは何ですか？
+1. Server Componentsでfetchするメリットは何ですか？
 
-   **回答例**: API キーを隠せる、データ込み HTML で SEO に有利、初期表示が速い
+   **回答例**: APIキーを隠せる、データ込みHTMLでSEOに有利、初期表示が速い
 
 2. `response.json()` の戻り値の型を保証するにはどうしますか？
 
-   **回答例**: Zod でスキーマを定義し、`schema.parse(data)` でバリデーションする
+   **回答例**: Zodでスキーマを定義し、`schema.parse(data)` でバリデーションする
 
 ***
 
@@ -73,13 +73,13 @@ pie title Phase 5 学習領域の構成
 
 - [ ] `cache: 'force-cache'` の動作を説明できる
 - [ ] `cache: 'no-store'` をいつ使うか判断できる
-- [ ] `next: { revalidate: N }` で ISR を設定できる
+- [ ] `next: { revalidate: N }` でISRを設定できる
 - [ ] `next: { tags: [...] }` でタグベース再検証を設定できる
-- [ ] revalidatePath と revalidateTag の違いを説明できる
+- [ ] revalidatePathとrevalidateTagの違いを説明できる
 
 ### 確認質問
 
-1. 在庫状況を取得する API にはどのキャッシュ設定を使いますか？
+1. 在庫状況を取得するAPIにはどのキャッシュ設定を使いますか？
 
    **回答例**: `cache: 'no-store'`。在庫はリアルタイム性が必要なため
 
@@ -93,20 +93,20 @@ pie title Phase 5 学習領域の構成
 
 ### 理解度チェック
 
-- [ ] loading.tsx の役割を説明できる
-- [ ] Suspense 境界を自分で設定できる
-- [ ] Skeleton コンポーネントを設計できる
-- [ ] 複数の Suspense 境界を配置して並列ロードを実現できる
+- [ ] loading.tsxの役割を説明できる
+- [ ] Suspense境界を自分で設定できる
+- [ ] Skeletonコンポーネントを設計できる
+- [ ] 複数のSuspense境界を配置して並列ロードを実現できる
 
 ### 確認質問
 
-1. loading.tsx と Suspense の違いは何ですか？
+1. loading.tsxとSuspenseの違いは何ですか？
 
-   **回答例**: loading.tsx はルート全体、Suspense は任意の範囲に境界を設定できる
+   **回答例**: loading.tsxはルート全体、Suspenseは任意の範囲に境界を設定できる
 
-2. Streaming SSR のメリットは何ですか？
+2. Streaming SSRのメリットは何ですか？
 
-   **回答例**: シェルを先に返せるため TTFB が短縮し、FCP が改善する
+   **回答例**: シェルを先に返せるためTTFBが短縮し、FCPが改善する
 
 ***
 
@@ -114,19 +114,19 @@ pie title Phase 5 学習領域の構成
 
 ### 理解度チェック
 
-- [ ] MSW をインストールできる
-- [ ] Service Worker を生成できる（`msw init`）
+- [ ] MSWをインストールできる
+- [ ] Service Workerを生成できる（`msw init`）
 - [ ] mocks/ ディレクトリ構成を理解している
-- [ ] Node.js 用（setupServer）とブラウザ用（setupWorker）の違いを説明できる
-- [ ] instrumentation.ts で MSW を初期化できる
+- [ ] Node.js用（setupServer）とブラウザ用（setupWorker）の違いを説明できる
+- [ ] instrumentation.tsでMSWを初期化できる
 
 ### 確認質問
 
-1. Server Components で MSW を使うにはどちらを使いますか？
+1. Server ComponentsでMSWを使うにはどちらを使いますか？
 
    **回答例**: `setupServer`（msw/node）を使う
 
-2. 開発環境でのみ MSW を有効にするにはどうしますか？
+2. 開発環境でのみMSWを有効にするにはどうしますか？
 
    **回答例**: `process.env.NODE_ENV === 'development'` で条件分岐する
 
@@ -136,7 +136,7 @@ pie title Phase 5 学習領域の構成
 
 ### 理解度チェック
 
-- [ ] http.get / http.post / http.put / http.delete の使い分けができる
+- [ ] http.get / http.post / http.put / http.deleteの使い分けができる
 - [ ] パスパラメータ（:id）を取得できる
 - [ ] クエリパラメータ（?key=value）を取得できる
 - [ ] リクエストボディを処理できる
@@ -159,17 +159,17 @@ pie title Phase 5 学習領域の構成
 
 ### 実装チェック
 
-- [ ] 商品一覧・詳細 API のモックを作成した
-- [ ] カテゴリ一覧 API のモックを作成した
-- [ ] 検索 API のモックを作成した
+- [ ] 商品一覧・詳細APIのモックを作成した
+- [ ] カテゴリ一覧APIのモックを作成した
+- [ ] 検索APIのモックを作成した
 - [ ] 各ページのキャッシュ戦略をデータ特性に応じて設定した
-- [ ] loading.tsx で Skeleton を表示した
-- [ ] not-found.tsx で 404 ページを表示した
+- [ ] loading.tsxでSkeletonを表示した
+- [ ] not-found.tsxで404ページを表示した
 
 ### コードレビュー観点
 
-- [ ] 型定義が適切か（Product, Category, SearchResult など）
-- [ ] データ取得関数が lib/api/ に分離されているか
+- [ ] 型定義が適切か（Product, Category, SearchResultなど）
+- [ ] データ取得関数がlib/api/ に分離されているか
 - [ ] キャッシュ戦略がデータの特性に合っているか
 - [ ] エラーハンドリングが適切か
 
@@ -179,13 +179,13 @@ pie title Phase 5 学習領域の構成
 
 ### 操作チェック
 
-- [ ] `pnpm dev` で開発サーバーが起動し、MSW が有効になる
+- [ ] `pnpm dev` で開発サーバーが起動し、MSWが有効になる
 - [ ] 商品一覧ページで商品が表示される
 - [ ] 商品詳細ページで詳細情報が表示される
 - [ ] カテゴリナビゲーションが動作する
 - [ ] 検索フォームで商品を検索できる
-- [ ] 存在しない ID/スラッグで 404 ページが表示される
-- [ ] ローディング中に Skeleton が表示される
+- [ ] 存在しないID/スラッグで404ページが表示される
+- [ ] ローディング中にSkeletonが表示される
 
 ***
 
@@ -207,8 +207,8 @@ pie title Phase 5 学習領域の構成
 以下の質問に自分の言葉で答えられますか？
 
 1. **なぜ Server Components でデータを取得するのか**
-   - API キーの保護
-   - SEO 対策
+   - APIキーの保護
+   - SEO対策
    - パフォーマンス
 
 2. **キャッシュ戦略をどのように決めるか**
@@ -218,13 +218,13 @@ pie title Phase 5 学習領域の構成
 
 3. **MSW を使うメリットは何か**
    - バックエンド不要で開発
-   - 実際の fetch を使うためコード変更不要
+   - 実際のfetchを使うためコード変更不要
    - テストでも再利用可能
 
 4. **Suspense を使う利点は何か**
    - 宣言的なローディング状態管理
    - 並列データ取得
-   - Streaming SSR の活用
+   - Streaming SSRの活用
 
 ***
 

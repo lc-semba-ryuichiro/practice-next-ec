@@ -22,8 +22,8 @@
 
 ## 概要
 
-Zod によるバリデーションと Server Actions を使ったフォーム処理を習得するフェーズです。
-EC サイトに必要なユーザー登録、配送先の住所入力、商品レビューなどのフォーム機能を実装します。
+ZodによるバリデーションとServer Actionsを使ったフォーム処理を習得するフェーズです。
+ECサイトに必要なユーザー登録、配送先の住所入力、商品レビューなどのフォーム機能を実装します。
 
 ***
 
@@ -37,16 +37,16 @@ EC サイトに必要なユーザー登録、配送先の住所入力、商品�
 
 ## 所要時間目安
 
-約 6〜8 時間です。
+約6〜8時間です。
 
 ***
 
 ## 前提知識
 
 - Phase 6（テスト駆動開発）を完了していること
-- TypeScript の基本的な理解
-- React コンポーネントの作成経験
-- Next.js App Router の基礎知識
+- TypeScriptの基本的な理解
+- Reactコンポーネントの作成経験
+- Next.js App Routerの基礎知識
 
 ***
 
@@ -54,14 +54,14 @@ EC サイトに必要なユーザー登録、配送先の住所入力、商品�
 
 このフェーズを完了すると、以下ができるようになります。
 
-- [ ] Zod を使ってバリデーションスキーマを定義できる
-- [ ] Server Actions でフォームデータを安全に処理できる
-- [ ] useActionState フックでフォームの状態を管理できる
-- [ ] useOptimistic で楽観的 UI 更新を実装できる
+- [ ] Zodを使ってバリデーションスキーマを定義できる
+- [ ] Server Actionsでフォームデータを安全に処理できる
+- [ ] useActionStateフックでフォームの状態を管理できる
+- [ ] useOptimisticで楽観的UI更新を実装できる
 - [ ] バリデーションエラーをユーザーフレンドリーに表示できる
 - [ ] フロントエンドとバックエンドでバリデーションスキーマを共有できる
-- [ ] react-hook-form でクライアントサイドのフォーム状態を管理できる
-- [ ] react-hook-form と Zod を連携できる
+- [ ] react-hook-formでクライアントサイドのフォーム状態を管理できる
+- [ ] react-hook-formとZodを連携できる
 
 ***
 
@@ -111,8 +111,8 @@ graph TD
     end
 ```
 
-- `packages/validators/` - Zod スキーマを一元管理
-- `apps/web/` - フォームコンポーネントと Server Actions
+- `packages/validators/` - Zodスキーマを一元管理
+- `apps/web/` - フォームコンポーネントとServer Actions
 
 ***
 
@@ -130,7 +130,7 @@ graph TD
 
 ## 関連する EC サイト機能
 
-このフェーズで実装する EC サイト機能は以下の通りです。
+このフェーズで実装するECサイト機能は以下の通りです。
 
 | EC 機能    | 実装画面            | 使用技術                |
 | -------- | --------------- | ------------------- |
@@ -186,20 +186,20 @@ graph TD
 
 ## 自己チェックリスト
 
-Phase 7 を完了する前に、以下を確認してください。
+Phase 7を完了する前に、以下を確認してください。
 
-- [ ] Zod スキーマを使ってフォーム入力を検証できる
-- [ ] Server Actions でフォームデータを受け取り処理できる
-- [ ] useActionState でフォームの状態（送信中、エラー、成功）を管理できる
-- [ ] useOptimistic で即座に UI を更新できる
+- [ ] Zodスキーマを使ってフォーム入力を検証できる
+- [ ] Server Actionsでフォームデータを受け取り処理できる
+- [ ] useActionStateでフォームの状態（送信中、エラー、成功）を管理できる
+- [ ] useOptimisticで即座にUIを更新できる
 - [ ] バリデーションエラーを各フィールドに表示できる
-- [ ] packages/validators でスキーマを共有できている
-- [ ] react-hook-form の useForm, register, handleSubmit を使える
-- [ ] zodResolver で Zod と react-hook-form を連携できる
+- [ ] packages/validatorsでスキーマを共有できている
+- [ ] react-hook-formのuseForm, register, handleSubmitを使える
+- [ ] zodResolverでZodとreact-hook-formを連携できる
 
 ***
 
 ## 次のフェーズ
 
-Phase 7 を完了したら、[Phase 8: 認証機能](../phase-08-authentication/README.md) に進みましょう。
-Phase 8 では、このフェーズで作成したフォームを使ってユーザー認証システムを構築します。
+Phase 7を完了したら、[Phase 8: 認証機能](../phase-08-authentication/README.md) に進みましょう。
+Phase 8では、このフェーズで作成したフォームを使ってユーザー認証システムを構築します。

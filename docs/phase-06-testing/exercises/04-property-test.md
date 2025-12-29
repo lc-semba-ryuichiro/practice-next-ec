@@ -24,7 +24,7 @@
 
 ## 目標
 
-fast-check を使って、価格計算ロジックとバリデーションのエッジケースを自動検出します。
+fast-checkを使って、価格計算ロジックとバリデーションのエッジケースを自動検出します。
 不変条件（invariant）を定義し、ランダムな入力で常に条件が満たされることを検証します。
 
 ```mermaid
@@ -41,7 +41,7 @@ graph LR
 ## 前提条件
 
 - [06-fast-check.md](../06-fast-check.md) を読んでいること
-- fast-check のインストール済み
+- fast-checkのインストール済み
 
 ***
 
@@ -476,11 +476,11 @@ describe("価格計算 Property-based テスト", () => {
 ## 確認チェックリスト
 
 - [ ] `fc.property()` でプロパティテストを書けた
-- [ ] `fc.integer()` / `fc.string()` などの基本 Arbitrary を使えた
+- [ ] `fc.integer()` / `fc.string()` などの基本Arbitraryを使えた
 - [ ] `fc.record()` でオブジェクトを生成できた
 - [ ] `fc.array()` で配列を生成できた
 - [ ] 不変条件を定義できた
-- [ ] カスタム Arbitrary を作成できた
+- [ ] カスタムArbitraryを作成できた
 - [ ] すべてのテストがパスする
 
 ***
@@ -527,12 +527,12 @@ fc.sample(cartItemArbitrary, 5).forEach(console.log);
 - [ ] 価格計算のプロパティテストがある
 - [ ] 割引計算のプロパティテストがある
 - [ ] バリデーションのプロパティテストがある
-- [ ] カスタム Arbitrary を使用している
+- [ ] カスタムArbitraryを使用している
 - [ ] `pnpm test` でテストが成功する
 
 ***
 
 ## Phase 6 完了
 
-これで Phase 6 の全演習が完了です。
+これでPhase 6の全演習が完了です。
 [チェックリスト](../checklist.md) で理解度を確認し、[Phase 7: フォーム + Server Actions](../../phase-07-forms-validation/README.md) に進みましょう。

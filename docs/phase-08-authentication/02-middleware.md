@@ -36,7 +36,7 @@
 
 ## Next.js Middleware とは
 
-Middleware は、リクエストが完了する前に実行されるコードです。認証チェック、リダイレクト、ヘッダーの変更などに使用されます。
+Middlewareは、リクエストが完了する前に実行されるコードです。認証チェック、リダイレクト、ヘッダーの変更などに使用されます。
 
 ```mermaid
 flowchart LR
@@ -106,7 +106,7 @@ export const config = {
 
 ### auth() 関数を使った認証チェック
 
-NextAuth.js v5 では、`auth()` 関数を使って Middleware で認証状態を確認できます。
+NextAuth.js v5では、`auth()` 関数を使ってMiddlewareで認証状態を確認できます。
 
 ```typescript
 // middleware.ts
@@ -299,7 +299,7 @@ declare module "@auth/core/jwt" {
 
 ## Edge Runtime の制約
 
-Middleware は Edge Runtime で実行されるため、いくつかの制約があります。
+MiddlewareはEdge Runtimeで実行されるため、いくつかの制約があります。
 
 ### 使用できないもの
 
@@ -330,7 +330,7 @@ const hash = await crypto.subtle.digest("SHA-256", data);
 
 ### jose ライブラリの使用
 
-JWT の検証には、Edge 対応の `jose` ライブラリを使用できます。
+JWTの検証には、Edge対応の `jose` ライブラリを使用できます。
 
 ```typescript
 import { jwtVerify } from "jose";
@@ -467,15 +467,15 @@ export const config = {
 
 ### 学んだこと
 
-- Next.js Middleware の基本構造と配置
-- NextAuth.js の `auth()` 関数を使った認証チェック
-- matcher 設定によるルート指定
+- Next.js Middlewareの基本構造と配置
+- NextAuth.jsの `auth()` 関数を使った認証チェック
+- matcher設定によるルート指定
 - ロールベースのアクセス制御
-- Edge Runtime の制約と対策
+- Edge Runtimeの制約と対策
 - デバッグとパフォーマンスの考慮点
 
 ***
 
 ## 次のステップ
 
-Middleware での認証チェックを理解したら、[保護されたルート](./03-protected-routes.md) に進んで、Server/Client Component での認証状態の取得方法を学びましょう。
+Middlewareでの認証チェックを理解したら、[保護されたルート](./03-protected-routes.md) に進んで、Server/Client Componentでの認証状態の取得方法を学びましょう。

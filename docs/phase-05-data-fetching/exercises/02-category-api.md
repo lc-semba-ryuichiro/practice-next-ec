@@ -33,7 +33,7 @@
 
 ## 目標
 
-カテゴリ一覧 API のモックを作成し、長期キャッシュ戦略を適用してカテゴリナビゲーションとカテゴリ別商品ページを実装します。
+カテゴリ一覧APIのモックを作成し、長期キャッシュ戦略を適用してカテゴリナビゲーションとカテゴリ別商品ページを実装します。
 
 ***
 
@@ -180,7 +180,7 @@ export const handlers = [...productHandlers, ...categoryHandlers];
 
 ### 4.1 カテゴリ API クライアント
 
-カテゴリは変更頻度が低いため、長期キャッシュ（1 時間）を設定します。
+カテゴリは変更頻度が低いため、長期キャッシュ（1時間）を設定します。
 
 ```typescript
 // lib/api/categories.ts
@@ -492,8 +492,8 @@ export default function CategoryNotFound(): React.ReactElement {
 - [ ] `/categories` でカテゴリ一覧が表示される
 - [ ] `/categories/food` でカテゴリ詳細（商品一覧）が表示される
 - [ ] カテゴリナビゲーションが表示される
-- [ ] 存在しないカテゴリで 404 ページが表示される
-- [ ] ローディング中に Skeleton が表示される
+- [ ] 存在しないカテゴリで404ページが表示される
+- [ ] ローディング中にSkeletonが表示される
 
 ***
 
@@ -501,8 +501,8 @@ export default function CategoryNotFound(): React.ReactElement {
 
 ### カテゴリナビが表示されない
 
-1. `CategoryNav` が async コンポーネントになっているか確認
-2. Suspense で囲まれているか確認
+1. `CategoryNav` がasyncコンポーネントになっているか確認
+2. Suspenseで囲まれているか確認
 
 ### キャッシュが効いているか確認
 
@@ -532,9 +532,9 @@ export async function getCategories(): Promise<Category[]> {
 
 以下がすべて動作すれば、この演習は完了です。
 
-- カテゴリ一覧ページで 5 件のカテゴリが表示される
+- カテゴリ一覧ページで5件のカテゴリが表示される
 - カテゴリをクリックするとカテゴリ別商品一覧に遷移
 - カテゴリナビゲーションが動作する
-- 存在しないカテゴリで 404 ページが表示される
+- 存在しないカテゴリで404ページが表示される
 
 次は [演習 3: 検索 API](./03-search-api.md) に進みましょう。

@@ -28,7 +28,7 @@
 
 ## 目標
 
-認証ユーザー専用のマイページを実装し、Server Component と Client Component でのセッション取得を実践します。
+認証ユーザー専用のマイページを実装し、Server ComponentとClient Componentでのセッション取得を実践します。
 
 ***
 
@@ -57,9 +57,9 @@ graph TD
 
 ### 技術要件
 
-- Server Component で `auth()` を使用してセッションを取得
-- Client Component で `useSession()` を使用してユーザーメニューを表示
-- Route Groups を使って保護されたルートを構成
+- Server Componentで `auth()` を使用してセッションを取得
+- Client Componentで `useSession()` を使用してユーザーメニューを表示
+- Route Groupsを使って保護されたルートを構成
 
 ***
 

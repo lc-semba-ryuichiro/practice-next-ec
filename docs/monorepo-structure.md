@@ -1,6 +1,6 @@
 # モノレポ構成
 
-Turborepo + pnpm workspace を使用した EC サイト向けモノレポ構成の詳細です。
+Turborepo + pnpm workspaceを使用したECサイト向けモノレポ構成の詳細です。
 
 ***
 

@@ -32,7 +32,7 @@
 
 ## 目標
 
-商品検索 API のモックを作成し、検索フォーム（Client Component）と検索結果ページ（Server Component）を実装します。検索はリアルタイム性が必要なため、キャッシュなし（`cache: 'no-store'`）で実装します。
+商品検索APIのモックを作成し、検索フォーム（Client Component）と検索結果ページ（Server Component）を実装します。検索はリアルタイム性が必要なため、キャッシュなし（`cache: 'no-store'`）で実装します。
 
 ***
 
@@ -696,12 +696,12 @@ export function SearchFormWithDebounce(): React.ReactElement {
 
 ### 検索結果が表示されない
 
-1. MSW ハンドラーが正しく登録されているか確認
+1. MSWハンドラーが正しく登録されているか確認
 2. `cache: 'no-store'` が設定されているか確認
 
 ### フィルターが反映されない
 
-`useSearchParams` を使う場合は Suspense で囲む必要があります。
+`useSearchParams` を使う場合はSuspenseで囲む必要があります。
 
 ```tsx
 <Suspense fallback={<div>Loading...</div>}>
@@ -728,6 +728,6 @@ export function SearchFormWithDebounce(): React.ReactElement {
 - ソート機能が動作する
 - ページネーションが動作する
 
-おめでとうございます！Phase 5 の演習が完了しました。
+おめでとうございます！Phase 5の演習が完了しました。
 
 [チェックリスト](../checklist.md) で理解度を確認しましょう。

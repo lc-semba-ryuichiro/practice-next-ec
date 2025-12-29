@@ -385,7 +385,7 @@ export async function placeOrder(
 }
 ```
 
-### 対策 3: 冪等キー
+### 対策 3: 冪などキー
 
 ```typescript
 // 冪等キーを使用した API
@@ -651,7 +651,7 @@ useEffect(() => {
 
 - ボタンの無効化（isPending）
 - トークンによる重複チェック
-- 冪等キーの使用
+- 冪などキーの使用
 
 ### PRG パターン
 

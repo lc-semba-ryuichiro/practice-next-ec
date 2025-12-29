@@ -37,7 +37,7 @@
 
 ## MSW（Mock Service Worker）とは
 
-MSW は、Service Worker を使って API リクエストをインターセプトし、モックレスポンスを返すライブラリです。バックエンド API がなくてもフロントエンド開発を進められます。
+MSWは、Service Workerを使ってAPIリクエストをインターセプトし、モックレスポンスを返すライブラリです。バックエンドAPIがなくてもフロントエンド開発を進められます。
 
 ```mermaid
 graph TD
@@ -80,7 +80,7 @@ pnpm add -D msw
 
 ### Service Worker の生成
 
-MSW はブラウザで動作する場合、Service Worker を使用します。
+MSWはブラウザで動作する場合、Service Workerを使用します。
 
 ```bash
 # public ディレクトリに Service Worker を生成
@@ -161,7 +161,7 @@ export const productHandlers = [
 
 ## ブラウザ用設定
 
-ブラウザで MSW を動作させる設定です。
+ブラウザでMSWを動作させる設定です。
 
 ```typescript
 // mocks/browser.ts
@@ -175,7 +175,7 @@ export const worker = setupWorker(...handlers);
 
 ## Node.js 用設定
 
-Server Components やテストで使用する設定です。
+Server Componentsやテストで使用する設定です。
 
 ```typescript
 // mocks/server.ts
@@ -191,7 +191,7 @@ export const server = setupServer(...handlers);
 
 ### 方法 1: instrumentation.ts を使用（推奨）
 
-Next.js の instrumentation hook を使って、サーバー起動時に MSW を初期化します。
+Next.jsのinstrumentation hookを使って、サーバー起動時にMSWを初期化します。
 
 ```typescript
 // instrumentation.ts（プロジェクトルート）
@@ -208,7 +208,7 @@ export async function register(): Promise<void> {
 }
 ```
 
-`next.config.ts` で instrumentation を有効化します。
+`next.config.ts` でinstrumentationを有効化します。
 
 ```typescript
 // next.config.ts
@@ -225,7 +225,7 @@ export default nextConfig;
 
 ### 方法 2: ブラウザでの初期化
 
-Client Components でブラウザ用 MSW を初期化する場合は以下のようにします。
+Client Componentsでブラウザ用MSWを初期化する場合は以下のようにします。
 
 ```typescript
 // components/MSWProvider.tsx
@@ -384,7 +384,7 @@ export async function register(): Promise<void> {
 
 ## Storybook との統合
 
-MSW は Storybook でも使用できます。
+MSWはStorybookでも使用できます。
 
 ### インストール
 
@@ -474,7 +474,7 @@ pnpm dlx msw init public/ --save
 
 ### ハンドラーが呼ばれない
 
-1. URL パスが正しいか確認
+1. URLパスが正しいか確認
 2. `onUnhandledRequest: "warn"` に変更してログを確認
 
 ```typescript
@@ -511,4 +511,4 @@ experimental: {
 
 ## 次のステップ
 
-MSW のセットアップが完了したら、[MSW ハンドラー作成](./05-msw-handlers.md) で具体的なハンドラーの書き方を学びましょう。
+MSWのセットアップが完了したら、[MSW ハンドラー作成](./05-msw-handlers.md) で具体的なハンドラーの書き方を学びましょう。

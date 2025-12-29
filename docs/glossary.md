@@ -1,6 +1,6 @@
 # 用語集
 
-React / Next.js 開発で使用する専門用語の解説です。
+React / Next.js開発で使用する専門用語の解説です。
 
 ***
 
@@ -67,7 +67,7 @@ React / Next.js 開発で使用する専門用語の解説です。
 
 ### JSX (JavaScript XML)
 
-JavaScript の中に HTML のような構文を書ける拡張構文。React コンポーネントの UI を記述するために使用する。
+JavaScriptの中にHTMLのような構文を書ける拡張構文。ReactコンポーネントのUIを記述するために使用する。
 
 ```tsx
 // JSX の例
@@ -76,7 +76,7 @@ const element = <h1>Hello, World!</h1>;
 
 ### Component（コンポーネント）
 
-UI を構成する再利用可能な部品。関数コンポーネントとクラスコンポーネントがあるが、現在は関数コンポーネントが主流。
+UIを構成する再利用可能な部品。関数コンポーネントとクラスコンポーネントがあるが、現在は関数コンポーネントが主流。
 
 ```tsx
 // 関数コンポーネント
@@ -87,7 +87,7 @@ function Button({ children }: { children: React.ReactNode }) {
 
 ### Props（プロパティ）
 
-親コンポーネントから子コンポーネントに渡されるデータ。読み取り専用で、子コンポーネントは受け取った props を変更できない。
+親コンポーネントから子コンポーネントに渡されるデータ。読み取り専用で、子コンポーネントは受け取ったpropsを変更できない。
 
 ```tsx
 // props の例
@@ -99,7 +99,7 @@ function Button({ children }: { children: React.ReactNode }) {
 
 ### State（ステート）
 
-コンポーネント内で管理される変更可能なデータ。state が変更されると、コンポーネントが再レンダリングされる。
+コンポーネント内で管理される変更可能なデータ。stateが変更されると、コンポーネントが再レンダリングされる。
 
 ```tsx
 const [count, setCount] = useState(0);
@@ -107,7 +107,7 @@ const [count, setCount] = useState(0);
 
 ### Hooks（フック）
 
-関数コンポーネントで state やライフサイクルなどの React 機能を使うための関数。`use` で始まる命名規則がある。
+関数コンポーネントでstateやライフサイクルなどのReact機能を使うための関数。`use` で始まる命名規則がある。
 
 | Hook          | 用途                        |
 | ------------- | ------------------------- |
@@ -121,15 +121,15 @@ const [count, setCount] = useState(0);
 
 ### Virtual DOM（仮想 DOM）
 
-実際の DOM のメモリ上の軽量なコピー。React は Virtual DOM を使って効率的に UI を更新する。
+実際のDOMのメモリ上の軽量なコピー。ReactはVirtual DOMを使って効率的にUIを更新する。
 
 ### Reconciliation（リコンシリエーション）
 
-React が Virtual DOM の差分を計算し、最小限の DOM 操作で UI を更新するプロセス。
+ReactがVirtual DOMの差分を計算し、最小限のDOM操作でUIを更新するプロセス。
 
 ### Re-render（再レンダリング）
 
-state や props の変更によってコンポーネントが再描画されること。
+stateやpropsの変更によってコンポーネントが再描画されること。
 
 ***
 
@@ -139,21 +139,21 @@ state や props の変更によってコンポーネントが再描画される�
 
 ### App Router
 
-Next.js 13 以降の新しいルーティングシステム。`app/` ディレクトリを使用する。
+Next.js 13以降の新しいルーティングシステム。`app/` ディレクトリを使用する。
 
 ### Pages Router
 
-Next.js の旧ルーティングシステム。`pages/` ディレクトリを使用する。
+Next.jsの旧ルーティングシステム。`pages/` ディレクトリを使用する。
 
 ### Server Components（サーバーコンポーネント）
 
-サーバー側でレンダリングされるコンポーネント。App Router ではデフォルトで全てのコンポーネントが Server Components になる。
+サーバー側でレンダリングされるコンポーネント。App RouterではデフォルトですべてのコンポーネントがServer Componentsになる。
 
 **特徴:**
 
 - データベースに直接アクセス可能
-- API キーなどの機密情報を安全に扱える
-- JavaScript バンドルに含まれない
+- APIキーなどの機密情報を安全に扱える
+- JavaScriptバンドルに含まれない
 
 ### Client Components（クライアントコンポーネント）
 
@@ -161,9 +161,9 @@ Next.js の旧ルーティングシステム。`pages/` ディレクトリを使
 
 **特徴:**
 
-- `useState`、`useEffect` などの Hooks が使用可能
-- イベントハンドラ（onClick など）が使用可能
-- ブラウザ API にアクセス可能
+- `useState`、`useEffect` などのHooksが使用可能
+- イベントハンドラ（onClickなど）が使用可能
+- ブラウザAPIにアクセス可能
 
 ```tsx
 "use client";
@@ -178,15 +178,15 @@ export function Counter() {
 
 ### Layout（レイアウト）
 
-複数のページで共有される UI。`layout.tsx` ファイルで定義する。
+複数のページで共有されるUI。`layout.tsx` ファイルで定義する。
 
 ### Template（テンプレート）
 
-Layout に似ているが、ナビゲーション時に毎回新しいインスタンスが作成される。
+Layoutに似ているが、ナビゲーション時に毎回新しいインスタンスが作成される。
 
 ### Dynamic Routes（動的ルート）
 
-URL パラメータを含むルート。`[slug]` や `[id]` のようにブラケットで囲む。
+URLパラメータを含むルート。`[slug]` や `[id]` のようにブラケットで囲む。
 
 ```text
 app/
@@ -197,7 +197,7 @@ app/
 
 ### Route Groups（ルートグループ）
 
-`(folder)` のように括弧で囲むことで、URL に影響を与えずにルートを整理できる。
+`(folder)` のように括弧で囲むことで、URLに影響を与えずにルートを整理できる。
 
 ### Parallel Routes（パラレルルート）
 
@@ -213,7 +213,7 @@ app/
 
 ### Edge Runtime
 
-サーバーサイドコードを CDN のエッジで実行する軽量ランタイム。
+サーバーサイドコードをCDNのエッジで実行する軽量ランタイム。
 
 ***
 
@@ -229,7 +229,7 @@ app/
 
 ### ISR (Incremental Static Regeneration)
 
-SSG の拡張。指定した間隔でページを再生成し、静的なパフォーマンスと動的なデータ更新を両立。
+SSGの拡張。指定した間隔でページを再生成し、静的なパフォーマンスと動的なデータ更新を両立。
 
 ```tsx
 // ISR の例（60秒ごとに再生成）
@@ -238,15 +238,15 @@ export const revalidate = 60;
 
 ### PPR (Partial Prerendering)
 
-Next.js 14 以降の機能。静的部分と動的部分を組み合わせてレンダリングする。
+Next.js 14以降の機能。静的部分と動的部分を組み合わせてレンダリングする。
 
 ### Streaming
 
-サーバーからクライアントへ HTML を段階的に送信する技術。Suspense と組み合わせて使用。
+サーバーからクライアントへHTMLを段階的に送信する技術。Suspenseと組み合わせて使用。
 
 ### Hydration（ハイドレーション）
 
-サーバーで生成された HTML に、クライアント側で JavaScript を紐付けてインタラクティブにするプロセス。
+サーバーで生成されたHTMLに、クライアント側でJavaScriptを紐付けてインタラクティブにするプロセス。
 
 ***
 
@@ -254,7 +254,7 @@ Next.js 14 以降の機能。静的部分と動的部分を組み合わせてレ
 
 ### Atom（アトム）
 
-Jotai における状態の最小単位。グローバルに共有可能な状態を表す。
+Jotaiにおける状態の最小単位。グローバルに共有可能な状態を表す。
 
 ```tsx
 import { atom } from "jotai";
@@ -264,7 +264,7 @@ const countAtom = atom(0);
 
 ### Derived Atom（派生アトム）
 
-他の Atom から計算される読み取り専用の Atom。
+他のAtomから計算される読み取り専用のAtom。
 
 ```tsx
 const doubleCountAtom = atom((get) => get(countAtom) * 2);
@@ -272,11 +272,11 @@ const doubleCountAtom = atom((get) => get(countAtom) * 2);
 
 ### Atom Family
 
-動的に Atom を生成するパターン。パラメータに基づいて異なる Atom を作成できる。
+動的にAtomを生成するパターン。パラメータに基づいて異なるAtomを作成できる。
 
 ### Provider
 
-状態のスコープを提供するコンポーネント。Jotai ではオプション。
+状態のスコープを提供するコンポーネント。Jotaiではオプション。
 
 ***
 
@@ -304,7 +304,7 @@ const doubleCountAtom = atom((get) => get(countAtom) * 2);
 
 ### Visual Regression Testing (VRT)
 
-UI のスクリーンショットを比較して、意図しない視覚的変更を検出するテスト。
+UIのスクリーンショットを比較して、意図しない視覚的変更を検出するテスト。
 
 ### Mutation Testing（ミューテーションテスト）
 
@@ -332,7 +332,7 @@ UI のスクリーンショットを比較して、意図しない視覚的変�
 
 ### Core Web Vitals
 
-Google が定義するウェブパフォーマンス指標。
+Googleが定義するウェブパフォーマンス指標。
 
 | 指標                              | 意味           | 良好な値    |
 | ------------------------------- | ------------ | ------- |

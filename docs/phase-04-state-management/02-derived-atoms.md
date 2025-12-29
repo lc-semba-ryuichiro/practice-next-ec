@@ -32,8 +32,8 @@
 
 ## 派生 Atom とは
 
-**派生 Atom（Derived Atom）** は、他の Atom の値から計算される Atom です。
-Excel のセル参照のように、元の Atom が変更されると自動的に再計算されます。
+**派生 Atom（Derived Atom）** は、他のAtomの値から計算されるAtomです。
+Excelのセル参照のように、元のAtomが変更されると自動的に再計算されます。
 
 ```mermaid
 graph LR
@@ -48,7 +48,7 @@ graph LR
 
 ### 基本的な派生 Atom
 
-`atom()` に関数を渡すと、派生 Atom になります。
+`atom()` に関数を渡すと、派生Atomになります。
 
 ```typescript
 import { atom } from "jotai";
@@ -62,7 +62,7 @@ const doubledCountAtom = atom((get) => get(countAtom) * 2);
 
 ### get 関数
 
-`get` 関数は他の Atom の現在の値を取得します。
+`get` 関数は他のAtomの現在の値を取得します。
 
 ```typescript
 const derivedAtom = atom((get) => {
@@ -189,7 +189,7 @@ export default function CartPage(): JSX.Element {
 
 ### 自動追跡
 
-Jotai は `get()` で呼び出された Atom を自動的に追跡します。
+Jotaiは `get()` で呼び出されたAtomを自動的に追跡します。
 
 ```mermaid
 graph TD
@@ -205,7 +205,7 @@ graph TD
 
 ### 最適化
 
-派生 Atom を使うと、必要な部分だけが再計算されます。
+派生Atomを使うと、必要な部分だけが再計算されます。
 
 ```typescript
 // taxRateAtom が変更された場合
@@ -217,7 +217,7 @@ graph TD
 
 ## 書き込み可能な派生 Atom
 
-派生 Atom に書き込み機能を追加できます。
+派生Atomに書き込み機能を追加できます。
 
 ### 基本構文
 
@@ -356,7 +356,7 @@ export function CartItemRow({ item }: CartItemRowProps): JSX.Element {
 
 ## 非同期派生 Atom
 
-派生 Atom は非同期処理もサポートしています。
+派生Atomは非同期処理もサポートしています。
 
 ### 非同期派生 Atom の作成
 
@@ -376,7 +376,7 @@ const productDetailAtom = atom(async (get) => {
 
 ### Suspense との連携
 
-非同期 Atom は React の Suspense と連携できます。
+非同期AtomはReactのSuspenseと連携できます。
 
 ```tsx
 import { Suspense } from "react";
@@ -516,8 +516,8 @@ const badAtom = atom((get) => {
 
 ### 派生 Atom のポイント
 
-- 他の Atom の値から計算される Atom
-- `get` 関数で依存する Atom を参照
+- 他のAtomの値から計算されるAtom
+- `get` 関数で依存するAtomを参照
 - 依存関係は自動追跡される
 - 書き込み機能も追加可能
 
@@ -526,10 +526,10 @@ const badAtom = atom((get) => {
 - 合計金額の計算
 - フィルタリング
 - データの変換
-- 複数の Atom を組み合わせた状態
+- 複数のAtomを組み合わせた状態
 
 ***
 
 ## 次のステップ
 
-派生 Atom を理解したら、[永続化（atomWithStorage）](./03-atom-with-storage.md) に進んで、状態を localStorage に保存する方法を学びましょう。
+派生Atomを理解したら、[永続化（atomWithStorage）](./03-atom-with-storage.md) に進んで、状態をlocalStorageに保存する方法を学びましょう。

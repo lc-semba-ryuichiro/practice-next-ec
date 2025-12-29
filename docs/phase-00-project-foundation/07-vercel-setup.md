@@ -53,7 +53,7 @@
 ## Vercel とは
 
 **Vercel** は、フロントエンドのデプロイ・ホスティングプラットフォームです。
-Next.js の開発元であり、Next.js との統合が最も優れています。
+Next.jsの開発元であり、Next.jsとの統合が最も優れています。
 
 ```mermaid
 flowchart LR
@@ -66,11 +66,11 @@ flowchart LR
 
 ### 特徴
 
-- ゼロ設定デプロイ - Git リポジトリを接続するだけ
-- プレビューデプロイ - PR ごとに自動でプレビュー URL を発行
+- ゼロ設定デプロイ - Gitリポジトリを接続するだけ
+- プレビューデプロイ - PRごとに自動でプレビュー URLを発行
 - Edge Functions - エッジでの高速なサーバーレス実行
-- Analytics - Web Vitals の自動計測
-- モノレポ対応 - Turborepo との連携
+- Analytics - Web Vitalsの自動計測
+- モノレポ対応 - Turborepoとの連携
 
 ***
 
@@ -80,12 +80,12 @@ flowchart LR
 
 1. [vercel.com](https://vercel.com) にアクセス
 2. 「Start Deploying」をクリック
-3. GitHub アカウントで認証
+3. GitHubアカウントで認証
 
 ### 2. GitHub との連携
 
 1. 「Import Git Repository」を選択
-2. GitHub アカウントを連携
+2. GitHubアカウントを連携
 3. リポジトリへのアクセスを許可
 
 ***
@@ -179,7 +179,7 @@ Environment Variables
 
 ## 環境変数の管理
 
-Vercel では環境ごとに異なる環境変数を設定できます。
+Vercelでは環境ごとに異なる環境変数を設定できます。
 
 ```mermaid
 flowchart TD
@@ -228,10 +228,10 @@ Project Settings → Environment Variables
 
 ### 仕組み
 
-1. PR を作成
-2. Vercel が自動でビルド
-3. 一意の URL でプレビュー公開
-4. PR コメントに URL が追加
+1. PRを作成
+2. Vercelが自動でビルド
+3. 一意のURLでプレビュー公開
+4. PRコメントにURLが追加
 
 ### URL 形式
 
@@ -350,7 +350,7 @@ vercel logs <url>
 
 ### ビルドキャッシュ
 
-Vercel は自動でビルドキャッシュを使用します。
+Vercelは自動でビルドキャッシュを使用します。
 
 ```text
 Using build cache from previous deployment
@@ -379,7 +379,7 @@ TURBO_TEAM: <team>
 
 ### Vercel Analytics
 
-Web Vitals を自動計測できます。
+Web Vitalsを自動計測できます。
 
 ```bash
 pnpm add @vercel/analytics
@@ -472,13 +472,13 @@ Error: Build failed
 
 以下を確認してください。
 
-1. Vercel Dashboard でログを確認する
+1. Vercel Dashboardでログを確認する
 2. ローカルで `pnpm build` を実行する
 3. 環境変数が正しく設定されているか確認する
 
 ### 504 Gateway Timeout
 
-サーバーレス関数のタイムアウト（デフォルト 10 秒）を延長できます。
+サーバーレス関数のタイムアウト（デフォルト10秒）を延長できます。
 
 ```typescript
 // app/api/heavy-task/route.ts
@@ -511,7 +511,7 @@ export const maxDuration = 30; // 最大 30 秒
 
 ### 無料枠の制限
 
-- ビルド: 100 回/日
+- ビルド: 100回/日
 - 帯域: 100GB/月
 - Serverless Functions: 100GB-時間/月
 
@@ -519,4 +519,4 @@ export const maxDuration = 30; // 最大 30 秒
 
 ## 次のステップ
 
-Vercel の基本設定が完了したら、[モノレポでの Vercel 設定](./08-vercel-monorepo.md) で複数アプリのデプロイを設定しましょう。
+Vercelの基本設定が完了したら、[モノレポでの Vercel 設定](./08-vercel-monorepo.md) で複数アプリのデプロイを設定しましょう。

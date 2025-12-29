@@ -36,7 +36,7 @@
 
 ## 概要
 
-保護されたルートとは、認証されたユーザーのみがアクセスできるページです。Next.js App Router では、Server Component と Client Component の両方で認証状態を確認できます。
+保護されたルートとは、認証されたユーザーのみがアクセスできるページです。Next.js App Routerでは、Server ComponentとClient Componentの両方で認証状態を確認できます。
 
 ```mermaid
 graph TD
@@ -55,7 +55,7 @@ graph TD
 
 ### auth() 関数を使用
 
-Server Component では、NextAuth.js の `auth()` 関数を使ってセッション情報を取得します。
+Server Componentでは、NextAuth.jsの `auth()` 関数を使ってセッション情報を取得します。
 
 ```typescript
 // app/mypage/page.tsx
@@ -101,7 +101,7 @@ type Session = {
 
 ### SessionProvider の設定
 
-Client Component でセッション情報を使用するには、`SessionProvider` でアプリをラップします。
+Client Componentでセッション情報を使用するには、`SessionProvider` でアプリをラップします。
 
 ```typescript
 // app/providers.tsx
@@ -594,10 +594,10 @@ export default async function UserPage() {
 
 ### 学んだこと
 
-- Server Component での `auth()` を使った認証チェック
-- Client Component での `useSession()` の使用方法
+- Server Componentでの `auth()` を使った認証チェック
+- Client Componentでの `useSession()` の使用方法
 - `SessionProvider` の設定
-- Route Groups を使った認証ルートの構成
+- Route Groupsを使った認証ルートの構成
 - ローディング状態とエラーハンドリング
 - セキュリティのベストプラクティス
 

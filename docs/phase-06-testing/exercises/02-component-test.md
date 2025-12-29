@@ -23,7 +23,7 @@
 
 ## 目標
 
-Testing Library を使って、ProductCard コンポーネントをテストします。
+Testing Libraryを使って、ProductCardコンポーネントをテストします。
 ユーザー視点でのテストを実践し、アクセシビリティを意識したクエリの使い方を身につけます。
 
 ```mermaid
@@ -40,7 +40,7 @@ graph TD
 ## 前提条件
 
 - [02-testing-library.md](../02-testing-library.md) を読んでいること
-- Testing Library のセットアップ済み
+- Testing Libraryのセットアップ済み
 
 ***
 
@@ -69,7 +69,7 @@ graph TD
 
 ## ステップ 1: テスト対象のコンポーネント
 
-まず、テスト対象の ProductCard コンポーネントを確認します。
+まず、テスト対象のProductCardコンポーネントを確認します。
 
 ```tsx
 // components/ProductCard.tsx

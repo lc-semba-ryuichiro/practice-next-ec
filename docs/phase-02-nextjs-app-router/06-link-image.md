@@ -30,7 +30,7 @@
 
 ## 概要
 
-Next.js は、`<Link>` と `<Image>` という最適化されたコンポーネントを提供しています。これらを使用することで、パフォーマンスが自動的に向上し、Core Web Vitals のスコアも改善されます。
+Next.jsは、`<Link>` と `<Image>` という最適化されたコンポーネントを提供しています。これらを使用することで、パフォーマンスが自動的に向上し、Core Web Vitalsのスコアも改善されます。
 
 ***
 
@@ -317,7 +317,7 @@ graph TD
 
 ### 外部画像の使用
 
-外部 URL の画像を使う場合、`next.config.ts` で許可が必要です。
+外部URLの画像を使う場合、`next.config.ts` で許可が必要です。
 
 ```typescript
 // next.config.ts
@@ -538,10 +538,10 @@ export function ProductDetail({ product }: Props): React.ReactElement {
 
 ### Image
 
-1. **画像のサイズを指定**: `width` と `height` を必ず指定（CLS 防止）
+1. **画像のサイズを指定**: `width` と `height` を必ず指定（CLS防止）
 2. **`sizes` を活用**: レスポンシブ画像には `sizes` を指定
-3. **`priority` を適切に**: LCP 要素のみに使用（乱用は逆効果）
-4. **`fill` と `object-fit`**: 柔軟なレイアウトには `fill` + CSS を使用
+3. **`priority` を適切に**: LCP要素のみに使用（乱用は逆効果）
+4. **`fill` と `object-fit`**: 柔軟なレイアウトには `fill` + CSSを使用
 
 ***
 
@@ -556,4 +556,4 @@ export function ProductDetail({ product }: Props): React.ReactElement {
 
 ## 次のステップ
 
-Link と Image コンポーネントを理解したら、[演習 1: レイアウト実装](./exercises/01-layout.md) で実際に EC サイトのレイアウトを作ってみましょう。
+LinkとImageコンポーネントを理解したら、[演習 1: レイアウト実装](./exercises/01-layout.md) で実際にECサイトのレイアウトを作ってみましょう。

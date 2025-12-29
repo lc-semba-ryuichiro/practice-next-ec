@@ -34,7 +34,7 @@
 ## 目標
 
 商品一覧を表示する **ProductList コンポーネント** を作成します。
-演習 1 で作成した ProductCard を活用し、リストレンダリングを実践します。
+演習1で作成したProductCardを活用し、リストレンダリングを実践します。
 
 ```mermaid
 graph TD
@@ -54,7 +54,7 @@ graph TD
 
 ## 前提条件
 
-- 演習 1: ProductCard 実装を完了していること
+- 演習1: ProductCard実装を完了していること
 - リストレンダリング（map、key）を理解していること
 
 ***
@@ -557,14 +557,14 @@ export * from "./ProductList";
 
 以下を確認してください。
 
-- [ ] ProductList コンポーネントが作成できた
-- [ ] map で ProductCard がリストレンダリングされる
-- [ ] key に product.id が正しく設定されている
-- [ ] 商品が 0 件の場合、空状態が表示される
+- [ ] ProductListコンポーネントが作成できた
+- [ ] mapでProductCardがリストレンダリングされる
+- [ ] keyにproduct.idが正しく設定されている
+- [ ] 商品が0件の場合、空状態が表示される
 - [ ] ローディング中にスケルトンが表示される
 - [ ] レスポンシブなグリッドレイアウトが適用されている
-- [ ] Storybook で各ストーリーが確認できる
-- [ ] onAddToCart が ProductCard に渡されている
+- [ ] Storybookで各ストーリーが確認できる
+- [ ] onAddToCartがProductCardに渡されている
 
 ***
 
@@ -602,12 +602,12 @@ type ProductListProps = {
 
 以下がすべて動作すれば、この演習は完了です。
 
-- [ ] ProductList コンポーネントが正しく動作する
+- [ ] ProductListコンポーネントが正しく動作する
 - [ ] 空リスト、ローディング状態が適切に処理される
-- [ ] Storybook で各バリエーションが確認できる
-- [ ] TypeScript の型エラーがない
-- [ ] ESLint のエラーがない
+- [ ] Storybookで各バリエーションが確認できる
+- [ ] TypeScriptの型エラーがない
+- [ ] ESLintのエラーがない
 
-これで Phase 1 の演習は完了です。
+これでPhase 1の演習は完了です。
 [チェックリスト](../checklist.md) で理解度を確認してから、
 [Phase 2: Next.js App Router 基礎](../../phase-02-nextjs-app-router/README.md) に進みましょう。

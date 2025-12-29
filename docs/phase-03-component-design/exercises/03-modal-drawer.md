@@ -34,7 +34,7 @@
 
 ## 目標
 
-Compound Components パターンを使って、アクセシブルな Modal と Drawer コンポーネントを実装します。
+Compound Componentsパターンを使って、アクセシブルなModalとDrawerコンポーネントを実装します。
 
 ***
 
@@ -65,8 +65,8 @@ packages/ui/
 
 ## 前提条件
 
-- 演習 1, 2 を完了していること
-- Compound Components パターンを理解していること
+- 演習1, 2を完了していること
+- Compound Componentsパターンを理解していること
 
 ***
 
@@ -858,11 +858,11 @@ export function ProductQuickView({ product, isOpen, onClose }: ProductQuickViewP
 
 ### 機能
 
-- [ ] Dialog が開閉する
-- [ ] Drawer が左右から開閉する
-- [ ] Escape キーで閉じる
+- [ ] Dialogが開閉する
+- [ ] Drawerが左右から開閉する
+- [ ] Escapeキーで閉じる
 - [ ] オーバーレイクリックで閉じる
-- [ ] body のスクロールがロックされる
+- [ ] bodyのスクロールがロックされる
 
 ### アクセシビリティ
 
@@ -875,10 +875,10 @@ export function ProductQuickView({ product, isOpen, onClose }: ProductQuickViewP
 
 ### Storybook
 
-- [ ] Dialog のストーリーがある
-- [ ] Drawer のストーリーがある
+- [ ] Dialogのストーリーがある
+- [ ] Drawerのストーリーがある
 - [ ] 確認ダイアログのストーリーがある
-- [ ] addon-a11y でエラーがない
+- [ ] addon-a11yでエラーがない
 
 ***
 
@@ -907,22 +907,22 @@ const focusableElements = content.querySelectorAll<HTMLElement>(
 
 ## 発展課題
 
-1. **アニメーション**: Framer Motion を使ったスムーズなアニメーション
+1. **アニメーション**: Framer Motionを使ったスムーズなアニメーション
 2. **ネストしたダイアログ**: ダイアログ内からさらにダイアログを開く
-3. **サイズバリエーション**: sm, md, lg, fullscreen などのサイズ対応
-4. **ドラッグで閉じる**: モバイルでのスワイプで Drawer を閉じる
+3. **サイズバリエーション**: sm, md, lg, fullscreenなどのサイズ対応
+4. **ドラッグで閉じる**: モバイルでのスワイプでDrawerを閉じる
 
 ***
 
 ## 完了条件
 
 - [ ] すべてのチェック項目を確認した
-- [ ] Dialog, Drawer が Storybook で確認できる
-- [ ] EC サイト向けの確認ダイアログ、カート Drawer が動作する
+- [ ] Dialog, DrawerがStorybookで確認できる
+- [ ] ECサイト向けの確認ダイアログ、カートDrawerが動作する
 - [ ] アクセシビリティチェックに合格している
 
 ***
 
 ## 次のステップ
 
-[checklist.md](../checklist.md) で Phase 3 全体の理解度を確認しましょう。
+[checklist.md](../checklist.md) でPhase 3全体の理解度を確認しましょう。

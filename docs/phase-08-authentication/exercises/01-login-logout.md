@@ -29,7 +29,7 @@
 
 ## 目標
 
-NextAuth.js を使って、メール/パスワードでのログイン・ログアウト機能を実装します。
+NextAuth.jsを使って、メール/パスワードでのログイン・ログアウト機能を実装します。
 
 ***
 
@@ -57,8 +57,8 @@ flowchart LR
 
 ### 非機能要件
 
-- パスワードは bcrypt でハッシュ化
-- Zod でフォームバリデーション
+- パスワードはbcryptでハッシュ化
+- Zodでフォームバリデーション
 - 環境変数で機密情報を管理
 
 ***
@@ -143,7 +143,7 @@ export const { GET, POST } = handlers;
 <details>
 <summary>ヒントを見る</summary>
 
-Server Action を使ってログイン処理を実装します。
+Server Actionを使ってログイン処理を実装します。
 
 ```typescript
 // app/login/actions.ts
@@ -401,9 +401,9 @@ export function LogoutButton() {
 
 ## 発展課題
 
-1. **OAuth Provider の追加**: GitHub でのログインを追加してみましょう
+1. **OAuth Provider の追加**: GitHubでのログインを追加してみましょう
 2. **ユーザー登録機能**: 新規ユーザー登録ページを作成してみましょう
-3. **Remember Me**: 「ログイン状態を維持する」チェックボックスを追加してみましょう
+3. **Remember Me**:「ログイン状態を維持する」チェックボックスを追加してみましょう
 
 ***
 

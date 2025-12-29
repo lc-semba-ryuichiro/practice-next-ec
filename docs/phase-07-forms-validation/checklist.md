@@ -1,6 +1,6 @@
 # Phase 7: 自己チェックリスト
 
-Phase 7 の理解度を確認するためのチェックリストです。
+Phase 7の理解度を確認するためのチェックリストです。
 各項目を確認し、自信を持って「はい」と答えられるか確認してください。
 
 ## 目次
@@ -49,7 +49,7 @@ pie title Phase 7 学習領域の構成
 
 ### 理解度チェック
 
-- [ ] Zod の基本的なスキーマ（`z.string()`, `z.number()` など）を定義できる
+- [ ] Zodの基本的なスキーマ（`z.string()`, `z.number()` など）を定義できる
 - [ ] バリデーションルール（`min`, `max`, `email`, `regex`）を設定できる
 - [ ] オブジェクトスキーマ（`z.object()`）を定義できる
 - [ ] `z.infer` で型を推論できる
@@ -77,25 +77,25 @@ pie title Phase 7 学習領域の構成
 ### 理解度チェック
 
 - [ ] `'use server'` ディレクティブの使い方を理解している
-- [ ] Server Actions をファイル単位・関数単位で定義できる
+- [ ] Server Actionsをファイル単位・関数単位で定義できる
 - [ ] `FormData` からデータを取得できる
-- [ ] Server Actions でバリデーションを行い、エラーを返せる
+- [ ] Server Actionsでバリデーションを行い、エラーを返せる
 - [ ] `revalidatePath` でキャッシュを再検証できる
-- [ ] Server Actions と API Routes の使い分けを理解している
+- [ ] Server ActionsとAPI Routesの使い分けを理解している
 
 ### 確認質問
 
-1. Server Actions はどこで実行されますか？
+1. Server Actionsはどこで実行されますか？
 
    **回答例**: サーバーサイドで実行される
 
-2. Server Actions の CSRF 対策はどうなっていますか？
+2. Server ActionsのCSRF対策はどうなっていますか？
 
-   **回答例**: Next.js が自動的に CSRF トークンを処理するため、特別な設定は不要
+   **回答例**: Next.jsが自動的にCSRFトークンを処理するため、特別な設定は不要
 
-3. Server Actions で `redirect` を使う場合の注意点は？
+3. Server Actionsで `redirect` を使う場合の注意点は？
 
-   **回答例**: try-catch 外で呼び出す。`redirect` は例外をスローするため、catch ブロックでキャッチされてしまう
+   **回答例**: try-catch外で呼び出す。`redirect` は例外をスローするため、catchブロックでキャッチされてしまう
 
 ***
 
@@ -119,9 +119,9 @@ pie title Phase 7 学習領域の構成
 
    **回答例**: `<form>` の子コンポーネント内でのみ使用できる
 
-3. Server Action の引数はどうなりますか？
+3. Server Actionの引数はどうなりますか？
 
-   **回答例**: 第1引数に前回の状態（prevState）、第2引数に FormData が渡される
+   **回答例**: 第1引数に前回の状態（prevState）、第2引数にFormDataが渡される
 
 ***
 
@@ -165,7 +165,7 @@ pie title Phase 7 学習領域の構成
 
 1. `aria-invalid` と `aria-describedby` の役割は？
 
-   **回答例**: `aria-invalid` はフィールドがエラー状態であることを示し、`aria-describedby` はエラーメッセージの ID を関連付ける
+   **回答例**: `aria-invalid` はフィールドがエラー状態であることを示し、`aria-describedby` はエラーメッセージのIDを関連付ける
 
 2. ユーザーフレンドリーなエラーメッセージの特徴は？
 
@@ -181,12 +181,12 @@ pie title Phase 7 学習領域の構成
 
 ### 操作チェック
 
-- [ ] `packages/validators` に Zod スキーマを作成できる
-- [ ] Server Actions でフォームデータを処理できる
+- [ ] `packages/validators` にZodスキーマを作成できる
+- [ ] Server Actionsでフォームデータを処理できる
 - [ ] `useActionState` でフォームの状態を管理できる
-- [ ] 楽観的 UI 更新を実装できる
+- [ ] 楽観的UI更新を実装できる
 - [ ] エラーメッセージを適切に表示できる
-- [ ] 演習 1〜3 をすべて完了した
+- [ ] 演習1〜3をすべて完了した
 
 ***
 
@@ -242,4 +242,4 @@ pie title Phase 7 学習領域の構成
 
 チェックリストを確認して理解度に自信が持てたら、[Phase 8: 認証機能](../phase-08-authentication/README.md) に進みましょう。
 
-Phase 8 では、このフェーズで作成したフォームを使ってユーザー認証システムを構築します。
+Phase 8では、このフェーズで作成したフォームを使ってユーザー認証システムを構築します。

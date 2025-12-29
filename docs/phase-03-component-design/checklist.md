@@ -36,24 +36,24 @@ pie title Phase 3 学習内容の割合
 
 ### 理解度チェック
 
-- [ ] Atoms・Molecules・Organisms・Templates・Pages の 5 階層を説明できる
-- [ ] EC サイトのコンポーネント（Button, ProductCard, Header など）を Atomic Design の階層に分類できる
-- [ ] shadcn/ui コンポーネントがどの階層に属するか判断できる
-- [ ] packages/ui のディレクトリ構成を設計できる
+- [ ] Atoms・Molecules・Organisms・Templates・Pagesの5階層を説明できる
+- [ ] ECサイトのコンポーネント（Button, ProductCard, Headerなど）をAtomic Designの階層に分類できる
+- [ ] shadcn/uiコンポーネントがどの階層に属するか判断できる
+- [ ] packages/uiのディレクトリ構成を設計できる
 
 ### 確認質問
 
 1. **Atoms と Molecules の違いは？**
 
-   Atoms は Button, Input, Icon など、これ以上分解できない最小単位の UI 要素である。Molecules は FormField (Label + Input + Error) のように、複数の Atoms を組み合わせて単一の機能を持つコンポーネントである。
+   AtomsはButton, Input, Iconなど、これ以上分解できない最小単位のUI要素である。MoleculesはFormField (Label + Input + Error) のように、複数のAtomsを組み合わせて単一の機能を持つコンポーネントである。
 
 2. **ProductCard は Organisms に分類される理由は？**
 
-   ProductCard は Image, Title, Price, Button など複数の Molecules や Atoms を組み合わせた、独立して機能する UI ブロックだからである。単体でも意味を持ち、様々なページで再利用できる。
+   ProductCardはImage, Title, Price, Buttonなど複数のMoleculesやAtomsを組み合わせた、独立して機能するUIブロックだからである。単体でも意味を持ち、さまざまなページで再利用できる。
 
 3. **Templates と Pages の違いは？**
 
-   Templates はページのワイヤーフレーム（構造）を定義し、実際のデータは持たない。Pages は Templates に実データを流し込んだ最終的なページで、Next.js では app/ ディレクトリ内の page.tsx がこれに該当する。
+   Templatesはページのワイヤーフレーム（構造）を定義し、実際のデータは持たない。PagesはTemplatesに実データを流し込んだ最終的なページで、Next.jsではapp/ ディレクトリ内のpage.tsxがこれに該当する。
 
 ***
 
@@ -61,10 +61,10 @@ pie title Phase 3 学習内容の割合
 
 ### 理解度チェック
 
-- [ ] Compound Components パターンの目的と利点を説明できる
-- [ ] React Context を使った状態共有を実装できる
-- [ ] Tabs, Accordion, Dialog を Compound Components パターンで使用できる
-- [ ] Props 地獄を避ける設計ができる
+- [ ] Compound Componentsパターンの目的と利点を説明できる
+- [ ] React Contextを使った状態共有を実装できる
+- [ ] Tabs, Accordion, DialogをCompound Componentsパターンで使用できる
+- [ ] Props地獄を避ける設計ができる
 
 ### 確認質問
 
@@ -73,17 +73,17 @@ pie title Phase 3 学習内容の割合
    **回答例**:
 
    - (1) 柔軟性: 子コンポーネントの順序や構成を自由に変更できる
-   - (2) 可読性: JSX の構造が HTML のように直感的
+   - (2) 可読性: JSXの構造がHTMLのように直感的
    - (3) カスタマイズ性: 各子コンポーネントに個別のスタイルを適用できる
-   - (4) 状態の隠蔽: 内部状態が Context で管理され、利用者は意識しない
+   - (4) 状態の隠蔽: 内部状態がContextで管理され、利用者は意識しない
 
 2. **Context を使った状態共有の実装手順は？**
 
    **回答例**:
 
-   - (1) createContext で Context を作成する
-   - (2) Provider コンポーネントで値を提供する
-   - (3) 子コンポーネントで useContext を使って値を取得する
+   - (1) createContextでContextを作成する
+   - (2) Providerコンポーネントで値を提供する
+   - (3) 子コンポーネントでuseContextを使って値を取得する
    - (4) カスタムフック (useXxxContext) でエラーハンドリングを追加する
 
 3. **shadcn/ui で Compound Components パターンを採用しているコンポーネントは？**
@@ -93,7 +93,7 @@ pie title Phase 3 学習内容の割合
    - Accordion (Root・Item・Trigger・Content)
    - Tabs (Root・List・Trigger・Content)
    - Dialog (Root・Trigger・Portal・Content・Close)
-   - DropdownMenu など
+   - DropdownMenuなど
 
 ***
 
@@ -102,24 +102,24 @@ pie title Phase 3 学習内容の割合
 ### 理解度チェック
 
 - [ ] `use` プレフィックスの命名規則を理解している
-- [ ] useState, useEffect, useCallback を組み合わせてカスタムフックを作成できる
-- [ ] useToggle, useLocalStorage, useDebounce を実装できる
-- [ ] EC サイト向けフック (useCart, useFavorites) を設計できる
-- [ ] renderHook を使ってカスタムフックをテストできる
+- [ ] useState, useEffect, useCallbackを組み合わせてカスタムフックを作成できる
+- [ ] useToggle, useLocalStorage, useDebounceを実装できる
+- [ ] ECサイト向けフック (useCart, useFavorites) を設計できる
+- [ ] renderHookを使ってカスタムフックをテストできる
 
 ### 確認質問
 
 1. **カスタムフックの命名規則は？**
 
-   **回答例**: 必ず `use` プレフィックスで始める。例: useCart, useToggle, useDebounce。これにより React がフックとして認識し、フックのルール（条件分岐内で呼ばない等）を適用できる。
+   **回答例**: 必ず `use` プレフィックスで始める。例: useCart, useToggle, useDebounce。これによりReactがフックとして認識し、フックのルール（条件分岐内で呼ばないなど）を適用できる。
 
 2. **useLocalStorage の実装で注意すべき点は？**
 
    **回答例**:
 
-   - (1) SSR 対応: サーバーサイドでは window が存在しないため初期値を返す
-   - (2) useEffect 内でのみ localStorage にアクセスする
-   - (3) JSON.parse/stringify でシリアライズする
+   - (1) SSR対応: サーバーサイドではwindowが存在しないため初期値を返す
+   - (2) useEffect内でのみlocalStorageにアクセスする
+   - (3) JSON.parse/stringifyでシリアライズする
    - (4) エラーハンドリングを行う
 
 3. **カスタムフックのテストはどう書くか**
@@ -132,30 +132,30 @@ pie title Phase 3 学習内容の割合
 
 ### 理解度チェック
 
-- [ ] WCAG 2.1 の POUR 原則を説明できる
-- [ ] ARIA 属性 (aria-label, aria-describedby, aria-expanded 等) を正しく使用できる
+- [ ] WCAG 2.1のPOUR原則を説明できる
+- [ ] ARIA属性 (aria-label, aria-describedby, aria-expandedなど) を正しく使用できる
 - [ ] キーボードナビゲーション (Tab, Escape, Enter) に対応できる
 - [ ] フォーカストラップを実装できる
-- [ ] Storybook addon-a11y でアクセシビリティをチェックできる
+- [ ] Storybook addon-a11yでアクセシビリティをチェックできる
 
 ### 確認質問
 
 1. **POUR 原則とは何か**
 
-   **回答例**: WCAG 2.1 の 4 つの原則である。
+   **回答例**: WCAG 2.1の4つの原則である。
 
    - Perceivable (知覚可能): 情報を認識できる
    - Operable (操作可能): キーボードで操作できる
    - Understandable (理解可能): 内容を理解できる
-   - Robust (堅牢): 様々な技術で解釈できる
+   - Robust (堅牢): さまざまな技術で解釈できる
 
 2. **aria-describedby と aria-labelledby の違いは？**
 
-   **回答例**: aria-labelledby は要素の「名前」を指定（フォーム入力のラベル等）。aria-describedby は要素の「追加説明」を指定（エラーメッセージ、ヒント等）。どちらも他の要素の ID を参照する。
+   **回答例**: aria-labelledbyは要素の「名前」を指定（フォーム入力のラベルなど）。aria-describedbyは要素の「追加説明」を指定（エラーメッセージ、ヒントなど）。どちらも他の要素のIDを参照する。
 
 3. **モーダルのフォーカストラップとは？**
 
-   **回答例**: モーダルが開いている間、Tab キーでのフォーカス移動をモーダル内に閉じ込めること。最後の要素で Tab を押すと最初の要素に戻り、最初の要素で Shift+Tab を押すと最後の要素に移動する。
+   **回答例**: モーダルが開いている間、Tabキーでのフォーカス移動をモーダル内に閉じ込めること。最後の要素でTabを押すと最初の要素に戻り、最初の要素でShift+Tabを押すと最後の要素に移動する。
 
 ***
 
@@ -176,11 +176,11 @@ pnpm storybook
 
 ### 実装確認
 
-- [ ] packages/ui/src/atoms/ に Button, Input, Badge などが存在する
-- [ ] packages/ui/src/molecules/ に FormField, SearchBox などが存在する
-- [ ] packages/ui/src/organisms/ に Dialog, Drawer, Accordion などが存在する
-- [ ] Storybook で各コンポーネントのストーリーが表示される
-- [ ] addon-a11y でエラーが出ていない
+- [ ] packages/ui/src/atoms/ にButton, Input, Badgeなどが存在する
+- [ ] packages/ui/src/molecules/ にFormField, SearchBoxなどが存在する
+- [ ] packages/ui/src/organisms/ にDialog, Drawer, Accordionなどが存在する
+- [ ] Storybookで各コンポーネントのストーリーが表示される
+- [ ] addon-a11yでエラーが出ていない
 
 ***
 
@@ -197,11 +197,11 @@ pnpm storybook
 
 ## 次のステップ
 
-Phase 3 を完了したら、[Phase 4: 状態管理（Jotai）](../phase-04-state-management/README.md) に進みましょう。
+Phase 3を完了したら、[Phase 4: 状態管理（Jotai）](../phase-04-state-management/README.md) に進みましょう。
 
-Phase 4 では、以下の内容を学びます。
+Phase 4では、以下の内容を学びます。
 
-- Jotai の Atom の基本
-- 派生 Atom と永続化
+- JotaiのAtomの基本
+- 派生Atomと永続化
 - ショッピングカート機能の実装
 - お気に入り機能の実装

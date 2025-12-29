@@ -46,10 +46,10 @@
 
 ## 概要
 
-Playwright は Microsoft が開発した E2E（End-to-End）テストフレームワークです。
+PlaywrightはMicrosoftが開発したE2E（End-to-End）テストフレームワークです。
 実際のブラウザを操作してアプリケーション全体をテストし、ユーザー体験のフローを確認します。
 
-このセクションでは、Playwright を使って EC サイトの購入フローなどをテストする方法を学びます。
+このセクションでは、Playwrightを使ってECサイトの購入フローなどをテストする方法を学びます。
 
 ***
 
@@ -57,7 +57,7 @@ Playwright は Microsoft が開発した E2E（End-to-End）テストフレー�
 
 ### 特徴
 
-- Chromium、Firefox、WebKit のクロスブラウザをサポート
+- Chromium、Firefox、WebKitのクロスブラウザをサポート
 - 要素の表示を自動的に待機する
 - テスト実行の詳細なログと動画を記録できる
 - 複数のテストを同時に並列実行可能
@@ -458,7 +458,7 @@ test.describe("商品検索", () => {
 npx playwright test --ui
 ```
 
-インタラクティブな UI でテストを実行・デバッグできます。
+インタラクティブなUIでテストを実行・デバッグできます。
 
 ### デバッグモード
 
@@ -566,9 +566,9 @@ await page.getByRole("article").first().getByRole("button", { name: "カート�
 
 ## 確認質問
 
-1. E2E テストとユニットテストの使い分けはどうしますか？
+1. E2Eテストとユニットテストの使い分けはどうしますか？
 
-   **回答例**: ユニットテストは個別の関数やコンポーネントの動作を高速にテストする。E2E テストはユーザーが実際に行う操作フロー全体をテストし、システム全体の統合が正しく動作することを確認する。E2E は実行コストが高いため、クリティカルなパスに限定して使用する。
+   **回答例**: ユニットテストは個別の関数やコンポーネントの動作を高速にテストする。E2Eテストはユーザーが実際に行う操作フロー全体をテストし、システム全体の統合が正しく動作することを確認する。E2Eは実行コストが高いため、クリティカルなパスに限定して使用する。
 
 2. `test.describe()` の役割は何ですか？
 
@@ -586,4 +586,4 @@ await page.getByRole("article").first().getByRole("button", { name: "カート�
 
 ## 次のステップ
 
-Playwright の基礎を学んだら、次は [playwright-bdd で Gherkin シナリオ](./05-playwright-bdd.md) で BDD スタイルのテストを学びましょう。
+Playwrightの基礎を学んだら、次は [playwright-bdd で Gherkin シナリオ](./05-playwright-bdd.md) でBDDスタイルのテストを学びましょう。

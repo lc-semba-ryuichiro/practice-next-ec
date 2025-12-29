@@ -34,7 +34,7 @@
 
 ## Suspense とは
 
-React の Suspense は、コンポーネントがデータを待っている間にフォールバック UI を表示する仕組みです。Next.js App Router では、この仕組みを活用してストリーミング SSR を実現しています。
+ReactのSuspenseは、コンポーネントがデータを待っている間にフォールバックUIを表示する仕組みです。Next.js App Routerでは、この仕組みを活用してストリーミングSSRを実現しています。
 
 ```mermaid
 sequenceDiagram
@@ -54,14 +54,14 @@ sequenceDiagram
 ### メリット
 
 - 初期表示が速い - シェルをすぐに返せる
-- UX 向上 - ローディング状態を明示できる
+- UX向上 - ローディング状態を明示できる
 - 段階的表示 - 準備できた部分から順次表示
 
 ***
 
 ## loading.tsx の使い方
 
-App Router では、`loading.tsx` ファイルを配置するだけで、自動的に Suspense 境界が作られます。
+App Routerでは、`loading.tsx` ファイルを配置するだけで、自動的にSuspense境界が作られます。
 
 ### 基本的な使い方
 
@@ -184,7 +184,7 @@ export async function Recommendations(): Promise<React.ReactElement> {
 
 ## Skeleton コンポーネントの設計
 
-Skeleton は、コンテンツのレイアウトを模したプレースホルダーです。Tailwind CSS の `animate-pulse` クラスで簡単に実装できます。
+Skeletonは、コンテンツのレイアウトを模したプレースホルダーです。Tailwind CSSの `animate-pulse` クラスで簡単に実装できます。
 
 ### 商品カード Skeleton
 
@@ -269,7 +269,7 @@ export function ProductDetailSkeleton(): React.ReactElement {
 
 ## Streaming SSR
 
-Next.js App Router は、Suspense を活用した Streaming SSR をサポートしています。
+Next.js App Routerは、Suspenseを活用したStreaming SSRをサポートしています。
 
 ```mermaid
 graph LR
@@ -286,21 +286,21 @@ graph LR
 
 ### 動作の仕組み
 
-1. サーバーは `<Suspense>` で囲まれていない部分を即座に HTML として送信
+1. サーバーは `<Suspense>` で囲まれていない部分を即座にHTMLとして送信
 2. データ取得が完了したら、その部分を追加で送信（ストリーミング）
-3. ブラウザは受け取った HTML を順次レンダリング
+3. ブラウザは受け取ったHTMLを順次レンダリング
 
 ### 利点
 
 - TTFB（Time To First Byte）の短縮 - シェルをすぐに返せる
-- FCP（First Contentful Paint）の改善 - ローディング UI がすぐに表示される
-- 並列処理 - 複数の Suspense 境界が並列でデータを取得
+- FCP（First Contentful Paint）の改善 - ローディングUIがすぐに表示される
+- 並列処理 - 複数のSuspense境界が並列でデータを取得
 
 ***
 
 ## ErrorBoundary との組み合わせ
 
-Suspense と ErrorBoundary を組み合わせることで、ローディングとエラーの両方を適切に処理できます。
+SuspenseとErrorBoundaryを組み合わせることで、ローディングとエラーの両方を適切に処理できます。
 
 ### error.tsx の配置
 
@@ -456,7 +456,7 @@ app/products/loading.tsx → /products 全体のローディング
 
 ### 4. 並列データ取得を活用
 
-複数の Suspense 境界を配置し、準備できたものから表示。
+複数のSuspense境界を配置し、準備できたものから表示。
 
 ***
 
@@ -473,4 +473,4 @@ app/products/loading.tsx → /products 全体のローディング
 
 ## 次のステップ
 
-Suspense と loading を理解したら、[MSW セットアップ](./04-msw-setup.md) で API モックの環境を構築しましょう。
+Suspenseとloadingを理解したら、[MSW セットアップ](./04-msw-setup.md) でAPIモックの環境を構築しましょう。

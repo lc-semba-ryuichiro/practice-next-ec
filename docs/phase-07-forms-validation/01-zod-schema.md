@@ -41,8 +41,8 @@
 
 ## Zod とは
 
-**Zod** は、TypeScript ファーストのスキーマ宣言・バリデーションライブラリです。
-スキーマを定義するだけで、ランタイムのバリデーションと TypeScript の型を同時に得られます。
+**Zod** は、TypeScriptファーストのスキーマ宣言・バリデーションライブラリです。
+スキーマを定義するだけで、ランタイムのバリデーションとTypeScriptの型を同時に得られます。
 
 ```typescript
 import { z } from "zod";
@@ -584,7 +584,7 @@ async function validateFormData(
 ### Zod を使うメリット
 
 - 型とバリデーションを一元管理できる
-- TypeScript の型を自動推論できる
+- TypeScriptの型を自動推論できる
 - フロントエンドとバックエンドでスキーマを共有できる
 - 詳細なエラーメッセージを設定できる
 - カスタムバリデーションが柔軟に書ける
@@ -600,4 +600,4 @@ async function validateFormData(
 
 ## 次のステップ
 
-Zod スキーマの定義方法を理解したら、[Server Actions 基礎](./02-server-actions.md) に進んで、サーバーサイドでのフォーム処理を学びましょう。
+Zodスキーマの定義方法を理解したら、[Server Actions 基礎](./02-server-actions.md) に進んで、サーバーサイドでのフォーム処理を学びましょう。

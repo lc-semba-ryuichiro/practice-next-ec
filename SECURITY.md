@@ -14,11 +14,11 @@
 
 ### 報告方法
 
-GitHub の [Security Advisories](https://github.com/lc-semba-ryuichiro/practice-next-ec/security/advisories/new) 機能を使用して非公開で報告してください。
+GitHubの [Security Advisories](https://github.com/lc-semba-ryuichiro/practice-next-ec/security/advisories/new) 機能を使用して非公開で報告してください。
 
 ### 報告に含める情報
 
-- 脆弱性の種類（XSS、CSRF、インジェクション等）
+- 脆弱性の種類（XSS、CSRF、インジェクションなど）
 - 影響を受けるファイルやコンポーネント
 - 再現手順
 - 想定される影響
@@ -33,4 +33,4 @@ GitHub の [Security Advisories](https://github.com/lc-semba-ryuichiro/practice-
 
 ## 注意事項
 
-このプロジェクトは学習目的であり、本番環境での使用を想定していません。実際の EC サイト構築時は、追加のセキュリティ対策を検討してください。
+このプロジェクトは学習目的であり、本番環境での使用を想定していません。実際のECサイト構築時は、追加のセキュリティ対策を検討してください。

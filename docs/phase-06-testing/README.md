@@ -23,8 +23,8 @@
 ## 概要
 
 テストファーストで開発できるスキルを習得するフェーズです。
-Vitest、Testing Library、Playwright、fast-check を使った各種テスト手法を学びます。
-EC サイトの品質を担保するテスト戦略を身につけます。
+Vitest、Testing Library、Playwright、fast-checkを使った各種テスト手法を学びます。
+ECサイトの品質を担保するテスト戦略を身につけます。
 
 ***
 
@@ -38,16 +38,16 @@ EC サイトの品質を担保するテスト戦略を身につけます。
 
 ## 所要時間目安
 
-約 8〜12 時間です。
+約8〜12時間です。
 
 ***
 
 ## 前提知識
 
-- Phase 1〜5 を完了していること
-- React コンポーネントの基本的な理解
-- Jotai による状態管理の理解
-- async/await の基本
+- Phase 1〜5を完了していること
+- Reactコンポーネントの基本的な理解
+- Jotaiによる状態管理の理解
+- async/awaitの基本
 
 ***
 
@@ -55,12 +55,12 @@ EC サイトの品質を担保するテスト戦略を身につけます。
 
 このフェーズを完了すると、以下ができるようになります。
 
-- [ ] Vitest でユニットテストを書ける
-- [ ] Testing Library でコンポーネントテストを書ける
-- [ ] Storybook + addon-vitest でインタラクションテストを書ける
-- [ ] Playwright で E2E テストを書ける
-- [ ] playwright-bdd で Gherkin シナリオを記述できる
-- [ ] fast-check で Property-based テストを書ける
+- [ ] Vitestでユニットテストを書ける
+- [ ] Testing Libraryでコンポーネントテストを書ける
+- [ ] Storybook + addon-vitestでインタラクションテストを書ける
+- [ ] PlaywrightでE2Eテストを書ける
+- [ ] playwright-bddでGherkinシナリオを記述できる
+- [ ] fast-checkでProperty-basedテストを書ける
 - [ ] テストピラミッドに基づくテスト戦略を説明できる
 
 ***
@@ -145,7 +145,7 @@ graph TD
 
 ## 関連する EC サイト機能
 
-このフェーズで以下の EC 機能をテスト対象として扱います。
+このフェーズで以下のEC機能をテスト対象として扱います。
 
 ```mermaid
 graph TD
@@ -196,18 +196,18 @@ graph TD
 
 ## 自己チェックリスト
 
-Phase 6 を完了する前に、以下を確認してください。
+Phase 6を完了する前に、以下を確認してください。
 
-- [ ] describe / it / expect の使い方を理解している
+- [ ] describe / it / expectの使い方を理解している
 - [ ] vi.fn() / vi.mock() / vi.spyOn() の違いを説明できる
-- [ ] Testing Library のクエリ優先順位を説明できる
-- [ ] userEvent でユーザー操作をシミュレートできる
-- [ ] Storybook の play 関数でインタラクションテストを書ける
-- [ ] Playwright でページ遷移とアサーションができる
-- [ ] Gherkin 構文で Given / When / Then を記述できる
-- [ ] fast-check で不変条件をテストできる
+- [ ] Testing Libraryのクエリ優先順位を説明できる
+- [ ] userEventでユーザー操作をシミュレートできる
+- [ ] Storybookのplay関数でインタラクションテストを書ける
+- [ ] Playwrightでページ遷移とアサーションができる
+- [ ] Gherkin構文でGiven / When / Thenを記述できる
+- [ ] fast-checkで不変条件をテストできる
 - [ ] テストピラミッドの各層の特徴を説明できる
-- [ ] TDD の Red-Green-Refactor サイクルを説明できる
+- [ ] TDDのRed-Green-Refactorサイクルを説明できる
 
 詳細なチェックリストは [checklist.md](./checklist.md) を参照してください。
 
@@ -215,4 +215,4 @@ Phase 6 を完了する前に、以下を確認してください。
 
 ## 次のフェーズ
 
-Phase 6 を完了したら、[Phase 7: フォーム + Server Actions](../phase-07-forms-validation/README.md) に進みましょう。
+Phase 6を完了したら、[Phase 7: フォーム + Server Actions](../phase-07-forms-validation/README.md) に進みましょう。

@@ -30,7 +30,7 @@
 
 ## 概要
 
-動的ルート（Dynamic Routes）を使うと、URL パラメータに基づいてページを動的に生成できます。EC サイトでは、商品詳細ページ（`/products/123`）やカテゴリページ（`/categories/shoes`）などで必須の機能です。
+動的ルート（Dynamic Routes）を使うと、URLパラメータに基づいてページを動的に生成できます。ECサイトでは、商品詳細ページ（`/products/123`）やカテゴリページ（`/categories/shoes`）などで必須の機能です。
 
 ***
 
@@ -49,7 +49,7 @@ app/
 
 ### パラメータの受け取り
 
-Next.js 15 以降では、`params` は Promise として渡されます。
+Next.js 15以降では、`params` はPromiseとして渡されます。
 
 ```tsx
 // app/products/[id]/page.tsx
@@ -87,7 +87,7 @@ graph TD
 
 ## 単一パラメータ \[param]
 
-最も一般的なパターンです。URL の一部を変数として受け取ります。
+最も一般的なパターンです。URLの一部を変数として受け取ります。
 
 ### 商品詳細ページの例
 
@@ -304,7 +304,7 @@ export default async function ProductPage({ params }: Props): Promise<React.Reac
 
 ## searchParams（クエリパラメータ）
 
-動的ルートとは別に、クエリパラメータも受け取れます。Next.js 15 以降では、`searchParams` も `params` と同様に Promise として渡されます。
+動的ルートとは別に、クエリパラメータも受け取れます。Next.js 15以降では、`searchParams` も `params` と同様にPromiseとして渡されます。
 
 ```tsx
 // app/products/page.tsx

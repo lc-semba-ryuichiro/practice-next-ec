@@ -1,115 +1,95 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+このファイルは、Claude Code (claude.ai/code) がこのリポジトリで作業する際のガイダンスを提供します。
 
 ## プロジェクト概要
 
-Next.js 16 の App Router を使用した EC サイト練習プロジェクト。TypeScript と Tailwind CSS を採用し、段階的な学習ガイド（Phase 0〜18）に沿って EC サイトを構築していく。
+React/Next.js を学習しながら EC サイトを構築するための Turborepo ベースのモノレポ。pnpm ワークスペースと厳格なカタログバージョニングを使用。
 
-## 開発コマンド
+## よく使うコマンド
 
 ```bash
-# 開発サーバー（ポート 3000）
-pnpm dev
+# 開発
+pnpm dev                    # 全開発サーバー起動 (web: 3000, admin: 3000)
+pnpm storybook              # Storybook 起動 (ポート 6006)
 
-# ビルド
-pnpm build
+# ビルド & 品質チェック
+pnpm build                  # 全パッケージビルド
+pnpm lint                   # Turborepo 経由で ESLint 実行
+pnpm typecheck              # TypeScript 型チェック
+pnpm fix                    # 自動修正: prettier, eslint, stylelint
 
-# リント（全ツール並列実行）
-pnpm lint
+# テスト
+pnpm test                   # Vitest テスト実行
+pnpm test:e2e               # Playwright E2E テスト
+pnpm test:ui                # Vitest UI モード
 
-# 型チェックのみ
-pnpm typecheck
-
-# 自動修正（Prettier → ESLint → Stylelint）
-pnpm fix
-
-# Storybook 開発モード（ポート 6006）
-pnpm storybook
-
-# Storybook 静的ビルド
-pnpm build-storybook
+# アプリ個別実行（アプリディレクトリから実行）
+cd apps/web && pnpm dev     # Next.js web アプリのみ
+cd apps/admin && pnpm dev   # Vite admin アプリのみ
+cd apps/admin && pnpm test  # admin テストのみ
 ```
 
-## 技術スタック
+## アーキテクチャ
 
-- **フレームワーク**: Next.js 16 (App Router)
-- **言語**: TypeScript 5.9+ (strict モード)
-- **スタイリング**: Tailwind CSS 4
-- **状態管理**: Jotai
-- **バリデーション**: Zod 4
-- **テスト**: Vitest, Playwright, Testing Library, fast-check
-- **コンポーネント開発**: Storybook 10
-- **パッケージマネージャー**: pnpm 10 (workspace catalog でバージョン管理)
-- **ランタイム**: Node.js 24 (mise で管理)
-- **UI コンポーネント**: shadcn/ui (new-york スタイル、Lucide アイコン)
+```
+apps/
+├── web/                    # Next.js 16 (App Router) - EC フロントエンド
+│                           # 使用: Jotai, react-hook-form, next-intl, pino
+└── admin/                  # Vite + TanStack React Start - 管理画面
+                            # 使用: TanStack (Router, Query, Table, Form), tRPC
 
-## プロジェクト構成
+packages/
+├── ui/                     # 共有 shadcn/ui コンポーネント
+├── lib/                    # 共有ユーティリティ関数
+└── types/                  # 共有 TypeScript 型定義
 
-```text
-app/           # Next.js App Router のページとレイアウト
-stories/       # Storybook のストーリーとコンポーネントファイル
-types/         # 共有 TypeScript 型定義
-lib/           # ユーティリティ関数（cn() など）
-docs/          # 学習ガイド（Phase 0〜18）
-.storybook/    # Storybook 設定
+tooling/
+└── eslint/                 # 共有 ESLint 設定 (base, react, next, storybook, test)
 ```
 
-## リント設定
-
-ESLint と oxlint の両方を使用:
-
-- **ESLint**: `eslint.config.mjs` - Next.js core-web-vitals + TypeScript 設定
-- **oxlint**: `.oxlintrc.json` - Next.js、TypeScript、React Hooks、JSX a11y ルール
-
-## パスエイリアス
-
-`@/*` でプロジェクトルートからインポート可能:
-
-```typescript
-import { cn } from "@/lib/utils";
-import { SomeType } from "@/types/validator";
-```
-
-## shadcn/ui 設定
-
-`components.json` で設定済み:
-
-- スタイル: new-york
-- RSC: 有効
-- アイコン: lucide-react
-- コンポーネント: `@/components/ui`
-- ユーティリティ: `@/lib/utils` (`cn()` 関数)
-
-## pnpm workspace
-
-`pnpm-workspace.yaml` で全依存関係のバージョンを catalog で一元管理。`catalogMode: strict` により、catalog に定義されていないバージョンの使用を禁止。
-
-## Git Hooks (Lefthook)
-
-- **pre-commit**: Prettier でフォーマットチェック
-- **commit-msg**: Conventional Commits 形式を強制（feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert）
-- **pre-push**: ESLint, TypeScript, Stylelint, Secretlint, Textlint, Build を並列実行
-
-## コーディング規約
+## コードスタイル要件
 
 ### TypeScript
 
-- `strict: true` に加え `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes` 等の厳格オプション有効
-- 関数には明示的な戻り値型を指定（`explicit-function-return-type`）
-- 型インポートは `import { type Foo }` 形式（inline-type-imports）
-- Boolean 変数は `is`, `has`, `should`, `can`, `will`, `did` プレフィックス必須
-- インターフェースに `I` プレフィックス禁止
+- ターゲット: ES2024、strict モード + `noUncheckedIndexedAccess`, `exactOptionalPropertyTypes`
+- 関数には明示的な戻り値の型が必要
+- `any` 型は使用禁止
 
-### インポート順序
+### ESLint（厳格な設定）
 
-1. React / Next.js
-2. 外部ライブラリ
-3. 内部モジュール（`@/*`）
-4. 相対パス
-5. 型インポート
+- default export 禁止: named export のみ使用
+- boolean 変数は `is*`, `has*`, `should*` プレフィックス必須
+- import はパスグループ別にアルファベット順 (builtin → external → internal)
+- `eslint-plugin-boundaries` によるアーキテクチャ境界の強制
 
-### ファイル命名
+### Prettier
 
-- kebab-case または PascalCase（コンポーネント）
-- default export は App Router 規約ファイル（page.tsx, layout.tsx 等）と Storybook のみ許可
+- ダブルクォート、セミコロン、2 スペースインデント、100 文字幅
+- ES5 スタイルの末尾カンマ
+- `prettier-plugin-tailwindcss` による Tailwind クラスのソート
+
+## パッケージ管理
+
+- **pnpm のみ** - `preinstall` スクリプトで強制
+- 全依存関係は `pnpm-workspace.yaml` の `catalog:` バージョニングを使用
+- ワークスペースパッケージは `workspace:*` プロトコルを使用
+- 依存関係の追加: まずカタログに追加し、`catalog:` で参照
+
+## Git フック (Lefthook)
+
+- **pre-commit**: Prettier チェックのみ（高速）
+- **commit-msg**: Conventional Commits (commitlint)
+- **pre-push**: 全 lint, typecheck, stylelint, secretlint, textlint, build, audit
+
+## shadcn/ui コンポーネントの追加
+
+```bash
+pnpm dlx shadcn@latest add button
+```
+
+## ランタイム要件
+
+- Node.js >= 24.12.0
+- pnpm >= 10.26.2
+- `mise install` で正しいバージョンをセットアップ

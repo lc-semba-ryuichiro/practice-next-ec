@@ -34,8 +34,8 @@
 
 ## JSX とは
 
-**JSX（JavaScript XML）** は、JavaScript の中に HTML のような構文を書ける拡張構文です。
-React でコンポーネントの UI を記述するために使用します。
+**JSX（JavaScript XML）** は、JavaScriptの中にHTMLのような構文を書ける拡張構文です。
+ReactでコンポーネントのUIを記述するために使用します。
 
 ### JSX の例
 
@@ -51,7 +51,7 @@ function ProductCard(): React.ReactElement {
 }
 ```
 
-JSX は最終的に JavaScript にトランスパイルされます。
+JSXは最終的にJavaScriptにトランスパイルされます。
 
 ```javascript
 // 上記の JSX はこのように変換される
@@ -71,7 +71,7 @@ function ProductCard() {
 
 ### 1. 必ず1つの親要素で囲む
 
-JSX は **1 つの親要素** を返す必要があります。
+JSXは **1 つの親要素** を返す必要があります。
 
 ```tsx
 // NG: 複数の要素を直接返せない
@@ -95,7 +95,7 @@ function Good(): React.ReactElement {
 
 ### 2. すべてのタグを閉じる
 
-HTML では省略可能な閉じタグも、JSX では必須です。
+HTMLでは省略可能な閉じタグも、JSXでは必須です。
 
 ```tsx
 // NG: 閉じタグがない
@@ -111,7 +111,7 @@ HTML では省略可能な閉じタグも、JSX では必須です。
 
 ### 3. コンポーネントは大文字で始める
 
-React コンポーネントは **PascalCase（大文字始まり）** で命名します。
+Reactコンポーネントは **PascalCase（大文字始まり）** で命名します。
 
 ```tsx
 // HTML 要素（小文字）
@@ -129,7 +129,7 @@ React コンポーネントは **PascalCase（大文字始まり）** で命名�
 
 ## 式の埋め込み
 
-中括弧 `{}` を使って JavaScript の式を JSX に埋め込めます。
+中括弧 `{}` を使ってJavaScriptの式をJSXに埋め込めます。
 
 ### 変数の表示
 
@@ -182,7 +182,7 @@ function PriceDisplay(): React.ReactElement {
 
 ## HTML との違い
 
-JSX は HTML に似ていますが、いくつかの重要な違いがあります。
+JSXはHTMLに似ていますが、いくつかの重要な違いがあります。
 
 ### 属性名の違い
 
@@ -207,7 +207,7 @@ JSX は HTML に似ていますが、いくつかの重要な違いがありま�
 
 ### style 属性
 
-HTML では文字列ですが、JSX では **オブジェクト** で指定します。
+HTMLでは文字列ですが、JSXでは **オブジェクト** で指定します。
 
 ```tsx
 // HTML
@@ -217,7 +217,7 @@ HTML では文字列ですが、JSX では **オブジェクト** で指定し�
 <div style={{ color: "red", fontSize: "16px", backgroundColor: "#f0f0f0" }}>
 ```
 
-プロパティ名は camelCase に変換されます。
+プロパティ名はcamelCaseに変換されます。
 
 | CSS                | JSX style オブジェクト  |
 | ------------------ | ----------------- |
@@ -230,7 +230,7 @@ HTML では文字列ですが、JSX では **オブジェクト** で指定し�
 
 ## JSX でのコメント
 
-JSX 内でコメントを書くには `{/* */}` を使います。
+JSX内でコメントを書くには `{/* */}` を使います。
 
 ```tsx
 function ProductCard(): React.ReactElement {
@@ -257,7 +257,7 @@ function ProductCard(): React.ReactElement {
 
 ## React Fragment
 
-余分な DOM 要素を追加せずに複数の要素をグループ化できます。
+余分なDOM要素を追加せずに複数の要素をグループ化できます。
 
 ### React.Fragment を使う方法
 
@@ -321,7 +321,7 @@ function Table(): React.ReactElement {
 
 ## 三項演算子による条件分岐
 
-JSX 内で `if` 文は使えませんが、三項演算子は使えます。
+JSX内で `if` 文は使えませんが、三項演算子は使えます。
 
 ```tsx
 function StockBadge({ inStock }: { inStock: boolean }): React.ReactElement {
@@ -504,5 +504,5 @@ function Good(): React.ReactElement {
 
 ## 次のステップ
 
-JSX の基本を理解したら、[コンポーネントと props](./02-components-props.md) に進んで、
+JSXの基本を理解したら、[コンポーネントと props](./02-components-props.md) に進んで、
 再利用可能なコンポーネントの作り方を学びましょう。

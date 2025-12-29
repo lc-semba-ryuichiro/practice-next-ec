@@ -36,8 +36,8 @@
 
 ## なぜ永続化が必要か
 
-通常の Atom は、ページをリロードすると値が失われます。
-EC サイトでは、以下のような状態を永続化します。
+通常のAtomは、ページをリロードすると値が失われます。
+ECサイトでは、以下のような状態を永続化します。
 
 ```mermaid
 graph TD
@@ -220,8 +220,8 @@ const checkoutFormAtom = atomWithStorage(
 
 ### 問題：Hydration Mismatch
 
-Server Side Rendering (SSR) では、サーバーとクライアントで localStorage の値が異なるため、
-Hydration Mismatch が発生する可能性があります。
+Server Side Rendering (SSR) では、サーバーとクライアントでlocalStorageの値が異なるため、
+Hydration Mismatchを引き起こす可能性があります。
 
 ```mermaid
 graph TD
@@ -380,11 +380,11 @@ const createEncryptedStorage = <T>(secret: string) =>
 
 ### localStorage の確認
 
-ブラウザの DevTools で localStorage の内容を確認できます。
+ブラウザのDevToolsでlocalStorageの内容を確認できます。
 
-1. DevTools を開く（F12 または Cmd+Option+I）
-2. Application タブを選択
-3. Storage → Local Storage を確認
+1. DevToolsを開く（F12またはCmd+Option+I）
+2. Applicationタブを選択
+3. Storage → Local Storageを確認
 
 ```mermaid
 graph LR
@@ -479,9 +479,9 @@ const safeSetItem = (key: string, value: string): boolean => {
 ### atomWithStorage のポイント
 
 - `jotai/utils` からインポート
-- 自動的に localStorage に保存される
-- 通常の Atom と同じ API で使用可能
-- SSR 時は Hydration Mismatch に注意
+- 自動的にlocalStorageに保存される
+- 通常のAtomと同じAPIで使用可能
+- SSR時はHydration Mismatchに注意
 
 ### 使いどころ
 
@@ -497,4 +497,4 @@ const safeSetItem = (key: string, value: string): boolean => {
 
 ## 次のステップ
 
-永続化を理解したら、[動的 Atom（atomFamily）](./04-atom-family.md) に進んで、パラメータに応じた Atom を動的に作成する方法を学びましょう。
+永続化を理解したら、[動的 Atom（atomFamily）](./04-atom-family.md) に進んで、パラメータに応じたAtomを動的に作成する方法を学びましょう。

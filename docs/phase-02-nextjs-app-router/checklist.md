@@ -1,6 +1,6 @@
 # Phase 2: 自己チェックリスト
 
-このチェックリストを使って、Phase 2 の学習内容を振り返りましょう。
+このチェックリストを使って、Phase 2の学習内容を振り返りましょう。
 
 ## 目次
 
@@ -52,18 +52,18 @@ pie title Phase 2 学習領域
 
 ### 理解度チェック
 
-- [ ] `app/` ディレクトリ内のフォルダ構造が URL パスに対応することを理解した
+- [ ] `app/` ディレクトリ内のフォルダ構造がURLパスに対応することを理解した
 - [ ] `page.tsx` がないとルートが作成されないことを理解した
 - [ ] ルートグループ `(groupName)` の用途を理解した
 - [ ] プライベートフォルダ `_folderName` の用途を理解した
 
 ### 確認質問
 
-1. `app/products/new/page.tsx` に対応する URL は？
+1. `app/products/new/page.tsx` に対応するURLは？
 
    **回答例:** `/products/new`
 
-2. URL を変えずにファイルを整理するには？
+2. URLを変えずにファイルを整理するには？
 
    **回答例:** ルートグループ `(groupName)` を使う
 
@@ -98,24 +98,24 @@ pie title Phase 2 学習領域
 
 ### 理解度チェック
 
-- [ ] デフォルトで Server Components であることを理解した
+- [ ] デフォルトでServer Componentsであることを理解した
 - [ ] `"use client"` ディレクティブの使い方を理解した
-- [ ] Server Components で使えないもの（useState, onClick など）を理解した
-- [ ] Client Components にすべき場面を判断できる
+- [ ] Server Componentsで使えないもの（useState, onClickなど）を理解した
+- [ ] Client Componentsにすべき場面を判断できる
 
 ### 確認質問
 
-1. Server Components のメリットは？
+1. Server Componentsのメリットは？
 
    **回答例:** バンドルサイズ削減、直接データアクセス、機密情報の保護、高速な初期表示
 
 2. `useState` を使いたい場合は？
 
-   **回答例:** ファイルの先頭に `"use client"` を追加して Client Component にする
+   **回答例:** ファイルの先頭に `"use client"` を追加してClient Componentにする
 
-3. Server Components から Client Components にデータを渡すときの制約は？
+3. Server ComponentsからClient Componentsにデータを渡すときの制約は？
 
-   **回答例:** シリアライズ可能なデータのみ渡せる（関数や Date オブジェクトは直接渡せない）
+   **回答例:** シリアライズ可能なデータのみ渡せる（関数やDateオブジェクトは直接渡せない）
 
 ***
 
@@ -124,7 +124,7 @@ pie title Phase 2 学習領域
 ### 理解度チェック
 
 - [ ] `loading.tsx` の役割と使い方を理解した
-- [ ] `error.tsx` が必ず Client Component であることを理解した
+- [ ] `error.tsx` が必ずClient Componentであることを理解した
 - [ ] `notFound()` 関数の使い方を理解した
 - [ ] `global-error.tsx` の用途を理解した
 
@@ -132,11 +132,11 @@ pie title Phase 2 学習領域
 
 1. `loading.tsx` はいつ表示される？
 
-   **回答例:** Server Component でデータ取得中（Suspense のフォールバックとして）
+   **回答例:** Server Componentでデータ取得中（Suspenseのフォールバックとして）
 
 2. `error.tsx` で必須のディレクティブは？
 
-   **回答例:** `"use client"` - Error Boundary は Client Component でなければならない
+   **回答例:** `"use client"` - Error BoundaryはClient Componentでなければならない
 
 3. 動的ルートで商品が見つからない場合の処理は？
 
@@ -206,16 +206,16 @@ pie title Phase 2 学習領域
 - [ ] ヘッダー/フッターを含むレイアウトを実装した
 - [ ] 商品一覧ページ `/products` を実装した
 - [ ] 商品詳細ページ `/products/[id]` を実装した
-- [ ] ローディング UI を実装した
-- [ ] 404 ページを実装した
+- [ ] ローディングUIを実装した
+- [ ] 404ページを実装した
 - [ ] パンくずリストを実装した
 
 ### コードチェック
 
-- [ ] TypeScript の型チェックを通過する
+- [ ] TypeScriptの型チェックを通過する
 - [ ] `eslint` のエラーがない
 - [ ] コンポーネントが適切に分割されている
-- [ ] Server/Client Components が適切に使い分けられている
+- [ ] Server/Client Componentsが適切に使い分けられている
 
 ***
 
@@ -234,8 +234,8 @@ pie title Phase 2 学習領域
 
 以下のようにチェックを入れた項目数を数えてください。
 
-- 理解度チェック: \_\_\_\_ / 20 項目
-- 実践確認: \_\_\_\_ / 10 項目
+- 理解度チェック: \_\_\_\_ / 20項目
+- 実践確認: \_\_\_\_ / 10項目
 - **合計: \_\_\_\_ / 30 項目 (\_\_\_\_\_%)**
 
 ***
@@ -251,16 +251,16 @@ pie title Phase 2 学習領域
 
 ### Q: `params` が Promise なのはなぜ？
 
-**A:** Next.js 15 以降では、`params` と `searchParams` は非同期になりました。これにより、より柔軟なデータ取得が可能になっています。
+**A:** Next.js 15以降では、`params` と `searchParams` は非同期になりました。これにより、より柔軟なデータ取得が可能になっています。
 
 ### Q: ローディング UI がうまく表示されない
 
-**A:** ローディング UI は Server Components のデータ取得中に表示されます。Client Components や静的データでは表示されません。
+**A:** ローディングUIはServer Componentsのデータ取得中に表示されます。Client Componentsや静的データでは表示されません。
 
 ***
 
 ## 次のステップ
 
-Phase 2 を完了したら、[Phase 3: コンポーネント設計パターン](../phase-03-component-design/README.md) に進んでください。
+Phase 2を完了したら、[Phase 3: コンポーネント設計パターン](../phase-03-component-design/README.md) に進んでください。
 
-Phase 3 では、Atomic Design、Compound Components、カスタムフックなどの設計パターンを学び、より再利用可能で保守性の高いコンポーネントを作成します。
+Phase 3では、Atomic Design、Compound Components、カスタムフックなどの設計パターンを学び、より再利用可能で保守性の高いコンポーネントを作成します。

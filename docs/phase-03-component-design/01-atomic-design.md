@@ -20,8 +20,8 @@
 
 ## Atomic Design とは
 
-Atomic Design は、Brad Frost が提唱したコンポーネント設計の方法論です。
-化学の概念（原子 → 分子 → 有機体）をベースに、UI コンポーネントを 5 つの階層に分類します。
+Atomic Designは、Brad Frostが提唱したコンポーネント設計の方法論です。
+化学の概念（原子 → 分子 → 有機体）をベースに、UIコンポーネントを5つの階層に分類します。
 
 ```mermaid
 graph LR
@@ -270,7 +270,7 @@ export function ProductListTemplate({
 ### 5. Pages（ページ）
 
 **Templates に実際のデータを流し込んだ、最終的なページ**です。
-Next.js App Router では `app/` ディレクトリ内の `page.tsx` がこれに該当します。
+Next.js App Routerでは `app/` ディレクトリ内の `page.tsx` がこれに該当します。
 
 ```typescript
 // apps/web/app/products/page.tsx
@@ -409,7 +409,7 @@ packages/ui/
 
 ## shadcn/ui との関係
 
-shadcn/ui のコンポーネントは、主に Atoms と Molecules に分類されます。
+shadcn/uiのコンポーネントは、主にAtomsとMoleculesに分類されます。
 
 | shadcn/ui | 分類        | カスタマイズ例                        |
 | --------- | --------- | ------------------------------ |
@@ -431,7 +431,7 @@ shadcn/ui のコンポーネントは、主に Atoms と Molecules に分類さ�
 | 利点             | 説明                            |
 | -------------- | ----------------------------- |
 | 一貫性            | 共通のコンポーネントを使うことで UI の一貫性が保たれる |
-| 再利用性           | 小さな単位で作るため、様々な場面で再利用できる       |
+| 再利用性           | 小さな単位で作るため、さまざまな場面で再利用できる     |
 | 保守性            | 変更箇所が明確で、影響範囲を把握しやすい          |
 | Storybook との相性 | 階層ごとにストーリーを整理できる              |
 
@@ -447,16 +447,16 @@ shadcn/ui のコンポーネントは、主に Atoms と Molecules に分類さ�
 
 ## まとめ
 
-- Atomic Design は **Atoms → Molecules → Organisms → Templates → Pages** の 5 階層
-- **Atoms** は最小単位（Button, Input など）
-- **Molecules** は Atoms の組み合わせ（FormField, SearchBox など）
-- **Organisms** は独立した機能ブロック（Header, ProductCard など）
+- Atomic Designは **Atoms → Molecules → Organisms → Templates → Pages** の5階層
+- **Atoms** は最小単位（Button, Inputなど）
+- **Molecules** はAtomsの組み合わせ（FormField, SearchBoxなど）
+- **Organisms** は独立した機能ブロック（Header, ProductCardなど）
 - **Templates** はレイアウトのワイヤーフレーム
-- **Pages** は Templates に実データを流し込んだ最終形
-- shadcn/ui は Atoms/Molecules として活用し、EC 用に拡張する
+- **Pages** はTemplatesに実データを流し込んだ最終形
+- shadcn/uiはAtoms/Moleculesとして活用し、EC用に拡張する
 
 ***
 
 ## 次のステップ
 
-[02 Compound Components](./02-compound-components.md) では、より柔軟な API を持つコンポーネントの設計パターンを学びます。
+[02 Compound Components](./02-compound-components.md) では、より柔軟なAPIを持つコンポーネントの設計パターンを学びます。

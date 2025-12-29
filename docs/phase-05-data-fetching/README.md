@@ -21,8 +21,8 @@
 
 ## 概要
 
-Server Components でのデータ取得と、MSW（Mock Service Worker）を使った API モックを習得するフェーズです。
-バックエンド API がなくても開発を進められるよう、フロントエンド単体で動作するモック環境を構築します。
+Server Componentsでのデータ取得と、MSW（Mock Service Worker）を使ったAPIモックを習得するフェーズです。
+バックエンドAPIがなくても開発を進められるよう、フロントエンド単体で動作するモック環境を構築します。
 
 ***
 
@@ -30,22 +30,22 @@ Server Components でのデータ取得と、MSW（Mock Service Worker）を使�
 
 難易度: 3/5（中級）
 
-Server Components での非同期処理とキャッシュの概念理解が必要です。MSW の設定は初めてだと戸惑いやすいですが、一度理解すれば再利用しやすいパターンです。
+Server Componentsでの非同期処理とキャッシュの概念理解が必要です。MSWの設定は初めてだと戸惑いやすいですが、一度理解すれば再利用しやすいパターンです。
 
 ***
 
 ## 所要時間目安
 
-約 8〜10 時間です。
+約8〜10時間です。
 
 ***
 
 ## 前提知識
 
-- Phase 1〜4 を完了していること
-- Server Components と Client Components の違いを理解していること
-- async/await の基本的な使い方を知っていること
-- TypeScript の基本を理解していること
+- Phase 1〜4を完了していること
+- Server ComponentsとClient Componentsの違いを理解していること
+- async/awaitの基本的な使い方を知っていること
+- TypeScriptの基本を理解していること
 
 ***
 
@@ -53,14 +53,14 @@ Server Components での非同期処理とキャッシュの概念理解が必�
 
 このフェーズを完了すると、以下ができるようになります。
 
-- [ ] Server Components で fetch を使ってデータを取得できる
+- [ ] Server Componentsでfetchを使ってデータを取得できる
 - [ ] キャッシュ戦略（force-cache, no-store, revalidate）を使い分けられる
-- [ ] Suspense と loading.tsx でローディング状態を実装できる
-- [ ] MSW をプロジェクトにセットアップできる
-- [ ] MSW ハンドラーで API モックを作成できる
-- [ ] 商品一覧・詳細・検索の API モックを実装できる
-- [ ] @tanstack/react-query でクライアントサイドキャッシュを実装できる
-- [ ] Server Components と React Query の使い分けを判断できる
+- [ ] Suspenseとloading.tsxでローディング状態を実装できる
+- [ ] MSWをプロジェクトにセットアップできる
+- [ ] MSWハンドラーでAPIモックを作成できる
+- [ ] 商品一覧・詳細・検索のAPIモックを実装できる
+- [ ] @tanstack/react-queryでクライアントサイドキャッシュを実装できる
+- [ ] Server ComponentsとReact Queryの使い分けを判断できる
 
 ***
 
@@ -161,20 +161,20 @@ graph TD
 
 ## 自己チェックリスト
 
-Phase 5 を完了する前に、以下を確認してください。
+Phase 5を完了する前に、以下を確認してください。
 
-- [ ] Server Components で async/await を使ってデータ取得できる
-- [ ] cache オプションの違い（force-cache, no-store, revalidate）を説明できる
-- [ ] revalidatePath と revalidateTag の使い分けを理解している
-- [ ] loading.tsx と Suspense の関係を説明できる
-- [ ] MSW のブラウザ用と Node.js 用の設定を理解している
+- [ ] Server Componentsでasync/awaitを使ってデータ取得できる
+- [ ] cacheオプションの違い（force-cache, no-store, revalidate）を説明できる
+- [ ] revalidatePathとrevalidateTagの使い分けを理解している
+- [ ] loading.tsxとSuspenseの関係を説明できる
+- [ ] MSWのブラウザ用とNode.js用の設定を理解している
 - [ ] パスパラメータとクエリパラメータを含むハンドラーを書ける
-- [ ] 商品一覧・詳細・検索の API モックが動作している
-- [ ] useQuery と useMutation の使い方を理解している
-- [ ] Server Components と React Query の使い分け基準を説明できる
+- [ ] 商品一覧・詳細・検索のAPIモックが動作している
+- [ ] useQueryとuseMutationの使い方を理解している
+- [ ] Server ComponentsとReact Queryの使い分け基準を説明できる
 
 ***
 
 ## 次のフェーズ
 
-Phase 5 を完了したら、[Phase 6: テスト駆動開発](../phase-06-testing/README.md) に進みましょう。
+Phase 5を完了したら、[Phase 6: テスト駆動開発](../phase-06-testing/README.md) に進みましょう。

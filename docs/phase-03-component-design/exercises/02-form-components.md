@@ -32,7 +32,7 @@
 
 ## 目標
 
-EC サイトで使用するフォームコンポーネント群を実装し、アクセシビリティに配慮した設計を習得します。
+ECサイトで使用するフォームコンポーネント群を実装し、アクセシビリティに配慮した設計を習得します。
 
 ***
 
@@ -60,8 +60,8 @@ packages/ui/
 
 ## 前提条件
 
-- 演習 1（デザインシステム構築）を完了していること
-- shadcn/ui の基本コンポーネントがインストールされていること
+- 演習1（デザインシステム構築）を完了していること
+- shadcn/uiの基本コンポーネントがインストールされていること
 
 ***
 
@@ -770,13 +770,13 @@ export const Disabled: Story = {
 
 ### コンポーネント実装
 
-- [ ] Input, Label, Select, Checkbox が作成されている
-- [ ] FormField, FormSelect, FormRadioGroup が作成されている
+- [ ] Input, Label, Select, Checkboxが作成されている
+- [ ] FormField, FormSelect, FormRadioGroupが作成されている
 - [ ] すべてのコンポーネントに `ref` を転送している
 
 ### アクセシビリティ
 
-- [ ] Label と Input が `htmlFor` / `id` で関連付けられている
+- [ ] LabelとInputが `htmlFor` / `id` で関連付けられている
 - [ ] エラーメッセージが `aria-describedby` で関連付けられている
 - [ ] エラーメッセージに `role="alert"` がある
 - [ ] 必須項目に `aria-required="true"` がある
@@ -786,7 +786,7 @@ export const Disabled: Story = {
 
 - [ ] 各コンポーネントのストーリーが作成されている
 - [ ] 必須、ヒント、エラー状態のストーリーがある
-- [ ] addon-a11y でエラーがない
+- [ ] addon-a11yでエラーがない
 
 ***
 
@@ -822,7 +822,7 @@ export const Disabled: Story = {
 ## 完了条件
 
 - [ ] すべてのチェック項目を確認した
-- [ ] Storybook でフォームコンポーネントが確認できる
+- [ ] Storybookでフォームコンポーネントが確認できる
 - [ ] アクセシビリティチェックに合格している
 
 ***

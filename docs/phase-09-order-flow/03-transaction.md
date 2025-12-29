@@ -36,7 +36,7 @@
 
 ### ACID 特性
 
-トランザクションは以下の 4 つの特性（ACID）を満たす必要があります。
+トランザクションは以下の4つの特性（ACID）を満たす必要があります。
 
 ```mermaid
 graph TD
@@ -146,7 +146,7 @@ export async function createOrderWithCompensation(data: CreateOrderInput): Promi
 
 ### 2. データベーストランザクション
 
-データベースのトランザクション機能を直接使用します（Prisma の例）。
+データベースのトランザクション機能を直接使用します（Prismaの例）。
 
 ```typescript
 // lib/orders/create-order.ts
@@ -523,7 +523,7 @@ await executeSaga(orderSaga);
 
 ## MSW でのモック
 
-開発中は MSW を使用してトランザクション処理をモックします。
+開発中はMSWを使用してトランザクション処理をモックします。
 
 ```typescript
 // mocks/handlers/orders.ts
@@ -631,7 +631,7 @@ await prisma.$transaction(async (tx) => {
 ### トランザクションの要点
 
 - 複数の処理を原子的に実行
-- ACID 特性を理解する
+- ACID特性を理解する
 - エラー時は確実にロールバック
 
 ### EC サイトでの実践

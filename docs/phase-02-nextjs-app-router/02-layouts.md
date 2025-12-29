@@ -27,7 +27,7 @@
 
 ## 概要
 
-App Router では、**layout.tsx** と **page.tsx** という2つの特別なファイルを使ってページを構成します。これにより、共通のヘッダー/フッターを一度だけ定義して、全ページで再利用できます。
+App Routerでは、**layout.tsx** と **page.tsx** という2つの特別なファイルを使ってページを構成します。これにより、共通のヘッダー/フッターを一度だけ定義して、全ページで再利用できます。
 
 ***
 
@@ -327,7 +327,7 @@ export default function Template({ children }: { children: React.ReactNode }): R
 
 ## Metadata の定義
 
-`layout.tsx` や `page.tsx` で `metadata` をエクスポートすると、ページの SEO 情報を設定できます。
+`layout.tsx` や `page.tsx` で `metadata` をエクスポートすると、ページのSEO情報を設定できます。
 
 ```tsx
 // app/products/page.tsx
@@ -429,4 +429,4 @@ export default function Layout({ children }) {
 
 ## 次のステップ
 
-layout.tsx と page.tsx を理解したら、次は [Server vs Client Components](./03-server-client.md) で、コンポーネントの種類と使い分けを学びましょう。
+layout.tsxとpage.tsxを理解したら、次は [Server vs Client Components](./03-server-client.md) で、コンポーネントの種類と使い分けを学びましょう。

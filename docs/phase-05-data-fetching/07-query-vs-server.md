@@ -32,7 +32,7 @@
 
 ## 概要
 
-Next.js App Router では、Server Components でのデータ取得がデフォルトですが、すべてのケースで最適というわけではありません。
+Next.js App Routerでは、Server Componentsでのデータ取得がデフォルトですが、すべてのケースで最適というわけではありません。
 React Query（TanStack Query）と組み合わせることで、より良いユーザー体験を実現できます。
 
 ***
@@ -127,7 +127,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 ### 3. 機密データへのアクセス
 
-データベース直接アクセスや、API シークレットが必要なリクエスト。
+データベース直接アクセスや、APIシークレットが必要なリクエスト。
 
 ```typescript
 // app/admin/orders/page.tsx
@@ -250,7 +250,7 @@ export function LoadMoreProducts() {
 
 ### 4. 楽観的更新が必要な操作
 
-カートへの追加、お気に入り登録など、即座に UI へ反映したい操作。
+カートへの追加、お気に入り登録など、即座にUIへ反映したい操作。
 
 ```typescript
 // hooks/use-toggle-favorite.ts
@@ -294,7 +294,7 @@ export function useToggleFavorite() {
 
 ### Server Components + React Query の組み合わせ
 
-初期データは Server Components で取得し、クライアントサイドでの更新は React Query で行う。
+初期データはServer Componentsで取得し、クライアントサイドでの更新はReact Queryで行う。
 
 ```typescript
 // app/cart/page.tsx
@@ -342,7 +342,7 @@ export function CartClient({ initialCart }: Props) {
 
 ### Prefetch パターン
 
-Server Components で React Query のキャッシュをプリフェッチする。
+Server ComponentsでReact Queryのキャッシュをプリフェッチする。
 
 ```typescript
 // app/products/page.tsx
@@ -476,4 +476,4 @@ export default async function Page() {
 
 ## 次のステップ
 
-Server Components と React Query の使い分けを理解したら、[演習 1: 商品データ API](./exercises/01-product-api.md) で実際に API を実装してみましょう。
+Server ComponentsとReact Queryの使い分けを理解したら、[演習 1: 商品データ API](./exercises/01-product-api.md) で実際にAPIを実装してみましょう。

@@ -38,7 +38,7 @@
 ## イベントハンドラとは
 
 **イベントハンドラ** は、ユーザーの操作（クリック、入力、送信など）に応答する関数です。
-React では、JSX の属性としてイベントハンドラを設定します。
+Reactでは、JSXの属性としてイベントハンドラを設定します。
 
 ```tsx
 function Button(): React.ReactElement {
@@ -61,7 +61,7 @@ function Button(): React.ReactElement {
 
 ## イベント属性の命名規則
 
-HTML のイベント属性は小文字（onclick）ですが、React では **camelCase** を使います。
+HTMLのイベント属性は小文字（onclick）ですが、Reactでは **camelCase** を使います。
 
 | HTML 属性        | React 属性       |
 | -------------- | -------------- |
@@ -651,4 +651,4 @@ const handleSubmit = (event: React.FormEvent<HTMLFormElement>): void => {
 ## 次のステップ
 
 イベントハンドリングを理解したら、[条件レンダリングとリスト](./05-conditional-lists.md) に進んで、
-動的な UI の表示方法を学びましょう。
+動的なUIの表示方法を学びましょう。

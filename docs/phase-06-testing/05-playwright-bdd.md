@@ -35,10 +35,10 @@
 
 ## 概要
 
-playwright-bdd は Playwright と Gherkin を組み合わせた BDD（Behavior Driven Development）テストフレームワークです。
-自然言語に近い Gherkin 構文でテストシナリオを記述し、非エンジニアとも共有しやすいテストを作成できます。
+playwright-bddはPlaywrightとGherkinを組み合わせたBDD（Behavior Driven Development）テストフレームワークです。
+自然言語に近いGherkin構文でテストシナリオを記述し、非エンジニアとも共有しやすいテストを作成できます。
 
-このセクションでは、EC サイトの購入フローを Gherkin シナリオで記述する方法を学びます。
+このセクションでは、ECサイトの購入フローをGherkinシナリオで記述する方法を学びます。
 
 ***
 
@@ -46,7 +46,7 @@ playwright-bdd は Playwright と Gherkin を組み合わせた BDD（Behavior D
 
 ### Behavior Driven Development
 
-BDD は、ソフトウェアの振る舞い（Behavior）を中心にテストを記述する開発手法です。
+BDDは、ソフトウェアの振る舞い（Behavior）を中心にテストを記述する開発手法です。
 
 ```mermaid
 graph LR
@@ -460,19 +460,19 @@ Then 「{string}」というメッセージが表示される
 
 ## 確認質問
 
-1. Given / When / Then それぞれの役割は何ですか？
+1. Given / When / Thenそれぞれの役割は何ですか？
 
    `Given` はテストの前提条件（初期状態）を設定する。`When` はユーザーが行う操作を記述する。`Then` は操作の結果として期待される状態を記述する。
 
-2. Background と Scenario の違いは何ですか？
+2. BackgroundとScenarioの違いは何ですか？
 
-   `Background` は Feature 内のすべての Scenario の前に実行される共通のステップである。各 Scenario で繰り返し書く必要がある前提条件を一箇所にまとめられる。
+   `Background` はFeature内のすべてのScenarioの前に実行される共通のステップである。各Scenarioで繰り返し書く必要がある前提条件を一箇所にまとめられる。
 
-3. Gherkin を使うメリットは何ですか？
+3. Gherkinを使うメリットは何ですか？
 
    自然言語に近い記述ができるため、非エンジニア（ビジネス担当者、QA）もテスト内容を理解・レビューできる。また、シナリオ自体が仕様書として機能し、ドキュメントとテストを一元管理できる。
 
-4. Scenario Outline はいつ使いますか？
+4. Scenario Outlineはいつ使いますか？
 
    同じシナリオを異なるデータで複数回実行したい場合に使う。`Examples` テーブルでパラメータを定義し、テストケースを効率的に記述できる。
 
@@ -480,4 +480,4 @@ Then 「{string}」というメッセージが表示される
 
 ## 次のステップ
 
-playwright-bdd を学んだら、次は [Property-based Testing（fast-check）](./06-fast-check.md) でエッジケースを自動検出する方法を学びましょう。
+playwright-bddを学んだら、次は [Property-based Testing（fast-check）](./06-fast-check.md) でエッジケースを自動検出する方法を学びましょう。

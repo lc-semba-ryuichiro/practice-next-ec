@@ -37,7 +37,7 @@
 
 ## 目標
 
-Turborepo + pnpm ワークスペースを使ったモノレポ構成をゼロから構築します。
+Turborepo + pnpmワークスペースを使ったモノレポ構成をゼロから構築します。
 
 ***
 
@@ -443,7 +443,7 @@ pnpm typecheck
 以下を確認してください。
 
 - [ ] `pnpm install` がエラーなく完了する
-- [ ] `pnpm dev` で web アプリが起動する
+- [ ] `pnpm dev` でwebアプリが起動する
 - [ ] `pnpm build` がエラーなく完了する
 - [ ] `pnpm typecheck` がエラーなく完了する
 - [ ] `@ec/shared` からの型インポートが動作する
@@ -480,8 +480,8 @@ pnpm add -D turbo --workspace-root
 
 ## 発展課題
 
-1. `packages/ui` に Button コンポーネントを作成し、`apps/web` で使用する
-2. `packages/validators` に Zod スキーマを作成する
+1. `packages/ui` にButtonコンポーネントを作成し、`apps/web` で使用する
+2. `packages/validators` にZodスキーマを作成する
 3. `apps/storybook` を追加し、コンポーネントを表示する
 
 ***

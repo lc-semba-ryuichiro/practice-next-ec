@@ -30,13 +30,13 @@
 
 ## 目標
 
-動的ルート `/products/[id]` を使って商品詳細ページを実装する。存在しない商品へのアクセス時は 404 ページを表示する。
+動的ルート `/products/[id]` を使って商品詳細ページを実装する。存在しない商品へのアクセス時は404ページを表示する。
 
 ***
 
 ## 前提条件
 
-- [ ] 演習 2（商品一覧ページ）を完了していること
+- [ ] 演習2（商品一覧ページ）を完了していること
 - [ ] 動的ルートの概念を理解していること
 - [ ] `notFound()` 関数の使い方を理解していること
 
@@ -372,8 +372,8 @@ export async function generateStaticParams(): Promise<Array<{ id: string }>> {
 
 **異常系:**
 
-- [ ] `http://localhost:3000/products/999` で 404 ページが表示される
-- [ ] `http://localhost:3000/products/abc` で 404 ページが表示される
+- [ ] `http://localhost:3000/products/999` で404ページが表示される
+- [ ] `http://localhost:3000/products/abc` で404ページが表示される
 
 **ナビゲーション:**
 
@@ -406,7 +406,7 @@ Cannot read properties of undefined (reading 'id')
 **解決策:**
 
 - `params` を `await` しているか確認
-- Next.js 15 以降では `params` は Promise
+- Next.js 15以降では `params` はPromise
 
 ### notFound() が機能しない
 
@@ -428,27 +428,27 @@ Cannot read properties of undefined (reading 'id')
 ## 発展課題
 
 1. **画像ギャラリー**: 複数画像を切り替えて表示する
-2. **カートに追加機能**: 実際にカートに商品を追加する（Phase 4 で実装）
+2. **カートに追加機能**: 実際にカートに商品を追加する（Phase 4で実装）
 3. **在庫表示**: 在庫状況を表示する
 4. **レビュー表示**: 商品レビューを表示する
-5. **SNS シェアボタン**: Twitter/Facebook シェアボタンを追加
+5. **SNS シェアボタン**: Twitter/Facebookシェアボタンを追加
 
 ***
 
 ## 完了条件
 
 - [ ] `/products/[id]` で商品詳細が表示される
-- [ ] 存在しない商品 ID で 404 ページが表示される
+- [ ] 存在しない商品IDで404ページが表示される
 - [ ] 動的メタデータが正しく設定される
-- [ ] ローディング UI が機能する
-- [ ] TypeScript の型チェックを通過する
+- [ ] ローディングUIが機能する
+- [ ] TypeScriptの型チェックを通過する
 - [ ] パンくずリストが正しく表示される
 
 ***
 
 ## Phase 2 完了
 
-お疲れ様でした。Phase 2 の全演習が完了しました。
+お疲れ様でした。Phase 2の全演習が完了しました。
 
 最後に [自己チェックリスト](../checklist.md) で学習内容を振り返りましょう。
 
@@ -456,4 +456,4 @@ Cannot read properties of undefined (reading 'id')
 
 ## 次のフェーズ
 
-Phase 2 を完了したら、[Phase 3: コンポーネント設計パターン](../../phase-03-component-design/README.md) に進んでください。
+Phase 2を完了したら、[Phase 3: コンポーネント設計パターン](../../phase-03-component-design/README.md) に進んでください。

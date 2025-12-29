@@ -22,8 +22,8 @@
 
 ## 概要
 
-Jotai を使ったグローバル状態管理をマスターするフェーズです。
-EC サイトに必須のショッピングカート、お気に入り、閲覧履歴などの機能を、Jotai を使って実装します。
+Jotaiを使ったグローバル状態管理をマスターするフェーズです。
+ECサイトに必須のショッピングカート、お気に入り、閲覧履歴などの機能を、Jotaiを使って実装します。
 
 ***
 
@@ -31,21 +31,21 @@ EC サイトに必須のショッピングカート、お気に入り、閲覧�
 
 難易度: 3/5（中級）
 
-React の基本（useState / useEffect）を理解していれば、比較的スムーズに習得できます。
+Reactの基本（useState / useEffect）を理解していれば、比較的スムーズに習得できます。
 
 ***
 
 ## 所要時間目安
 
-約 6〜8 時間です。
+約6〜8時間です。
 
 ***
 
 ## 前提知識
 
-- Phase 1〜3 を完了していること
-- React の useState / useEffect を理解していること
-- TypeScript の基本を理解していること
+- Phase 1〜3を完了していること
+- ReactのuseState / useEffectを理解していること
+- TypeScriptの基本を理解していること
 - コンポーネント間のデータの流れを理解していること
 
 ***
@@ -54,12 +54,12 @@ React の基本（useState / useEffect）を理解していれば、比較的ス
 
 このフェーズを完了すると、以下ができるようになります。
 
-- [ ] Jotai の基本概念（Atom）を説明できる
-- [ ] primitive atom と derived atom の違いを理解している
-- [ ] atomWithStorage で状態を localStorage に永続化できる
-- [ ] atomFamily で動的な Atom を作成できる
-- [ ] useAtom / useAtomValue / useSetAtom を適切に使い分けられる
-- [ ] ショッピングカート機能を Jotai で実装できる
+- [ ] Jotaiの基本概念（Atom）を説明できる
+- [ ] primitive atomとderived atomの違いを理解している
+- [ ] atomWithStorageで状態をlocalStorageに永続化できる
+- [ ] atomFamilyで動的なAtomを作成できる
+- [ ] useAtom / useAtomValue / useSetAtomを適切に使い分けられる
+- [ ] ショッピングカート機能をJotaiで実装できる
 
 ***
 
@@ -109,8 +109,8 @@ graph TD
 
 このフェーズでは主に以下のディレクトリで作業します。
 
-- `packages/store` - Jotai の Atom を定義
-- `apps/web` - Atom を使用するコンポーネント
+- `packages/store` - JotaiのAtomを定義
+- `apps/web` - Atomを使用するコンポーネント
 
 ***
 
@@ -126,7 +126,7 @@ graph TD
 
 ## 関連する EC サイト機能
 
-このフェーズで学ぶ内容は、以下の EC 機能に直接関連します。
+このフェーズで学ぶ内容は、以下のEC機能に直接関連します。
 
 | EC 機能     | 使用する Jotai 機能   | 説明            |
 | --------- | --------------- | ------------- |
@@ -158,13 +158,13 @@ graph TD
 
 ## 自己チェックリスト
 
-Phase 4 を完了する前に、以下を確認してください。
+Phase 4を完了する前に、以下を確認してください。
 
-- [ ] Atom の作成と使用方法を理解している
-- [ ] primitive atom と derived atom の違いを説明できる
-- [ ] atomWithStorage を使って状態を永続化できる
-- [ ] atomFamily でパラメータ付き Atom を作成できる
-- [ ] useAtom / useAtomValue / useSetAtom の使い分けを理解している
+- [ ] Atomの作成と使用方法を理解している
+- [ ] primitive atomとderived atomの違いを説明できる
+- [ ] atomWithStorageを使って状態を永続化できる
+- [ ] atomFamilyでパラメータ付きAtomを作成できる
+- [ ] useAtom / useAtomValue / useSetAtomの使い分けを理解している
 - [ ] ショッピングカート機能が動作している
 - [ ] お気に入り機能が動作している
 - [ ] 最近見た商品機能が動作している
@@ -173,4 +173,4 @@ Phase 4 を完了する前に、以下を確認してください。
 
 ## 次のフェーズ
 
-Phase 4 を完了したら、[Phase 5: データ取得 + MSW モック](../phase-05-data-fetching/README.md) に進みましょう。
+Phase 4を完了したら、[Phase 5: データ取得 + MSW モック](../phase-05-data-fetching/README.md) に進みましょう。

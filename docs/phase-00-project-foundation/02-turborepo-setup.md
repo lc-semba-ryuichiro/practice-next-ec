@@ -35,15 +35,15 @@
 
 ## Turborepo とは
 
-**Turborepo** は、JavaScript/TypeScript モノレポ向けの高性能ビルドシステムです。
-Vercel が開発しており、Next.js との相性が非常に良いです。
+**Turborepo** は、JavaScript/TypeScriptモノレポ向けの高性能ビルドシステムです。
+Vercelが開発しており、Next.jsとの相性が非常に良いです。
 
 ### 主な特徴
 
 - インクリメンタルビルド - 変更されたパッケージのみ再ビルド
 - キャッシュ - ローカル・リモートでビルド結果をキャッシュ
 - 並列実行 - 依存関係を考慮した最適な並列ビルド
-- シンプルな設定 - `turbo.json` 1 ファイルで設定完了
+- シンプルな設定 - `turbo.json` 1ファイルで設定完了
 
 ***
 
@@ -228,7 +228,7 @@ turbo build --concurrency=auto
 
 ## キャッシュの仕組み
 
-Turborepo のキャッシュは、入力ファイルのハッシュ値に基づいて動作します。
+Turborepoのキャッシュは、入力ファイルのハッシュ値に基づいて動作します。
 
 ```mermaid
 flowchart TD
@@ -261,7 +261,7 @@ $ turbo build
 
 ### リモートキャッシュ（Vercel）
 
-CI/CD でもキャッシュを共有できます。
+CI/CDでもキャッシュを共有できます。
 
 ```bash
 # Vercel とリンク
@@ -391,4 +391,4 @@ turbo build --verbose
 
 ## 次のステップ
 
-Turborepo の設定が完了したら、[pnpm ワークスペース設定](./03-pnpm-workspace.md) でパッケージ管理を設定しましょう。
+Turborepoの設定が完了したら、[pnpm ワークスペース設定](./03-pnpm-workspace.md) でパッケージ管理を設定しましょう。

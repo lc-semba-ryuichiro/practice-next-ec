@@ -1,6 +1,6 @@
 # 学習リソース集
 
-React / Next.js 学習に役立つリソースをまとめています。
+React / Next.js学習に役立つリソースをまとめています。
 
 ***
 
@@ -225,43 +225,43 @@ React / Next.js 学習に役立つリソースをまとめています。
 
 ### Phase 0: プロジェクト基盤
 
-- Turborepo ドキュメント: <https://turbo.build/repo/docs>
+- Turborepoドキュメント: <https://turbo.build/repo/docs>
 - pnpm Workspaces: <https://pnpm.io/workspaces>
 - Vercel Monorepos: <https://vercel.com/docs/monorepos>
 
 ### Phase 1: React 基礎
 
-- React 公式チュートリアル: <https://react.dev/learn>
+- React公式チュートリアル: <https://react.dev/learn>
 - りあクト！シリーズ
 
 ### Phase 2: Next.js App Router
 
 - Next.js Learn: <https://nextjs.org/learn>
-- Next.js ドキュメント（App Router）: <https://nextjs.org/docs/app>
+- Next.jsドキュメント（App Router）: <https://nextjs.org/docs/app>
 
 ### Phase 3: コンポーネント設計
 
-- Storybook チュートリアル: <https://storybook.js.org/tutorials/>
+- Storybookチュートリアル: <https://storybook.js.org/tutorials/>
 - Atomic Design: <https://atomicdesign.bradfrost.com/>
 
 ### Phase 4: 状態管理
 
-- Jotai ドキュメント: <https://jotai.org/docs>
+- Jotaiドキュメント: <https://jotai.org/docs>
 
 ### Phase 5: データ取得
 
 - Next.js Data Fetching: <https://nextjs.org/docs/app/building-your-application/data-fetching>
-- MSW ドキュメント: <https://mswjs.io/docs/>
+- MSWドキュメント: <https://mswjs.io/docs/>
 
 ### Phase 6: テスト
 
 - フロントエンド開発のためのテスト入門（書籍）
-- Vitest ドキュメント: <https://vitest.dev/>
-- Playwright ドキュメント: <https://playwright.dev/>
+- Vitestドキュメント: <https://vitest.dev/>
+- Playwrightドキュメント: <https://playwright.dev/>
 
 ### Phase 7-9: フルスタック機能
 
-- Zod ドキュメント: <https://zod.dev/>
+- Zodドキュメント: <https://zod.dev/>
 - Next.js Server Actions: <https://nextjs.org/docs/app/building-your-application/data-fetching/server-actions-and-mutations>
 
 ### Phase 10-11: パフォーマンス・SEO

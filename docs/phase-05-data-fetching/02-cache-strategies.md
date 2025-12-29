@@ -34,7 +34,7 @@
 
 ## Next.js のキャッシュ概念
 
-Next.js App Router には複数のキャッシュレイヤーがあります。これらを理解することで、パフォーマンスを最適化できます。
+Next.js App Routerには複数のキャッシュレイヤーがあります。これらを理解することで、パフォーマンスを最適化できます。
 
 ```mermaid
 graph TD
@@ -66,7 +66,7 @@ graph TD
 
 ## fetch オプション
 
-Next.js の fetch は拡張されており、キャッシュ動作を細かく制御できます。
+Next.jsのfetchは拡張されており、キャッシュ動作を細かく制御できます。
 
 ### オプション一覧
 
@@ -100,7 +100,7 @@ const response = await fetch("https://api.example.com/categories", {
 
 ## cache: 'no-store'
 
-リクエストごとに必ず API を呼び出します。キャッシュは一切行いません。
+リクエストごとに必ずAPIを呼び出します。キャッシュは一切行いません。
 
 ```typescript
 const response = await fetch("https://api.example.com/stock", {
@@ -119,7 +119,7 @@ const response = await fetch("https://api.example.com/stock", {
 
 ## next: { revalidate: N }（ISR）
 
-指定秒数が経過すると、バックグラウンドで再検証します。これを ISR（Incremental Static Regeneration）と呼びます。
+指定秒数が経過すると、バックグラウンドで再検証します。これをISR（Incremental Static Regeneration）と呼びます。
 
 ```typescript
 const response = await fetch("https://api.example.com/products", {
@@ -153,9 +153,9 @@ sequenceDiagram
 
 ### 適用例
 
-- 商品一覧（1 分ごと更新）
-- ランキング（5 分ごと更新）
-- ニュース（10 分ごと更新）
+- 商品一覧（1分ごと更新）
+- ランキング（5分ごと更新）
+- ニュース（10分ごと更新）
 
 ***
 

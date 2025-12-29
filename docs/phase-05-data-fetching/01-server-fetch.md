@@ -25,7 +25,7 @@
 
 ## Server Components での fetch とは
 
-Next.js の App Router では、Server Components がデフォルトです。Server Components は Node.js 環境で実行されるため、コンポーネント内で直接 `async/await` を使ってデータを取得できます。
+Next.jsのApp Routerでは、Server Componentsがデフォルトです。Server ComponentsはNode.js環境で実行されるため、コンポーネント内で直接 `async/await` を使ってデータを取得できます。
 
 ```mermaid
 sequenceDiagram
@@ -42,9 +42,9 @@ sequenceDiagram
 
 ### 特徴
 
-- サーバーサイド実行 - fetch はサーバーで実行されるため、API キーなどの機密情報をブラウザに露出しない
-- 直接 async/await - コンポーネント関数を async にして、await で結果を待てる
-- SEO に有利 - データ込みの HTML が返されるため、クローラーがコンテンツを認識しやすい
+- サーバーサイド実行 - fetchはサーバーで実行されるため、APIキーなどの機密情報をブラウザに露出しない
+- 直接async/await - コンポーネント関数をasyncにして、awaitで結果を待てる
+- SEOに有利 - データ込みのHTMLが返されるため、クローラーがコンテンツを認識しやすい
 - 初期表示が速い - ブラウザでの追加リクエストが不要
 
 ***
@@ -81,7 +81,7 @@ export default async function ProductsPage(): Promise<React.ReactElement> {
 1. コンポーネント関数に `async` キーワードを付ける
 2. 戻り値の型は `Promise<React.ReactElement>` にする
 3. `await` でレスポンスを待つ
-4. `response.json()` も Promise なので `await` が必要
+4. `response.json()` もPromiseなので `await` が必要
 
 ***
 
@@ -94,20 +94,20 @@ export default async function ProductsPage(): Promise<React.ReactElement> {
 | SEO       | 有利            | 不利（クローラーが待たない）          |
 | API キーの露出 | なし（安全）        | あり（公開 API のみ可）          |
 | ユーザー固有データ | Cookie で対応    | トークンで対応                 |
-| リアルタイム更新  | 再リクエストが必要     | WebSocket 等で可能          |
+| リアルタイム更新  | 再リクエストが必要     | WebSocket などで可能         |
 | バンドルサイズ   | 小さい           | 大きくなりがち                 |
 
 ### いつ Client fetch を使うか
 
 - ユーザー操作に応じたデータ取得（検索のリアルタイム表示など）
-- WebSocket によるリアルタイム更新
-- ブラウザ API が必要な処理
+- WebSocketによるリアルタイム更新
+- ブラウザAPIが必要な処理
 
 ***
 
 ## データ取得関数の分離
 
-実際のプロジェクトでは、fetch ロジックを別ファイルに分離することを推奨します。
+実際のプロジェクトでは、fetchロジックを別ファイルに分離することを推奨します。
 
 ```typescript
 // lib/api/products.ts
@@ -163,7 +163,7 @@ export default async function ProductsPage(): Promise<React.ReactElement> {
 
 ## Zod による型安全なデータ取得
 
-外部 API のレスポンスは信頼できません。Zod でバリデーションすることで、実行時の型安全性を確保できます。
+外部APIのレスポンスは信頼できません。Zodでバリデーションすることで、実行時の型安全性を確保できます。
 
 ```typescript
 // lib/api/products.ts
@@ -202,7 +202,7 @@ export async function getProducts(): Promise<Product[]> {
 
 ### バリデーションのメリット
 
-- API の変更を早期に検出できる
+- APIの変更を早期に検出できる
 - 不正なデータによるランタイムエラーを防げる
 - スキーマから型を自動生成できる
 

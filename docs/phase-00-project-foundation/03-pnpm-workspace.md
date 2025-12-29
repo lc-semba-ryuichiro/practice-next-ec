@@ -142,7 +142,7 @@ ec-monorepo/
 
 ## workspace プロトコル
 
-pnpm は `workspace:*` プロトコルを使って、モノレポ内のパッケージ間の依存関係を管理します。
+pnpmは `workspace:*` プロトコルを使って、モノレポ内のパッケージ間の依存関係を管理します。
 
 ```mermaid
 flowchart TD
@@ -486,7 +486,7 @@ pnpm store prune
 
 ### 幽霊依存（Phantom Dependencies）
 
-pnpm は厳格な依存管理のため、他のパッケージマネージャーで動いていたコードがエラーになることがあります。
+pnpmは厳格な依存管理のため、他のパッケージマネージャーで動いていたコードがエラーになることがあります。
 
 ```text
 Error: Cannot find module 'some-package'
@@ -504,7 +504,7 @@ pnpm add some-package
 
 ### 1. private: true を設定
 
-内部パッケージには `private: true` を設定し、npm への誤公開を防ぎます。
+内部パッケージには `private: true` を設定し、npmへの誤公開を防ぎます。
 
 ```json
 {
@@ -515,7 +515,7 @@ pnpm add some-package
 
 ### 2. カタログでバージョン統一
 
-同じ依存関係は catalog: で参照し、バージョンを統一します。
+同じ依存関係はcatalog: で参照し、バージョンを統一します。
 
 ### 3. peerDependencies の活用
 
@@ -531,7 +531,7 @@ pnpm add some-package
 
 ### 4. engines フィールド
 
-Node.js と pnpm のバージョンを固定します。
+Node.jsとpnpmのバージョンを固定します。
 
 ```json
 {
@@ -546,4 +546,4 @@ Node.js と pnpm のバージョンを固定します。
 
 ## 次のステップ
 
-pnpm ワークスペースの設定が完了したら、[共有設定パッケージ](./04-shared-tooling.md) で ESLint や TypeScript の設定を共有しましょう。
+pnpmワークスペースの設定が完了したら、[共有設定パッケージ](./04-shared-tooling.md) でESLintやTypeScriptの設定を共有しましょう。

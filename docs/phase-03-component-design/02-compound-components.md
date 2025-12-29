@@ -23,8 +23,8 @@
 
 ## Compound Components とは
 
-Compound Components は、**複数のコンポーネントが暗黙的に状態を共有し、協調して動作するパターン**です。
-HTML の `<select>` と `<option>` の関係に似ています。
+Compound Componentsは、**複数のコンポーネントが暗黙的に状態を共有し、協調して動作するパターン**です。
+HTMLの `<select>` と `<option>` の関係に似ています。
 
 ```tsx
 {
@@ -499,7 +499,7 @@ export function FilterPanel({
 
 ## shadcn/ui での Compound Components
 
-shadcn/ui は Radix UI をベースにしており、多くの Compound Components パターンを採用しています。
+shadcn/uiはRadix UIをベースにしており、多くのCompound Componentsパターンを採用しています。
 
 | コンポーネント      | 構成                                             |
 | ------------ | ---------------------------------------------- |
@@ -533,11 +533,11 @@ pnpm dlx shadcn@latest add accordion tabs dialog sheet
 
 ## まとめ
 
-- Compound Components は**複数のコンポーネントが暗黙的に状態を共有するパターン**
+- Compound Componentsは**複数のコンポーネントが暗黙的に状態を共有するパターン**
 - **Context** を使って親から子に状態を渡す
-- **Props 地獄**を回避し、柔軟で読みやすい API を提供
-- shadcn/ui の Accordion, Tabs, Dialog などで活用されている
-- EC サイトでは商品詳細タブ、FAQ、フィルターパネルなどで使える
+- **Props 地獄**を回避し、柔軟で読みやすいAPIを提供
+- shadcn/uiのAccordion, Tabs, Dialogなどで活用されている
+- ECサイトでは商品詳細タブ、FAQ、フィルターパネルなどで使える
 
 ***
 

@@ -28,7 +28,7 @@
 
 ## 概要
 
-React 18 と Next.js App Router では、コンポーネントが **Server Components** と **Client Components** の2種類に分かれます。適切に使い分けることで、パフォーマンスと UX を最適化できます。
+React 18とNext.js App Routerでは、コンポーネントが **Server Components** と **Client Components** の2種類に分かれます。適切に使い分けることで、パフォーマンスとUXを最適化できます。
 
 ***
 
@@ -63,7 +63,7 @@ graph TD
 
 ## デフォルトは Server Components
 
-App Router では、**全てのコンポーネントがデフォルトで Server Components** です。
+App Routerでは、**すべてのコンポーネントがデフォルトで Server Components** です。
 
 ```tsx
 // app/products/page.tsx
@@ -89,16 +89,16 @@ export default async function ProductsPage(): Promise<React.ReactElement> {
 
 ### Server Components のメリット
 
-1. **バンドルサイズ削減**: JavaScript がブラウザに送られない
-2. **高速な初期表示**: サーバーで HTML を生成
-3. **機密情報の保護**: API キーなどをサーバーに隠せる
-4. **直接データアクセス**: DB や外部 API に直接アクセス可能
+1. **バンドルサイズ削減**: JavaScriptがブラウザに送られない
+2. **高速な初期表示**: サーバーでHTMLを生成
+3. **機密情報の保護**: APIキーなどをサーバーに隠せる
+4. **直接データアクセス**: DBや外部APIに直接アクセス可能
 
 ***
 
 ## Client Components の宣言
 
-Client Components にするには、ファイルの先頭に `"use client"` ディレクティブを追加します。
+Client Componentsにするには、ファイルの先頭に `"use client"` ディレクティブを追加します。
 
 ```tsx
 // components/AddToCartButton.tsx
@@ -137,14 +137,14 @@ export function AddToCartButton({ productId }: Props): React.ReactElement {
 
 - `useState`, `useEffect`, `useContext` などのフックを使う
 - `onClick`, `onChange` などのイベントハンドラを使う
-- `window`, `document`, `localStorage` などのブラウザ API を使う
+- `window`, `document`, `localStorage` などのブラウザAPIを使う
 - クラスコンポーネントを使う
 
 ***
 
 ## コンポーネントの組み合わせ
 
-Server Components と Client Components は自由に組み合わせられます。
+Server ComponentsとClient Componentsは自由に組み合わせられます。
 
 ```mermaid
 graph TD
@@ -191,7 +191,7 @@ export default async function ProductPage({ params }: Props): Promise<React.Reac
 
 ## "use client" の境界
 
-`"use client"` はモジュールの境界を定義します。そのファイルと、そのファイルがインポートする全てのモジュールが Client Components になります。
+`"use client"` はモジュールの境界を定義します。そのファイルと、そのファイルがインポートするすべてのモジュールがClient Componentsになります。
 
 ```mermaid
 graph TD
@@ -228,7 +228,7 @@ export function InteractiveComponent(): React.ReactElement {
 
 ## データの受け渡し
 
-Server Components から Client Components へは、**シリアライズ可能な props** のみ渡せます。
+Server ComponentsからClient Componentsへは、**シリアライズ可能な props** のみ渡せます。
 
 ```tsx
 // OK: プリミティブ値、オブジェクト、配列
@@ -267,7 +267,7 @@ function ClientComponent({ date }: Props) {
 
 ## パターン: Composition
 
-Server Components の中で Client Components を使うときは、**Composition パターン**を活用します。
+Server Componentsの中でClient Componentsを使うときは、**Composition パターン**を活用します。
 
 ### children を使ったパターン
 
@@ -428,16 +428,16 @@ export default function Page() {
 
 ## まとめ
 
-| ポイント           | 説明                                  |
-| -------------- | ----------------------------------- |
-| デフォルトは Server  | 全てのコンポーネントがデフォルトで Server Components |
-| `"use client"` | Client Components にするためのディレクティブ     |
-| 最小限の Client    | インタラクションが必要な部分だけ Client に           |
-| Composition    | Server の中に Client を組み込むパターン         |
-| シリアライズ         | props はシリアライズ可能な値のみ                 |
+| ポイント           | 説明                                   |
+| -------------- | ------------------------------------ |
+| デフォルトは Server  | すべてのコンポーネントがデフォルトで Server Components |
+| `"use client"` | Client Components にするためのディレクティブ      |
+| 最小限の Client    | インタラクションが必要な部分だけ Client に            |
+| Composition    | Server の中に Client を組み込むパターン          |
+| シリアライズ         | props はシリアライズ可能な値のみ                  |
 
 ***
 
 ## 次のステップ
 
-Server と Client Components を理解したら、次は [loading/error/not-found](./04-special-files.md) で特殊なファイルを使った UX 向上を学びましょう。
+ServerとClient Componentsを理解したら、次は [loading/error/not-found](./04-special-files.md) で特殊なファイルを使ったUX向上を学びましょう。

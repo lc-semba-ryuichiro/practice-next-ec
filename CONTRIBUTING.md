@@ -23,11 +23,11 @@
 
 ## 貢献の流れ
 
-1. リポジトリを Fork する
-2. feature ブランチを作成する (`git checkout -b feature/amazing-feature`)
+1. リポジトリをForkする
+2. featureブランチを作成する (`git checkout -b feature/amazing-feature`)
 3. 変更をコミットする (`git commit -m 'feat: add amazing feature'`)
-4. ブランチを Push する (`git push origin feature/amazing-feature`)
-5. Pull Request を作成する
+4. ブランチをPushする (`git push origin feature/amazing-feature`)
+5. Pull Requestを作成する
 
 ## 開発環境のセットアップ
 
@@ -50,21 +50,21 @@ pnpm dev
 
 ### TypeScript
 
-- strict モードを有効にする
+- strictモードを有効にする
 - `any` 型の使用を避ける
 - 明示的な型注釈よりも型推論を優先する
 
 ### スタイリング
 
-- Tailwind CSS のユーティリティクラスを使用する
-- カスタム CSS は最小限に抑える
+- Tailwind CSSのユーティリティクラスを使用する
+- カスタムCSSは最小限に抑える
 - `cn()` 関数でクラスを結合する
 
 ### コンポーネント
 
-- Server Components をデフォルトとして使用する
-- Client Components は必要な場合のみ `"use client"` を付与する
-- コンポーネントには Storybook ストーリーを作成する
+- Server Componentsをデフォルトとして使用する
+- Client Componentsは必要な場合のみ `"use client"` を付与する
+- コンポーネントにはStorybookストーリーを作成する
 
 ## コミットメッセージ
 
@@ -80,15 +80,15 @@ pnpm dev
 
 ### Type
 
-| Type     | 説明                      |
-| -------- | ----------------------- |
-| feat     | 新機能                     |
-| fix      | バグ修正                    |
-| docs     | ドキュメントのみの変更             |
-| style    | コードの意味に影響しない変更（フォーマット等） |
-| refactor | バグ修正や機能追加を伴わないコード変更     |
-| test     | テストの追加・修正               |
-| chore    | ビルドプロセスやツールの変更          |
+| Type     | 説明                       |
+| -------- | ------------------------ |
+| feat     | 新機能                      |
+| fix      | バグ修正                     |
+| docs     | ドキュメントのみの変更              |
+| style    | コードの意味に影響しない変更（フォーマットなど） |
+| refactor | バグ修正や機能追加を伴わないコード変更      |
+| test     | テストの追加・修正                |
+| chore    | ビルドプロセスやツールの変更           |
 
 ## Pull Request
 
@@ -96,12 +96,12 @@ pnpm dev
 
 - [ ] `pnpm lint` がエラーなく通る
 - [ ] `pnpm build` が成功する
-- [ ] 新機能には Storybook ストーリーを追加した
+- [ ] 新機能にはStorybookストーリーを追加した
 - [ ] 変更に伴いドキュメントを更新した
 
 ### タイトル
 
-コミットメッセージと同様に Conventional Commits 形式で記述します。
+コミットメッセージと同様にConventional Commits形式で記述します。
 
 ```text
 feat: カート機能を追加
@@ -110,7 +110,7 @@ feat: カート機能を追加
 ### 説明
 
 - 変更の目的と概要
-- 関連する Issue 番号（あれば）
+- 関連するIssue番号（あれば）
 - テスト方法や確認手順
 
 ## Issue
@@ -120,7 +120,7 @@ feat: カート機能を追加
 - 再現手順
 - 期待される動作
 - 実際の動作
-- 環境情報（OS、ブラウザ、Node.js バージョン等）
+- 環境情報（OS、ブラウザ、Node.jsバージョンなど）
 
 ### 機能リクエスト
 
@@ -130,4 +130,4 @@ feat: カート機能を追加
 
 ## 質問
 
-Issue で `question` ラベルを付けて質問できます。
+Issueで `question` ラベルを付けて質問できます。

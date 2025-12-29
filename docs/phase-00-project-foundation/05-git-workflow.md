@@ -74,7 +74,7 @@ gitGraph
 
 1. `main` ブランチは常にデプロイ可能な状態
 2. 新機能・修正は `main` からブランチを切る
-3. 作業が完了したら Pull Request を作成
+3. 作業が完了したらPull Requestを作成
 4. レビュー後、`main` にマージ
 5. マージ後すぐにデプロイ
 
@@ -249,7 +249,7 @@ echo 'pnpm exec commitlint --edit "$1"' > .husky/commit-msg
 
 ## secretlint の設定
 
-シークレット（API キー、パスワードなど）の誤コミットを防ぎます。
+シークレット（APIキー、パスワードなど）の誤コミットを防ぎます。
 
 ### インストール
 
@@ -489,4 +489,4 @@ git diff --staged
 
 ## 次のステップ
 
-Git ワークフローを理解したら、[GitHub Actions による CI/CD](./06-github-actions.md) でパイプラインを構築しましょう。
+Gitワークフローを理解したら、[GitHub Actions による CI/CD](./06-github-actions.md) でパイプラインを構築しましょう。

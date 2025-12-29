@@ -36,14 +36,14 @@
 
 ## 認証（Authentication）と認可（Authorization）
 
-Web アプリケーションのセキュリティを考える際、認証と認可は異なる概念です。
+Webアプリケーションのセキュリティを考える際、認証と認可は異なる概念です。
 
 ### 認証（Authentication）
 
 **「あなたは誰ですか？」** を確認するプロセスです。
 
 - ユーザー名とパスワードの検証
-- OAuth による第三者認証（Google, GitHub など）
+- OAuthによる第三者認証（Google, GitHubなど）
 - 多要素認証（MFA）
 
 ### 認可（Authorization）
@@ -75,7 +75,7 @@ flowchart LR
 
 ### Cookie とは
 
-Cookie は、Web サーバーがブラウザに保存を依頼する小さなデータです。
+Cookieは、Webサーバーがブラウザに保存を依頼する小さなデータです。
 
 ```mermaid
 sequenceDiagram
@@ -117,14 +117,14 @@ cookies().set("session", token, {
 
 ## NextAuth.js（Auth.js v5）とは
 
-NextAuth.js は、Next.js 向けの認証ライブラリです。v5 からは **Auth.js** としてフレームワーク非依存になりました。
+NextAuth.jsは、Next.js向けの認証ライブラリです。v5からは **Auth.js** としてフレームワーク非依存になりました。
 
 ### 特徴
 
-- 複数の認証プロバイダー対応（OAuth, Credentials など）
-- JWT / Database セッション選択可能
-- App Router 完全対応
-- TypeScript サポート
+- 複数の認証プロバイダー対応（OAuth, Credentialsなど）
+- JWT / Databaseセッション選択可能
+- App Router完全対応
+- TypeScriptサポート
 - セキュリティベストプラクティス組み込み
 
 ### 主要コンポーネント
@@ -275,7 +275,7 @@ openssl rand -base64 32
 
 ## セッション戦略
 
-NextAuth.js では、JWT と Database の 2 つのセッション戦略を選択できます。
+NextAuth.jsでは、JWTとDatabaseの2つのセッション戦略を選択できます。
 
 ### JWT セッション（デフォルト）
 
@@ -417,7 +417,7 @@ export async function registerAction(formData: FormData) {
 
 ### GitHub Provider
 
-1. [GitHub Developer Settings](https://github.com/settings/developers) で OAuth App を作成
+1. [GitHub Developer Settings](https://github.com/settings/developers) でOAuth Appを作成
 2. Authorization callback URL: `http://localhost:3000/api/auth/callback/github`
 
 ```typescript
@@ -431,8 +431,8 @@ GitHub({
 
 ### Google Provider
 
-1. [Google Cloud Console](https://console.cloud.google.com/) で OAuth 2.0 クライアントを作成
-2. 承認済みのリダイレクト URI: `http://localhost:3000/api/auth/callback/google`
+1. [Google Cloud Console](https://console.cloud.google.com/) でOAuth 2.0クライアントを作成
+2. 承認済みのリダイレクトURI: `http://localhost:3000/api/auth/callback/google`
 
 ```typescript
 import Google from "next-auth/providers/google";
@@ -510,14 +510,14 @@ function checkRateLimit(ip: string): boolean {
 ### 学んだこと
 
 - 認証と認可の違い
-- Cookie ベース認証の仕組みと重要な属性
-- NextAuth.js のセットアップと設定
-- JWT と Database セッションの違い
-- Credentials Provider と OAuth Provider の設定
+- Cookieベース認証の仕組みと重要な属性
+- NextAuth.jsのセットアップと設定
+- JWTとDatabaseセッションの違い
+- Credentials ProviderとOAuth Providerの設定
 - セキュリティのベストプラクティス
 
 ***
 
 ## 次のステップ
 
-NextAuth.js の基本設定を理解したら、[Middleware での認証](./02-middleware.md) に進んで、保護されたルートの実装方法を学びましょう。
+NextAuth.jsの基本設定を理解したら、[Middleware での認証](./02-middleware.md) に進んで、保護されたルートの実装方法を学びましょう。

@@ -28,7 +28,7 @@
 
 ## 目標
 
-EC サイト向けのデザインシステムを構築し、一貫性のある UI を実現します。
+ECサイト向けのデザインシステムを構築し、一貫性のあるUIを実現します。
 
 ***
 
@@ -62,9 +62,9 @@ apps/storybook/
 
 ## 前提条件
 
-- Node.js 24 以上がインストールされていること
-- pnpm がインストールされていること
-- Phase 1, 2 を完了していること
+- Node.js 24以上がインストールされていること
+- pnpmがインストールされていること
+- Phase 1, 2を完了していること
 
 ***
 
@@ -618,10 +618,10 @@ export const FullWidth: Story = {
 ## 確認チェックリスト
 
 - [ ] `packages/ui/src/tokens/` にカラー、タイポグラフィ、スペーシングが定義されている
-- [ ] `packages/ui/src/atoms/` に Button, Badge が作成されている
-- [ ] Storybook でカラーパレットが表示される
-- [ ] Storybook で Button の各バリエーションが確認できる
-- [ ] EC 向けバリアント（addToCart, sale バッジなど）が動作する
+- [ ] `packages/ui/src/atoms/` にButton, Badgeが作成されている
+- [ ] Storybookでカラーパレットが表示される
+- [ ] StorybookでButtonの各バリエーションが確認できる
+- [ ] EC向けバリアント（addToCart, saleバッジなど）が動作する
 - [ ] `pnpm build` が成功する
 - [ ] `pnpm storybook` でエラーなく表示される
 
@@ -663,10 +663,10 @@ pnpm turbo clean
 
 ## 発展課題
 
-1. **ダークモード対応**: CSS 変数を使ってダークモードのカラーを定義する
-2. **アニメーショントークン**: transition や animation の定義を追加する
+1. **ダークモード対応**: CSS変数を使ってダークモードのカラーを定義する
+2. **アニメーショントークン**: transitionやanimationの定義を追加する
 3. **ブレークポイント**: レスポンシブデザイン用のトークンを定義する
-4. **Tailwind 統合**: デザイントークンを Tailwind のテーマに統合する
+4. **Tailwind 統合**: デザイントークンをTailwindのテーマに統合する
 
 ***
 
@@ -674,7 +674,7 @@ pnpm turbo clean
 
 - [ ] すべてのチェック項目を確認した
 - [ ] `pnpm storybook` でデザインシステムが確認できる
-- [ ] EC サイト向けのバリアントが追加されている
+- [ ] ECサイト向けのバリアントが追加されている
 
 ***
 

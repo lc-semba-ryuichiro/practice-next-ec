@@ -28,7 +28,7 @@
 ## 概要
 
 再利用可能で保守性の高いコンポーネント設計を習得するフェーズです。
-Atomic Design、Compound Components、カスタムフックなどのパターンを学び、EC サイトで使えるデザインシステムを構築します。
+Atomic Design、Compound Components、カスタムフックなどのパターンを学び、ECサイトで使えるデザインシステムを構築します。
 
 ***
 
@@ -36,22 +36,22 @@ Atomic Design、Compound Components、カスタムフックなどのパターン
 
 難易度: 3/5（中）
 
-コンポーネント設計の概念理解と実践が中心です。抽象的な考え方が多いため、Phase 1・2 の React/Next.js 基礎をしっかり理解していることが重要です。
+コンポーネント設計の概念理解と実践が中心です。抽象的な考え方が多いため、Phase 1・2のReact/Next.js基礎をしっかり理解していることが重要です。
 
 ***
 
 ## 所要時間目安
 
-約 8〜12 時間です。
+約8〜12時間です。
 
 ***
 
 ## 前提知識
 
-- Phase 1（React 基礎 + Storybook 入門）を完了していること
-- Phase 2（Next.js App Router 基礎）を完了していること
-- React コンポーネントの基本（props, state, hooks）
-- TypeScript の基本的な型定義
+- Phase 1（React基礎 + Storybook入門）を完了していること
+- Phase 2（Next.js App Router基礎）を完了していること
+- Reactコンポーネントの基本（props, state, hooks）
+- TypeScriptの基本的な型定義
 
 ***
 
@@ -59,15 +59,15 @@ Atomic Design、Compound Components、カスタムフックなどのパターン
 
 このフェーズを完了すると、以下ができるようになります。
 
-- [ ] Atomic Design の 5 つの階層を説明できる
-- [ ] EC サイトのコンポーネントを Atomic Design の各階層に分類できる
-- [ ] Compound Components パターンを使って柔軟な API を設計できる
+- [ ] Atomic Designの5つの階層を説明できる
+- [ ] ECサイトのコンポーネントをAtomic Designの各階層に分類できる
+- [ ] Compound Componentsパターンを使って柔軟なAPIを設計できる
 - [ ] カスタムフックを作成してロジックを再利用できる
 - [ ] アクセシビリティ（a11y）の基本原則を説明できる
-- [ ] Storybook addon-a11y でアクセシビリティをチェックできる
+- [ ] Storybook addon-a11yでアクセシビリティをチェックできる
 - [ ] デザインシステムの基礎を構築できる
 - [ ] フォームコンポーネント群を実装できる
-- [ ] Modal/Drawer を Compound Components パターンで実装できる
+- [ ] Modal/DrawerをCompound Componentsパターンで実装できる
 
 ***
 
@@ -171,7 +171,7 @@ apps/
 
 ## 関連する EC サイト機能
 
-このフェーズで実装するコンポーネントは、以下の EC 機能で活用されます。
+このフェーズで実装するコンポーネントは、以下のEC機能で活用されます。
 
 | EC 機能     | 使用コンポーネント                               |
 | --------- | --------------------------------------- |
@@ -203,24 +203,24 @@ apps/
 ### Storybook Addons
 
 - [addon-a11y](https://storybook.js.org/addons/@storybook/addon-a11y) - アクセシビリティチェック
-- [addon-designs](https://storybook.js.org/addons/@storybook/addon-designs) - Figma 連携
+- [addon-designs](https://storybook.js.org/addons/@storybook/addon-designs) - Figma連携
 
 ***
 
 ## 自己チェックリスト
 
-Phase 3 を完了する前に、以下を確認してください。
+Phase 3を完了する前に、以下を確認してください。
 
 ### Atomic Design
 
-- [ ] Atoms・Molecules・Organisms・Templates・Pages の違いを説明できる
-- [ ] EC サイトのコンポーネントを Atomic Design の各階層に分類できる
+- [ ] Atoms・Molecules・Organisms・Templates・Pagesの違いを説明できる
+- [ ] ECサイトのコンポーネントをAtomic Designの各階層に分類できる
 
 ### Compound Components
 
-- [ ] Compound Components パターンの利点を説明できる
-- [ ] Context を使った状態共有を実装できる
-- [ ] shadcn/ui の Tabs, Accordion を活用できる
+- [ ] Compound Componentsパターンの利点を説明できる
+- [ ] Contextを使った状態共有を実装できる
+- [ ] shadcn/uiのTabs, Accordionを活用できる
 
 ### カスタムフック
 
@@ -230,13 +230,13 @@ Phase 3 を完了する前に、以下を確認してください。
 
 ### アクセシビリティ
 
-- [ ] WCAG 2.1 の基本原則（POUR）を説明できる
-- [ ] ARIA 属性 (aria-label、aria-describedby 等) を使用できる
+- [ ] WCAG 2.1の基本原則（POUR）を説明できる
+- [ ] ARIA属性 (aria-label、aria-describedbyなど) を使用できる
 - [ ] キーボードナビゲーションに対応できる
-- [ ] Storybook addon-a11y でチェックを実行できる
+- [ ] Storybook addon-a11yでチェックを実行できる
 
 ***
 
 ## 次のフェーズ
 
-Phase 3 を完了したら、[Phase 4: 状態管理（Jotai）](../phase-04-state-management/README.md) に進みましょう。
+Phase 3を完了したら、[Phase 4: 状態管理（Jotai）](../phase-04-state-management/README.md) に進みましょう。

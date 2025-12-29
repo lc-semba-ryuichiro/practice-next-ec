@@ -1,6 +1,6 @@
 # つまずきポイント集
 
-React / Next.js 開発でよくあるエラーと解決策をまとめています。
+React / Next.js開発でよくあるエラーと解決策をまとめています。
 
 ***
 
@@ -47,9 +47,9 @@ React Hook "useState" is called conditionally.
 React Hooks must be called in the exact same order in every component render.
 ```
 
-**原因:** Hooks を条件分岐やループの中で呼び出している。
+**原因:** Hooksを条件分岐やループの中で呼び出している。
 
-**解決策:** Hooks はコンポーネントのトップレベルで呼び出す。
+**解決策:** Hooksはコンポーネントのトップレベルで呼び出す。
 
 ```tsx
 // NG
@@ -74,7 +74,7 @@ function Component({ condition }) {
 
 **症状:** ページがフリーズする、またはコンソールに大量のログが出力される。
 
-**原因:** useEffect の依存配列が正しく設定されていない。
+**原因:** useEffectの依存配列が正しく設定されていない。
 
 **解決策:** 依存配列を正しく設定する。
 
@@ -100,9 +100,9 @@ useEffect(() => {
 Warning: Each child in a list should have a unique "key" prop.
 ```
 
-**原因:** リストのアイテムに一意の key が設定されていない。
+**原因:** リストのアイテムに一意のkeyが設定されていない。
 
-**解決策:** 各アイテムに一意の key を設定する。
+**解決策:** 各アイテムに一意のkeyを設定する。
 
 ```tsx
 // NG
@@ -199,7 +199,7 @@ function Component() {
 You're importing a component that needs useState. It only works in a Client Component but none of its parents are marked with "use client"
 ```
 
-**原因:** Client Component として使用すべきコンポーネントに `"use client"` がない。
+**原因:** Client Componentとして使用すべきコンポーネントに `"use client"` がない。
 
 **解決策:** ファイルの先頭に `"use client"` を追加。
 
@@ -224,9 +224,9 @@ export function Counter() {
 Event handlers cannot be passed to Client Component props.
 ```
 
-**原因:** Server Component から Client Component にイベントハンドラを直接渡している。
+**原因:** Server ComponentからClient Componentにイベントハンドラを直接渡している。
 
-**解決策:** Client Component 内でイベントハンドラを定義する。
+**解決策:** Client Component内でイベントハンドラを定義する。
 
 ```tsx
 // NG: Server Component で定義したハンドラを渡す
@@ -255,7 +255,7 @@ export function Button() {
 Error: Element type is invalid. Received a promise that resolves to: [object Object].
 ```
 
-**原因:** dynamic import の使い方が間違っている。
+**原因:** dynamic importの使い方が間違っている。
 
 **解決策:** 正しい構文を使用する。
 
@@ -284,7 +284,7 @@ Cannot find module '@/types/product' or its corresponding type declarations.
 
 **原因:** パスエイリアスの設定が不完全。
 
-**解決策:** `tsconfig.json` の paths 設定を確認。
+**解決策:** `tsconfig.json` のpaths設定を確認。
 
 ```json
 {
@@ -333,9 +333,9 @@ const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
 Property 'children' does not exist on type 'IntrinsicAttributes'.
 ```
 
-**原因:** コンポーネントの props に children の型が定義されていない。
+**原因:** コンポーネントのpropsにchildrenの型が定義されていない。
 
-**解決策:** PropsWithChildren または ReactNode を使用。
+**解決策:** PropsWithChildrenまたはReactNodeを使用。
 
 ```tsx
 // 方法 1: PropsWithChildren
@@ -366,7 +366,7 @@ Warning: An update to Component inside a test was not wrapped in act(...).
 
 **原因:** 状態更新がテストで正しく待機されていない。
 
-**解決策:** userEvent を使用するか、waitFor で待機する。
+**解決策:** userEventを使用するか、waitForで待機する。
 
 ```tsx
 // NG
@@ -395,7 +395,7 @@ Unable to find an element with the text: "Submit"
 
 **原因:** 要素がまだレンダリングされていない、または存在しない。
 
-**解決策:** findBy クエリを使用して待機するか、要素の存在を確認。
+**解決策:** findByクエリを使用して待機するか、要素の存在を確認。
 
 ```tsx
 // NG: すぐに取得しようとする
@@ -414,7 +414,7 @@ expect(screen.queryByText("Submit")).not.toBeInTheDocument();
 
 ### React DevTools
 
-1. **Components タブ**: コンポーネントツリー、props、state を確認
+1. **Components タブ**: コンポーネントツリー、props、stateを確認
 2. **Profiler タブ**: レンダリングパフォーマンスを計測
 
 ### console.log の効果的な使い方
@@ -438,7 +438,7 @@ console.assert(value > 0, "Value must be positive");
 
 ### Network タブの確認
 
-1. **XHR/Fetch フィルター**: API リクエストのみ表示
+1. **XHR/Fetch フィルター**: APIリクエストのみ表示
 2. **Request/Response**: リクエスト内容とレスポンスを確認
 3. **Timing**: リクエストのタイミングを分析
 

@@ -23,7 +23,7 @@
 
 ## ハンドラーの基本構文
 
-MSW 2.x では、`http` オブジェクトを使ってハンドラーを定義します。
+MSW 2.xでは、`http` オブジェクトを使ってハンドラーを定義します。
 
 ```typescript
 import { http, HttpResponse } from "msw";
@@ -54,7 +54,7 @@ export const handlers = [
 
 ## パスパラメータの扱い
 
-URL に含まれるパスパラメータ（`:id` など）を取得できます。
+URLに含まれるパスパラメータ（`:id` など）を取得できます。
 
 ```typescript
 // mocks/handlers/products.ts
@@ -90,7 +90,7 @@ http.get("/api/categories/:categoryId/products/:productId", ({ params }) => {
 
 ## クエリパラメータの扱い
 
-URL のクエリパラメータ（`?key=value`）を取得するには、`request.url` を使用します。
+URLのクエリパラメータ（`?key=value`）を取得するには、`request.url` を使用します。
 
 ```typescript
 // GET /api/products?category=food&sort=price
@@ -134,7 +134,7 @@ http.get("/api/products", ({ request }) => {
 
 ## リクエストボディの処理
 
-POST、PUT、PATCH リクエストでは、リクエストボディを取得できます。
+POST、PUT、PATCHリクエストでは、リクエストボディを取得できます。
 
 ```typescript
 // mocks/handlers/cart.ts
@@ -210,7 +210,7 @@ http.get("/api/products", async () => {
 
 ## エラーレスポンス
 
-様々なエラーケースをシミュレートできます。
+さまざまなエラーケースをシミュレートできます。
 
 ```typescript
 // mocks/handlers/errors.ts
@@ -508,4 +508,4 @@ server.use(
 
 ## 次のステップ
 
-MSW ハンドラーの書き方を理解したら、[演習 1: 商品データ API](./exercises/01-product-api.md) で実際に商品 API を実装してみましょう。
+MSWハンドラーの書き方を理解したら、[演習 1: 商品データ API](./exercises/01-product-api.md) で実際に商品APIを実装してみましょう。

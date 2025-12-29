@@ -25,8 +25,8 @@
 
 ## 概要
 
-Next.js での認証パターンを理解し、NextAuth.js（Auth.js v5）を使った実践的な認証機能を実装するフェーズです。
-EC サイトに必須のユーザー認証機能を構築し、保護されたルートやセッション管理の仕組みを習得します。
+Next.jsでの認証パターンを理解し、NextAuth.js（Auth.js v5）を使った実践的な認証機能を実装するフェーズです。
+ECサイトに必須のユーザー認証機能を構築し、保護されたルートやセッション管理の仕組みを習得します。
 
 ***
 
@@ -34,22 +34,22 @@ EC サイトに必須のユーザー認証機能を構築し、保護された�
 
 難易度: 3/5（中）
 
-認証は Web アプリケーションの重要な機能であり、セキュリティの理解が求められます。NextAuth.js を使用することで、複雑な認証ロジックを簡略化できます。
+認証はWebアプリケーションの重要な機能であり、セキュリティの理解が求められます。NextAuth.jsを使用することで、複雑な認証ロジックを簡略化できます。
 
 ***
 
 ## 所要時間目安
 
-約 6〜8 時間です。
+約6〜8時間です。
 
 ***
 
 ## 前提知識
 
 - Phase 7（フォーム + Server Actions）を完了していること
-- Cookie とセッションの基本的な概念
-- Next.js App Router の基本（layout, page, middleware）
-- Server Components と Client Components の違い
+- Cookieとセッションの基本的な概念
+- Next.js App Routerの基本（layout, page, middleware）
+- Server ComponentsとClient Componentsの違い
 
 ***
 
@@ -59,10 +59,10 @@ EC サイトに必須のユーザー認証機能を構築し、保護された�
 
 - [ ] 認証（Authentication）と認可（Authorization）の違いを説明できる
 - [ ] NextAuth.js（Auth.js v5）をセットアップできる
-- [ ] Credentials Provider でメール/パスワード認証を実装できる
-- [ ] OAuth Provider（GitHub, Google など）を設定できる
-- [ ] Middleware を使って認証が必要なルートを保護できる
-- [ ] Server/Client Component でセッション情報を取得できる
+- [ ] Credentials Providerでメール/パスワード認証を実装できる
+- [ ] OAuth Provider（GitHub, Googleなど）を設定できる
+- [ ] Middlewareを使って認証が必要なルートを保護できる
+- [ ] Server/Client Componentでセッション情報を取得できる
 - [ ] セッションの有効期限とリフレッシュを設定できる
 
 ***
@@ -138,7 +138,7 @@ sequenceDiagram
 
 ## 関連する EC サイト機能
 
-このフェーズで実装する機能は EC サイトの以下の部分に対応します。
+このフェーズで実装する機能はECサイトの以下の部分に対応します。
 
 | 機能         | 説明                |
 | ---------- | ----------------- |
@@ -194,23 +194,23 @@ graph TD
 
 ## 自己チェックリスト
 
-Phase 8 を完了する前に、以下を確認してください。
+Phase 8を完了する前に、以下を確認してください。
 
 ### 概念理解
 
 - [ ] 認証（Authentication）と認可（Authorization）の違いを説明できる
-- [ ] Cookie ベース認証の仕組みを理解している
-- [ ] JWT と Database セッションの違いを説明できる
-- [ ] CSRF 攻撃とその対策を理解している
+- [ ] Cookieベース認証の仕組みを理解している
+- [ ] JWTとDatabaseセッションの違いを説明できる
+- [ ] CSRF攻撃とその対策を理解している
 
 ### 実装スキル
 
-- [ ] NextAuth.js の設定ファイル（auth.ts）を書ける
-- [ ] Credentials Provider を設定できる
-- [ ] OAuth Provider（GitHub など）を設定できる
-- [ ] Middleware で認証チェックを実装できる
-- [ ] Server Component で `auth()` を使ってセッションを取得できる
-- [ ] Client Component で `useSession()` を使える
+- [ ] NextAuth.jsの設定ファイル（auth.ts）を書ける
+- [ ] Credentials Providerを設定できる
+- [ ] OAuth Provider（GitHubなど）を設定できる
+- [ ] Middlewareで認証チェックを実装できる
+- [ ] Server Componentで `auth()` を使ってセッションを取得できる
+- [ ] Client Componentで `useSession()` を使える
 - [ ] ログイン/ログアウト機能を実装できる
 
 ### セキュリティ
@@ -223,4 +223,4 @@ Phase 8 を完了する前に、以下を確認してください。
 
 ## 次のフェーズ
 
-Phase 8 を完了したら、[Phase 9: 注文フロー + API Routes](../phase-09-order-flow/README.md) に進みましょう。
+Phase 8を完了したら、[Phase 9: 注文フロー + API Routes](../phase-09-order-flow/README.md) に進みましょう。

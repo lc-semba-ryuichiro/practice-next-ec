@@ -25,7 +25,7 @@
 
 ## useActionState とは
 
-**useActionState** は React 19 で導入されたフックで、Server Actions の状態を管理するために使用します。
+**useActionState** はReact 19で導入されたフックです。Server Actionsの状態を管理するために使用します。
 フォームの送信状態（送信中、成功、エラー）を簡単に追跡できます。
 
 ```mermaid
@@ -667,7 +667,7 @@ export default function ContactPage(): JSX.Element {
 
 ### useActionState のメリット
 
-- Server Actions の状態を簡単に追跡できる
+- Server Actionsの状態を簡単に追跡できる
 - ローディング状態を自動で管理できる
 - バリデーションエラーを状態として管理できる
 - プログレッシブエンハンスメントに対応
@@ -683,4 +683,4 @@ export default function ContactPage(): JSX.Element {
 
 ## 次のステップ
 
-useActionState の使い方を理解したら、[楽観的 UI 更新](./04-optimistic-ui.md) に進んで、より良いユーザー体験を実現する方法を学びましょう。
+useActionStateの使い方を理解したら、[楽観的 UI 更新](./04-optimistic-ui.md) に進んで、より良いユーザー体験を実現する方法を学びましょう。

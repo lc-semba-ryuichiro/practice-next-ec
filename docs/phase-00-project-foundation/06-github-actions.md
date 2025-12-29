@@ -34,14 +34,14 @@
 
 ## GitHub Actions とは
 
-**GitHub Actions** は、GitHub に組み込まれた CI/CD プラットフォームです。
-リポジトリ内のイベント（push, PR など）をトリガーにワークフローを実行できます。
+**GitHub Actions** は、GitHubに組み込まれたCI/CDプラットフォームです。
+リポジトリ内のイベント（push, PRなど）をトリガーにワークフローを実行できます。
 
 ***
 
 ## 基本概念
 
-GitHub Actions の構成要素は以下のようになっています。
+GitHub Actionsの構成要素は以下のようになっています。
 
 ```mermaid
 flowchart LR
@@ -58,7 +58,7 @@ flowchart LR
 
 ### ワークフロー（Workflow）
 
-自動化されたプロセス全体。`.github/workflows/` に YAML ファイルとして定義します。
+自動化されたプロセス全体。`.github/workflows/` にYAMLファイルとして定義します。
 
 ### ジョブ（Job）
 
@@ -356,7 +356,7 @@ jobs:
 | `secrets` | 機密情報    | API キー、トークン |
 | `vars`    | 設定値（公開） | 環境名、URL     |
 
-設定場所はリポジトリの Settings → Secrets and variables → Actions です。
+設定場所はリポジトリのSettings → Secrets and variables → Actionsです。
 
 ### キャッシュ
 
@@ -510,7 +510,7 @@ jobs:
 
 ### ログの確認
 
-1. Actions タブで該当のワークフローを選択
+1. Actionsタブで該当のワークフローを選択
 2. 失敗したジョブをクリック
 3. 失敗したステップのログを展開
 
@@ -538,4 +538,4 @@ jobs:
 
 ## 次のステップ
 
-GitHub Actions の設定が完了したら、[Vercel セットアップ](./07-vercel-setup.md) でデプロイ環境を整えましょう。
+GitHub Actionsの設定が完了したら、[Vercel セットアップ](./07-vercel-setup.md) でデプロイ環境を整えましょう。

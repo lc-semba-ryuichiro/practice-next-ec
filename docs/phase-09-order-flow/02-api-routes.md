@@ -33,8 +33,8 @@
 
 ## Route Handlers とは
 
-**Route Handlers** は、Next.js App Router で API エンドポイントを作成する仕組みです。
-`app/api/` ディレクトリ内に `route.ts` ファイルを作成することで、RESTful API を実装できます。
+**Route Handlers** は、Next.js App RouterでAPIエンドポイントを作成する仕組みです。
+`app/api/` ディレクトリ内に `route.ts` ファイルを作成することで、RESTful APIを実装できます。
 
 ### Server Actions との違い
 
@@ -172,7 +172,7 @@ export async function PATCH(request: NextRequest, { params }: Params): Promise<N
 
 ### エンドポイント設計
 
-EC サイトの注文関連 API を RESTful に設計します。
+ECサイトの注文関連APIをRESTfulに設計します。
 
 ```mermaid
 graph TD
@@ -584,21 +584,21 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
 ### Route Handlers の要点
 
-- `app/api/` に `route.ts` を配置して API を作成
-- HTTP メソッド（GET, POST, PUT, DELETE）ごとに関数をエクスポート
+- `app/api/` に `route.ts` を配置してAPIを作成
+- HTTPメソッド（GET, POST, PUT, DELETE）ごとに関数をエクスポート
 - `NextRequest` と `NextResponse` を使用
 - 動的ルートは `[id]/route.ts` で実装
 
 ### 設計のベストプラクティス
 
-- RESTful な URL 設計
-- Zod でリクエストをバリデーション
+- RESTfulなURL設計
+- Zodでリクエストをバリデーション
 - 統一されたエラーレスポンス形式
-- 操作結果に応じた HTTP ステータスコードの使用
+- 操作結果に応じたHTTPステータスコードの使用
 - 認証・認可の実装
 
 ***
 
 ## 次のステップ
 
-API Routes の設計を理解したら、[トランザクション処理](./03-transaction.md) に進んで、注文処理における原子性の確保方法を学びましょう。
+API Routesの設計を理解したら、[トランザクション処理](./03-transaction.md) に進んで、注文処理における原子性の確保方法を学びましょう。

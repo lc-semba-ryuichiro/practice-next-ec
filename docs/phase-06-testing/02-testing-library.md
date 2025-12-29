@@ -43,10 +43,10 @@
 
 ## 概要
 
-Testing Library は「ユーザーがアプリケーションを使用する方法」に基づいてテストを書くためのライブラリです。
+Testing Libraryは「ユーザーがアプリケーションを使用する方法」に基づいてテストを書くためのライブラリです。
 実装の詳細ではなく、ユーザーが見る画面や行う操作をテストすることで、リファクタリングに強いテストを作成できます。
 
-このセクションでは、React コンポーネントを Testing Library でテストする方法を学びます。
+このセクションでは、ReactコンポーネントをTesting Libraryでテストする方法を学びます。
 
 ***
 
@@ -60,9 +60,9 @@ Testing Library は「ユーザーがアプリケーションを使用する方�
 
 ### 特徴
 
-- DOM 要素をユーザーが認識する方法（ロール、テキスト、ラベル）でクエリする
+- DOM要素をユーザーが認識する方法（ロール、テキスト、ラベル）でクエリする
 - クラス名や内部構造ではなく、アクセシビリティ属性を使用する
-- `getByRole` や `getByLabelText` などアクセシビリティ属性でクエリすることで a11y 対応も促進される
+- `getByRole` や `getByLabelText` などアクセシビリティ属性を使ったクエリにより、a11y対応も促進される
 
 ***
 
@@ -85,7 +85,7 @@ it('商品名が表示される', () => {
 
 ### cleanup
 
-Vitest では `@testing-library/react` が自動的に cleanup を実行するため、手動で呼び出す必要はありません。
+Vitestでは `@testing-library/react` が自動的にcleanupを実行するため、手動で呼び出す必要はありません。
 
 ***
 
@@ -111,7 +111,7 @@ Vitest では `@testing-library/react` が自動的に cleanup を実行する�
 
 ## クエリの優先順位
 
-Testing Library では、以下の優先順位でクエリを選択することを推奨しています。
+Testing Libraryでは、以下の優先順位でクエリを選択することを推奨しています。
 
 ### 1. 誰でもアクセスできるクエリ（最優先）
 
@@ -233,11 +233,11 @@ import userEvent from "@testing-library/user-event";
 await user.click(button);
 ```
 
-userEvent を使うと以下の動作が発生する。
+userEventを使うと以下の動作が発生する。
 
 - フォーカス移動
-- hover イベント
-- 入力時の keydown/keypress/keyup
+- hoverイベント
+- 入力時のkeydown/keypress/keyup
 
 ***
 
@@ -527,11 +527,11 @@ it('ロールを確認', () => {
 
 2. `findBy` と `getBy` の違いは何ですか？
 
-   `getBy` は同期的なクエリであり、要素が見つからない場合は即座にエラーを投げる。`findBy` は非同期で、要素が現れるまで待機する（デフォルトで最大 1000ms）。
+   `getBy` は同期的なクエリであり、要素が見つからない場合は即座にエラーを投げる。`findBy` は非同期で、要素が現れるまで待機する（デフォルトで最大1000ms）。
 
 3. `userEvent.setup()` を使う理由は何ですか？
 
-   **回答例**: `setup()` を使うと、ユーザーの実際の操作により近いシミュレーションができる。イベントの順序（keydown → keypress → keyup など）が正しく発火し、フォーカス移動も適切に行われる。
+   **回答例**: `setup()` を使うと、ユーザーの実際の操作により近いシミュレーションができる。イベントの順序（keydown → keypress → keyupなど）が正しく発火し、フォーカス移動も適切に行われる。
 
 4. `queryBy` はいつ使いますか？
 
@@ -541,4 +541,4 @@ it('ロールを確認', () => {
 
 ## 次のステップ
 
-Testing Library の基礎を学んだら、次は [Storybook + Vitest 連携](./03-storybook-vitest.md) でインタラクションテストを学びましょう。
+Testing Libraryの基礎を学んだら、次は [Storybook + Vitest 連携](./03-storybook-vitest.md) でインタラクションテストを学びましょう。

@@ -33,22 +33,22 @@
 ### 認証の基礎
 
 - [ ] 認証（Authentication）と認可（Authorization）の違いを説明できる
-- [ ] Cookie ベース認証の仕組みを図で説明できる
-- [ ] HttpOnly、Secure、SameSite 属性の役割を説明できる
-- [ ] セッション Cookie と永続 Cookie の違いを理解している
+- [ ] Cookieベース認証の仕組みを図で説明できる
+- [ ] HttpOnly、Secure、SameSite属性の役割を説明できる
+- [ ] セッションCookieと永続Cookieの違いを理解している
 
 ### NextAuth.js
 
 - [ ] NextAuth.js（Auth.js v5）の役割とメリットを説明できる
-- [ ] Credentials Provider と OAuth Provider の違いを説明できる
-- [ ] JWT セッションと Database セッションの違いを説明できる
-- [ ] auth.ts、handlers、middleware の役割を説明できる
+- [ ] Credentials ProviderとOAuth Providerの違いを説明できる
+- [ ] JWTセッションとDatabaseセッションの違いを説明できる
+- [ ] auth.ts、handlers、middlewareの役割を説明できる
 
 ### セッション管理
 
 - [ ] セッションの有効期限（maxAge）と更新間隔（updateAge）の関係を理解している
 - [ ] ローリングセッションの仕組みを説明できる
-- [ ] CSRF 攻撃とその対策を説明できる
+- [ ] CSRF攻撃とその対策を説明できる
 
 ***
 
@@ -58,43 +58,43 @@
 
 ### セットアップ
 
-- [ ] NextAuth.js をインストールしてセットアップできる
-- [ ] auth.ts に基本的な設定を記述できる
+- [ ] NextAuth.jsをインストールしてセットアップできる
+- [ ] auth.tsに基本的な設定を記述できる
 - [ ] API Route（`app/api/auth/[...nextauth]/route.ts`）を作成できる
-- [ ] 環境変数（AUTH\_SECRET など）を設定できる
+- [ ] 環境変数（AUTH\_SECRETなど）を設定できる
 
 ### 認証プロバイダー
 
-- [ ] Credentials Provider でメール/パスワード認証を実装できる
-- [ ] OAuth Provider（GitHub など）を設定できる
-- [ ] パスワードを bcrypt でハッシュ化して保存できる
-- [ ] Zod でログインフォームをバリデーションできる
+- [ ] Credentials Providerでメール/パスワード認証を実装できる
+- [ ] OAuth Provider（GitHubなど）を設定できる
+- [ ] パスワードをbcryptでハッシュ化して保存できる
+- [ ] Zodでログインフォームをバリデーションできる
 
 ### Middleware
 
-- [ ] middleware.ts を作成して認証チェックを実装できる
-- [ ] matcher で適用するパスを指定できる
+- [ ] middleware.tsを作成して認証チェックを実装できる
+- [ ] matcherで適用するパスを指定できる
 - [ ] 未認証ユーザーをログインページにリダイレクトできる
-- [ ] callbackUrl を使って元のページに戻れる実装ができる
+- [ ] callbackUrlを使って元のページに戻れる実装ができる
 
 ### Server Component
 
 - [ ] auth() でセッションを取得できる
-- [ ] 未認証時に redirect() でリダイレクトできる
-- [ ] Route Groups を使って認証ルートを分離できる
+- [ ] 未認証時にredirect() でリダイレクトできる
+- [ ] Route Groupsを使って認証ルートを分離できる
 
 ### Client Component
 
-- [ ] SessionProvider を設定できる
+- [ ] SessionProviderを設定できる
 - [ ] useSession() でセッション情報を取得できる
-- [ ] signIn() と signOut() を使ってログイン/ログアウトを実装できる
-- [ ] status による条件分岐（loading, authenticated, unauthenticated）ができる
+- [ ] signIn() とsignOut() を使ってログイン/ログアウトを実装できる
+- [ ] statusによる条件分岐（loading, authenticated, unauthenticated）ができる
 
 ### コールバック
 
-- [ ] jwt コールバックでカスタム情報をトークンに追加できる
-- [ ] session コールバックでセッション情報をカスタマイズできる
-- [ ] TypeScript の型定義を拡張できる
+- [ ] jwtコールバックでカスタム情報をトークンに追加できる
+- [ ] sessionコールバックでセッション情報をカスタマイズできる
+- [ ] TypeScriptの型定義を拡張できる
 
 ***
 
@@ -104,9 +104,9 @@
 
 ### 必須事項
 
-- [ ] パスワードを平文で保存していない（bcrypt でハッシュ化）
-- [ ] AUTH\_SECRET を環境変数で管理している
-- [ ] 本番環境で Secure Cookie を使用している
+- [ ] パスワードを平文で保存していない（bcryptでハッシュ化）
+- [ ] AUTH\_SECRETを環境変数で管理している
+- [ ] 本番環境でSecure Cookieを使用している
 - [ ] センシティブなデータ（パスワードハッシュなど）をクライアントに送信していない
 
 ### 推奨事項
@@ -130,13 +130,13 @@
 
 ### 保護されたルート
 
-- [ ] 未認証で /mypage にアクセスするとログインページにリダイレクトされる
+- [ ] 未認証で /mypageにアクセスするとログインページにリダイレクトされる
 - [ ] ログイン後、元のページに戻れる（callbackUrl）
 - [ ] 認証済みでログインページにアクセスするとマイページにリダイレクトされる
 
 ### セッション
 
-- [ ] ブラウザを閉じても（永続 Cookie の場合）ログイン状態が維持される
+- [ ] ブラウザを閉じても（永続Cookieの場合）ログイン状態が維持される
 - [ ] ログアウト後、保護されたページにアクセスできなくなる
 
 ***
@@ -197,7 +197,7 @@ export default async function MyPage() {
 
 **B. スケーラビリティが重要で、データベースへの負荷を減らしたい場合**
 
-JWT セッションはステートレスで、データベースへのアクセスが不要です。A と C は Database セッションが適しています。
+JWTセッションはステートレスで、データベースへのアクセスが不要です。AとCはDatabaseセッションが適しています。
 
 </details>
 
@@ -228,7 +228,7 @@ export const config = {
 };
 ```
 
-または Middleware 内で除外ロジックを追加します。
+またはMiddleware内で除外ロジックを追加します。
 
 </details>
 

@@ -623,7 +623,7 @@ describe("useToggle", () => {
 
 - カスタムフックは **`use` プレフィックス**で始める
 - **useState, useEffect, useCallback** などを組み合わせてロジックを抽出
-- EC サイトでは **useCart, useFavorites, useRecentlyViewed** などが有用
+- ECサイトでは **useCart, useFavorites, useRecentlyViewed** などが有用
 - **renderHook** を使ってテストを書く
 - **単一責任**を意識し、複雑化を避ける
 

@@ -39,7 +39,7 @@
 
 ## Jotai とは
 
-**Jotai（状態）** は、React 用の軽量な状態管理ライブラリです。
+**Jotai（状態）** は、React用の軽量な状態管理ライブラリです。
 
 ### 名前の由来
 
@@ -58,10 +58,10 @@ graph TD
     end
 ```
 
-- **軽量** - バンドルサイズが非常に小さい（約 3KB）
-- **ボイラープレートなし** - Redux のような定型コードが不要
+- **軽量** - バンドルサイズが非常に小さい（約3KB）
+- **ボイラープレートなし** - Reduxのような定型コードが不要
 - **TypeScript ファースト** - 型推論が優れている
-- **React に特化** - React の思想に沿った設計
+- **React に特化** - Reactの思想に沿った設計
 
 ***
 
@@ -123,7 +123,7 @@ const userAtom = atom<User | null>(null);
 
 ### Atom とは
 
-**Atom** は、Jotai における状態の最小単位です。
+**Atom** は、Jotaiにおける状態の最小単位です。
 
 ```mermaid
 graph TD
@@ -140,8 +140,8 @@ graph TD
 ### Atom の特徴
 
 1. **不可分（Atomic）** - これ以上分割できない状態の単位
-2. **独立している** - 各 Atom は他の Atom に依存しない（派生 Atom を除く）
-3. **購読可能** - コンポーネントが Atom を購読し、変更を検知できる
+2. **独立している** - 各Atomは他のAtomに依存しない（派生Atomを除く）
+3. **購読可能** - コンポーネントがAtomを購読し、変更を検知できる
 
 ***
 
@@ -198,7 +198,7 @@ const cartAtom = atom<CartItem[]>([]);
 
 ### useAtom フック
 
-`useAtom` は、Atom の値を読み取りと書き込みの両方を行うフックです。
+`useAtom` は、Atomの値を読み取りと書き込みの両方を行うフックです。
 
 ```typescript
 import { useAtom } from "jotai";
@@ -227,7 +227,7 @@ const [count, setCount] = useState(0);
 const [count, setCount] = useAtom(countAtom);
 ```
 
-API は `useState` とほぼ同じですが、状態がコンポーネントの外部（Atom）で管理されるため、複数のコンポーネント間で共有できます。
+APIは `useState` とほぼ同じですが、状態がコンポーネントの外部（Atom）で管理されるため、複数のコンポーネント間で共有できます。
 
 ***
 
@@ -357,7 +357,7 @@ export function Header(): JSX.Element {
 
 ### Provider は必要？
 
-Jotai v2 以降、**Provider は基本的に不要**です。
+Jotai v2以降、**Provider は基本的に不要**です。
 
 ```tsx
 // Provider なしで動作する
@@ -373,7 +373,7 @@ function App(): JSX.Element {
 
 ### Provider を使う場合
 
-以下の場合は Provider を使用します。
+以下の場合はProviderを使用します。
 
 1. **テスト時に状態を分離したい場合**
 2. **SSR で初期値を注入したい場合**
@@ -442,15 +442,15 @@ setItem((prev) => ({ ...prev, name }));
 
 ### Atom の基本
 
-- Atom は Jotai における状態の最小単位
+- AtomはJotaiにおける状態の最小単位
 - `atom()` 関数で作成
 - `useAtom()` フックで読み書き
 - コンポーネントの外部で定義する
 
 ### メリット
 
-- シンプルな API（useState に似ている）
-- TypeScript との相性が良い
+- シンプルなAPI（useStateに似ている）
+- TypeScriptとの相性が良い
 - 不要な再レンダリングを防げる
 - ボイラープレートが少ない
 
@@ -458,4 +458,4 @@ setItem((prev) => ({ ...prev, name }));
 
 ## 次のステップ
 
-Atom の基本を理解したら、[派生 Atom](./02-derived-atoms.md) に進んで、Atom 同士を組み合わせる方法を学びましょう。
+Atomの基本を理解したら、[派生 Atom](./02-derived-atoms.md) に進んで、Atom同士を組み合わせる方法を学びましょう。

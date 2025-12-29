@@ -31,8 +31,8 @@
 
 ## コンポーネントとは
 
-**コンポーネント** は、UI を独立した再利用可能な部品に分割するための仕組みです。
-React では、関数がコンポーネントとして機能します。
+**コンポーネント** は、UIを独立した再利用可能な部品に分割するための仕組みです。
+Reactでは、関数がコンポーネントとして機能します。
 
 ### 関数コンポーネント
 
@@ -74,7 +74,7 @@ function productCard(): React.ReactElement { ... }  // 動作しない
 
 ### ファイル命名
 
-コンポーネントファイルも PascalCase または kebab-case で命名します。
+コンポーネントファイルもPascalCaseまたはkebab-caseで命名します。
 
 ```text
 // PascalCase（コンポーネントファイル）
@@ -116,7 +116,7 @@ function Greeting(props: { name: string }): React.ReactElement {
 
 ## props の分割代入
 
-props は分割代入で受け取るのが一般的です。
+propsは分割代入で受け取るのが一般的です。
 
 ```tsx
 // 分割代入なし
@@ -234,7 +234,7 @@ const sampleProduct: Product = {
 
 ## オプショナル props
 
-`?` をつけることで、省略可能な props を定義できます。
+`?` をつけることで、省略可能なpropsを定義できます。
 
 ```tsx
 type ButtonProps = {
@@ -271,7 +271,7 @@ function Button({
 
 ## children プロパティ
 
-`children` は特別な props で、コンポーネントの開始タグと終了タグの間に渡された要素を受け取ります。
+`children` は特別なpropsで、コンポーネントの開始タグと終了タグの間に渡された要素を受け取ります。
 
 ```tsx
 type CardProps = {
@@ -299,7 +299,7 @@ function Card({ title, children }: CardProps): React.ReactElement {
 
 `children` の型として使用される `React.ReactNode` は、以下のすべてを含みます。
 
-- JSX 要素
+- JSX要素
 - 文字列
 - 数値
 - `null` / `undefined`
@@ -462,7 +462,7 @@ function ProductCard({ product }: ProductCardProps): React.ReactElement {
 
 ## props の読み取り専用性
 
-props は **読み取り専用** です。子コンポーネント内で props を変更してはいけません。
+propsは **読み取り専用** です。子コンポーネント内でpropsを変更してはいけません。
 
 ```tsx
 // NG: props を変更しようとする
@@ -484,8 +484,8 @@ function GoodComponent({ price }: { price: number }): React.ReactElement {
 
 ### 分割の目安
 
-1. **再利用性**: 複数の場所で使われる UI
-2. **複雑さ**: 1 つのコンポーネントが大きくなりすぎた
+1. **再利用性**: 複数の場所で使われるUI
+2. **複雑さ**: 1つのコンポーネントが大きくなりすぎた
 3. **責務**: 異なる責務を持つ部分を分離
 
 ### EC サイトでの例
@@ -585,5 +585,5 @@ function Header({ user }: { user: User }): React.ReactElement {
 
 ## 次のステップ
 
-コンポーネントと props を理解したら、[useState / useEffect](./03-state-hooks.md) に進んで、
+コンポーネントとpropsを理解したら、[useState / useEffect](./03-state-hooks.md) に進んで、
 コンポーネントの状態管理を学びましょう。

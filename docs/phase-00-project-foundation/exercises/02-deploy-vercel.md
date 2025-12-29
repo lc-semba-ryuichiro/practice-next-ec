@@ -44,15 +44,15 @@
 
 ## 目標
 
-モノレポ構成のプロジェクトを Vercel にデプロイし、プレビューデプロイとリモートキャッシュを設定します。
+モノレポ構成のプロジェクトをVercelにデプロイし、プレビューデプロイとリモートキャッシュを設定します。
 
 ***
 
 ## 前提条件
 
-- 演習 1 が完了していること
-- GitHub アカウントを持っていること
-- Vercel アカウントを持っていること（なければ作成）
+- 演習1が完了していること
+- GitHubアカウントを持っていること
+- Vercelアカウントを持っていること（なければ作成）
 
 ***
 
@@ -113,7 +113,7 @@ git push -u origin main
 1. [vercel.com](https://vercel.com) にアクセス
 2. 「Sign Up」をクリック
 3. 「Continue with GitHub」を選択
-4. GitHub アカウントで認証
+4. GitHubアカウントで認証
 
 ### 2.2 GitHub との連携
 
@@ -127,7 +127,7 @@ git push -u origin main
 
 ### 3.1 プロジェクトをインポート
 
-1. Vercel Dashboard で「Add New\...」→「Project」
+1. Vercel Dashboardで「Add New\...」→「Project」
 2. 「Import Git Repository」で `ec-monorepo` を選択
 3. 「Import」をクリック
 
@@ -145,7 +145,7 @@ git push -u origin main
 
 1. 「Deploy」をクリック
 2. ビルドログを確認
-3. デプロイ完了後、URL にアクセスして確認
+3. デプロイ完了後、URLにアクセスして確認
 
 ***
 
@@ -157,7 +157,7 @@ git push -u origin main
 npx turbo login
 ```
 
-ブラウザが開き、Vercel で認証します。
+ブラウザが開き、Vercelで認証します。
 
 ### 4.2 プロジェクトをリンク
 
@@ -217,12 +217,12 @@ git push origin feature/test-preview
 
 ### 5.4 PR を作成
 
-GitHub で Pull Request を作成します。
+GitHubでPull Requestを作成します。
 
 ### 5.5 プレビューを確認
 
-1. PR のコメントに Vercel bot がプレビュー URL を投稿
-2. URL にアクセスして変更を確認
+1. PRのコメントにVercel botがプレビュー URLを投稿
+2. URLにアクセスして変更を確認
 3. レビュー後、マージ
 
 ***
@@ -312,7 +312,7 @@ GitHub → Settings → Secrets and variables → Actions:
 
 **Secrets:**
 
-- `TURBO_TOKEN`: Turborepo のトークン
+- `TURBO_TOKEN`: Turborepoのトークン
 
 **Variables:**
 
@@ -328,7 +328,7 @@ git push
 
 ### 6.4 Actions の実行を確認
 
-GitHub → Actions タブでワークフローの実行を確認。
+GitHub → Actionsタブでワークフローの実行を確認。
 
 ***
 
@@ -362,11 +362,11 @@ git push
 
 以下を確認してください。
 
-- [ ] Vercel にプロジェクトがデプロイされている
-- [ ] デプロイ URL でサイトが表示される
-- [ ] PR を作成するとプレビュー URL が発行される
-- [ ] GitHub Actions が正常に実行される
-- [ ] Turborepo のリモートキャッシュが有効（ビルドログで確認）
+- [ ] Vercelにプロジェクトがデプロイされている
+- [ ] デプロイURLでサイトが表示される
+- [ ] PRを作成するとプレビュー URLが発行される
+- [ ] GitHub Actionsが正常に実行される
+- [ ] Turborepoのリモートキャッシュが有効（ビルドログで確認）
 
 ***
 
@@ -394,14 +394,14 @@ Error: Cannot find module '@ec/shared'
 
 以下を確認してください。
 
-- Vercel の GitHub App が正しく設定されているか確認する
-- Project Settings → Git → Preview Branches の設定を確認する
+- VercelのGitHub Appが正しく設定されているか確認する
+- Project Settings → Git → Preview Branchesの設定を確認する
 
 ***
 
 ## 発展課題
 
-1. `apps/admin` を別の Vercel プロジェクトとしてデプロイ
+1. `apps/admin` を別のVercelプロジェクトとしてデプロイ
 2. カスタムドメインを設定
 3. 環境ごとの環境変数を設定（Production/Preview/Development）
 
@@ -411,14 +411,14 @@ Error: Cannot find module '@ec/shared'
 
 以下がすべて動作すれば、この演習は完了です。
 
-- [ ] Vercel に web アプリがデプロイされている
-- [ ] PR でプレビューデプロイが自動生成される
-- [ ] GitHub Actions の CI が正常に動作する
-- [ ] Turborepo のリモートキャッシュが有効になっている
+- [ ] Vercelにwebアプリがデプロイされている
+- [ ] PRでプレビューデプロイが自動生成される
+- [ ] GitHub ActionsのCIが正常に動作する
+- [ ] Turborepoのリモートキャッシュが有効になっている
 
 ***
 
 ## 次のステップ
 
-Phase 0 の演習が完了しました。
+Phase 0の演習が完了しました。
 [チェックリスト](../checklist.md) で理解度を確認し、[Phase 1: React 基礎 + Storybook 入門](../../phase-01-react-basics/README.md) に進みましょう。

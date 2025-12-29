@@ -27,7 +27,7 @@
 
 ## 楽観的更新とは
 
-**楽観的更新（Optimistic Update）** とは、サーバーからの応答を待たずに、UI を即座に更新する手法です。
+**楽観的更新（Optimistic Update）** とは、サーバーからの応答を待たずに、UIを即座に更新する手法です。
 ユーザーにとって操作が即座に反映されるため、より良い体験を提供できます。
 
 ```mermaid
@@ -53,7 +53,7 @@ graph LR
 
 ## useOptimistic フック
 
-React 19 で導入された `useOptimistic` フックを使用して、楽観的更新を実装できます。
+React 19で導入された `useOptimistic` フックを使用して、楽観的更新を実装できます。
 
 ### シグネチャ
 
@@ -493,7 +493,7 @@ export function OptimisticComponent(): JSX.Element {
 
 ### なぜ useTransition が必要か
 
-- `useTransition` により、UI の更新を「低優先度」としてマーク
+- `useTransition` により、UIの更新を「低優先度」としてマーク
 - ユーザー入力などの高優先度タスクをブロックしない
 - `isPending` でローディング状態を取得できる
 
@@ -572,4 +572,4 @@ const actualItem = await addToCart(product.id, 1);
 
 ## 次のステップ
 
-楽観的 UI 更新を理解したら、[エラーハンドリング](./05-error-handling.md) に進んで、バリデーションエラーやサーバーエラーの処理方法を学びましょう。
+楽観的UI更新を理解したら、[エラーハンドリング](./05-error-handling.md) に進んで、バリデーションエラーやサーバーエラーの処理方法を学びましょう。

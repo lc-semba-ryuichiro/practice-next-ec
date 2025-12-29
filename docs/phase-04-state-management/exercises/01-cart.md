@@ -32,8 +32,8 @@
 
 ## 目標
 
-Jotai を使ってショッピングカート機能を実装します。
-このエクササイズでは、Atom の基本、派生 Atom、永続化の知識を総合的に活用します。
+Jotaiを使ってショッピングカート機能を実装します。
+このエクササイズでは、Atomの基本、派生Atom、永続化の知識を総合的に活用します。
 
 ***
 
@@ -54,7 +54,7 @@ graph TD
 - カートから商品を削除
 - 商品の数量変更
 - カート内の合計金額計算
-- カート内容を localStorage に永続化
+- カート内容をlocalStorageに永続化
 
 ***
 
@@ -533,13 +533,13 @@ export default function CartPage(): JSX.Element {
 
 ### localStorage が動作しない
 
-SSR 環境では localStorage にアクセスできません。
+SSR環境ではlocalStorageにアクセスできません。
 `"use client"` ディレクティブが付いているか確認してください。
 
 ### Hydration Mismatch エラー
 
 サーバーとクライアントで値が異なる場合に発生します。
-Suspense でラップするか、クライアントサイドでのみ表示するようにしてください。
+Suspenseでラップするか、クライアントサイドでのみ表示するようにしてください。
 
 ```tsx
 "use client";

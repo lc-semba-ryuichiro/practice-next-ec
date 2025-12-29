@@ -23,7 +23,7 @@
 
 ## 概要
 
-このフェーズでは、Next.js 16 の App Router を使ったルーティングとレイアウトを学びます。ファイルベースのルーティングシステム、Server Components と Client Components の違い、そして EC サイトの基本的なページ構成を実装します。
+このフェーズでは、Next.js 16のApp Routerを使ったルーティングとレイアウトを学びます。ファイルベースのルーティングシステム、Server ComponentsとClient Componentsの違い、そしてECサイトの基本的なページ構成を実装します。
 
 ***
 
@@ -31,22 +31,22 @@
 
 2/5。
 
-React の基礎（Phase 1）を理解していれば、App Router の概念は直感的に理解できます。
+Reactの基礎（Phase 1）を理解していれば、App Routerの概念は直感的に理解できます。
 
 ***
 
 ## 所要時間目安
 
-約 8〜10 時間。
+約8〜10時間。
 
 ***
 
 ## 前提知識
 
-- [ ] Phase 1: React 基礎を完了していること
-- [ ] React コンポーネントと props の基本を理解していること
-- [ ] TypeScript の基本的な型定義ができること
-- [ ] HTML/CSS の基本を理解していること
+- [ ] Phase 1: React基礎を完了していること
+- [ ] Reactコンポーネントとpropsの基本を理解していること
+- [ ] TypeScriptの基本的な型定義ができること
+- [ ] HTML/CSSの基本を理解していること
 
 ***
 
@@ -54,10 +54,10 @@ React の基礎（Phase 1）を理解していれば、App Router の概念は�
 
 このフェーズを完了すると、以下ができるようになります。
 
-- [ ] App Router のファイルベースルーティングを理解し、ページを作成できる
+- [ ] App Routerのファイルベースルーティングを理解し、ページを作成できる
 - [ ] `layout.tsx` と `page.tsx` の役割を説明し、適切に使い分けられる
-- [ ] Server Components と Client Components の違いを理解し、適切に選択できる
-- [ ] `loading.tsx`、`error.tsx`、`not-found.tsx` を使って UX を向上できる
+- [ ] Server ComponentsとClient Componentsの違いを理解し、適切に選択できる
+- [ ] `loading.tsx`、`error.tsx`、`not-found.tsx` を使ってUXを向上できる
 - [ ] 動的ルート（`[slug]`）を使って商品詳細ページを実装できる
 - [ ] `<Link>` と `<Image>` コンポーネントを使ってパフォーマンスを最適化できる
 
@@ -115,7 +115,7 @@ apps/web/
 
 ## 関連する EC サイト機能
 
-このフェーズで実装する EC サイト機能を示します。
+このフェーズで実装するECサイト機能を示します。
 
 | 機能     | 対応ルート                | 説明               |
 | ------ | -------------------- | ---------------- |
@@ -172,13 +172,13 @@ graph TD
 
 ## 自己チェックリスト
 
-Phase 2 を完了する前に、以下の項目を確認してください。
+Phase 2を完了する前に、以下の項目を確認してください。
 
 ### 理解度チェック
 
 - [ ] `app/` ディレクトリ内のファイル構造がルーティングにどう対応するか説明できる
 - [ ] `layout.tsx` と `page.tsx` の違いを説明できる
-- [ ] Server Components と Client Components の使い分けができる
+- [ ] Server ComponentsとClient Componentsの使い分けができる
 - [ ] `"use client"` ディレクティブをいつ使うか判断できる
 - [ ] 動的ルートの `[param]` と `[[...slug]]` の違いを説明できる
 
@@ -187,13 +187,13 @@ Phase 2 を完了する前に、以下の項目を確認してください。
 - [ ] ヘッダーとフッターを含むレイアウトを実装した
 - [ ] 商品一覧ページを実装した
 - [ ] 商品詳細ページを動的ルートで実装した
-- [ ] `loading.tsx` でローディング UI を実装した
-- [ ] `not-found.tsx` で 404 ページを実装した
+- [ ] `loading.tsx` でローディングUIを実装した
+- [ ] `not-found.tsx` で404ページを実装した
 
 ***
 
 ## 次のフェーズ
 
-Phase 2 を完了したら、[Phase 3: コンポーネント設計パターン](../phase-03-component-design/README.md) に進んでください。
+Phase 2を完了したら、[Phase 3: コンポーネント設計パターン](../phase-03-component-design/README.md) に進んでください。
 
-Phase 3 では、Atomic Design や Compound Components などの設計パターンを学び、より再利用可能で保守性の高いコンポーネント設計を習得します。
+Phase 3では、Atomic DesignやCompound Componentsなどの設計パターンを学び、より再利用可能で保守性の高いコンポーネント設計を習得します。

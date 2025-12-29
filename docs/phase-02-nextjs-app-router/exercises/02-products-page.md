@@ -31,13 +31,13 @@
 
 ## 目標
 
-`/products` ルートに商品一覧ページを実装し、商品カードを表示する。ローディング状態と 404 ページも実装する。
+`/products` ルートに商品一覧ページを実装し、商品カードを表示する。ローディング状態と404ページも実装する。
 
 ***
 
 ## 前提条件
 
-- [ ] 演習 1（レイアウト実装）を完了していること
+- [ ] 演習1（レイアウト実装）を完了していること
 - [ ] `layout.tsx` でヘッダー/フッターが表示されていること
 
 ***
@@ -313,7 +313,7 @@ export default function ProductsLoading(): React.ReactElement {
 
 ### 4.2 ローディングの確認
 
-ローディング UI を確認するには、一時的にデータ取得を遅延させます。
+ローディングUIを確認するには、一時的にデータ取得を遅延させます。
 
 ```tsx
 // app/products/page.tsx
@@ -371,8 +371,8 @@ export default function ProductsNotFound(): React.ReactElement {
 - [ ] 商品一覧が表示されている
 - [ ] 各商品カードに画像、名前、説明、価格が表示されている
 - [ ] 商品カードにホバーするとエフェクトが適用される
-- [ ] 商品カードをクリックすると `/products/[id]` に遷移する（まだ 404）
-- [ ] ローディング中にスケルトン UI が表示される
+- [ ] 商品カードをクリックすると `/products/[id]` に遷移する（まだ404）
+- [ ] ローディング中にスケルトンUIが表示される
 
 ***
 
@@ -395,7 +395,7 @@ export default function ProductsNotFound(): React.ReactElement {
 **解決策:**
 
 1. `public/images/products/` ディレクトリを作成
-2. 画像ファイルを配置するか、プレースホルダー URL を使用
+2. 画像ファイルを配置するか、プレースホルダー URLを使用
 3. 外部画像の場合は `next.config.ts` で許可
 
 ### TypeScript エラー
@@ -424,8 +424,8 @@ Type '{ product: Product; }' is not assignable to type...
 
 - [ ] `/products` にアクセスすると商品一覧が表示される
 - [ ] 商品カードに正しい情報が表示される
-- [ ] ローディング UI が機能する
-- [ ] TypeScript の型チェックを通過する
+- [ ] ローディングUIが機能する
+- [ ] TypeScriptの型チェックを通過する
 - [ ] レスポンシブデザインになっている
 
 ***

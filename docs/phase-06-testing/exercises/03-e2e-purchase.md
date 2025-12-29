@@ -24,7 +24,7 @@
 
 ## 目標
 
-Playwright を使って、商品を見つけてから購入完了までの一連のフローを E2E テストします。
+Playwrightを使って、商品を見つけてから購入完了までの一連のフローをE2Eテストします。
 ユーザーが実際に行う操作をシミュレートし、クリティカルパスが正しく動作することを確認します。
 
 ```mermaid
@@ -43,7 +43,7 @@ graph LR
 ## 前提条件
 
 - [04-playwright-basics.md](../04-playwright-basics.md) を読んでいること
-- Playwright のセットアップ済み
+- Playwrightのセットアップ済み
 
 ***
 

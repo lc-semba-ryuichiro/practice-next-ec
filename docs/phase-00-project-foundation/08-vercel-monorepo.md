@@ -49,8 +49,8 @@
 
 ## 概要
 
-モノレポ構成では、1 つのリポジトリから複数のアプリケーションをデプロイします。
-Vercel は Turborepo モノレポをネイティブサポートしています。
+モノレポ構成では、1つのリポジトリから複数のアプリケーションをデプロイします。
+VercelはTurborepoモノレポをネイティブサポートしています。
 
 ```mermaid
 flowchart TD
@@ -82,7 +82,7 @@ flowchart TD
 
 ### プロジェクトの作成
 
-1 つのリポジトリから複数の Vercel プロジェクトを作成します。
+1つのリポジトリから複数のVercelプロジェクトを作成します。
 
 | Vercel プロジェクト | Root Directory | ドメイン                  |
 | ------------- | -------------- | --------------------- |
@@ -129,7 +129,7 @@ Vercel Dashboard → Add New Project
 
 ### 推奨設定
 
-Root Directory を設定している場合、ルートからのコマンド実行が必要です。
+Root Directoryを設定している場合、ルートからのコマンド実行が必要です。
 
 ```bash
 # apps/web から実行
@@ -270,7 +270,7 @@ npx turbo link
 
 ### 環境変数の設定
 
-Vercel Dashboard で以下を設定します。
+Vercel Dashboardで以下を設定します。
 
 ```text
 TURBO_TOKEN: <token>
@@ -302,7 +302,7 @@ Cached:    2 cached, 2 total
 
 ### プロジェクト間で共有
 
-Vercel では、環境変数はプロジェクトごとに設定が必要です。
+Vercelでは、環境変数はプロジェクトごとに設定が必要です。
 
 ### 共通の環境変数
 
@@ -333,7 +333,7 @@ Preview:
 
 ### 各プロジェクトでプレビュー
 
-1 つの PR で複数のプレビューが作成されます。
+1つのPRで複数のプレビューが作成されます。
 
 ```text
 PR #123: feat/product-card
@@ -488,7 +488,7 @@ Error: Environment variable not found: DATABASE_URL
 
 以下を確認してください。
 
-1. Vercel Dashboard で環境変数を確認
+1. Vercel Dashboardで環境変数を確認
 2. 正しい環境（Production/Preview/Development）に設定されているか確認
 3. `vercel env pull` で同期
 
@@ -521,4 +521,4 @@ turbo-ignore: 有効（変更のないアプリはスキップ）
 
 ## 次のステップ
 
-モノレポでの Vercel 設定が完了したら、[演習 1: モノレポ初期セットアップ](./exercises/01-setup-monorepo.md) で実際にセットアップを行いましょう。
+モノレポでのVercel設定が完了したら、[演習 1: モノレポ初期セットアップ](./exercises/01-setup-monorepo.md) で実際にセットアップを行いましょう。

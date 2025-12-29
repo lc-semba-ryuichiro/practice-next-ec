@@ -36,8 +36,8 @@
 
 ## Server Actions とは
 
-**Server Actions** は、Next.js 13.4 で導入された機能で、サーバー上で実行される非同期関数です。
-フォームの送信やデータの変更を、API Routes を作成せずに直接処理できます。
+**Server Actions** は、Next.js 13.4で導入された機能です。サーバー上で実行される非同期関数として定義されます。
+フォームの送信やデータの変更を、API Routesを作成せずに直接処理できます。
 
 ```mermaid
 graph LR
@@ -60,7 +60,7 @@ graph LR
 
 ## 'use server' ディレクティブ
 
-Server Actions を定義するには、関数またはファイルの先頭に `'use server'` ディレクティブを追加します。
+Server Actionsを定義するには、関数またはファイルの先頭に `'use server'` ディレクティブを追加します。
 
 ### ファイル単位で定義
 
@@ -287,7 +287,7 @@ export async function registerUser(formData: FormData): Promise<ActionState> {
 
 ### 1. サーバーサイドでのバリデーション
 
-クライアントサイドのバリデーションは UX のためであり、セキュリティのためには **必ずサーバーサイドでバリデーション** を行う必要があります。
+クライアントサイドのバリデーションはUXのためであり、セキュリティのためには **必ずサーバーサイドでバリデーション** を行う必要があります。
 
 ```typescript
 "use server";
@@ -344,7 +344,7 @@ export async function updateProfile(formData: FormData): Promise<ActionState> {
 
 ### 3. CSRF 対策
 
-Next.js は Server Actions に対して自動的に CSRF トークンを検証します。
+Next.jsはServer Actionsに対して自動的にCSRFトークンを検証します。
 特別な設定なしで、安全にフォームを処理できます。
 
 ### 4. 入力値のサニタイズ
@@ -412,10 +412,10 @@ graph TD
 
 ### API Routes を使うべきケース
 
-- Webhook の受け取り
+- Webhookの受け取り
 - 外部サービスからの呼び出し
 - 認証プロバイダーのコールバック
-- CORS が必要なエンドポイント
+- CORSが必要なエンドポイント
 
 ***
 
@@ -448,7 +448,7 @@ export async function createProduct(formData: FormData): Promise<void> {
 
 ### プログレッシブエンハンスメント
 
-JavaScript が無効でもフォームが動作するように実装します。
+JavaScriptが無効でもフォームが動作するように実装します。
 
 ```typescript
 // app/contact/page.tsx
@@ -468,8 +468,8 @@ export default function ContactPage(): JSX.Element {
 
 この実装では以下が可能です。
 
-- JavaScript が有効な場合: 非同期でフォームを送信
-- JavaScript が無効な場合: 通常のフォーム送信として動作
+- JavaScriptが有効な場合: 非同期でフォームを送信
+- JavaScriptが無効な場合: 通常のフォーム送信として動作
 
 ***
 
@@ -580,9 +580,9 @@ export async function addToCart(formData: FormData): Promise<ActionState> {
 
 ### Server Actions のメリット
 
-- API Routes を作成せずにサーバー処理が書ける
+- API Routesを作成せずにサーバー処理が書ける
 - 型安全にフォームデータを処理できる
-- CSRF 対策が自動的に行われる
+- CSRF対策が自動的に行われる
 - プログレッシブエンハンスメントに対応
 
 ### ベストプラクティス
@@ -596,4 +596,4 @@ export async function addToCart(formData: FormData): Promise<ActionState> {
 
 ## 次のステップ
 
-Server Actions の基本を理解したら、[useActionState フック](./03-use-action-state.md) に進んで、フォームの状態管理を学びましょう。
+Server Actionsの基本を理解したら、[useActionState フック](./03-use-action-state.md) に進んで、フォームの状態管理を学びましょう。

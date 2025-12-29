@@ -37,7 +37,7 @@
 
 ## 目標
 
-商品一覧・詳細 API のモックを作成し、Server Components でデータを取得して表示します。
+商品一覧・詳細APIのモックを作成し、Server Componentsでデータを取得して表示します。
 
 ***
 
@@ -564,8 +564,8 @@ export default function ProductDetailLoading(): React.ReactElement {
 - [ ] `pnpm dev` で開発サーバーが起動する
 - [ ] `/products` で商品一覧が表示される
 - [ ] `/products/1` で商品詳細が表示される
-- [ ] 存在しない ID でアクセスすると 404 ページが表示される
-- [ ] ローディング中に Skeleton が表示される
+- [ ] 存在しないIDでアクセスすると404ページが表示される
+- [ ] ローディング中にSkeletonが表示される
 - [ ] コンソールに「🔶 MSW server started」が表示される
 
 ***
@@ -615,9 +615,9 @@ imageUrl: "https://via.placeholder.com/400",
 
 以下がすべて動作すれば、この演習は完了です。
 
-- 商品一覧ページで 8 件の商品が表示される
+- 商品一覧ページで8件の商品が表示される
 - 商品カードをクリックすると詳細ページに遷移
-- 存在しない ID で 404 ページが表示される
-- ローディング中に Skeleton が表示される
+- 存在しないIDで404ページが表示される
+- ローディング中にSkeletonが表示される
 
 次は [演習 2: カテゴリ API](./02-category-api.md) に進みましょう。

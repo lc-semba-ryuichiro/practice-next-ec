@@ -81,7 +81,7 @@ graph TD
 
 特徴は以下のとおりです。
 
-- すべてのプロジェクトが 1 つのリポジトリ
+- すべてのプロジェクトが1つのリポジトリ
 - コードの共有が容易
 - 一貫したツール設定が可能
 
@@ -98,7 +98,7 @@ import { Product } from "@ec/shared/types";
 import { productSchema } from "@ec/validators";
 ```
 
-- npm 公開なしで内部パッケージとして使用可能
+- npm公開なしで内部パッケージとして使用可能
 - 型定義も即座に共有される
 
 ### 2. 一貫した設定
@@ -128,11 +128,11 @@ flowchart LR
     end
 ```
 
-1. shared-ui-repo で Button を変更
-2. npm に公開
-3. frontend-repo で npm update
-4. backend-repo で npm update
-5. admin-dashboard-repo で npm update
+1. shared-ui-repoでButtonを変更
+2. npmに公開
+3. frontend-repoでnpm update
+4. backend-repoでnpm update
+5. admin-dashboard-repoでnpm update
 
 **モノレポの場合:**
 
@@ -144,16 +144,16 @@ flowchart LR
     end
 ```
 
-1. packages/ui で Button を変更
-2. 1 つの PR ですべてのアプリが更新される
+1. packages/uiでButtonを変更
+2. 1つのPRですべてのアプリが更新される
 
 ### 4. ビルドの最適化
 
-Turborepo などのツールを使うと、以下のような最適化が可能です。
+Turborepoなどのツールを使うと、以下のような最適化が可能です。
 
 - キャッシュ - 変更のないパッケージはビルドをスキップ
 - 並列実行 - 依存関係を考慮して並列ビルド
-- リモートキャッシュ - CI でもキャッシュを共有
+- リモートキャッシュ - CIでもキャッシュを共有
 
 ```bash
 # 初回ビルド
@@ -168,7 +168,7 @@ $ turbo build
 ### 5. リファクタリングが容易
 
 - 型の変更が全プロジェクトへ即座に反映
-- IDE の「参照を検索」が全コードベースを対象にできる
+- IDEの「参照を検索」が全コードベースを対象にできる
 - 破壊的変更の影響範囲がすぐわかる
 
 ***
@@ -177,18 +177,18 @@ $ turbo build
 
 ### 1. リポジトリが大きくなる
 
-- clone に時間がかかる可能性
+- cloneに時間がかかる可能性
 - 対策: sparse checkout、shallow clone
 
 ### 2. 権限管理が難しい
 
 - 全員がすべてのコードにアクセス可能
-- 対策: CODEOWNERS ファイル、GitHub の保護ルール
+- 対策: CODEOWNERSファイル、GitHubの保護ルール
 
 ### 3. CI/CD の複雑化
 
 - 変更に関係ないプロジェクトもビルドしてしまう可能性
-- 対策: Turborepo の差分検出、`--filter` オプション
+- 対策: Turborepoの差分検出、`--filter` オプション
 
 ### 4. 学習コスト
 
@@ -253,10 +253,10 @@ import type { Product } from "@ec/shared/types"; // 同じ型を使用
 
 その理由は以下の通りです。
 
-- Next.js との相性が良い（同じ Vercel 製）
+- Next.jsとの相性が良い（同じVercel製）
 - 設定がシンプル
 - キャッシュ機能が強力
-- Vercel でのリモートキャッシュが無料
+- Vercelでのリモートキャッシュが無料
 
 ***
 

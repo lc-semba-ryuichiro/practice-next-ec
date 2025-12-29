@@ -30,7 +30,7 @@
 
 ## 概要
 
-App Router では、`loading.tsx`、`error.tsx`、`not-found.tsx` という特殊なファイルを使って、ローディング状態、エラー状態、404 状態を宣言的に処理できます。これにより、ユーザー体験を向上できます。
+App Routerでは、`loading.tsx`、`error.tsx`、`not-found.tsx` という特殊なファイルを使って、ローディング状態、エラー状態、404状態を宣言的に処理できます。これにより、ユーザー体験を向上できます。
 
 ***
 
@@ -56,7 +56,7 @@ graph TD
 
 ## loading.tsx
 
-`loading.tsx` を配置すると、ページのデータ取得中に自動的にローディング UI が表示されます。
+`loading.tsx` を配置すると、ページのデータ取得中に自動的にローディングUIが表示されます。
 
 ### 基本的な使い方
 
@@ -73,7 +73,7 @@ export default function Loading(): React.ReactElement {
 
 ### 仕組み
 
-`loading.tsx` は内部的に React の Suspense を使っています。
+`loading.tsx` は内部的にReactのSuspenseを使っています。
 
 ```mermaid
 sequenceDiagram
@@ -89,7 +89,7 @@ sequenceDiagram
 
 ### スケルトンローディング
 
-より良い UX のために、スケルトンローディングを使用することが推奨されます。
+より良いUXのために、スケルトンローディングを使用することが推奨されます。
 
 ```tsx
 // app/products/loading.tsx
@@ -128,7 +128,7 @@ app/
 
 ## error.tsx
 
-`error.tsx` を配置すると、ランタイムエラーが発生した際に、アプリケーション全体がクラッシュせずにエラー UI を表示できます。
+`error.tsx` を配置すると、ランタイムエラーが発生した際に、アプリケーション全体がクラッシュせずにエラー UIを表示できます。
 
 ### 基本的な使い方
 
@@ -416,4 +416,4 @@ graph TD
 
 ## 次のステップ
 
-特殊ファイルを理解したら、次は [動的ルート](./05-dynamic-routes.md) で URL パラメータを使ったページ作成を学びましょう。
+特殊ファイルを理解したら、次は [動的ルート](./05-dynamic-routes.md) でURLパラメータを使ったページ作成を学びましょう。

@@ -24,7 +24,7 @@
 
 ## 目標
 
-購入フローの 2 番目のステップとして、配送先住所を入力するフォームを実装します。
+購入フローの2番目のステップとして、配送先住所を入力するフォームを実装します。
 
 ```mermaid
 graph LR
@@ -88,8 +88,8 @@ graph LR
 
 ## 前提条件
 
-- 演習 1（カート確認）が完了していること
-- Phase 7 で学んだ Zod + Server Actions を理解していること
+- 演習1（カート確認）が完了していること
+- Phase 7で学んだZod + Server Actionsを理解していること
 
 ***
 
@@ -586,7 +586,7 @@ const handleAutoFill = async (): Promise<void> => {
 
 ### 2. リダイレクトが動作しない
 
-Server Actions 内で `redirect()` を呼び出していることを確認してください。try-catch の中で `redirect()` を呼ぶと、エラーとして catch される場合があります。
+Server Actions内で `redirect()` を呼び出していることを確認してください。try-catchの中で `redirect()` を呼ぶと、エラーとしてcatchされる場合があります。
 
 ***
 

@@ -64,7 +64,7 @@ graph LR
 
 ## 前提条件
 
-- Phase 4 で実装したカート機能（Jotai Atom）が動作していること
+- Phase 4で実装したカート機能（Jotai Atom）が動作していること
 - カートに商品が追加できること
 
 ***
@@ -507,11 +507,11 @@ export function StockWarning(): JSX.Element | null {
 
 ### 1. カートが空になっても画面が更新されない
 
-Jotai の状態が正しく反映されているか確認してください。`useAtom` または `useAtomValue` を使用していることを確認します。
+Jotaiの状態が正しく反映されているか確認してください。`useAtom` または `useAtomValue` を使用していることを確認します。
 
 ### 2. 数量変更後に小計が更新されない
 
-派生 Atom（`cartTotalAtom`）が正しく設定されているか確認してください。元の Atom（`cartItemsAtom`）が更新されると、派生 Atom も自動的に再計算されます。
+派生Atom（`cartTotalAtom`）が正しく設定されているか確認してください。元のAtom（`cartItemsAtom`）が更新されると、派生Atomも自動的に再計算されます。
 
 ***
 

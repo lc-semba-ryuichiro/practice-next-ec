@@ -27,7 +27,7 @@
 
 ### React Query とは
 
-TanStack Query（旧 React Query）は、クライアントサイドでのデータフェッチング、キャッシュ、同期、更新を簡単に行うためのライブラリです。
+TanStack Query（旧React Query）は、クライアントサイドでのデータフェッチング、キャッシュ、同期、更新を簡単に行うためのライブラリです。
 
 ```mermaid
 graph LR
@@ -60,7 +60,7 @@ graph LR
 pnpm add @tanstack/react-query
 ```
 
-開発時に DevTools を使う場合は、以下も追加します。
+開発時にDevToolsを使う場合は、以下も追加します。
 
 ```bash
 pnpm add -D @tanstack/react-query-devtools
@@ -431,7 +431,7 @@ export function useUpdateCartItem() {
 
 ## DevTools
 
-開発中は React Query DevTools を使うと、キャッシュの状態を可視化できます。
+開発中はReact Query DevToolsを使うと、キャッシュの状態を可視化できます。
 
 ```typescript
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
@@ -440,7 +440,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 <ReactQueryDevtools initialIsOpen={false} />
 ```
 
-DevTools で確認できること。
+DevToolsで確認できること。
 
 - 現在のクエリ一覧とその状態（fresh, stale, fetching, inactive）
 - キャッシュされているデータの中身
@@ -451,7 +451,7 @@ DevTools で確認できること。
 
 ## まとめ
 
-- React Query はクライアントサイドのデータフェッチングを簡潔に書ける
+- React Queryはクライアントサイドのデータフェッチングを簡潔に書ける
 - `useQuery` で取得、`useMutation` で更新
 - `queryKey` でキャッシュを識別し、`staleTime` で鮮度を管理
 - 楽観的更新でユーザー体験を向上できる
@@ -460,4 +460,4 @@ DevTools で確認できること。
 
 ## 次のステップ
 
-React Query の基礎を理解したら、[Server Components との使い分け](./07-query-vs-server.md) で、どちらを使うべきか判断基準を学びましょう。
+React Queryの基礎を理解したら、[Server Components との使い分け](./07-query-vs-server.md) で、どちらを使うべきか判断基準を学びましょう。
