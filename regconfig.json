@@ -1,0 +1,13 @@
+{
+  "core": {
+    "workingDir": ".reg",
+    "actualDir": ".vrt/storycap/__screenshots__",
+    "thresholdRate": 0.01,
+    "ximgdiff": {
+      "invocationType": "client"
+    }
+  },
+  "plugins": {
+    "reg-simple-keygen-plugin": {}
+  }
+}

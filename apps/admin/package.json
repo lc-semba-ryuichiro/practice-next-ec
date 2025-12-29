@@ -4,13 +4,11 @@
   "type": "module",
   "scripts": {
     "build": "vite build",
-    "build-storybook": "storybook build",
     "check": "prettier --write . && eslint --fix",
     "dev": "vite dev --port 3000",
     "format": "prettier",
     "lint": "eslint",
     "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
     "test": "vitest run"
   },
   "dependencies": {
@@ -20,7 +18,6 @@
     "@radix-ui/react-slider": "catalog:",
     "@radix-ui/react-slot": "catalog:",
     "@radix-ui/react-switch": "catalog:",
-    "@storybook/react-vite": "catalog:",
     "@t3-oss/env-core": "catalog:",
     "@tailwindcss/vite": "catalog:",
     "@tanstack/match-sorter-utils": "catalog:",
@@ -42,7 +39,6 @@
     "lucide-react": "catalog:",
     "react": "catalog:",
     "react-dom": "catalog:",
-    "storybook": "catalog:",
     "superjson": "catalog:",
     "tailwind-merge": "catalog:",
     "tailwindcss": "catalog:",
