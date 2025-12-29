@@ -1,6 +1,6 @@
 import "./button.css";
 
-export interface ButtonProps {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   /** Is this the principal call to action on the page? */
   primary?: boolean;
   /** What background color to use */
@@ -9,8 +9,6 @@ export interface ButtonProps {
   size?: "small" | "medium" | "large";
   /** Button contents */
   label: string;
-  /** Optional click handler */
-  onClick?: (() => void) | undefined;
 }
 
 /**
@@ -20,6 +18,8 @@ export interface ButtonProps {
  * @param props.size - ボタンのサイズ
  * @param props.backgroundColor - 背景色
  * @param props.label - ボタンのラベル
+ * @param props.className - 追加のCSSクラス
+ * @param props.type - ボタンのtype属性
  * @returns ボタン要素
  */
 export const Button = ({
@@ -27,13 +27,19 @@ export const Button = ({
   size = "medium",
   backgroundColor,
   label,
+  className,
+  type = "button",
   ...props
 }: ButtonProps): React.JSX.Element => {
   const mode = primary ? "storybook-button--primary" : "storybook-button--secondary";
+  const classes = ["storybook-button", `storybook-button--${size}`, mode, className]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <button
-      type="button"
-      className={["storybook-button", `storybook-button--${size}`, mode].join(" ")}
+      type={type}
+      className={classes}
       style={{ backgroundColor }}
       {...props}
     >

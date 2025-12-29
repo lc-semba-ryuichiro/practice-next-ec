@@ -3,6 +3,11 @@
   "compilerOptions": {
     "paths": {
       "@/*": ["./*"],
+      "@/app/*": ["./app/*"],
+      "@/widgets/*": ["./widgets/*"],
+      "@/features/*": ["./features/*"],
+      "@/entities/*": ["./entities/*"],
+      "@/shared/*": ["./shared/*"],
       "@practice-next-ec/ui": ["../../packages/ui/src"],
       "@practice-next-ec/lib": ["../../packages/lib/src"],
       "@practice-next-ec/types": ["../../packages/types/src"]

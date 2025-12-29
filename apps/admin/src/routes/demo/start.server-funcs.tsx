@@ -51,10 +51,10 @@ const getTodos = createServerFn({
 const addTodo = createServerFn({ method: "POST" })
   .inputValidator((d: string) => d)
   .handler(async ({ data }): Promise<Array<Todo>> => {
-    const todos: Array<Todo> = await readTodos();
-    todos.push({ id: todos.length + 1, name: data });
-    await fs.promises.writeFile(TODOS_FILE, JSON.stringify(todos, null, 2));
-    return todos;
+    const existingTodos: Array<Todo> = await readTodos();
+    const newTodos = [...existingTodos, { id: existingTodos.length + 1, name: data }];
+    await fs.promises.writeFile(TODOS_FILE, JSON.stringify(newTodos, null, 2));
+    return newTodos;
   });
 
 export const Route = createFileRoute("/demo/start/server-funcs")({

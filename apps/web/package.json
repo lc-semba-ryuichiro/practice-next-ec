@@ -5,6 +5,9 @@
   "scripts": {
     "build": "next build",
     "clean": "rm -rf .next .turbo",
+    "dep:archi": "depcruise --config .dependency-cruiser.cjs --output-type archi . | dot -T svg > architecture-graph.svg",
+    "dep:check": "depcruise --config .dependency-cruiser.cjs .",
+    "dep:graph": "depcruise --config .dependency-cruiser.cjs --output-type dot . | dot -T svg > dependency-graph.svg",
     "dev": "next dev",
     "lint": "eslint .",
     "start": "next start",
@@ -30,14 +33,18 @@
     "zod": "catalog:"
   },
   "devDependencies": {
+    "@hookform/resolvers": "catalog:",
     "@practice-next-ec/eslint-config": "workspace:*",
     "@practice-next-ec/typescript-config": "workspace:*",
     "@tailwindcss/postcss": "catalog:",
     "@tanstack/eslint-config": "catalog:",
+    "@tanstack/react-query-devtools": "catalog:",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
+    "dependency-cruiser": "catalog:",
     "tailwindcss": "catalog:",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "web-vitals": "catalog:"
   }
 }

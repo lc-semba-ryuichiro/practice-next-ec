@@ -5,7 +5,7 @@ interface Todo {
   name: string;
 }
 
-const todos: Array<Todo> = [
+let mut_todos: Array<Todo> = [
   {
     id: 1,
     name: "Buy groceries",
@@ -24,15 +24,15 @@ export const Route = createFileRoute("/demo/api/tq-todos")({
   server: {
     handlers: {
       GET: () => {
-        return Response.json(todos);
+        return Response.json(mut_todos);
       },
       POST: async ({ request }): Promise<Response> => {
         const name = (await request.json()) as string;
         const todo: Todo = {
-          id: todos.length + 1,
+          id: mut_todos.length + 1,
           name,
         };
-        todos.push(todo);
+        mut_todos = [...mut_todos, todo];
         return Response.json(todo);
       },
     },

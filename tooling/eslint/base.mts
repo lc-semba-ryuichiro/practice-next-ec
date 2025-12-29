@@ -76,6 +76,35 @@ export function createBaseConfig(tsconfigRootDir: string): Linter.Config[] {
         "@typescript-eslint/require-await": "error",
         "@typescript-eslint/no-unnecessary-condition": "error",
         "@typescript-eslint/no-unnecessary-type-assertion": "error",
+        "@typescript-eslint/no-confusing-void-expression": [
+          "error",
+          { ignoreArrowShorthand: true },
+        ],
+        "@typescript-eslint/only-throw-error": "error",
+        "@typescript-eslint/switch-exhaustiveness-check": "error",
+        "@typescript-eslint/method-signature-style": "error",
+        "@typescript-eslint/restrict-plus-operands": [
+          "error",
+          {
+            skipCompoundAssignments: false,
+            allowBoolean: false,
+            allowNullish: false,
+            allowNumberAndString: false,
+            allowRegExp: false,
+            allowAny: false,
+          },
+        ],
+        "@typescript-eslint/restrict-template-expressions": [
+          "error",
+          {
+            allowNumber: true,
+            allowBoolean: true,
+            allowAny: false,
+            allowNever: false,
+            allowNullish: false,
+            allowRegExp: false,
+          },
+        ],
         "@typescript-eslint/prefer-nullish-coalescing": "error",
         "@typescript-eslint/prefer-optional-chain": "error",
         "@typescript-eslint/consistent-type-imports": [
@@ -117,6 +146,14 @@ export function createBaseConfig(tsconfigRootDir: string): Linter.Config[] {
               match: false,
             },
           },
+        ],
+        // JavaScript 基本ルール
+        "no-implicit-coercion": "error",
+        "prefer-template": "error",
+        "no-restricted-globals": [
+          "error",
+          { name: "isFinite", message: "Use Number.isFinite instead." },
+          { name: "isNaN", message: "Use Number.isNaN instead." },
         ],
       },
     },
@@ -234,6 +271,7 @@ export function createBaseConfig(tsconfigRootDir: string): Linter.Config[] {
         ],
         "unicorn/no-array-reduce": "off",
         "unicorn/no-useless-undefined": "off", // TypeScript と相性悪い
+        "unicorn/prefer-switch": "error",
       },
     },
 
@@ -241,16 +279,34 @@ export function createBaseConfig(tsconfigRootDir: string): Linter.Config[] {
     // ESLint Comments
     // =====================
     comments.recommended,
+    {
+      rules: {
+        "@eslint-community/eslint-comments/no-unused-disable": "error",
+        "@eslint-community/eslint-comments/no-unlimited-disable": "error",
+      },
+    },
 
     // =====================
     // Promise
     // =====================
     pluginPromise.configs["flat/recommended"],
+    {
+      rules: {
+        "promise/no-multiple-resolved": "error",
+        "promise/no-return-wrap": "error",
+      },
+    },
 
     // =====================
     // Regexp
     // =====================
     regexpPlugin.configs["flat/recommended"],
+    {
+      rules: {
+        "regexp/no-super-linear-backtracking": "error",
+        "regexp/confusing-quantifier": "error",
+      },
+    },
 
     // =====================
     // SonarJS
@@ -280,7 +336,24 @@ export function createBaseConfig(tsconfigRootDir: string): Linter.Config[] {
     {
       plugins: { functional },
       rules: {
-        "functional/no-let": "warn",
+        "functional/no-let": [
+          "error",
+          {
+            allowInForLoopInit: true,
+            allowInFunctions: false,
+            ignoreIdentifierPattern: ["^mut_", "^_mut_", "^#mut_"],
+          },
+        ],
+        "functional/immutable-data": [
+          "error",
+          {
+            ignoreClasses: true,
+            ignoreImmediateMutation: true,
+            ignoreMapsAndSets: true,
+            ignoreIdentifierPattern: ["^draft", "^mut_", "^_mut_", "^#mut_"],
+            ignoreAccessorPattern: ["**.current.**", "**.displayName", "**.scrollTop"],
+          },
+        ],
         "functional/prefer-readonly-type": "off", // TypeScript の readonly を使用
       },
     },

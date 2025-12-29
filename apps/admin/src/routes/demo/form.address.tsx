@@ -28,15 +28,9 @@ function AddressForm(): React.JSX.Element {
     },
     validators: {
       onBlur: ({ value }) => {
-        const errors = {
-          fields: {},
-        } as {
-          fields: Record<string, string>;
-        };
-        if (value.fullName.trim().length === 0) {
-          errors.fields["fullName"] = "Full name is required";
-        }
-        return errors;
+        const fields: Record<string, string> =
+          value.fullName.trim().length === 0 ? { fullName: "Full name is required" } : {};
+        return { fields };
       },
     },
     onSubmit: ({ value }) => {
