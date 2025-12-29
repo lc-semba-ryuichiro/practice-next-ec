@@ -29,6 +29,7 @@
 
 .storybook-page a {
   color: inherit;
+  text-decoration: underline;
 }
 
 .storybook-page ul {

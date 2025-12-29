@@ -23,7 +23,7 @@
     "clean": "turbo run clean",
     "dev": "turbo run dev",
     "fix": "run-s fix:prettier fix:eslint fix:stylelint",
-    "fix:eslint": "eslint . --fix",
+    "fix:eslint": "turbo run lint -- --fix",
     "fix:prettier": "prettier --write .",
     "fix:remark": "remark . --output",
     "fix:stylelint": "stylelint \"**/*.css\" --fix",
@@ -39,6 +39,8 @@
     "prepare": "lefthook install",
     "storybook": "storybook dev -p 6006",
     "test": "turbo run test",
+    "test:a11y": "A11Y_TEST=true test-storybook --url http://127.0.0.1:6006",
+    "test:a11y:ci": "concurrently -k -s first -n 'SB,TEST' -c 'magenta,blue' 'http-server storybook-static -p 6006 --silent' 'wait-on tcp:6006 && pnpm test:a11y'",
     "test:coverage": "vitest --coverage",
     "test:e2e": "playwright test",
     "test:ui": "vitest --ui",
@@ -55,6 +57,7 @@
     "vrt:storycap:ci": "concurrently -k -s first -n 'SB,TEST' -c 'magenta,blue' 'http-server storybook-static -p 6006 --silent' 'wait-on tcp:6006 && pnpm vrt:storycap'"
   },
   "devDependencies": {
+    "@axe-core/playwright": "catalog:",
     "@chromatic-com/storybook": "catalog:",
     "@commitlint/cli": "catalog:",
     "@commitlint/config-conventional": "catalog:",

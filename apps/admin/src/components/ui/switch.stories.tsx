@@ -16,23 +16,28 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {},
+  args: {
+    "aria-label": "Toggle switch",
+  },
 };
 
 export const Checked: Story = {
   args: {
+    "aria-label": "Toggle switch",
     defaultChecked: true,
   },
 };
 
 export const Disabled: Story = {
   args: {
+    "aria-label": "Toggle switch",
     disabled: true,
   },
 };
 
 export const DisabledChecked: Story = {
   args: {
+    "aria-label": "Toggle switch",
     disabled: true,
     defaultChecked: true,
   },
