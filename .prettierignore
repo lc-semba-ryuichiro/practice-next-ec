@@ -4,7 +4,9 @@ build/
 storybook-static/
 coverage/
 node_modules/
+.netlify/
 pnpm-lock.yaml
 *.min.js
 *.min.css
+*.gen.ts
 *.md

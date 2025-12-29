@@ -1,0 +1,27 @@
+version: 1
+rules:
+  # 表記ゆれの統一例
+  - expected: ください
+    patterns:
+      - 下さい
+  - expected: できる
+    patterns:
+      - 出来る
+  - expected: ありません
+    patterns:
+      - 有りません
+  - expected: すべて
+    patterns:
+      - 全て
+  - expected: さまざま
+    patterns:
+      - 様々
+  # 技術用語の統一
+  - expected: JavaScript
+    patterns:
+      - /[Jj]ava\s*[Ss]cript/
+    specs:
+      - from: javascript
+        to: JavaScript
+      - from: Java Script
+        to: JavaScript
