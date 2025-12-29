@@ -1,0 +1,16 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "verbatimModuleSyntax": false,
+    "types": ["vite/client"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@practice-next-ec/ui": ["../../packages/ui/src"],
+      "@practice-next-ec/lib": ["../../packages/lib/src"],
+      "@practice-next-ec/types": ["../../packages/types/src"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx", "**/*.mts", ".storybook/**/*.ts"],
+  "exclude": ["node_modules"]
+}

@@ -32,6 +32,7 @@
   "devDependencies": {
     "@practice-next-ec/eslint-config": "workspace:*",
     "@tailwindcss/postcss": "catalog:",
+    "@tanstack/eslint-config": "catalog:",
     "@types/node": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
