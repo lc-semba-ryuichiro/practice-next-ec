@@ -63,20 +63,28 @@ const tanstackConfigFiltered = tanstackConfig
   })
   .filter((config) => Object.keys(config).length > 0);
 
-// Remove react-hooks plugin from react config (Next.js config already includes it)
-const reactConfigFiltered = createReactConfig().map((config) => {
-  if (config.plugins && "react-hooks" in config.plugins) {
-    const { "react-hooks": _reactHooks, ...restPlugins } = config.plugins as Record<
-      string,
-      unknown
-    >;
-    return {
-      ...config,
-      plugins: restPlugins,
-    };
-  }
-  return config;
-});
+// Remove react-hooks and jsx-a11y plugins from react config (Next.js config already includes them)
+const reactConfigFiltered = createReactConfig()
+  .map((config) => {
+    let result = config;
+
+    if (result.plugins) {
+      const {
+        "react-hooks": _reactHooks,
+        "jsx-a11y": _jsxA11y,
+        ...restPlugins
+      } = result.plugins as Record<string, unknown>;
+      if (_reactHooks !== undefined || _jsxA11y !== undefined) {
+        result = {
+          ...result,
+          plugins: restPlugins,
+        };
+      }
+    }
+
+    return result;
+  })
+  .filter((config) => Object.keys(config).length > 0);
 
 /**
  * FSD (Feature-Sliced Design) Boundaries 設定

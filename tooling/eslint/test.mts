@@ -1,4 +1,6 @@
 import vitest from "@vitest/eslint-plugin";
+import jestDom from "eslint-plugin-jest-dom";
+import playwright from "eslint-plugin-playwright";
 import testingLibrary from "eslint-plugin-testing-library";
 
 import type { Linter } from "eslint";
@@ -10,13 +12,14 @@ import type { Linter } from "eslint";
 export function createTestConfig(): Linter.Config[] {
   return [
     // =====================
-    // Test files (Vitest + Testing Library)
+    // Test files (Vitest + Testing Library + jest-dom)
     // =====================
     {
       files: ["**/*.test.{ts,tsx}", "**/*.spec.{ts,tsx}", "**/__tests__/**"],
       plugins: {
         vitest,
         "testing-library": testingLibrary,
+        "jest-dom": jestDom,
       },
       rules: {
         // Vitest rules
@@ -38,7 +41,18 @@ export function createTestConfig(): Linter.Config[] {
         "testing-library/no-dom-import": "error",
         "testing-library/prefer-screen-queries": "error",
         "testing-library/prefer-user-event": "error",
+
+        // jest-dom rules
+        ...jestDom.configs["flat/recommended"].rules,
       },
+    },
+
+    // =====================
+    // E2E Test files (Playwright)
+    // =====================
+    {
+      ...playwright.configs["flat/recommended"],
+      files: ["**/e2e/**/*.{ts,tsx}", "**/*.e2e.{ts,tsx}"],
     },
   ];
 }

@@ -1,4 +1,5 @@
 import comments from "@eslint-community/eslint-plugin-eslint-comments/configs";
+import neverthrow from "@ninoseki/eslint-plugin-neverthrow";
 import boundaries from "eslint-plugin-boundaries";
 import functional from "eslint-plugin-functional";
 import importX from "eslint-plugin-import-x";
@@ -409,6 +410,16 @@ export function createBaseConfig(tsconfigRootDir: string): Linter.Config[] {
             argsIgnorePattern: "^_",
           },
         ],
+      },
+    },
+
+    // =====================
+    // Neverthrow (Result type error handling)
+    // =====================
+    {
+      plugins: { neverthrow },
+      rules: {
+        "neverthrow/must-use-result": "error",
       },
     },
   ];

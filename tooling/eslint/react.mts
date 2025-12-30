@@ -1,3 +1,4 @@
+import jsxA11y from "eslint-plugin-jsx-a11y";
 import reactPlugin from "eslint-plugin-react";
 import reactCompiler from "eslint-plugin-react-compiler";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -16,6 +17,18 @@ export function createReactConfig(): Linter.Config[] {
     {
       ...reactPlugin.configs.flat?.recommended,
       ...reactPlugin.configs.flat?.["jsx-runtime"],
+      settings: {
+        react: {
+          version: "detect",
+        },
+      },
+    },
+
+    // =====================
+    // JSX A11y (Accessibility)
+    // =====================
+    {
+      ...jsxA11y.flatConfigs.recommended,
       settings: {
         react: {
           version: "detect",

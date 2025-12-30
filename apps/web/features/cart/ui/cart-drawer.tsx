@@ -37,8 +37,17 @@ export function CartDrawer({
   return (
     <div className="fixed inset-0 z-50 flex justify-end">
       <div
+        role="button"
+        tabIndex={0}
+        aria-label="カートを閉じる"
         className="absolute inset-0 bg-black/50"
         onClick={onClose}
+        onKeyDown={(event) => {
+          if (event.key === "Enter" || event.key === " ") {
+            event.preventDefault();
+            onClose();
+          }
+        }}
       />
       <div className="relative w-full max-w-md bg-white p-6 shadow-xl">
         <div className="flex items-center justify-between">

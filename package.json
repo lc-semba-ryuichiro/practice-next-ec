@@ -29,6 +29,9 @@
     "fix:stylelint": "stylelint \"**/*.css\" --fix",
     "fix:textlint": "textlint --fix \"**/*.md\"",
     "preinstall": "npx only-allow pnpm",
+    "knip": "knip",
+    "knip:fix": "knip --fix",
+    "knip:production": "knip --production",
     "lint": "turbo run lint",
     "lint:browserslist": "browserslist",
     "lint:prettier": "prettier --check .",
@@ -56,11 +59,16 @@
     "vrt:storycap": "test-storybook --url http://127.0.0.1:6006",
     "vrt:storycap:ci": "concurrently -k -s first -n 'SB,TEST' -c 'magenta,blue' 'http-server storybook-static -p 6006 --silent' 'wait-on tcp:6006 && pnpm vrt:storycap'"
   },
+  "dependencies": {
+    "neverthrow": "catalog:"
+  },
   "devDependencies": {
     "@axe-core/playwright": "catalog:",
     "@chromatic-com/storybook": "catalog:",
     "@commitlint/cli": "catalog:",
     "@commitlint/config-conventional": "catalog:",
+    "@cyclonedx/cyclonedx-npm": "catalog:",
+    "@pact-foundation/pact": "catalog:",
     "@playwright/test": "catalog:",
     "@practice-next-ec/prettier-config": "workspace:*",
     "@practice-next-ec/stylelint-config": "workspace:*",
@@ -97,11 +105,13 @@
     "browserslist": "catalog:",
     "chromatic": "catalog:",
     "concurrently": "catalog:",
+    "cspell": "catalog:",
     "dependency-cruiser": "catalog:",
     "eslint": "catalog:",
     "fast-check": "catalog:",
     "http-server": "catalog:",
     "jiti": "catalog:",
+    "knip": "catalog:",
     "lefthook": "catalog:",
     "lost-pixel": "catalog:",
     "msw": "catalog:",
@@ -154,6 +164,16 @@
     "pnpm": ">=10.26.2"
   },
   "pnpm": {
+    "onlyBuiltDependencies": [
+      "@parcel/watcher",
+      "@swc/core",
+      "core-js-pure",
+      "esbuild",
+      "lefthook",
+      "libxmljs2",
+      "msw",
+      "odiff-bin"
+    ],
     "overrides": {
       "axios": ">=1.12.0",
       "esbuild": ">=0.25.0",

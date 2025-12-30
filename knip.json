@@ -1,0 +1,165 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "workspaces": {
+    ".": {
+      "entry": [".secretlintrc.json", ".textlintrc.json", "regconfig.json"],
+      "project": [".*rc.json"],
+      "ignoreUnresolved": [
+        "stylelint-config-standard",
+        "stylelint-config-tailwindcss",
+        "stylelint-order",
+        "stylelint-declaration-strict-value",
+        "stylelint-high-performance-animation"
+      ],
+      "ignoreDependencies": [
+        "@practice-next-ec/ui",
+        "@secretlint/*",
+        "@storybook/addon-onboarding",
+        "@storybook/mdx2-csf",
+        "@storybook/nextjs",
+        "@stryker-mutator/*",
+        "@testing-library/*",
+        "@textlint-ja/*",
+        "@textlint/*",
+        "dependency-cruiser",
+        "fast-check",
+        "msw",
+        "msw-storybook-addon",
+        "oxlint",
+        "oxlint-tsgolint",
+        "pino-pretty",
+        "playwright-bdd",
+        "reg-*",
+        "remark",
+        "remark-*",
+        "storycap-testrun",
+        "textlint-*",
+        "tw-animate-css",
+        "typedoc",
+        "typedoc-*"
+      ]
+    },
+    "apps/web": {
+      "next": true,
+      "entry": ["features/**/index.ts", "entities/**/index.ts", "shared/index.ts"],
+      "project": [
+        "app/**/*.{ts,tsx}",
+        "features/**/*.{ts,tsx}",
+        "entities/**/*.{ts,tsx}",
+        "shared/**/*.{ts,tsx}"
+      ],
+      "paths": {
+        "@/*": ["./*"],
+        "@/app/*": ["./app/*"],
+        "@/widgets/*": ["./widgets/*"],
+        "@/features/*": ["./features/*"],
+        "@/entities/*": ["./entities/*"],
+        "@/shared/*": ["./shared/*"]
+      },
+      "ignoreDependencies": [
+        "@tanstack/react-query-devtools",
+        "pino",
+        "@vercel/analytics",
+        "@vercel/speed-insights",
+        "next-intl",
+        "tailwindcss",
+        "web-vitals"
+      ]
+    },
+    "apps/admin": {
+      "entry": [
+        "src/router.tsx",
+        "src/routes/**/*.{ts,tsx}",
+        "src/routeTree.gen.ts",
+        "src/integrations/**/*.{ts,tsx}",
+        "src/**/*.stories.{ts,tsx}"
+      ],
+      "project": ["src/**/*.{ts,tsx}"],
+      "paths": {
+        "@/*": ["./src/*"]
+      },
+      "ignoreDependencies": [
+        "@tanstack/router-plugin",
+        "@testing-library/*",
+        "tailwindcss",
+        "tw-animate-css",
+        "web-vitals"
+      ]
+    },
+    "packages/ui": {
+      "entry": ["src/**/*.stories.{ts,tsx}"],
+      "project": ["src/**/*.{ts,tsx}"],
+      "includeEntryExports": true,
+      "ignoreDependencies": [
+        "@practice-next-ec/lib",
+        "@types/react-dom",
+        "class-variance-authority",
+        "clsx",
+        "lucide-react",
+        "react-dom",
+        "tailwind-merge"
+      ]
+    },
+    "packages/lib": {
+      "includeEntryExports": true
+    },
+    "packages/types": {
+      "includeEntryExports": true
+    },
+    "tooling/eslint": {
+      "includeEntryExports": true,
+      "ignoreDependencies": ["eslint-config-prettier"]
+    },
+    "tooling/typescript": {
+      "includeEntryExports": true,
+      "ignoreUnresolved": ["next"]
+    },
+    "tooling/vitest": {
+      "includeEntryExports": true,
+      "ignoreDependencies": [
+        "@testing-library/dom",
+        "@testing-library/jest-dom",
+        "@testing-library/react",
+        "@testing-library/user-event",
+        "@vitest/coverage-v8"
+      ]
+    },
+    "tooling/prettier": {
+      "includeEntryExports": true,
+      "ignoreDependencies": ["prettier-plugin-packagejson", "prettier-plugin-tailwindcss"]
+    },
+    "tooling/stylelint": {
+      "includeEntryExports": true,
+      "ignoreDependencies": [
+        "stylelint-config-standard",
+        "stylelint-config-tailwindcss",
+        "stylelint-declaration-strict-value",
+        "stylelint-high-performance-animation",
+        "stylelint-order"
+      ]
+    }
+  },
+  "ignore": [
+    "**/node_modules/**",
+    "**/.next/**",
+    "**/dist/**",
+    "**/build/**",
+    "**/storybook-static/**",
+    "**/.turbo/**",
+    "**/coverage/**",
+    "**/*.d.ts",
+    "**/routeTree.gen.ts"
+  ],
+  "ignoreBinaries": ["dot", "only-allow"],
+  "ignoreExportsUsedInFile": true,
+  "storybook": true,
+  "vitest": true,
+  "eslint": true,
+  "typescript": true,
+  "prettier": true,
+  "stylelint": true,
+  "tailwind": true,
+  "playwright": {
+    "entry": ["playwright.config.ts", "e2e/**/*.spec.ts"]
+  }
+}

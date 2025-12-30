@@ -172,12 +172,24 @@ function TableDemo(): React.JSX.Element {
                       {header.isPlaceholder ? null : (
                         <>
                           <div
-                            {...{
-                              className: header.column.getCanSort()
-                                ? "cursor-pointer select-none hover:text-blue-400 transition-colors"
-                                : "",
-                              onClick: header.column.getToggleSortingHandler(),
-                            }}
+                            role={header.column.getCanSort() ? "button" : undefined}
+                            tabIndex={header.column.getCanSort() ? 0 : undefined}
+                            className={
+                              header.column.getCanSort()
+                                ? "cursor-pointer transition-colors select-none hover:text-blue-400"
+                                : ""
+                            }
+                            onClick={header.column.getToggleSortingHandler()}
+                            onKeyDown={
+                              header.column.getCanSort()
+                                ? (event) => {
+                                    if (event.key === "Enter" || event.key === " ") {
+                                      event.preventDefault();
+                                      header.column.getToggleSortingHandler()?.(event);
+                                    }
+                                  }
+                                : undefined
+                            }
                           >
                             {flexRender(header.column.columnDef.header, header.getContext())}
                             {{
