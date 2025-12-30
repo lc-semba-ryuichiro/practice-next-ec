@@ -1,0 +1,16 @@
+{
+  "name": "@practice-next-ec/validators",
+  "version": "0.1.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "clean": "rm -rf .turbo",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@practice-next-ec/eslint-config": "workspace:*",
+    "@practice-next-ec/typescript-config": "workspace:*",
+    "typescript": "catalog:"
+  }
+}
