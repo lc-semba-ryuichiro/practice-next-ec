@@ -385,7 +385,7 @@ export async function placeOrder(
 }
 ```
 
-### 対策 3: 冪などキー
+### 対策 3: 冪等キー
 
 ```typescript
 // 冪等キーを使用した API

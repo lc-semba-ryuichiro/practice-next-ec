@@ -129,7 +129,7 @@ pie title Phase 9 学習領域
 
    1. ボタンの無効化（isPending中はdisabled）
    2. トークンによる重複チェック（一度使用したトークンは無効化）
-   3. 冪などキー（Idempotency-Keyヘッダー）の使用
+   3. 冪等キー（Idempotency-Keyヘッダー）の使用
 
 2. Post-Redirect-Getパターンとは何ですか？
 
