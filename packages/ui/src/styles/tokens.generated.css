@@ -70,4 +70,9 @@
   --warning-foreground: oklch(0 0 0);
   --error: oklch(0.5922 0.243 29.23);
   --error-foreground: oklch(1 0 0);
+  --link: oklch(0.3073 0.1944 264.21);
+  --link-hover: oklch(0.38 0.2449 264.21);
+  --link-visited: oklch(0.4468 0.2053 328.36);
+  --link-active: oklch(0.5686 0.175 40.96);
+  --focus-indicator: oklch(0.8827 0.1638 92.1);
 }

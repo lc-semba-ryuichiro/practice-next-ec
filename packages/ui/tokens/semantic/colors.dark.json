@@ -21,5 +21,10 @@
   "warning": { "$value": "{semantic.warning-orange.2}", "$type": "color" },
   "warning-foreground": { "$value": "{neutral.black}", "$type": "color" },
   "error": { "$value": "{semantic.error.2}", "$type": "color" },
-  "error-foreground": { "$value": "{neutral.white}", "$type": "color" }
+  "error-foreground": { "$value": "{neutral.white}", "$type": "color" },
+  "link": { "$value": "{primitive.blue.500}", "$type": "color" },
+  "link-hover": { "$value": "{primitive.blue.400}", "$type": "color" },
+  "link-visited": { "$value": "{primitive.magenta.600}", "$type": "color" },
+  "link-active": { "$value": "{primitive.orange.600}", "$type": "color" },
+  "focus-indicator": { "$value": "{primitive.yellow.400}", "$type": "color" }
 }

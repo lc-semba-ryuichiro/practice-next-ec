@@ -1,0 +1,84 @@
+<link
+  rel="preconnect"
+  href="https://fonts.googleapis.com"
+/>
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Mono:wght@100..900&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  /* パネル間のボーダー色 */
+  #root > div > div:has(nav) {
+    border-right-color: var(--neutral-solid-gray-420);
+  }
+  #root > div > div:has(#storybook-panel-root) {
+    border-top-color: var(--neutral-solid-gray-420);
+  }
+  [data-test-id="sb-preview-toolbar"] {
+    border-bottom: 1px solid var(--neutral-solid-gray-420);
+    box-shadow: none !important;
+  }
+
+  /* 検索フィールド */
+  [role="combobox"]:has(#storybook-explorer-searchfield) {
+    border: 1px solid var(--neutral-solid-gray-420);
+    box-shadow: none;
+  }
+  [role="combobox"]:has(#storybook-explorer-searchfield):has(input:focus) {
+    outline: calc(4 / 16 * 1rem) solid var(--neutral-black);
+    outline-offset: calc(2 / 16 * 1rem);
+    box-shadow: 0 0 0 calc(2 / 16 * 1rem) var(--focus-indicator);
+  }
+  #storybook-explorer-searchfield:focus {
+    box-shadow: none;
+  }
+
+  /* 検索結果項目 */
+  .search-result-item[aria-selected="true"]:not(:hover) {
+    outline: 1px solid var(--link);
+  }
+
+  /* ツリー全体フォーカス時 */
+  #storybook-explorer-menu:focus-visible {
+    outline: calc(4 / 16 * 1rem) solid var(--neutral-black);
+  }
+
+  /* Documents, Foundations, Components のトグル */
+  button[data-action="collapse-root"]:focus-visible {
+    outline: calc(4 / 16 * 1rem) solid var(--neutral-black);
+    outline-offset: calc(2 / 16 * 1rem);
+    border-radius: calc(4 / 16 * 1rem);
+    box-shadow: 0 0 0 calc(2 / 16 * 1rem) var(--focus-indicator);
+  }
+
+  /* ツリーのアイコン */
+  svg:has(use[href="#icon--document"]) {
+    color: var(--warning);
+  }
+  svg:has(use[href="#icon--story"]) {
+    color: var(--link);
+  }
+
+  /* Argsテーブルのコントロール */
+  .docblock-argstable :focus:focus {
+    outline: calc(4 / 16 * 1rem) solid var(--neutral-black) !important;
+    outline-offset: calc(2 / 16 * 1rem) !important;
+    box-shadow: 0 0 0 calc(2 / 16 * 1rem) var(--focus-indicator) !important;
+  }
+
+  /* Switchコントロール */
+  input[type="checkbox"][role="switch"]:checked ~ span:nth-of-type(1) {
+    color: #fff;
+  }
+  input[type="checkbox"][role="switch"]:not(:checked) ~ span:nth-of-type(2) {
+    color: #fff;
+  }
+</style>
+<script>
+  document.documentElement.setAttribute("lang", "ja");
+</script>

@@ -1,0 +1,53 @@
+<link
+  rel="preconnect"
+  href="https://fonts.googleapis.com"
+/>
+<link
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin
+/>
+<link
+  href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+Mono:wght@100..900&display=swap"
+  rel="stylesheet"
+/>
+<style>
+  /* フォーカス可能なコードブロックにフォーカスしたとき背景が黄色くならないようにする */
+  [data-radix-scroll-area-viewport]:focus {
+    background-color: transparent;
+  }
+
+  /* Storyキャンバス */
+  .sbdocs-preview {
+    border: 1px solid var(--neutral-solid-gray-420) !important;
+  }
+
+  /* Storyキャンバス内コード */
+  .sbdocs-preview .token.attr-value {
+    color: #dba3ff !important;
+  }
+
+  /* ドキュメント内コードブロック */
+  .docblock-source .token.attr-name,
+  .docblock-source .token.property {
+    color: #e00 !important;
+  }
+
+  /* Argsテーブルのコントロール */
+  .docblock-argstable :focus:focus {
+    outline: calc(4 / 16 * 1rem) solid var(--neutral-black) !important;
+    outline-offset: calc(2 / 16 * 1rem) !important;
+    box-shadow: 0 0 0 calc(2 / 16 * 1rem) var(--focus-indicator) !important;
+  }
+
+  /* Switchコントロール */
+  input[type="checkbox"][role="switch"]:checked ~ span:nth-of-type(1) {
+    color: #fff;
+  }
+  input[type="checkbox"][role="switch"]:not(:checked) ~ span:nth-of-type(2) {
+    color: #fff;
+  }
+</style>
+<script>
+  document.documentElement.setAttribute("lang", "ja");
+</script>

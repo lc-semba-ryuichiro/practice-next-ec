@@ -31,5 +31,10 @@
   "warning": { "$value": "{semantic.warning-orange.1}", "$type": "color" },
   "warning-foreground": { "$value": "{neutral.black}", "$type": "color" },
   "error": { "$value": "{semantic.error.1}", "$type": "color" },
-  "error-foreground": { "$value": "{neutral.white}", "$type": "color" }
+  "error-foreground": { "$value": "{neutral.white}", "$type": "color" },
+  "link": { "$value": "{primitive.blue.1000}", "$type": "color" },
+  "link-hover": { "$value": "{primitive.blue.900}", "$type": "color" },
+  "link-visited": { "$value": "{primitive.magenta.900}", "$type": "color" },
+  "link-active": { "$value": "{primitive.orange.800}", "$type": "color" },
+  "focus-indicator": { "$value": "{primitive.yellow.300}", "$type": "color" }
 }

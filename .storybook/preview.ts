@@ -1,4 +1,5 @@
 import "../apps/web/app/globals.css";
+import "./styles/mdx.css";
 
 import type { Preview } from "@storybook/nextjs-vite";
 

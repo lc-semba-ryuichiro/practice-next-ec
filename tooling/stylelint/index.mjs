@@ -1,7 +1,7 @@
 /** @type {import("stylelint").Config} */
 export default {
   extends: ["stylelint-config-standard", "stylelint-config-tailwindcss"],
-  ignoreFiles: ["stories/**/*.css", "**/dist/**/*.css"],
+  ignoreFiles: ["stories/**/*.css", "**/dist/**/*.css", "**/*.generated.css"],
   plugins: [
     "stylelint-order",
     "stylelint-declaration-strict-value",
