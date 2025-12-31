@@ -2,10 +2,18 @@
 @import "tw-animate-css";
 @import "./styles/tokens.generated.css";
 @import "./styles/tokens.dark.generated.css";
+@import "./styles/typography.generated.css";
+@import "./styles/typography-utilities.css";
+@import "./styles/spacing.generated.css";
 
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
+  /* Typography */
+  --font-sans: var(--font-family-sans);
+  --font-mono: var(--font-family-mono);
+
+  /* Radius */
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -21,8 +29,18 @@
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-active: var(--primary-active);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-hover: var(--secondary-hover);
+  --color-secondary-active: var(--secondary-active);
+  --color-tertiary: var(--tertiary);
+  --color-tertiary-foreground: var(--tertiary-foreground);
+  --color-tertiary-hover-bg: var(--tertiary-hover-bg);
+  --color-tertiary-hover-fg: var(--tertiary-hover-fg);
+  --color-tertiary-active-bg: var(--tertiary-active-bg);
+  --color-brand-background: var(--brand-background);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);

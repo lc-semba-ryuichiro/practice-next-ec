@@ -328,6 +328,9 @@ export function createBaseConfig(tsconfigRootDir: string): Linter.Config[] {
         ...nodePlugin.configs["flat/recommended"].rules,
         "n/no-missing-import": "off", // TypeScript の解決に任せる
         "n/no-unsupported-features/node-builtins": "off",
+        // Node.js 24 を使用しているため、ES2022+ の機能（Object.hasOwn など）は利用可能
+        "n/no-unsupported-features/es-builtins": "off",
+        "n/no-unsupported-features/es-syntax": "off",
       },
     },
 

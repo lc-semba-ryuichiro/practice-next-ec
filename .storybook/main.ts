@@ -2,6 +2,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 
 import type { StorybookConfig } from "@storybook/nextjs-vite";
+import remarkGfm from "remark-gfm";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -28,6 +29,13 @@ const config: StorybookConfig = {
   ],
   framework: "@storybook/nextjs-vite",
   staticDirs: ["../apps/web/public", { from: "./public", to: "/" }],
+  docs: {
+    mdxPluginOptions: {
+      mdxCompileOptions: {
+        remarkPlugins: [remarkGfm],
+      },
+    },
+  },
   viteFinal: async (viteConfig) => {
     const { default: tailwindcss } = await import("@tailwindcss/vite");
     return {
@@ -35,6 +43,7 @@ const config: StorybookConfig = {
       plugins: [...(viteConfig.plugins ?? []), tailwindcss()],
       resolve: {
         ...viteConfig.resolve,
+        dedupe: ["react", "react-dom"],
         alias: {
           ...viteConfig.resolve?.alias,
           "@practice-next-ec/ui": path.resolve(__dirname, "../packages/ui/src"),

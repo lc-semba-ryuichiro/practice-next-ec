@@ -1,0 +1,273 @@
+import { Meta, Unstyled } from "@storybook/addon-docs/blocks";
+import "./spacing.css";
+
+<Meta title="基礎/スペーシング" />
+
+export const SpacingTable = ({ data }) => (
+  <table>
+    <thead>
+      <tr>
+        <th>トークン</th>
+        <th>値</th>
+        <th>px</th>
+      </tr>
+    </thead>
+    <tbody>
+      {data.map(([token, value, px]) => (
+        <tr key={token}>
+          <td>
+            <code>{token}</code>
+          </td>
+          <td>{value}</td>
+          <td>{px}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+);
+
+export const GuidelineTable = ({ data }) => (
+  <table>
+    <thead>
+      <tr>
+        <th>用途</th>
+        <th>推奨トークン</th>
+      </tr>
+    </thead>
+    <tbody>
+      {data.map(([usage, tokens]) => (
+        <tr key={usage}>
+          <td>{usage}</td>
+          <td>
+            <code>{tokens}</code>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+);
+
+export const SpacingDemo = ({ token, value, rem }) => (
+  <div className="spacing-demo">
+    <code className="spacing-label">{token}</code>
+    <div
+      className="spacing-visual"
+      style={{ width: value, height: "1rem" }}
+    />
+    <span className="spacing-value">
+      {value} ({rem})
+    </span>
+  </div>
+);
+
+export const SpacingSection = ({ title, description, children }) => (
+  <div className="spacing-section">
+    <h3>{title}</h3>
+    {description && <p className="section-description">{description}</p>}
+    {children}
+  </div>
+);
+
+export const basicScale = [
+  ["--spacing-0", "0", "0px"],
+  ["--spacing-px", "1px", "1px"],
+  ["--spacing-0-5", "0.125rem", "2px"],
+  ["--spacing-1", "0.25rem", "4px"],
+  ["--spacing-1-5", "0.375rem", "6px"],
+  ["--spacing-2", "0.5rem", "8px"],
+  ["--spacing-2-5", "0.625rem", "10px"],
+  ["--spacing-3", "0.75rem", "12px"],
+  ["--spacing-3-5", "0.875rem", "14px"],
+  ["--spacing-4", "1rem", "16px"],
+];
+
+export const mediumScale = [
+  ["--spacing-5", "1.25rem", "20px"],
+  ["--spacing-6", "1.5rem", "24px"],
+  ["--spacing-7", "1.75rem", "28px"],
+  ["--spacing-8", "2rem", "32px"],
+  ["--spacing-9", "2.25rem", "36px"],
+  ["--spacing-10", "2.5rem", "40px"],
+  ["--spacing-11", "2.75rem", "44px"],
+  ["--spacing-12", "3rem", "48px"],
+];
+
+export const largeScale = [
+  ["--spacing-14", "3.5rem", "56px"],
+  ["--spacing-16", "4rem", "64px"],
+  ["--spacing-20", "5rem", "80px"],
+  ["--spacing-24", "6rem", "96px"],
+  ["--spacing-28", "7rem", "112px"],
+  ["--spacing-32", "8rem", "128px"],
+  ["--spacing-36", "9rem", "144px"],
+  ["--spacing-40", "10rem", "160px"],
+];
+
+export const extraLargeScale = [
+  ["--spacing-44", "11rem", "176px"],
+  ["--spacing-48", "12rem", "192px"],
+  ["--spacing-52", "13rem", "208px"],
+  ["--spacing-56", "14rem", "224px"],
+  ["--spacing-60", "15rem", "240px"],
+  ["--spacing-64", "16rem", "256px"],
+  ["--spacing-72", "18rem", "288px"],
+  ["--spacing-80", "20rem", "320px"],
+  ["--spacing-96", "24rem", "384px"],
+];
+
+export const guidelineData = [
+  ["アイコンとテキストの間隔", "--spacing-1 〜 --spacing-2"],
+  ["フォーム要素間の間隔", "--spacing-2 〜 --spacing-3"],
+  ["カード内のパディング", "--spacing-4 〜 --spacing-6"],
+  ["セクション間の余白", "--spacing-8 〜 --spacing-16"],
+  ["ページセクションの余白", "--spacing-16 〜 --spacing-32"],
+];
+
+<Unstyled>
+<div className="prose spacing-docs">
+
+# スペーシング
+
+このデザインシステムでは、**4pxベーススケール**のスペーシングシステムを採用しています。
+
+<hr />
+
+## 基本スケール
+
+<SpacingTable data={basicScale} />
+
+<hr />
+
+## 中間スケール
+
+<SpacingTable data={mediumScale} />
+
+<hr />
+
+## 大スケール
+
+<SpacingTable data={largeScale} />
+
+<hr />
+
+## 特大スケール
+
+<SpacingTable data={extraLargeScale} />
+
+<hr />
+
+## ビジュアルサンプル
+
+<SpacingSection
+  title="基本スケール"
+  description="4px〜16px - コンポーネント内部のパディング、アイコン間隔など"
+>
+  <SpacingDemo
+    token="--spacing-1"
+    value="0.25rem"
+    rem="4px"
+  />
+  <SpacingDemo
+    token="--spacing-2"
+    value="0.5rem"
+    rem="8px"
+  />
+  <SpacingDemo
+    token="--spacing-3"
+    value="0.75rem"
+    rem="12px"
+  />
+  <SpacingDemo
+    token="--spacing-4"
+    value="1rem"
+    rem="16px"
+  />
+</SpacingSection>
+
+<SpacingSection
+  title="中間スケール"
+  description="20px〜48px - セクション間隔、カード内パディングなど"
+>
+  <SpacingDemo
+    token="--spacing-5"
+    value="1.25rem"
+    rem="20px"
+  />
+  <SpacingDemo
+    token="--spacing-6"
+    value="1.5rem"
+    rem="24px"
+  />
+  <SpacingDemo
+    token="--spacing-8"
+    value="2rem"
+    rem="32px"
+  />
+  <SpacingDemo
+    token="--spacing-12"
+    value="3rem"
+    rem="48px"
+  />
+</SpacingSection>
+
+<SpacingSection
+  title="大スケール"
+  description="56px〜160px - ページセクション間隔、ヒーローエリアなど"
+>
+  <SpacingDemo
+    token="--spacing-16"
+    value="4rem"
+    rem="64px"
+  />
+  <SpacingDemo
+    token="--spacing-20"
+    value="5rem"
+    rem="80px"
+  />
+  <SpacingDemo
+    token="--spacing-24"
+    value="6rem"
+    rem="96px"
+  />
+  <SpacingDemo
+    token="--spacing-32"
+    value="8rem"
+    rem="128px"
+  />
+</SpacingSection>
+
+<hr />
+
+## 使用方法
+
+### CSS変数
+
+```css
+.card {
+  padding: var(--spacing-4);
+  margin-bottom: var(--spacing-6);
+}
+
+.section {
+  padding-block: var(--spacing-16);
+}
+```
+
+### Tailwind CSS
+
+<p>Tailwindのデフォルトスペーシングユーティリティがそのまま使用可能です。</p>
+
+```tsx
+<div className="mb-6 p-4">
+  <section className="py-16">コンテンツ</section>
+</div>
+```
+
+<hr />
+
+## 用途ガイドライン
+
+<GuidelineTable data={guidelineData} />
+
+</div>
+</Unstyled>

@@ -1,0 +1,50 @@
+{
+  "typography": {
+    "font-family": {
+      "sans": {
+        "$value": "'Inter', 'Noto Sans JP', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'",
+        "$type": "fontFamily"
+      },
+      "mono": {
+        "$value": "'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+        "$type": "fontFamily"
+      }
+    },
+    "font-size": {
+      "14": { "$value": "0.875rem", "$type": "dimension" },
+      "16": { "$value": "1rem", "$type": "dimension" },
+      "17": { "$value": "1.0625rem", "$type": "dimension" },
+      "18": { "$value": "1.125rem", "$type": "dimension" },
+      "20": { "$value": "1.25rem", "$type": "dimension" },
+      "22": { "$value": "1.375rem", "$type": "dimension" },
+      "24": { "$value": "1.5rem", "$type": "dimension" },
+      "26": { "$value": "1.625rem", "$type": "dimension" },
+      "28": { "$value": "1.75rem", "$type": "dimension" },
+      "32": { "$value": "2rem", "$type": "dimension" },
+      "36": { "$value": "2.25rem", "$type": "dimension" },
+      "45": { "$value": "2.8125rem", "$type": "dimension" },
+      "48": { "$value": "3rem", "$type": "dimension" },
+      "57": { "$value": "3.5625rem", "$type": "dimension" },
+      "64": { "$value": "4rem", "$type": "dimension" }
+    },
+    "line-height": {
+      "100": { "$value": "1", "$type": "number" },
+      "120": { "$value": "1.2", "$type": "number" },
+      "130": { "$value": "1.3", "$type": "number" },
+      "140": { "$value": "1.4", "$type": "number" },
+      "150": { "$value": "1.5", "$type": "number" },
+      "160": { "$value": "1.6", "$type": "number" },
+      "170": { "$value": "1.7", "$type": "number" },
+      "175": { "$value": "1.75", "$type": "number" }
+    },
+    "font-weight": {
+      "normal": { "$value": "400", "$type": "fontWeight" },
+      "bold": { "$value": "700", "$type": "fontWeight" }
+    },
+    "letter-spacing": {
+      "0": { "$value": "0", "$type": "dimension" },
+      "1": { "$value": "0.01em", "$type": "dimension" },
+      "2": { "$value": "0.02em", "$type": "dimension" }
+    }
+  }
+}

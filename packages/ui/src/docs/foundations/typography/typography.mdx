@@ -1,0 +1,360 @@
+import { Meta, Unstyled } from "@storybook/addon-docs/blocks";
+import "./typography.css";
+
+<Meta title="基礎/タイポグラフィ" />
+
+export const SimpleTable = ({ headers, data }) => (
+  <table>
+    <thead>
+      <tr>
+        {headers.map((h) => (
+          <th key={h}>{h}</th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {data.map((row, i) => (
+        <tr key={i}>
+          {row.map((cell, j) => (
+            <td key={j}>{cell}</td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+);
+
+export const TokenTable = ({ data }) => (
+  <table>
+    <thead>
+      <tr>
+        <th>トークン</th>
+        <th>値</th>
+      </tr>
+    </thead>
+    <tbody>
+      {data.map(([token, value]) => (
+        <tr key={token}>
+          <td>
+            <code>{token}</code>
+          </td>
+          <td>{value}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+);
+
+export const TypeDemo = ({ className, label }) => (
+  <div className="type-demo">
+    <code className="type-label">{label}</code>
+    <p className={className}>あのイーハトーヴォの The quick brown fox jumps over the lazy dog</p>
+  </div>
+);
+
+export const CategorySection = ({ title, description, children }) => (
+  <div className="category-section">
+    <h3>{title}</h3>
+    <p className="category-description">{description}</p>
+    {children}
+  </div>
+);
+
+export const fontFamilyData = [
+  [<strong>Sans</strong>, "Inter + Noto Sans JP", "UI、本文"],
+  [<strong>Mono</strong>, "Geist Mono", "コード"],
+];
+
+export const namingData = [
+  [<code>category</code>, "カテゴリ", "dsp, std, dns, oln, mono"],
+  [<code>size</code>, "フォントサイズ (px)", "16, 17, 24, 48..."],
+  [<code>weight</code>, "ウェイト", "B (Bold), N (Normal)"],
+  [<code>lineHeight</code>, "line-height × 100", "140, 150, 170..."],
+];
+
+export const fontSizeData = [
+  ["--font-size-14", "0.875rem (14px)"],
+  ["--font-size-16", "1rem (16px)"],
+  ["--font-size-17", "1.0625rem (17px)"],
+  ["--font-size-18", "1.125rem (18px)"],
+  ["--font-size-20", "1.25rem (20px)"],
+  ["--font-size-22", "1.375rem (22px)"],
+  ["--font-size-24", "1.5rem (24px)"],
+  ["--font-size-26", "1.625rem (26px)"],
+  ["--font-size-28", "1.75rem (28px)"],
+  ["--font-size-32", "2rem (32px)"],
+  ["--font-size-36", "2.25rem (36px)"],
+  ["--font-size-45", "2.8125rem (45px)"],
+  ["--font-size-48", "3rem (48px)"],
+  ["--font-size-57", "3.5625rem (57px)"],
+  ["--font-size-64", "4rem (64px)"],
+];
+
+export const lineHeightData = [
+  ["--line-height-100", "1"],
+  ["--line-height-120", "1.2"],
+  ["--line-height-130", "1.3"],
+  ["--line-height-140", "1.4"],
+  ["--line-height-150", "1.5"],
+  ["--line-height-160", "1.6"],
+  ["--line-height-170", "1.7"],
+  ["--line-height-175", "1.75"],
+];
+
+export const fontWeightData = [
+  ["--font-weight-normal", "400"],
+  ["--font-weight-bold", "700"],
+];
+
+export const letterSpacingData = [
+  ["--letter-spacing-0", "0"],
+  ["--letter-spacing-1", "0.01em"],
+  ["--letter-spacing-2", "0.02em"],
+];
+
+<Unstyled>
+<div className="prose typography-docs">
+
+# タイポグラフィ
+
+このデザインシステムでは、<strong>デジタル庁デザインシステム（DADS）</strong>に基づいたタイポグラフィ体系を採用しています。
+
+<hr />
+
+## フォントファミリー
+
+<SimpleTable
+  headers={["種類", "フォント", "用途"]}
+  data={fontFamilyData}
+/>
+
+<hr />
+
+## 命名規則
+
+```
+dads-u-{category}-{size}{weight}-{lineHeight}
+```
+
+<SimpleTable
+  headers={["要素", "説明", "例"]}
+  data={namingData}
+/>
+
+<hr />
+
+## Display (Dsp)
+
+<p>大見出し用。インパクトのあるタイトルに使用します。</p>
+
+<CategorySection
+  title=""
+  description="line-height: 1.4 / letter-spacing: 0"
+>
+  <TypeDemo
+    className="dads-u-dsp-64B-140"
+    label="dads-u-dsp-64B-140"
+  />
+  <TypeDemo
+    className="dads-u-dsp-64N-140"
+    label="dads-u-dsp-64N-140"
+  />
+  <TypeDemo
+    className="dads-u-dsp-57B-140"
+    label="dads-u-dsp-57B-140"
+  />
+  <TypeDemo
+    className="dads-u-dsp-57N-140"
+    label="dads-u-dsp-57N-140"
+  />
+  <TypeDemo
+    className="dads-u-dsp-48B-140"
+    label="dads-u-dsp-48B-140"
+  />
+  <TypeDemo
+    className="dads-u-dsp-48N-140"
+    label="dads-u-dsp-48N-140"
+  />
+</CategorySection>
+
+<hr />
+
+## Standard (Std)
+
+<p>本文・見出し用。最も汎用的なスタイルです。</p>
+
+<CategorySection
+  title=""
+  description="line-height: 1.4〜1.75 / letter-spacing: 0〜0.02em"
+>
+  <TypeDemo
+    className="dads-u-std-45B-140"
+    label="dads-u-std-45B-140"
+  />
+  <TypeDemo
+    className="dads-u-std-36B-140"
+    label="dads-u-std-36B-140"
+  />
+  <TypeDemo
+    className="dads-u-std-32B-150"
+    label="dads-u-std-32B-150"
+  />
+  <TypeDemo
+    className="dads-u-std-28B-150"
+    label="dads-u-std-28B-150"
+  />
+  <TypeDemo
+    className="dads-u-std-24B-150"
+    label="dads-u-std-24B-150"
+  />
+  <TypeDemo
+    className="dads-u-std-20B-150"
+    label="dads-u-std-20B-150"
+  />
+  <TypeDemo
+    className="dads-u-std-18B-160"
+    label="dads-u-std-18B-160"
+  />
+  <TypeDemo
+    className="dads-u-std-17B-170"
+    label="dads-u-std-17B-170"
+  />
+  <TypeDemo
+    className="dads-u-std-16B-170"
+    label="dads-u-std-16B-170"
+  />
+  <TypeDemo
+    className="dads-u-std-16N-175"
+    label="dads-u-std-16N-175"
+  />
+</CategorySection>
+
+<hr />
+
+## Dense (Dns)
+
+<p>密なテキスト用。コンパクトな情報表示に使用します。</p>
+
+<CategorySection
+  title=""
+  description="line-height: 1.2〜1.3 / letter-spacing: 0"
+>
+  <TypeDemo
+    className="dads-u-dns-17B-130"
+    label="dads-u-dns-17B-130"
+  />
+  <TypeDemo
+    className="dads-u-dns-16N-130"
+    label="dads-u-dns-16N-130"
+  />
+  <TypeDemo
+    className="dads-u-dns-14N-130"
+    label="dads-u-dns-14N-130"
+  />
+  <TypeDemo
+    className="dads-u-dns-17N-120"
+    label="dads-u-dns-17N-120"
+  />
+  <TypeDemo
+    className="dads-u-dns-16N-120"
+    label="dads-u-dns-16N-120"
+  />
+  <TypeDemo
+    className="dads-u-dns-14N-120"
+    label="dads-u-dns-14N-120"
+  />
+</CategorySection>
+
+<hr />
+
+## Oneline (Oln)
+
+<p>単行テキスト用。ラベルやボタンに使用します。</p>
+
+<CategorySection
+  title=""
+  description="line-height: 1.0 / letter-spacing: 0.02em"
+>
+  <TypeDemo
+    className="dads-u-oln-17B-100"
+    label="dads-u-oln-17B-100"
+  />
+  <TypeDemo
+    className="dads-u-oln-16N-100"
+    label="dads-u-oln-16N-100"
+  />
+  <TypeDemo
+    className="dads-u-oln-14N-100"
+    label="dads-u-oln-14N-100"
+  />
+</CategorySection>
+
+<hr />
+
+## Monospace (Mono)
+
+<p>コード用。等幅フォントを使用します。</p>
+
+<CategorySection
+  title=""
+  description="line-height: 1.5 / letter-spacing: 0"
+>
+  <TypeDemo
+    className="dads-u-mono-17B-150"
+    label="dads-u-mono-17B-150"
+  />
+  <TypeDemo
+    className="dads-u-mono-16N-150"
+    label="dads-u-mono-16N-150"
+  />
+  <TypeDemo
+    className="dads-u-mono-14N-150"
+    label="dads-u-mono-14N-150"
+  />
+</CategorySection>
+
+<hr />
+
+## 使用方法
+
+### ユーティリティクラス
+
+```tsx
+<h1 className="dads-u-dsp-48B-140">大見出し</h1>
+<p className="dads-u-std-16N-170">本文テキスト</p>
+<code className="dads-u-mono-14N-150">console.log('Hello')</code>
+```
+
+### CSS変数
+
+```css
+.custom-heading {
+  font-size: var(--font-size-24);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-150);
+  letter-spacing: var(--letter-spacing-2);
+}
+```
+
+<hr />
+
+## トークン一覧
+
+### font-size
+
+<TokenTable data={fontSizeData} />
+
+### line-height
+
+<TokenTable data={lineHeightData} />
+
+### font-weight
+
+<TokenTable data={fontWeightData} />
+
+### letter-spacing
+
+<TokenTable data={letterSpacingData} />
+
+</div>
+</Unstyled>

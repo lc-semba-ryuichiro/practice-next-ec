@@ -1,0 +1,267 @@
+import { Canvas, Meta, Unstyled } from "@storybook/addon-docs/blocks";
+import * as ButtonStories from "./button.stories";
+
+<Meta of={ButtonStories} />
+
+export const SimpleTable = ({ headers, data }) => (
+  <table>
+    <thead>
+      <tr>
+        {headers.map((h) => (
+          <th key={h}>{h}</th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {data.map((row, i) => (
+        <tr key={i}>
+          {row.map((cell, j) => (
+            <td key={j}>{cell}</td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+);
+
+export const variantData = [
+  ["default", "主要なアクション。画面内で最も重要な操作", "「保存」「送信」「購入する」"],
+  ["secondary", "副次的なアクション。主要アクションの次に重要", "「下書き保存」「プレビュー」"],
+  ["outline", "キャンセルや戻る操作。控えめな表現", "「キャンセル」「戻る」"],
+  ["destructive", "削除や危険な操作。注意を促す", "「削除する」「アカウント削除」"],
+  ["ghost", "ツールバーやメニュー内。背景に溶け込む", "アイコンボタン、ツールバー"],
+  ["link", "ナビゲーション。テキストリンクとして表示", "「詳細を見る」「ヘルプ」"],
+];
+
+export const sizeData = [
+  ["sm", "32px (h-8)", "コンパクトな UI、テーブル内アクション"],
+  ["default", "36px (h-9)", "標準的なフォーム、ダイアログ"],
+  ["lg", "40px (h-10)", "ヒーローセクション、重要な CTA"],
+  ["icon", "36x36px", "アイコンのみのボタン"],
+  ["icon-sm", "32x32px", "コンパクトなアイコンボタン"],
+  ["icon-lg", "40x40px", "大きなアイコンボタン"],
+];
+
+export const keyboardData = [
+  ["Enter", "ボタンをクリック"],
+  ["Space", "ボタンをクリック"],
+  ["Tab", "次のフォーカス可能な要素へ移動"],
+];
+
+export const dataAttrData = [
+  ["data-slot", '常に "button"'],
+  ["data-variant", "現在の variant 値"],
+  ["data-size", "現在の size 値"],
+];
+
+<Unstyled>
+<div className="prose">
+
+# Button
+
+ボタンコンポーネントは、ユーザーのアクションを促すためのインタラクティブな要素です。
+フォームの送信、ダイアログの開閉、ナビゲーションなど、さまざまな用途で使用されます。
+
+<Canvas of={ButtonStories.Default} />
+
+---
+
+## 概要
+
+- **Radix UI Slot** を使用したポリモーフィックレンダリング対応
+- **class-variance-authority** によるタイプセーフなバリアント管理
+- **アクセシビリティ** を考慮した設計（キーボード操作、フォーカス管理）
+
+---
+
+## Variant の使い分け
+
+用途に合ったvariantを選択することで、ユーザーに意図を明確に伝えられます。
+
+<Canvas of={ButtonStories.AllVariants} />
+
+<SimpleTable
+  headers={["Variant", "用途", "使用例"]}
+  data={variantData}
+/>
+
+### 推奨パターン
+
+```tsx
+// 主要アクション + キャンセルの組み合わせ
+<div className="flex gap-2">
+  <Button variant="outline">キャンセル</Button>
+  <Button>保存する</Button>
+</div>
+
+// 危険な操作の確認ダイアログ
+<div className="flex gap-2">
+  <Button variant="outline">やめる</Button>
+  <Button variant="destructive">削除する</Button>
+</div>
+```
+
+---
+
+## Size の使い分け
+
+以下の表を参考に、用途に合ったサイズを選択してください。
+
+<Canvas of={ButtonStories.AllSizes} />
+
+<SimpleTable
+  headers={["Size", "高さ", "用途"]}
+  data={sizeData}
+/>
+
+---
+
+## アイコンの使い方
+
+アイコンとテキストを組み合わせる場合、アイコンはテキストの**左側**に配置します。
+
+<Canvas of={ButtonStories.WithIcon} />
+
+### アイコンのみボタン
+
+アイコンのみのボタンには、スクリーンリーダー用に `aria-label` を必ず設定してください。
+
+<Canvas of={ButtonStories.IconOnly} />
+
+```tsx
+// Good
+<Button size="icon" aria-label="削除">
+  <Trash2 />
+</Button>
+
+// Bad - aria-label がない
+<Button size="icon">
+  <Trash2 />
+</Button>
+```
+
+---
+
+## 状態
+
+### 無効化状態
+
+ユーザーが操作できない状態を示します。
+
+<Canvas of={ButtonStories.Disabled} />
+
+### ローディング状態
+
+処理中であることを示します。`disabled` + スピナーアイコンを組み合わせます。
+
+<Canvas of={ButtonStories.Loading} />
+
+```tsx
+<Button disabled>
+  <Loader2 className="animate-spin" />
+  処理中...
+</Button>
+```
+
+---
+
+## asChild パターン
+
+`asChild` propを使用すると、Buttonのスタイルを維持しながら別の要素としてレンダリングできます。
+
+<Canvas of={ButtonStories.AsLink} />
+
+```tsx
+// リンクとして使用
+<Button asChild variant="link">
+  <a href="/about">詳細を見る</a>
+</Button>
+
+// Next.js Link として使用
+<Button asChild>
+  <Link href="/dashboard">ダッシュボードへ</Link>
+</Button>
+
+// router.push と組み合わせる場合は type="button" を指定
+<Button type="button" onClick={() => router.push('/home')}>
+  ホームへ
+</Button>
+```
+
+---
+
+## アクセシビリティ
+
+Buttonコンポーネントは以下のアクセシビリティ機能をサポートしています。
+
+### キーボード操作
+
+<SimpleTable
+  headers={["キー", "動作"]}
+  data={keyboardData}
+/>
+
+### フォーカス表示
+
+- `focus-visible` 状態で3pxのリングが表示される
+- キーボードフォーカス時のみリングが表示され、マウスクリックでは表示されない
+
+### ARIA 属性
+
+- `disabled` 時は自動的に `disabled` 属性が設定される
+- フォームバリデーションエラー時は `aria-invalid` でスタイルが変化する
+
+---
+
+## Do's and Don'ts
+
+### Do's
+
+- 1画面に主要アクション（default）は1つに限定する
+- ボタンのラベルは動詞で始める（「保存する」「送信する」など）
+- 危険な操作にはdestructive variantを使用する
+- アイコンのみのボタンにはaria-labelを設定する
+- ローディング中はdisabled + アニメーションアイコンを組み合わせる
+
+### Don'ts
+
+- 同じ画面に複数のdefault variantボタンを配置しない
+- 「はい」「いいえ」のような曖昧なラベルを使用しない
+- リンクとして機能するボタンにbutton typeを使用しない
+- disabled状態のボタンにカーソル変更のスタイルを適用しない
+
+---
+
+## API リファレンス
+
+```tsx
+interface ButtonProps extends React.ComponentProps<"button"> {
+  /** スタイルバリアント */
+  variant?: "default" | "secondary" | "outline" | "destructive" | "ghost" | "link";
+
+  /** サイズ */
+  size?: "default" | "sm" | "lg" | "icon" | "icon-sm" | "icon-lg";
+
+  /** true の場合、子要素をそのままレンダリング */
+  asChild?: boolean;
+}
+```
+
+### Data 属性
+
+Buttonは以下のdata属性を出力します。CSSセレクタやテストで使用できます。
+
+<SimpleTable
+  headers={["属性", "値"]}
+  data={dataAttrData}
+/>
+
+```css
+/* CSS でのスタイリング例 */
+[data-slot="button"][data-variant="destructive"]:hover {
+  /* destructive variant hover 時のカスタムスタイル */
+}
+```
+
+</div>
+</Unstyled>

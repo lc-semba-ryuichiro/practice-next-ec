@@ -1,0 +1,57 @@
+/* Spacing ドキュメント用スタイル */
+
+.spacing-docs {
+  font-family: var(--font-family-sans);
+}
+
+.spacing-demo {
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.spacing-demo:last-child {
+  border-bottom: none;
+}
+
+.spacing-label {
+  background-color: var(--muted);
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  min-width: 10rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.spacing-visual {
+  background-color: var(--primary);
+  border-radius: 0.125rem;
+  flex-shrink: 0;
+  min-height: 1rem;
+}
+
+.spacing-value {
+  color: var(--muted-foreground);
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+}
+
+.spacing-section {
+  margin-bottom: 1.5rem;
+}
+
+.spacing-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.section-description {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  margin: 0 0 1rem;
+}

@@ -1,0 +1,411 @@
+/**
+ * DADS (Digital Agency Design System) Typography Utilities
+ * デジタル庁デザインシステムに基づくタイポグラフィユーティリティクラス
+ *
+ * 命名規則: dads-u-{category}-{size}{weight}-{lineHeight}
+ * - category: dsp (Display), std (Standard), dns (Dense), oln (Oneline), mono (Monospace)
+ * - size: フォントサイズ (px)
+ * - weight: B (Bold) / N (Normal)
+ * - lineHeight: line-height * 100
+ */
+
+@layer utilities {
+  /* ==========================================================================
+   * Display (Dsp) - 大見出し用
+   * ========================================================================== */
+  .dads-u-dsp-64B-140 {
+    font-size: var(--font-size-64);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-140);
+  }
+
+  .dads-u-dsp-64N-140 {
+    font-size: var(--font-size-64);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-140);
+  }
+
+  .dads-u-dsp-57B-140 {
+    font-size: var(--font-size-57);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-140);
+  }
+
+  .dads-u-dsp-57N-140 {
+    font-size: var(--font-size-57);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-140);
+  }
+
+  .dads-u-dsp-48B-140 {
+    font-size: var(--font-size-48);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-140);
+  }
+
+  .dads-u-dsp-48N-140 {
+    font-size: var(--font-size-48);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-140);
+  }
+
+  /* ==========================================================================
+   * Standard (Std) - 本文・見出し用
+   * ========================================================================== */
+  .dads-u-std-45B-140 {
+    font-size: var(--font-size-45);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-140);
+  }
+
+  .dads-u-std-45N-140 {
+    font-size: var(--font-size-45);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-140);
+  }
+
+  .dads-u-std-36B-140 {
+    font-size: var(--font-size-36);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-1);
+    line-height: var(--line-height-140);
+  }
+
+  .dads-u-std-36N-140 {
+    font-size: var(--font-size-36);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-1);
+    line-height: var(--line-height-140);
+  }
+
+  .dads-u-std-32B-150 {
+    font-size: var(--font-size-32);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-1);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-std-32N-150 {
+    font-size: var(--font-size-32);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-1);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-std-28B-150 {
+    font-size: var(--font-size-28);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-1);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-std-28N-150 {
+    font-size: var(--font-size-28);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-1);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-std-26B-150 {
+    font-size: var(--font-size-26);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-std-26N-150 {
+    font-size: var(--font-size-26);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-std-24B-150 {
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-std-24N-150 {
+    font-size: var(--font-size-24);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-std-22B-150 {
+    font-size: var(--font-size-22);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-std-22N-150 {
+    font-size: var(--font-size-22);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-std-20B-150 {
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-std-20N-150 {
+    font-size: var(--font-size-20);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-std-18B-160 {
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-160);
+  }
+
+  .dads-u-std-18N-160 {
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-160);
+  }
+
+  .dads-u-std-17B-170 {
+    font-size: var(--font-size-17);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-170);
+  }
+
+  .dads-u-std-17N-170 {
+    font-size: var(--font-size-17);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-170);
+  }
+
+  .dads-u-std-16B-170 {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-170);
+  }
+
+  .dads-u-std-16N-170 {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-170);
+  }
+
+  .dads-u-std-16B-175 {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-175);
+  }
+
+  .dads-u-std-16N-175 {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-175);
+  }
+
+  /* ==========================================================================
+   * Dense (Dns) - 密なテキスト用
+   * ========================================================================== */
+  .dads-u-dns-17B-130 {
+    font-size: var(--font-size-17);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-130);
+  }
+
+  .dads-u-dns-17N-130 {
+    font-size: var(--font-size-17);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-130);
+  }
+
+  .dads-u-dns-16B-130 {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-130);
+  }
+
+  .dads-u-dns-16N-130 {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-130);
+  }
+
+  .dads-u-dns-14B-130 {
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-130);
+  }
+
+  .dads-u-dns-14N-130 {
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-130);
+  }
+
+  .dads-u-dns-17B-120 {
+    font-size: var(--font-size-17);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-120);
+  }
+
+  .dads-u-dns-17N-120 {
+    font-size: var(--font-size-17);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-120);
+  }
+
+  .dads-u-dns-16B-120 {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-120);
+  }
+
+  .dads-u-dns-16N-120 {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-120);
+  }
+
+  .dads-u-dns-14B-120 {
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-120);
+  }
+
+  .dads-u-dns-14N-120 {
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-120);
+  }
+
+  /* ==========================================================================
+   * Oneline (Oln) - 単行テキスト用
+   * ========================================================================== */
+  .dads-u-oln-17B-100 {
+    font-size: var(--font-size-17);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-100);
+  }
+
+  .dads-u-oln-17N-100 {
+    font-size: var(--font-size-17);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-100);
+  }
+
+  .dads-u-oln-16B-100 {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-100);
+  }
+
+  .dads-u-oln-16N-100 {
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-100);
+  }
+
+  .dads-u-oln-14B-100 {
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-100);
+  }
+
+  .dads-u-oln-14N-100 {
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-2);
+    line-height: var(--line-height-100);
+  }
+
+  /* ==========================================================================
+   * Monospace (Mono) - コード用
+   * ========================================================================== */
+  .dads-u-mono-17B-150 {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-17);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-mono-17N-150 {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-17);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-mono-16B-150 {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-mono-16N-150 {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-16);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-mono-14B-150 {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-150);
+  }
+
+  .dads-u-mono-14N-150 {
+    font-family: var(--font-family-mono);
+    font-size: var(--font-size-14);
+    font-weight: var(--font-weight-normal);
+    letter-spacing: var(--letter-spacing-0);
+    line-height: var(--line-height-150);
+  }
+}

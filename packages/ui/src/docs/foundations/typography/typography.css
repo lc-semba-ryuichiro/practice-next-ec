@@ -1,0 +1,45 @@
+/* Typography ドキュメント用スタイル */
+
+.typography-docs {
+  font-family: var(--font-family-sans);
+}
+
+.type-demo {
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+}
+
+.type-demo:last-child {
+  border-bottom: none;
+}
+
+.type-label {
+  background-color: var(--muted);
+  border-radius: 0.25rem;
+  display: inline-block;
+  font-family: var(--font-family-mono);
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.5rem;
+}
+
+.type-demo p {
+  margin: 0;
+}
+
+.category-section {
+  margin-bottom: 1.5rem;
+}
+
+.category-section h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+}
+
+.category-description {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  margin: 0 0 1rem;
+}

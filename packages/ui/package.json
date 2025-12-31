@@ -7,6 +7,7 @@
   ],
   "exports": {
     ".": "./src/index.ts",
+    "./index.css": "./src/index.css",
     "./styles/*": "./src/styles/*"
   },
   "scripts": {
@@ -18,6 +19,14 @@
   "dependencies": {
     "@practice-next-ec/lib": "workspace:*",
     "@radix-ui/react-accordion": "catalog:",
+    "@radix-ui/react-alert-dialog": "catalog:",
+    "@radix-ui/react-aspect-ratio": "catalog:",
+    "@radix-ui/react-avatar": "catalog:",
+    "@radix-ui/react-checkbox": "catalog:",
+    "@radix-ui/react-collapsible": "catalog:",
+    "@radix-ui/react-context-menu": "catalog:",
+    "@radix-ui/react-dialog": "catalog:",
+    "@radix-ui/react-dropdown-menu": "catalog:",
     "@radix-ui/react-separator": "catalog:",
     "@radix-ui/react-slot": "catalog:",
     "@radix-ui/react-switch": "catalog:",
@@ -28,17 +37,28 @@
     "@tailwindcss/vite": "catalog:",
     "class-variance-authority": "catalog:",
     "clsx": "catalog:",
+    "cmdk": "catalog:",
+    "date-fns": "catalog:",
+    "embla-carousel-react": "catalog:",
     "lucide-react": "catalog:",
     "react": "catalog:",
+    "react-day-picker": "catalog:",
     "react-dom": "catalog:",
+    "recharts": "catalog:",
     "tailwind-merge": "catalog:",
     "tailwind-variants": "catalog:",
-    "tailwindcss": "catalog:"
+    "tailwindcss": "catalog:",
+    "vaul": "catalog:"
   },
   "devDependencies": {
     "@practice-next-ec/eslint-config": "workspace:*",
     "@practice-next-ec/typescript-config": "workspace:*",
+    "@practice-next-ec/vitest-config": "workspace:*",
+    "@storybook/nextjs-vite": "catalog:",
     "@storybook/react": "catalog:",
+    "@testing-library/jest-dom": "catalog:",
+    "@testing-library/react": "catalog:",
+    "@testing-library/user-event": "catalog:",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@vitejs/plugin-react": "catalog:",

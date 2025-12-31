@@ -16,6 +16,33 @@
   margin-bottom: 2rem;
 }
 
+.color-section h3 {
+  color: var(--foreground);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.color-section p {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0 0 1rem;
+}
+
+.color-section ul {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  list-style-type: disc;
+  margin: 0 0 1rem;
+  padding-left: 1.5rem;
+}
+
+.color-section li {
+  margin-bottom: 0.25rem;
+}
+
 .color-group h3 {
   color: var(--foreground);
   font-size: 1.125rem;

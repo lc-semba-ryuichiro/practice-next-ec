@@ -5,6 +5,7 @@
     "paths": {
       "@ui/*": ["./src/*"]
     },
+    "types": ["@testing-library/jest-dom"],
     "outDir": "./dist",
     "rootDir": "."
   },
