@@ -198,10 +198,10 @@ export function ShippingAddressForm({
 
       <Button
         type="submit"
-        label="次へ"
-        primary
         className="w-full"
-      />
+      >
+        次へ
+      </Button>
     </form>
   );
 }

@@ -27,7 +27,7 @@
     "fix:prettier": "prettier --write .",
     "fix:remark": "remark . --output",
     "fix:stylelint": "stylelint \"**/*.css\" --fix",
-    "fix:textlint": "textlint --fix \"**/*.md\"",
+    "fix:textlint": "textlint --fix \"**/*.{md,mdx}\"",
     "preinstall": "npx only-allow pnpm",
     "knip": "knip",
     "knip:fix": "knip --fix",
@@ -38,7 +38,7 @@
     "lint:remark": "remark . --quiet",
     "lint:secretlint": "secretlint \"**/*\"",
     "lint:stylelint": "stylelint \"**/*.css\"",
-    "lint:textlint": "textlint \"**/*.md\"",
+    "lint:textlint": "textlint \"**/*.{md,mdx}\"",
     "prepare": "lefthook install",
     "storybook": "storybook dev -p 6006",
     "test": "turbo run test",
@@ -116,6 +116,7 @@
     "lost-pixel": "catalog:",
     "msw": "catalog:",
     "msw-storybook-addon": "catalog:",
+    "next": "catalog:",
     "npm-run-all2": "catalog:",
     "oxlint": "catalog:",
     "oxlint-tsgolint": "catalog:",
@@ -145,6 +146,7 @@
     "textlint-filter-rule-allowlist": "catalog:",
     "textlint-filter-rule-comments": "catalog:",
     "textlint-plugin-html": "catalog:",
+    "textlint-plugin-mdx": "catalog:",
     "textlint-rule-preset-ja-spacing": "catalog:",
     "textlint-rule-preset-ja-technical-writing": "catalog:",
     "textlint-rule-prh": "catalog:",
@@ -165,19 +167,21 @@
   },
   "pnpm": {
     "onlyBuiltDependencies": [
+      "@bundled-es-modules/glob",
       "@parcel/watcher",
       "@swc/core",
       "core-js-pure",
       "esbuild",
       "lefthook",
-      "libxmljs2",
       "msw",
-      "odiff-bin"
+      "odiff-bin",
+      "style-dictionary"
     ],
     "overrides": {
       "axios": ">=1.12.0",
       "esbuild": ">=0.25.0",
       "form-data": ">=4.0.4",
+      "qs": ">=6.14.1",
       "tmp": ">=0.2.4"
     }
   }

@@ -3,7 +3,7 @@ import { Textarea } from "./textarea";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta = {
-  title: "Admin/UI/Textarea",
+  title: "管理画面/UI/テキストエリア",
   component: Textarea,
   parameters: {
     layout: "centered",

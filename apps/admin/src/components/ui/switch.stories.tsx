@@ -4,7 +4,7 @@ import { Switch } from "./switch";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta = {
-  title: "Admin/UI/Switch",
+  title: "管理画面/UI/スイッチ",
   component: Switch,
   parameters: {
     layout: "centered",

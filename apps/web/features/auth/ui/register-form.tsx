@@ -137,11 +137,7 @@ export function RegisterForm({ onSuccess }: Readonly<RegisterFormProps>): React.
 
       {error && <p className="text-sm text-red-600">{error.message}</p>}
 
-      <Button
-        type="submit"
-        label={isLoading ? "登録中..." : "登録"}
-        primary
-      />
+      <Button type="submit">{isLoading ? "登録中..." : "登録"}</Button>
     </form>
   );
 }

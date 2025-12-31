@@ -1,0 +1,182 @@
+import { Meta, Unstyled } from "@storybook/addon-docs/blocks";
+import { tokens } from "../../../../tokens";
+import "./colors.css";
+
+<Meta title="基礎/カラー" />
+
+export const ColorCard = ({ name, value, cssVar }) => (
+  <div className="color-card">
+    <div
+      className="color-chip"
+      style={{ backgroundColor: value }}
+    />
+    <div className="color-info">
+      <h4 className="color-level">{name}</h4>
+      <code className="color-value">{value}</code>
+      {cssVar && <code className="color-var">{cssVar}</code>}
+    </div>
+  </div>
+);
+
+export const ColorScale = ({ title, colors, prefix }) => (
+  <div className="color-group">
+    <h3>{title}</h3>
+    <div className="color-grid">
+      {Object.entries(colors).map(([key, token]) => (
+        <ColorCard
+          key={key}
+          name={key}
+          value={token.$value}
+          cssVar={prefix ? `--${prefix}-${key}` : undefined}
+        />
+      ))}
+    </div>
+  </div>
+);
+
+<Unstyled>
+<div className="prose">
+
+# Colors
+
+このデザインシステムでは、**OKLCH カラーモデル**を使用しています。
+カラートークンは **Style Dictionary** で管理され、階層構造で定義されています。
+
+---
+
+<div className="color-section">
+
+## Primitiveカラー
+
+ブランドカラーの基本スケールです。
+
+<ColorScale
+  title="Blue"
+  colors={tokens.primitive.blue}
+  prefix="primitive-blue"
+/>
+
+</div>
+
+<div className="color-section">
+
+## Neutralカラー
+
+白、黒、グレースケールです。
+
+<div className="color-group">
+  <h3>White / Black</h3>
+  <div className="color-grid">
+    <ColorCard
+      name="White"
+      value={tokens.neutral.white.$value}
+      cssVar="--neutral-white"
+    />
+    <ColorCard
+      name="Black"
+      value={tokens.neutral.black.$value}
+      cssVar="--neutral-black"
+    />
+  </div>
+</div>
+
+<ColorScale
+  title="Solid Gray"
+  colors={tokens.neutral["solid-gray"]}
+  prefix="neutral-solid-gray"
+/>
+
+<ColorScale
+  title="Opacity Gray"
+  colors={tokens.neutral["opacity-gray"]}
+  prefix="neutral-opacity-gray"
+/>
+
+</div>
+
+<div className="color-section">
+
+## Semanticベースカラー
+
+状態を表現するカラーの基本定義です。
+
+<ColorScale
+  title="Success"
+  colors={tokens.semantic.success}
+  prefix="success"
+/>
+
+<ColorScale
+  title="Error"
+  colors={tokens.semantic.error}
+  prefix="error"
+/>
+
+<ColorScale
+  title="Warning Yellow"
+  colors={tokens.semantic["warning-yellow"]}
+  prefix="warning-yellow"
+/>
+
+<ColorScale
+  title="Warning Orange"
+  colors={tokens.semantic["warning-orange"]}
+  prefix="warning-orange"
+/>
+
+</div>
+
+---
+
+## 使用方法
+
+### Tailwind CSSクラス
+
+```tsx
+<div className="bg-primary text-primary-foreground">
+  Primary Button
+</div>
+
+<div className="bg-success text-success-foreground">
+  Success
+</div>
+
+<div className="bg-warning text-warning-foreground">
+  Warning
+</div>
+```
+
+### CSS変数
+
+```css
+.custom-element {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  border: 1px solid var(--border);
+}
+```
+
+---
+
+## ファイル構成
+
+```
+packages/ui/
+├── tokens/
+│   ├── index.ts                # TypeScript エクスポート
+│   ├── primitive/
+│   │   └── colors.json         # ブランドカラー + ステータスベース
+│   ├── neutral/
+│   │   └── colors.json         # white, black, gray scales
+│   └── semantic/
+│       ├── colors.light.json   # ライトモード
+│       └── colors.dark.json    # ダークモード
+├── scripts/
+│   └── build-tokens.mjs        # ビルドスクリプト
+└── src/styles/
+    ├── tokens.generated.css      # 生成（:root）
+    └── tokens.dark.generated.css # 生成（.dark）
+```
+
+</div>
+</Unstyled>

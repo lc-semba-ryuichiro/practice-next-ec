@@ -29,10 +29,5 @@ export function LogoutButton({ onSuccess }: Readonly<LogoutButtonProps>): React.
     });
   };
 
-  return (
-    <Button
-      label={isLoading ? "ログアウト中..." : "ログアウト"}
-      onClick={handleClick}
-    />
-  );
+  return <Button onClick={handleClick}>{isLoading ? "ログアウト中..." : "ログアウト"}</Button>;
 }

@@ -8,11 +8,14 @@
       "@/features/*": ["./features/*"],
       "@/entities/*": ["./entities/*"],
       "@/shared/*": ["./shared/*"],
-      "@practice-next-ec/ui": ["../../packages/ui/src"],
-      "@practice-next-ec/lib": ["../../packages/lib/src"],
-      "@practice-next-ec/types": ["../../packages/types/src"]
+      "@ui/*": ["../../packages/ui/src/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "references": [
+    { "path": "../../packages/ui" },
+    { "path": "../../packages/lib" },
+    { "path": "../../packages/types" }
+  ]
 }

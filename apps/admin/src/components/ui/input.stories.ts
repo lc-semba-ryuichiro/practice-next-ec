@@ -3,7 +3,7 @@ import { Input } from "./input";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta = {
-  title: "Admin/UI/Input",
+  title: "管理画面/UI/インプット",
   component: Input,
   parameters: {
     layout: "centered",

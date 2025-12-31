@@ -9,7 +9,7 @@
   "scripts": {
     "clean": "rm -rf .turbo",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --build"
   },
   "dependencies": {
     "clsx": "catalog:",

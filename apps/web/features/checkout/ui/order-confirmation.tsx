@@ -107,17 +107,19 @@ export function OrderConfirmation({
       <div className="flex gap-4">
         <Button
           type="button"
-          label="戻る"
+          variant="outline"
           onClick={onBack}
           className="flex-1"
-        />
+        >
+          戻る
+        </Button>
         <Button
           type="button"
-          label={isSubmitting ? "注文中..." : "注文を確定する"}
           onClick={handleSubmit}
-          primary
           className="flex-1"
-        />
+        >
+          {isSubmitting ? "注文中..." : "注文を確定する"}
+        </Button>
       </div>
     </div>
   );

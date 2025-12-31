@@ -11,7 +11,7 @@ import {
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta = {
-  title: "Admin/UI/Select",
+  title: "管理画面/UI/セレクト",
   component: Select,
   parameters: {
     layout: "centered",

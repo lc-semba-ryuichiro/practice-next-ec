@@ -4,7 +4,8 @@
     "comments": true
   },
   "plugins": {
-    "@textlint/markdown": true
+    "@textlint/markdown": true,
+    "mdx": true
   },
   "rules": {
     "@textlint-ja/preset-ai-writing": true,

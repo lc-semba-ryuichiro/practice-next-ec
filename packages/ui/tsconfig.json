@@ -1,10 +1,20 @@
 {
-  "extends": "@practice-next-ec/typescript-config/library",
+  "extends": "@practice-next-ec/typescript-config/composite",
   "compilerOptions": {
+    "baseUrl": ".",
     "paths": {
-      "@practice-next-ec/lib": ["../lib/src"]
-    }
+      "@ui/*": ["./src/*"]
+    },
+    "outDir": "./dist",
+    "rootDir": "."
   },
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules"]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "scripts/**/*.ts",
+    "scripts/**/*.mts",
+    "tokens/**/*.ts",
+    "tokens/**/*.json"
+  ],
+  "exclude": ["node_modules", "dist"]
 }

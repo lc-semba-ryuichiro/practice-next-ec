@@ -90,11 +90,7 @@ export function LoginForm({ onSuccess }: Readonly<LoginFormProps>): React.JSX.El
 
       {error && <p className="text-sm text-red-600">{error.message}</p>}
 
-      <Button
-        type="submit"
-        label={isLoading ? "ログイン中..." : "ログイン"}
-        primary
-      />
+      <Button type="submit">{isLoading ? "ログイン中..." : "ログイン"}</Button>
     </form>
   );
 }

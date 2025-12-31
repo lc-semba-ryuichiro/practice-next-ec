@@ -3,7 +3,7 @@ import { Slider } from "./slider";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta = {
-  title: "Admin/UI/Slider",
+  title: "管理画面/UI/スライダー",
   component: Slider,
   parameters: {
     layout: "centered",

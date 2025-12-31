@@ -84,16 +84,18 @@ export function PaymentForm({ onComplete, onBack }: Readonly<PaymentFormProps>):
       <div className="flex gap-4">
         <Button
           type="button"
-          label="戻る"
+          variant="outline"
           onClick={onBack}
           className="flex-1"
-        />
+        >
+          戻る
+        </Button>
         <Button
           type="submit"
-          label="次へ"
-          primary
           className="flex-1"
-        />
+        >
+          次へ
+        </Button>
       </div>
     </form>
   );

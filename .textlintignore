@@ -48,6 +48,8 @@ storybook-static/
 .ai/
 .ai/**
 CLAUDE.md
+**/CLAUDE.md
+.claude/rules/**
 .github/copilot-instructions.md
 
 # storybook

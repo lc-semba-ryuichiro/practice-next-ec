@@ -1,5 +1,9 @@
 {
-  "extends": "@practice-next-ec/typescript-config/library",
+  "extends": "@practice-next-ec/typescript-config/composite",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "./src"
+  },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "dist"]
 }

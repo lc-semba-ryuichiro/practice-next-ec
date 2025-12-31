@@ -80,20 +80,13 @@ export function CartDrawer({
                 href={ROUTES.CART}
                 onClick={onClose}
               >
-                <Button
-                  label="カートを見る"
-                  className="w-full"
-                />
+                <Button className="w-full">カートを見る</Button>
               </Link>
               <Link
                 href={ROUTES.CHECKOUT}
                 onClick={onClose}
               >
-                <Button
-                  label="購入手続きへ"
-                  primary
-                  className="w-full"
-                />
+                <Button className="w-full">購入手続きへ</Button>
               </Link>
             </div>
           </>

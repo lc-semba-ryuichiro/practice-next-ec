@@ -1,49 +1,43 @@
-import "./button.css";
+import type * as React from "react";
 
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  /** Is this the principal call to action on the page? */
-  primary?: boolean;
-  /** What background color to use */
-  backgroundColor?: string;
-  /** How large should the button be? */
-  size?: "small" | "medium" | "large";
-  /** Button contents */
-  label: string;
-}
+import { Slot } from "@radix-ui/react-slot";
+import { cn } from "@ui/lib/utils";
+import { type VariantProps } from "class-variance-authority";
+
+import { buttonVariants } from "./button.variants";
 
 /**
- * ユーザーインタラクション用のプライマリ UI コンポーネント
- * @param props - ボタンのプロパティ
- * @param props.primary - メインのアクションボタンかどうか
- * @param props.size - ボタンのサイズ
- * @param props.backgroundColor - 背景色
- * @param props.label - ボタンのラベル
- * @param props.className - 追加のCSSクラス
- * @param props.type - ボタンのtype属性
+ * 汎用ボタンコンポーネント。
+ * @param props - button 要素に渡すプロパティ
+ * @param props.className - 追加の CSS クラス名
+ * @param props.variant - ボタンのスタイルバリアント（default, destructive, outline, secondary, ghost, link）
+ * @param props.size - ボタンのサイズ（default, sm, lg, icon, icon-sm, icon-lg）
+ * @param props.asChild - true の場合、子要素をそのままレンダリング
  * @returns ボタン要素
  */
-export const Button = ({
-  primary = false,
-  size = "medium",
-  backgroundColor,
-  label,
+function Button({
   className,
-  type = "button",
+  variant = "default",
+  size = "default",
+  asChild = false,
   ...props
-}: ButtonProps): React.JSX.Element => {
-  const mode = primary ? "storybook-button--primary" : "storybook-button--secondary";
-  const classes = ["storybook-button", `storybook-button--${size}`, mode, className]
-    .filter(Boolean)
-    .join(" ");
+}: Readonly<
+  React.ComponentProps<"button"> &
+    VariantProps<typeof buttonVariants> & {
+      asChild?: boolean;
+    }
+>): React.ReactElement {
+  const Comp = asChild ? Slot : "button";
 
   return (
-    <button
-      type={type}
-      className={classes}
-      style={{ backgroundColor }}
+    <Comp
+      data-slot="button"
+      data-variant={variant}
+      data-size={size}
+      className={cn(buttonVariants({ variant, size, className }))}
       {...props}
-    >
-      {label}
-    </button>
+    />
   );
-};
+}
+
+export { Button };

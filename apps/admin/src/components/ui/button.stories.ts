@@ -5,7 +5,7 @@ import { Button } from "./button";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta = {
-  title: "Admin/UI/Button",
+  title: "管理画面/UI/ボタン",
   component: Button,
   parameters: {
     layout: "centered",

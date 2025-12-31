@@ -123,7 +123,7 @@ Viteアプリケーション（`apps/admin`）で使用します。
 
 | オプション                                | 値      | 説明                          |
 | ------------------------------------ | ------ | --------------------------- |
-| `strict`                             | `true` | すべての strict オプションを有効化        |
+| `strict`                             | `true` | すべての strict オプションを有効化       |
 | `noUncheckedIndexedAccess`           | `true` | インデックスアクセス時に undefined を考慮  |
 | `exactOptionalPropertyTypes`         | `true` | オプショナルプロパティと undefined を区別  |
 | `noImplicitOverride`                 | `true` | オーバーライド時に override キーワードを強制 |

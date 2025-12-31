@@ -13,15 +13,26 @@ catalog:
   "@faker-js/faker": 10.1.0
   "@hookform/resolvers": 5.2.2
   "@netlify/vite-plugin-tanstack-start": 1.2.6
+  "@next/third-parties": 16.1.1
   "@ninoseki/eslint-plugin-neverthrow": 0.0.1
+  "@opentelemetry/api-logs": 0.208.0
+  "@opentelemetry/instrumentation": 0.208.0
+  "@opentelemetry/sdk-logs": 0.208.0
+  "@opentelemetry/sdk-trace-base": 2.2.0
   "@pact-foundation/pact": 16.0.4
   "@playwright/test": 1.57.0
+  "@radix-ui/react-accordion": 1.2.12
   "@radix-ui/react-label": 2.1.8
   "@radix-ui/react-radio-group": 1.3.8
   "@radix-ui/react-select": 2.2.6
+  "@radix-ui/react-separator": 1.1.8
   "@radix-ui/react-slider": 1.3.6
   "@radix-ui/react-slot": 1.2.4
   "@radix-ui/react-switch": 1.2.6
+  "@radix-ui/react-tabs": 1.1.13
+  "@radix-ui/react-toggle": 1.1.10
+  "@radix-ui/react-toggle-group": 1.1.11
+  "@radix-ui/react-tooltip": 1.2.8
   "@secretlint/secretlint-rule-preset-recommend": 11.2.5
   "@storybook/addon-a11y": 10.1.11
   "@storybook/addon-designs": 11.1.0
@@ -33,6 +44,7 @@ catalog:
   "@storybook/mdx2-csf": 1.1.0
   "@storybook/nextjs": 10.1.11
   "@storybook/nextjs-vite": 10.1.11
+  "@storybook/react": 10.1.11
   "@storybook/test-runner": 0.24.2
   "@stryker-mutator/core": 9.4.0
   "@stryker-mutator/typescript-checker": 9.4.0
@@ -67,6 +79,7 @@ catalog:
   "@types/react": 19.2.7
   "@types/react-dom": 19.2.3
   "@vercel/analytics": 1.6.1
+  "@vercel/otel": 2.1.0
   "@vercel/speed-insights": 1.3.1
   "@vitejs/plugin-react": 5.1.2
   "@vitest/browser-playwright": 4.0.16
@@ -106,7 +119,7 @@ catalog:
   eslint-plugin-testing-library: 7.15.3
   eslint-plugin-unicorn: 62.0.0
   eslint-plugin-unused-imports: 4.3.0
-  fast-check: 4.5.2
+  fast-check: 4.5.3
   http-server: 14.1.1
   jiti: 2.6.1
   jotai: 2.16.1
@@ -149,6 +162,7 @@ catalog:
   secretlint: 11.2.5
   storybook: 10.1.11
   storycap-testrun: 1.0.0
+  style-dictionary: 5.1.1
   stylelint: 16.26.1
   stylelint-config-standard: 39.0.1
   stylelint-config-tailwindcss: 1.0.0
@@ -157,11 +171,13 @@ catalog:
   stylelint-order: 7.0.1
   superjson: 2.2.6
   tailwind-merge: 3.4.0
+  tailwind-variants: 3.2.2
   tailwindcss: 4.1.18
   textlint: 15.5.0
   textlint-filter-rule-allowlist: 4.0.0
   textlint-filter-rule-comments: 1.2.2
   textlint-plugin-html: 1.0.1
+  textlint-plugin-mdx: 1.0.2
   textlint-rule-preset-ja-spacing: 2.4.3
   textlint-rule-preset-ja-technical-writing: 12.0.2
   textlint-rule-prh: 6.1.0

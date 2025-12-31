@@ -39,7 +39,7 @@ const config: TestRunnerConfig = {
       }
     } else {
       // VRT モード: スクリーンショット撮影
-      const fileName = context.id.replace(/[^a-zA-Z0-9-_]/g, "-");
+      const fileName = context.id.replaceAll(/[^a-zA-Z0-9-_]/g, "-");
       await page.screenshot({
         path: `${screenshotsDir}/${fileName}.png`,
         fullPage: false,

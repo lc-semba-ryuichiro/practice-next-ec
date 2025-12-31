@@ -11,15 +11,21 @@
     "dev": "next dev",
     "lint": "eslint .",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --build"
   },
   "dependencies": {
+    "@next/third-parties": "catalog:",
+    "@opentelemetry/api-logs": "catalog:",
+    "@opentelemetry/instrumentation": "catalog:",
+    "@opentelemetry/sdk-logs": "catalog:",
+    "@opentelemetry/sdk-trace-base": "catalog:",
     "@practice-next-ec/lib": "workspace:*",
     "@practice-next-ec/types": "workspace:*",
     "@practice-next-ec/ui": "workspace:*",
     "@t3-oss/env-nextjs": "catalog:",
     "@tanstack/react-query": "catalog:",
     "@vercel/analytics": "catalog:",
+    "@vercel/otel": "catalog:",
     "@vercel/speed-insights": "catalog:",
     "date-fns": "catalog:",
     "jotai": "catalog:",

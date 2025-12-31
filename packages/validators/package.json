@@ -6,7 +6,7 @@
   "scripts": {
     "clean": "rm -rf .turbo",
     "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --build"
   },
   "devDependencies": {
     "@practice-next-ec/eslint-config": "workspace:*",

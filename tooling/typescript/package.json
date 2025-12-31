@@ -6,7 +6,8 @@
     "./base": "./base.json",
     "./nextjs": "./nextjs.json",
     "./vite": "./vite.json",
-    "./library": "./library.json"
+    "./library": "./library.json",
+    "./composite": "./composite.json"
   },
   "dependencies": {
     "typescript": "catalog:"

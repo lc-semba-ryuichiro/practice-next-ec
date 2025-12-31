@@ -4,7 +4,7 @@ import { Label } from "./label";
 import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 
 const meta = {
-  title: "Admin/UI/Label",
+  title: "管理画面/UI/ラベル",
   component: Label,
   parameters: {
     layout: "centered",

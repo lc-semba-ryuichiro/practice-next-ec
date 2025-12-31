@@ -10,7 +10,12 @@
         "maxDepth": 3
       }
     ],
-    ["remark-frontmatter", ["yaml"]]
+    [
+      "remark-frontmatter",
+      [
+        "yaml"
+      ]
+    ]
   ],
   "settings": {
     "bullet": "-",

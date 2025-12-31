@@ -1,0 +1,37 @@
+{
+  "primitive": {
+    "blue": {
+      "50": { "$value": "oklch(0.9552 0.02 257.47)", "$type": "color" },
+      "100": { "$value": "oklch(0.9229 0.036858 263.6237)", "$type": "color" },
+      "200": { "$value": "oklch(0.8773 0.0536 264.25)", "$type": "color" },
+      "300": { "$value": "oklch(0.7846 0.0989 267.55)", "$type": "color" },
+      "400": { "$value": "oklch(0.6893 0.1507 266.51)", "$type": "color" },
+      "500": { "$value": "oklch(0.6094 0.1932 265.17)", "$type": "color" },
+      "600": { "$value": "oklch(0.5588 0.2353 266.26)", "$type": "color" },
+      "700": { "$value": "oklch(0.511 0.2535 266.47)", "$type": "color" },
+      "800": { "$value": "oklch(0.437 0.2507 263.95)", "$type": "color" },
+      "900": { "$value": "oklch(0.38 0.2449 264.21)", "$type": "color" },
+      "1000": { "$value": "oklch(0.3073 0.1944 264.21)", "$type": "color" },
+      "1100": { "$value": "oklch(0.248 0.1718 264.05)", "$type": "color" },
+      "1200": { "$value": "oklch(0.2211 0.1532 264.05)", "$type": "color" }
+    }
+  },
+  "semantic": {
+    "success": {
+      "1": { "$value": "oklch(0.6176 0.1355 156.74)", "$type": "color" },
+      "2": { "$value": "oklch(0.5137 0.1142 156.47)", "$type": "color" }
+    },
+    "error": {
+      "1": { "$value": "oklch(0.5922 0.243 29.23)", "$type": "color" },
+      "2": { "$value": "oklch(0.5347 0.2194 29.23)", "$type": "color" }
+    },
+    "warning-yellow": {
+      "1": { "$value": "oklch(0.6689 0.1367 88.67)", "$type": "color" },
+      "2": { "$value": "oklch(0.5674 0.116 89.063)", "$type": "color" }
+    },
+    "warning-orange": {
+      "1": { "$value": "oklch(0.6762 0.209 40.7)", "$type": "color" },
+      "2": { "$value": "oklch(0.5686 0.175 40.96)", "$type": "color" }
+    }
+  }
+}

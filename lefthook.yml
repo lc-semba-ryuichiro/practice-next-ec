@@ -35,7 +35,7 @@ pre-push:
       run: pnpm exec secretlint "**/*"
 
     - name: textlint
-      run: pnpm exec textlint "**/*.md"
+      run: pnpm exec textlint "**/*.{md,mdx}"
 
     - name: remark
       run: pnpm exec remark . --quiet

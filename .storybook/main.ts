@@ -8,10 +8,13 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const config: StorybookConfig = {
   stories: [
     // packages/ui - 共有コンポーネント (コロケーション)
+    "../packages/ui/src/**/*.mdx",
     "../packages/ui/src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
     // apps/admin - 管理画面コンポーネント (コロケーション)
+    "../apps/admin/src/**/*.mdx",
     "../apps/admin/src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
     // apps/web - EC フロントエンドコンポーネント
+    "../apps/web/app/**/*.mdx",
     "../apps/web/app/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
   addons: [
@@ -24,7 +27,7 @@ const config: StorybookConfig = {
     "@storybook/addon-themes",
   ],
   framework: "@storybook/nextjs-vite",
-  staticDirs: ["../apps/web/public"],
+  staticDirs: ["../apps/web/public", { from: "./public", to: "/" }],
   viteFinal: async (viteConfig) => {
     const { default: tailwindcss } = await import("@tailwindcss/vite");
     return {

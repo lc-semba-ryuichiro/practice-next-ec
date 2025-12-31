@@ -38,11 +38,5 @@ export function AddToCartButton({
     });
   };
 
-  return (
-    <Button
-      label="カートに追加"
-      onClick={handleClick}
-      primary
-    />
-  );
+  return <Button onClick={handleClick}>カートに追加</Button>;
 }

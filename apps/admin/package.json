@@ -9,7 +9,8 @@
     "format": "prettier",
     "lint": "eslint",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "typecheck": "tsc --build"
   },
   "dependencies": {
     "@faker-js/faker": "catalog:",

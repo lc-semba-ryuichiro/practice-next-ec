@@ -7,5 +7,15 @@
     "source.organizeImports.biome": "explicit"
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "cSpell.words": [
+    "clsx",
+    "networkidle",
+    "oklch",
+    "oxlint",
+    "pino",
+    "storycap",
+    "tsgolint",
+    "vitejs"
+  ]
 }
